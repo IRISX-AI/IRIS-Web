@@ -100,8 +100,8 @@ export default function GhostEther({ className = "" }: GhostEtherProps) {
         opacity: 0.82,
         emissive: new THREE.Color(0x10b981),
         emissiveIntensity: 6.0,
-        roughness: 0.02,
-        metalness: 0.0,
+        roughness: 0.1,
+        metalness: 0.1,
         side: THREE.DoubleSide,
       });
       const body = new THREE.Mesh(bodyGeo, bodyMat);

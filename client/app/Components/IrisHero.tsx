@@ -42,7 +42,7 @@ export default function IrisHero({
         <div
           className={`
             absolute inset-0 z-90 pointer-events-none hidden md:block
-            transition-opacity duration-700 ease-in-out
+            transition-opacity duration-700 ease-in-out bg-black/1
             ${isHeroVisible ? "opacity-100" : "opacity-0"}
           `}
           style={{ display: isHeroActive ? undefined : "none" }}
