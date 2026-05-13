@@ -220,8 +220,10 @@ void main() {
     resize();
 
     let rafId: number;
+    let disposed = false;
 
     const render = (t: number) => {
+      if (disposed) return;
       uniforms.iTime.value = t * 0.001;
 
       const lerpFactor = 0.1;
@@ -247,6 +249,7 @@ void main() {
     rafId = requestAnimationFrame(render);
 
     return () => {
+      disposed = true;
       cancelAnimationFrame(rafId);
       window.removeEventListener("resize", resize);
       if (mouseInteraction && containerRef.current) {
@@ -261,7 +264,12 @@ void main() {
         );
       }
       renderer.gl.getExtension("WEBGL_lose_context")?.loseContext();
-      containerRef.current?.removeChild(gl.canvas);
+      if (
+        containerRef.current &&
+        gl.canvas.parentNode === containerRef.current
+      ) {
+        containerRef.current.removeChild(gl.canvas);
+      }
     };
   }, []);
 
