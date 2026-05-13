@@ -20,7 +20,7 @@ import MagneticButton from "../utils/MagneticButton";
 import GhostEther from "./GhostEther";
 
 interface IrisHeroProps {
-  heroTextRef: React.RefObject<HTMLDivElement>;
+  heroTextRef: React.RefObject<HTMLDivElement | null>;
   isHeroVisible: boolean;
   isHeroActive: boolean;
 }
