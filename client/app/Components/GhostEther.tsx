@@ -1,24 +1,5 @@
 "use client";
 
-/**
- * GhostEther.tsx
- * ─────────────────────────────────────────────────────────────────────────────
- * Drop-in replacement for <LiquidEther> in the IRIS hero section.
- * Renders a Three.js ghost that:
- *  • follows the mouse (just like the original ghost concept)
- *  • glows in IRIS neon-green (#10b981 / #34d399)
- *  • emits neon-green fireflies
- *  • leaves trailing particles on movement
- *  • has a scanline + vignette post-process pass for a retro AI feel
- *
- * Usage (exact drop-in swap):
- *   <GhostEther className="md:block hidden" />
- *
- * Install deps (already in your project from prior step, but just in case):
- *   npm install three @types/three
- * ─────────────────────────────────────────────────────────────────────────────
- */
-
 import { useEffect, useRef } from "react";
 import type * as THREE from "three";
 
@@ -91,7 +72,7 @@ export default function GhostEther({ className = "" }: GhostEtherProps) {
       bodyGeo.computeVertexNormals();
 
       const bodyMat = new THREE.MeshStandardMaterial({
-        color: 0x021a10, // very dark IRIS green tint
+        color: 0x021a10,
         transparent: true,
         opacity: 0.82,
         emissive: new THREE.Color(0x10b981),
