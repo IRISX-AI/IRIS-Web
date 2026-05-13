@@ -424,7 +424,7 @@ export function Terminal({
     <div
       ref={containerRef}
       className={cn(
-        "mx-auto w-full max-w-xl px-4 font-mono text-xs",
+        "mx-auto w-full max-w-xl px-4 font-mono text-xs scrollbar-small",
         className,
       )}
     >
