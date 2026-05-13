@@ -371,7 +371,7 @@ const IRIS = () => {
                   width={300}
                   height={300}
                   priority
-                  className="w-52 h-52 object-contain drop-shadow-[0_0_15px_rgba(16,185,129,0.2)]"
+                  className="w-40 h-40 object-contain drop-shadow-[0_0_15px_rgba(16,185,129,0.2)]"
                   style={{
                     filter:
                       "drop-shadow(0px 0px 15px rgba(16, 185, 129, 0.6)) drop-shadow(0px 0px 45px rgba(16, 185, 129, 0.4))",
