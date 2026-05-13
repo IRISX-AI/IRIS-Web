@@ -32,7 +32,7 @@ export default function IrisHero({
             gridThickness={5}
             mouseInteraction={true}
             mouseInteractionRadius={10}
-            opacity={1}
+            opacity={0.8}
             fadeDistance={1.5}
             vignetteStrength={5}
             glowIntensity={0.9}
@@ -42,7 +42,7 @@ export default function IrisHero({
         <div
           className={`
             absolute inset-0 z-90 pointer-events-none hidden md:block
-            transition-opacity duration-700 ease-in-out bg-black/1
+            transition-opacity duration-700 ease-in-out bg-black/12
             ${isHeroVisible ? "opacity-100" : "opacity-0"}
           `}
           style={{ display: isHeroActive ? undefined : "none" }}
