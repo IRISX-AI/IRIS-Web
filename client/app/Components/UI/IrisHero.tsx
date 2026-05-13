@@ -119,18 +119,17 @@ export default function IrisHero({
               />
             </Link>
 
-            <MagneticButton
-              onClick={() => {
-                window.open("https://github.com/201Harsh/IRIS-AI", "_blank");
-              }}
-              title="How to Install"
-              subtitle="Watch Tutorial"
-              iconLeft={<FileCode2 className="w-6 h-6 text-[#10b981]" />}
-              iconRight={
-                <ArrowRight className="w-5 h-5 text-current group-hover:text-[#10b981]" />
-              }
-              className="bg-transparent border border-white/15 text-white hover:bg-white/80 hover:text-black backdrop-blur-sm shadow-none"
-            />
+            <Link href="/how-to-install">
+              <MagneticButton
+                title="How to Install"
+                subtitle="Watch Tutorial"
+                iconLeft={<FileCode2 className="w-6 h-6 text-[#10b981]" />}
+                iconRight={
+                  <ArrowRight className="w-5 h-5 text-current group-hover:text-[#10b981]" />
+                }
+                className="bg-transparent border border-white/15 text-white hover:bg-white/80 hover:text-black backdrop-blur-sm shadow-none"
+              />
+            </Link>
           </div>
 
           <div className="flex items-center gap-3 mt-10 flex-wrap justify-center">
