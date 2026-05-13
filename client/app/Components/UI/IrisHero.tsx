@@ -51,17 +51,6 @@ export default function IrisHero({
         </div>
 
         <div className="relative z-20 flex flex-col items-center justify-center text-center px-6 w-full max-w-5xl gap-0">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-[#10b981]/30 bg-black/70 mb-8 backdrop-blur-md iris-chip-pulse">
-            <span className="relative flex h-2 w-2">
-              <span className="iris-ping absolute inline-flex h-full w-full rounded-full bg-[#10b981]" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-[#10b981]" />
-            </span>
-            <span className="text-[10px] md:text-[11px] font-mono text-white tracking-[0.25em] uppercase font-bold">
-              Release&nbsp;&nbsp;//&nbsp;&nbsp;v1&nbsp;
-              {new Date().getFullYear()}
-            </span>
-          </div>
-
           <div className="relative w-full flex justify-center flex-col items-center mb-2">
             <h1
               className="text-[28vw] sm:text-[20vw] md:text-[13vw] font-black tracking-tighter leading-none select-none text-white"
