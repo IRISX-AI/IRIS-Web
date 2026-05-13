@@ -52,54 +52,72 @@ export default function IrisHero({
 
         <div className="relative z-20 flex flex-col items-center justify-center text-center px-6 w-full max-w-5xl gap-0">
           {/* Live badge */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-[#10b981]/30 bg-[#10b981]/10 mb-8 backdrop-blur-md iris-chip-pulse">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-[#10b981]/30 bg-black/70 mb-8 backdrop-blur-md iris-chip-pulse">
             <span className="relative flex h-2 w-2">
               <span className="iris-ping absolute inline-flex h-full w-full rounded-full bg-[#10b981]" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-[#10b981]" />
             </span>
-            <span className="text-[10px] md:text-[11px] font-mono text-[#6ee7b7] tracking-[0.25em] uppercase font-bold">
+            <span className="text-[10px] md:text-[11px] font-mono text-white tracking-[0.25em] uppercase font-bold">
               Beta Release&nbsp;&nbsp;//&nbsp;&nbsp;Q1&nbsp;
               {new Date().getFullYear()}
             </span>
           </div>
 
-          {/* Main title */}
           <div className="relative w-full flex justify-center flex-col items-center mb-2">
-            <h1 className="text-[28vw] sm:text-[20vw] md:text-[13vw] font-black tracking-tighter leading-none select-none iris-title-shimmer">
+            <h1
+              className="text-[28vw] sm:text-[20vw] md:text-[13vw] font-black tracking-tighter leading-none select-none text-white"
+              style={{
+                textShadow:
+                  "0 0 40px rgba(16,185,129,0.85), 0 0 80px rgba(16,185,129,0.4), 0 2px 6px rgba(0,0,0,1)",
+              }}
+            >
               IRIS AI
             </h1>
           </div>
 
-          {/* Eyebrow tag line under the big word */}
           <div className="flex items-center gap-3 mb-6">
             <hr className="iris-rule" />
           </div>
-          <p className="text-[11px] md:text-sm font-mono tracking-[0.35em] uppercase text-[#10b981] mb-2">
+
+          <p
+            className="text-[11px] md:text-sm font-mono tracking-[0.35em] uppercase text-white mb-2 font-bold"
+            style={{
+              textShadow:
+                "0 0 8px rgba(0,0,0,1), 0 0 16px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,0.9)",
+            }}
+          >
             Integrated Responsive Intelligence System
           </p>
 
-          {/* Sub-headline */}
-          <p className="mt-5 max-w-xl text-sm md:text-lg text-gray-300 font-mono leading-relaxed drop-shadow-lg">
+          <p
+            className="mt-5 max-w-xl text-sm md:text-lg text-white font-mono leading-relaxed"
+            style={{
+              textShadow: "0 1px 8px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.95)",
+            }}
+          >
             Your device. Fully under command.{" "}
-            <span className="text-[#34d399]">Speak once</span> — IRIS handles
-            the rest. From files and apps to browser and beyond,
-            <span className="text-white"> real-time, zero friction.</span>
+            <span className="text-[#a7f3d0] font-bold">Speak once</span> — IRIS
+            handles the rest. From files and apps to browser and beyond,{" "}
+            <span className="text-white font-bold">
+              real-time, zero friction.
+            </span>
           </p>
 
-          {/* Waveform + voice hint */}
           <div className="flex items-center gap-3 mt-6 mb-10">
-            <Mic className="w-4 h-4 text-[#10b981]" />
+            <Mic className="w-4 h-4 text-white" />
             <div className="flex items-end gap-0.75">
               {Array.from({ length: 7 }).map((_, i) => (
                 <span key={i} className="iris-wave-bar" />
               ))}
             </div>
-            <span className="text-[11px] font-mono text-[#10b981]/70 tracking-widest uppercase">
+            <span
+              className="text-[11px] font-mono text-white tracking-widest uppercase font-semibold"
+              style={{ textShadow: "0 0 10px rgba(0,0,0,1)" }}
+            >
               Voice-native AI
             </span>
           </div>
 
-          {/* CTA buttons */}
           <div className="flex md:flex-row flex-col justify-center items-center gap-5 w-full sm:w-auto">
             <Link href="/download">
               <MagneticButton
@@ -113,12 +131,13 @@ export default function IrisHero({
               />
             </Link>
 
+            {/* ← subtitle changed from "Source Code" to "Watch Tutorial" */}
             <MagneticButton
               onClick={() => {
                 window.open("https://github.com/201Harsh/IRIS-AI", "_blank");
               }}
-              title="GitHub Repo"
-              subtitle="Source Code"
+              title="How to Install"
+              subtitle="Watch Tutorial"
               iconLeft={<FileCode2 className="w-6 h-6 text-[#10b981]" />}
               iconRight={
                 <ArrowRight className="w-5 h-5 text-current group-hover:text-[#10b981]" />
@@ -137,9 +156,9 @@ export default function IrisHero({
             ].map(({ label, value }) => (
               <div
                 key={label}
-                className="flex items-center gap-2 px-3 py-1.5 rounded-md border border-[#10b981]/20 bg-black/60 backdrop-blur-md"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-md border border-[#10b981]/30 bg-black/80 backdrop-blur-md"
               >
-                <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest">
+                <span className="text-[10px] font-mono text-gray-300 uppercase tracking-widest">
                   {label}
                 </span>
                 <span className="text-[11px] font-mono text-[#34d399] font-bold">
@@ -150,12 +169,14 @@ export default function IrisHero({
           </div>
         </div>
 
-        {/* ── Scroll cue ── */}
+        {/* Scroll cue */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-3 pointer-events-none select-none">
-          <span className="text-[10px] font-mono uppercase tracking-[0.35em] text-[#10b981]/60">
+          <span
+            className="text-[10px] font-mono uppercase tracking-[0.35em] text-white/70"
+            style={{ textShadow: "0 0 8px rgba(0,0,0,1)" }}
+          >
             Scroll to Explore
           </span>
-          {/* Mouse icon */}
           <svg
             width="20"
             height="30"
