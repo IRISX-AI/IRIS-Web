@@ -22,7 +22,6 @@ export default function InstallGuide() {
       <Header />
 
       <main className="max-w-7xl mx-auto px-6 relative z-10 pb-24">
-        {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -41,7 +40,6 @@ export default function InstallGuide() {
           </p>
         </motion.div>
 
-        {/* Global API Key Notice */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -73,7 +71,6 @@ export default function InstallGuide() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Desktop Installation Track */}
           <motion.section
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -154,7 +151,6 @@ export default function InstallGuide() {
             </a>
           </motion.section>
 
-          {/* CLI Installation Track */}
           <motion.section
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -182,7 +178,6 @@ export default function InstallGuide() {
                 </span>
               </div>
               <div className="p-4 h-[400px] overflow-y-auto custom-scrollbar">
-                {/* Your Custom Terminal Component */}
                 <Terminal
                   commands={[
                     "npm install -g iris-mini",
@@ -251,7 +246,6 @@ export default function InstallGuide() {
           </motion.section>
         </div>
 
-        {/* IRIS-X Mobile Announcement Card */}
         <motion.section
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
