@@ -9,6 +9,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa6";
 import { TextHoverEffect } from "./TextHoverEffect";
+import Link from "next/link";
 
 export default function Footer() {
   const containerVariants = {
@@ -113,9 +114,9 @@ export default function Footer() {
             <Activity size={16} className="text-[#10b981]" /> COMPANY
           </h5>
           {["Join Us", "Pricing", "Feedback"].map((link) => (
-            <a
+            <Link
               key={link}
-              href="#"
+              href={"/" + link.toLowerCase().replace(" ", "-")}
               className="group flex items-center text-gray-400 hover:text-white transition-colors w-max"
             >
               <span className="text-[#10b981] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 mr-2">
@@ -124,9 +125,9 @@ export default function Footer() {
               <span className="group-hover:translate-x-1 transition-transform duration-300">
                 {link}
               </span>
-            </a>
+            </Link>
           ))}
-          <a
+          {/* <a
             href="#"
             className="group flex items-center text-gray-400 hover:text-white transition-colors w-max mt-2"
           >
@@ -134,7 +135,7 @@ export default function Footer() {
               <FaWhatsapp size={16} />
             </span>
             <span>WhatsApp Community</span>
-          </a>
+          </a> */}
         </motion.div>
 
         <motion.div variants={itemVariants} className="flex flex-col gap-4">
