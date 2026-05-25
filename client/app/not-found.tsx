@@ -85,7 +85,6 @@ export default function NotFound() {
     return () => clearInterval(interval);
   }, []);
 
-  // ── GSAP Entrance Timeline ──
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
 
@@ -140,7 +139,6 @@ export default function NotFound() {
       );
   }, []);
 
-  // ── Canvas Constellation ──
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -194,7 +192,6 @@ export default function NotFound() {
         ctx.fill();
       });
 
-      // Neural connections
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -235,14 +232,11 @@ export default function NotFound() {
       onMouseMove={handleMouseMove}
       className="relative min-h-screen w-full bg-black overflow-hidden text-[#00ff41] selection:bg-[#00ff41] selection:text-black font-mono"
     >
-      {/* ── Canvas Layer ── */}
       <canvas ref={canvasRef} className="iris-canvas absolute inset-0 z-0 opacity-0" />
 
-      {/* ── Scanlines & Vignette ── */}
       <div className="absolute inset-0 z-10 pointer-events-none bg-[linear-linear(rgba(0,255,65,0.04)_1px,transparent_1px)] bg-size-[100%_3px]" />
       <div className="absolute inset-0 z-10 pointer-events-none bg-[radial-linear(circle_at_center,transparent_40%,rgba(0,0,0,0.8)_100%)]" />
 
-      {/* ── Dynamic Grid ── */}
       <div className="absolute inset-0 z-10 pointer-events-none">
         {[...Array(6)].map((_, i) => (
           <div
@@ -260,7 +254,6 @@ export default function NotFound() {
         ))}
       </div>
 
-      {/* ── Floating Tech Sigils ── */}
       <div className="absolute inset-0 z-10 pointer-events-none overflow-hidden">
         {[...Array(5)].map((_, i) => (
           <motion.div
@@ -287,7 +280,6 @@ export default function NotFound() {
         ))}
       </div>
 
-      {/* ── Cursor Follower (IRIS Eye) ── */}
       <motion.div
         className="pointer-events-none fixed z-30 mix-blend-screen"
         animate={{ x: coords.x - 40, y: coords.y - 40 }}
@@ -300,9 +292,7 @@ export default function NotFound() {
         </div>
       </motion.div>
 
-      {/* ── Main Content ── */}
       <div className="relative z-20 flex flex-col items-center justify-center min-h-screen px-4 py-20">
-        {/* Badge */}
         <motion.div
           initial={{ opacity: 0 }}
           className="iris-badge mb-10 flex items-center gap-3 px-5 py-2 rounded-full border border-[#00ff41]/40 bg-black/60 backdrop-blur-md shadow-[0_0_20px_rgba(0,255,65,0.1)]"
@@ -317,7 +307,6 @@ export default function NotFound() {
           </span>
         </motion.div>
 
-        {/* 404 Hologram */}
         <motion.div
           style={{ rotateX: rotX, rotateY: rotY, perspective: 1200 }}
           className="relative mb-8 cursor-default"
@@ -329,7 +318,6 @@ export default function NotFound() {
             {glitchText}
           </h1>
 
-          {/* Ghost layers for glitch depth */}
           <span
             aria-hidden
             className="absolute top-0 left-0 w-full text-center text-[7rem] sm:text-[9rem] md:text-[13rem] font-black leading-none tracking-tighter text-[#00ff41]/10 -translate-x-0.75 mix-blend-screen"
@@ -343,7 +331,6 @@ export default function NotFound() {
             404
           </span>
 
-          {/* Decorative brackets */}
           <div className="absolute -left-8 top-1/2 -translate-y-1/2 text-[#00ff41]/30 text-2xl hidden md:block">
             {"<<"}
           </div>
@@ -352,7 +339,6 @@ export default function NotFound() {
           </div>
         </motion.div>
 
-        {/* Status Line */}
         <div className="sub-status text-center mb-2">
           <p className="text-lg md:text-2xl font-bold tracking-[0.2em] uppercase text-[#00ff41]/90">
             SECTOR_NOT_FOUND
@@ -364,7 +350,6 @@ export default function NotFound() {
           <span className="tracking-widest uppercase">Neural Pathway Disconnected</span>
         </div>
 
-        {/* Diagnostic Panel */}
         <motion.div
           ref={diagRef}
           style={{ x: transX, y: transY }}
@@ -402,7 +387,6 @@ export default function NotFound() {
             ))}
           </div>
 
-          {/* Progress bar */}
           <div className="h-1 w-full bg-[#00ff41]/10">
             <motion.div
               className="h-full bg-linear-to-r from-[#00ff41] to-[#008f11]"
@@ -412,7 +396,6 @@ export default function NotFound() {
           </div>
         </motion.div>
 
-        {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-5 w-full max-w-md sm:max-w-none justify-center">
           <Link href="/" className="iris-btn block">
             <motion.button
@@ -442,13 +425,11 @@ export default function NotFound() {
         </div>
       </div>
 
-      {/* ── Corner Brackets ── */}
       <div className="corner-deco absolute top-6 left-6 w-24 h-24 border-l-2 border-t-2 border-[#00ff41]/40 z-20 pointer-events-none" />
       <div className="corner-deco absolute top-6 right-6 w-24 h-24 border-r-2 border-t-2 border-[#00ff41]/40 z-20 pointer-events-none" />
       <div className="corner-deco absolute bottom-6 left-6 w-24 h-24 border-l-2 border-b-2 border-[#00ff41]/40 z-20 pointer-events-none" />
       <div className="corner-deco absolute bottom-6 right-6 w-24 h-24 border-r-2 border-b-2 border-[#00ff41]/40 z-20 pointer-events-none" />
 
-      {/* ── Footer Telemetry ── */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -469,7 +450,6 @@ export default function NotFound() {
         <span>QUANTUM_LINK: SEVERED</span>
       </motion.div>
 
-      {/* ── Data Rain Overlay (subtle) ── */}
       <div className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none overflow-hidden opacity-[0.03]">
         {[...Array(10)].map((_, i) => (
           <motion.div
