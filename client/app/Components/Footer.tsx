@@ -6,7 +6,7 @@ import {
   FaXTwitter,
   FaInstagram,
   FaLinkedin,
-  FaWhatsapp,
+  // FaWhatsapp,
 } from "react-icons/fa6";
 import { TextHoverEffect } from "./TextHoverEffect";
 import Link from "next/link";
