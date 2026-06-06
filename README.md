@@ -5,16 +5,16 @@
 ## The Autonomous Neural OS Agent
 
 <div style="display: flex; justify-center; gap: 10px; margin-bottom: 20px;">
-  <a href="https://github.com/201Harsh/IRIS-AI/stargazers">
+  <a href="https://github.com/IRISX-AI/IRIS-AI/stargazers">
     <img src="https://img.shields.io/github/stars/201Harsh/IRIS-AI?style=for-the-badge&color=10b981&logo=github&logoColor=white" alt="GitHub stars">
   </a>
-  <a href="https://github.com/201Harsh/IRIS-AI/network/members">
+  <a href="https://github.com/IRISX-AI/IRIS-AI/network/members">
     <img src="https://img.shields.io/github/forks/201Harsh/IRIS-AI?style=for-the-badge&color=10b981&logo=git&logoColor=white" alt="GitHub forks">
   </a>
-  <a href="https://github.com/201Harsh/IRIS-AI/graphs/contributors">
+  <a href="https://github.com/IRISX-AI/IRIS-AI/graphs/contributors">
     <img src="https://img.shields.io/github/contributors/201Harsh/IRIS-AI?style=for-the-badge&color=10b981&logo=users&logoColor=white" alt="Contributors">
   </a>
-  <a href="https://github.com/201Harsh/IRIS-AI/releases">
+  <a href="https://github.com/IRISX-AI/IRIS-AI/releases">
     <img src="https://img.shields.io/github/downloads/201Harsh/IRIS-AI/total?style=for-the-badge&color=10b981&logo=download&logoColor=white" alt="Downloads">
   </a>
 </div>
@@ -234,7 +234,7 @@ IRIS is forged using a high-performance stack combining web technologies with de
 ### 1. Clone Repo
 
 ```bash
-git clone https://github.com/201Harsh/IRIS-AI.git
+git clone https://github.com/IRISX-AI/IRIS-AI.git
 cd IRIS-AI
 ```
 
@@ -398,7 +398,7 @@ Use responsibly. The maintainers are not liable for misuse.
 AI Systems Engineer
 
 Instagram: [@201Harshs](https://www.instagram.com/201harshs/)
-GitHub: [@201Harsh](https://github.com/201Harsh)
+GitHub: [@201Harsh](https://github.com/IRISX-AI)
 
 ---
 

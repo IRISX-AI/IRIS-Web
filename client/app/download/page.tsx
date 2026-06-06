@@ -37,7 +37,7 @@ export default function DownloadPage() {
       if (counter <= 0) {
         clearInterval(interval);
         window.location.href =
-          "https://github.com/201Harsh/IRIS-AI/releases/download/v1.3.0/iris-ai-1.3.0-setup.exe";
+          "https://github.com/IRISX-AI/IRIS-AI/releases/download/v1.3.0/iris-ai-1.3.0-setup.exe";
         setTimeout(() => setShowWarning(false), 5000);
       }
     }, 1000);

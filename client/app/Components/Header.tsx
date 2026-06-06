@@ -81,7 +81,7 @@ const Header = () => {
 
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com/201Harsh"
+            href="https://github.com/IRISX-AI"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:flex text-zinc-400 hover:text-[#10b981] transition-colors"
@@ -162,7 +162,7 @@ const Header = () => {
 
               <div className="mt-auto pt-8 flex flex-col gap-6">
                 <a
-                  href="https://github.com/201Harsh"
+                  href="https://github.com/IRISX-AI"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 text-zinc-400 hover:text-[#10b981] transition-colors"

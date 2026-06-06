@@ -223,7 +223,7 @@ No external key storage
 INSTALLATION & SETUP
 
 Step 1. Clone Repo
-git clone https://github.com/201Harsh/IRIS-AI.git
+git clone https://github.com/IRISX-AI/IRIS-AI.git
 cd IRIS-AI
 
 Step 2. Environment Setup
@@ -325,7 +325,7 @@ Harsh Pandey
 AI Systems Engineer
 
 Instagram: @201Harshs (https://www.instagram.com/201harshs/)
-GitHub: @201Harsh (https://github.com/201Harsh)
+GitHub: @201Harsh (https://github.com/IRISX-AI)
 
 LICENSE
 

@@ -232,7 +232,7 @@ export default function InstallGuide() {
                       "[ EXIT ]     Press Ctrl + C to stop",
                       "========================================================",
                       "CREATED BY  Harsh (@irisxai)",
-                      "GITHUB      https://github.com/201Harsh",
+                      "GITHUB      https://github.com/IRISX-AI",
                       "INSTAGRAM   https://www.instagram.com/201harshs/",
                       "========================================================",
                     ],
