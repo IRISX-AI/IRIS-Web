@@ -74,7 +74,7 @@ export default function IrisHero({
                 "0 0 8px rgba(0,0,0,1), 0 0 16px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,0.9)",
             }}
           >
-            Integrated Responsive Intelligence System
+            Your High-Performance Desktop Assistant
           </p>
 
           <p
@@ -83,12 +83,11 @@ export default function IrisHero({
               textShadow: "0 1px 8px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.95)",
             }}
           >
-            Your device. Fully under command.{" "}
-            <span className="text-[#a7f3d0] font-bold">Speak once</span> — IRIS
-            handles the rest. From files and apps to browser and beyond,{" "}
-            <span className="text-white font-bold">
-              real-time, zero friction.
-            </span>
+            Command your PC completely hands-free.{" "}
+            <span className="text-[#a7f3d0] font-bold">Speak naturally</span>{" "}
+            and let IRIS manage your files, analyze your screen, and control
+            your applications with{" "}
+            <span className="text-white font-bold">zero friction.</span>
           </p>
 
           <div className="flex items-center gap-3 mt-6 mb-10">
@@ -102,15 +101,15 @@ export default function IrisHero({
               className="text-[11px] font-mono text-white tracking-widest uppercase font-semibold"
               style={{ textShadow: "0 0 10px rgba(0,0,0,1)" }}
             >
-              Voice-native AI
+              Native Voice Control
             </span>
           </div>
 
           <div className="flex md:flex-row flex-col justify-center items-center gap-5 w-full sm:w-auto">
             <Link href="/download">
               <MagneticButton
-                title="Download IRIS"
-                subtitle="Get the App"
+                title="Download for Windows"
+                subtitle="Get Early Access"
                 iconLeft={<Command className="w-6 h-6" />}
                 iconRight={
                   <Download className="w-5 h-5 text-current group-hover:text-[#10b981]" />
@@ -121,7 +120,7 @@ export default function IrisHero({
 
             <Link href="/how-to-install">
               <MagneticButton
-                title="How to Install"
+                title="Installation Guide"
                 subtitle="Watch Tutorial"
                 iconLeft={<FileCode2 className="w-6 h-6 text-[#10b981]" />}
                 iconRight={
@@ -134,10 +133,10 @@ export default function IrisHero({
 
           <div className="flex items-center gap-3 mt-10 flex-wrap justify-center">
             {[
-              { label: "Latency", value: "<1.5s" },
-              { label: "Context", value: "128k+" },
-              { label: "Uptime", value: "24/7" },
-              { label: "Local AI", value: "On-device" },
+              { label: "Wake Word", value: "Offline" },
+              { label: "Execution", value: "Real-Time" },
+              { label: "Integration", value: "Native OS" },
+              { label: "Memory", value: "Persistent" },
             ].map(({ label, value }) => (
               <div
                 key={label}
