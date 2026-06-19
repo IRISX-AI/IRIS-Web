@@ -11,12 +11,12 @@ export function ImageComparisonHover() {
       enableHover
     >
       <ImageComparisonImage
-        src="/mp_dark.png"
+        src="/img/screen.png"
         alt="Motion Primitives Dark"
         position="left"
       />
       <ImageComparisonImage
-        src="/mp_light.png"
+        src="/iris.png"
         alt="Motion Primitives Light"
         position="right"
       />
