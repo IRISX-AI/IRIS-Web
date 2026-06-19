@@ -315,8 +315,25 @@ const IRIS = () => {
           </div>
         </section>
 
-        <section className="min-h-screen bg-black flex flex-col items-center pt-32 relative overflow-hidden font-sans">
-          <IRISCompare />
+        <section className="min-h-screen bg-black flex flex-col items-center pt-24 pb-20 relative overflow-hidden font-sans px-4">
+          <div className="text-center z-20 flex flex-col items-center mb-12">
+            <h1
+              className="text-5xl md:text-7xl font-bold tracking-tight bg-[url('/img/bright-neon-bg.png')] bg-cover bg-center bg-clip-text text-transparent mb-4 select-none"
+              style={{
+                filter: "drop-shadow(0px 0px 15px rgba(57, 255, 20, 0.8))",
+              }}
+            >
+              Rewritten for Speed.
+            </h1>
+            <h2 className="text-xl md:text-2xl text-gray-300 font-normal tracking-tight max-w-3xl">
+              v1.3 was a buggy prototype. The new engine is instantaneous,
+              stable, and completely native.
+            </h2>
+          </div>
+
+          <div className="w-full max-w-6xl relative z-10">
+            <IRISCompare />
+          </div>
         </section>
 
         <section className="w-full px-6 md:px-0 py-12 relative overflow-hidden flex flex-col items-center z-20">
