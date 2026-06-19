@@ -84,7 +84,7 @@ const BentoCard = ({
 );
 
 // ── 2. The Absolute Cinematic Background ──
-// This frames the screenshots and ensures text readability using a deep gradient.
+// This frames the screenshots and ensures text readability using a deep linear.
 const ImageHeader = ({ src, alt }: { src: string; alt: string }) => {
   return (
     <div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden">
@@ -95,7 +95,7 @@ const ImageHeader = ({ src, alt }: { src: string; alt: string }) => {
         className="object-cover object-top opacity-40 group-hover:opacity-70 transition-all duration-700 group-hover:scale-105"
         unoptimized
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-black via-black/80 to-transparent" />
     </div>
   );
 };
@@ -187,7 +187,7 @@ export default function SystemsSection() {
       id="systems"
       className="min-h-screen w-full px-6 md:px-20 py-32 flex flex-col justify-center relative overflow-hidden bg-black dark"
     >
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#10b981]/5 rounded-full blur-[120px] pointer-events-none opacity-50" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-200 h-200 bg-[#10b981]/5 rounded-full blur-[120px] pointer-events-none opacity-50" />
 
       <div className="w-full max-w-7xl mx-auto flex flex-col gap-16 relative z-10">
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-4 px-4 relative z-10">
