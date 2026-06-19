@@ -9,34 +9,30 @@ import {
 import { BentoGrid, BentoGridItem } from "../core/bento-grid";
 import Image from "next/image";
 
-const Skeleton = ({
-  glowPosition,
-}: {
-  glowPosition: "left" | "right" | "center";
-}) => {
-  const positionClass =
-    glowPosition === "left"
-      ? "justify-start"
-      : glowPosition === "right"
-        ? "justify-end"
-        : "justify-center";
-
+// ── 1. The Premium Image Container ──
+// This perfectly frames your screenshots and adds a dark cinematic fade to the bottom
+const ImageHeader = ({ src, alt }: { src: string; alt: string }) => {
   return (
-    <div
-      className={`flex flex-1 w-full h-full min-h-24 rounded-xl bg-black/40 border border-white/10 overflow-hidden relative items-center ${positionClass}`}
-    >
-      <div className="absolute w-32 h-32 bg-[#10b981]/20 rounded-full blur-3xl animate-pulse" />
-      <div className="w-full h-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[14px_24px] mask-[radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+    <div className="flex flex-1 w-full h-full min-h-[8rem] rounded-xl overflow-hidden relative border border-white/5 group-hover/bento:border-[#10b981]/50 transition-colors duration-300">
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-cover object-top opacity-80 group-hover/bento:opacity-100 transition-all duration-500 group-hover/bento:scale-105"
+        unoptimized
+      />
+      {/* Cinematic shadow gradient so it blends with the dark card */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none" />
     </div>
   );
 };
 
+// ── 2. The Hardcore Features Array (Now with Images) ──
 const items = [
   {
     title: "Deep System & File Execution",
     description:
       "Total file system access. IRIS creates folders, reads code files, executes terminal scripts, and manages your local drives without lifting a finger.",
-    header: <Image src='/iris/png' height={1000} width={1000}/>,
     icon: <Terminal className="h-5 w-5 text-[#10b981]" />,
     className: "md:col-span-2 border-white/10 hover:border-[#10b981]/50",
   },
@@ -44,7 +40,7 @@ const items = [
     title: "WhatsApp Automation",
     description:
       "Bypass the browser. Schedule and dispatch WhatsApp messages and emails autonomously via background services.",
-    header: <Skeleton glowPosition="right" />,
+
     icon: <MessageSquare className="h-5 w-5 text-[#10b981]" />,
     className: "md:col-span-1 border-white/10 hover:border-[#10b981]/50",
   },
@@ -52,7 +48,6 @@ const items = [
     title: "Mobile Telekinesis",
     description:
       "Absolute Android integration. Read incoming notifications, push files, launch apps, and trigger remote swipes directly from your PC.",
-    header: <Skeleton glowPosition="left" />,
     icon: <Smartphone className="h-5 w-5 text-[#10b981]" />,
     className: "md:col-span-1 border-white/10 hover:border-[#10b981]/50",
   },
@@ -60,7 +55,6 @@ const items = [
     title: "Autonomous Deep Research",
     description:
       "Deploys autonomous crawlers to scrape live web data, digest massive documentation, and synthesize full reports directly into your workspace.",
-    header: <Skeleton glowPosition="center" />,
     icon: <Globe className="h-5 w-5 text-[#10b981]" />,
     className: "md:col-span-2 border-white/10 hover:border-[#10b981]/50",
   },
@@ -68,7 +62,6 @@ const items = [
     title: "Live Web & Browser Control",
     description:
       "Hack the DOM. IRIS manipulates live websites, extracts visual UI into raw code, and generates Tailwind components on the fly.",
-    header: <Skeleton glowPosition="center" />,
     icon: <Code className="h-5 w-5 text-[#10b981]" />,
     className: "md:col-span-2 border-white/10 hover:border-[#10b981]/50",
   },
@@ -76,19 +69,20 @@ const items = [
     title: "Screen Peeling & Optics",
     description:
       "IRIS sees your monitor. It extracts text via OCR, targets UI coordinates, and injects phantom keystrokes system-wide.",
-    header: <Skeleton glowPosition="left" />,
     icon: <ScanLine className="h-5 w-5 text-[#10b981]" />,
     className: "md:col-span-1 border-white/10 hover:border-[#10b981]/50",
   },
 ];
 
+// ── 3. The Main Section Wrapper ──
 export default function SystemsSection() {
   return (
     <section
       id="systems"
       className="min-h-screen w-full px-6 md:px-20 py-32 flex flex-col justify-center relative overflow-hidden bg-black"
     >
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-200 h-200 bg-[#10b981]/5 rounded-full blur-[120px] pointer-events-none opacity-50" />
+      {/* Subtle Background Glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#10b981]/5 rounded-full blur-[120px] pointer-events-none opacity-50" />
 
       <div className="w-full max-w-7xl mx-auto flex flex-col gap-16 relative z-10">
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-4 px-4 relative z-10">
@@ -113,6 +107,7 @@ export default function SystemsSection() {
           </p>
         </div>
 
+        {/* The Bento Grid Rendering */}
         <BentoGrid className="max-w-6xl mx-auto w-full">
           {items.map((item, i) => (
             <BentoGridItem
