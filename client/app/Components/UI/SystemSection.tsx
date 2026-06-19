@@ -117,7 +117,7 @@ const items = [
     description:
       "Bypass the browser. Schedule and dispatch WhatsApp messages autonomously.",
     background: (
-      <ImageHeader src="/bento/bento-whatsapp.png" alt="WhatsApp Automation" />
+      <ImageHeader src="/bento/whatsapp.png" alt="WhatsApp Automation" />
     ),
     Icon: MessageSquare,
     href: "#",
