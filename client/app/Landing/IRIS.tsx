@@ -28,6 +28,7 @@ import { TbBrandSocketIo } from "react-icons/tb";
 import IrisHero from "../Components/UI/IrisHero";
 import { MacbookScroll } from "../constants/MacbookScroll";
 import { ContainerScroll } from "../constants/ContainerScroll";
+import { IRISCompare } from "../Components/UI/IRISCompare";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -312,6 +313,10 @@ const IRIS = () => {
               </div>
             </div>
           </div>
+        </section>
+
+        <section className="min-h-screen bg-black flex flex-col items-center pt-32 relative overflow-hidden font-sans">
+          <IRISCompare />
         </section>
 
         <section className="w-full px-6 md:px-0 py-12 relative overflow-hidden flex flex-col items-center z-20">

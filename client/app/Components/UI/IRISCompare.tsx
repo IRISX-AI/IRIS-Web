@@ -4,7 +4,7 @@ import {
   ImageComparisonSlider,
 } from "../core/ImageComparsion";
 
-export function ImageComparisonHover() {
+export function IRISCompare() {
   return (
     <ImageComparison
       className="aspect-16/10 w-full rounded-lg border border-zinc-200 dark:border-zinc-800"
