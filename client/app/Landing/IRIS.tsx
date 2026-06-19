@@ -230,7 +230,7 @@ const IRIS = () => {
                 />
               </a>
             }
-            src={`/img/screen.png`}
+            src={`/iris.png`}
             showGradient={false}
           />
         </section>
