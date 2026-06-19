@@ -29,6 +29,7 @@ import IrisHero from "../Components/UI/IrisHero";
 import { MacbookScroll } from "../constants/MacbookScroll";
 import { ContainerScroll } from "../constants/ContainerScroll";
 import { IRISCompare } from "../Components/UI/IRISCompare";
+import SystemsSection from "../Components/UI/SystemSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -387,19 +388,7 @@ const IRIS = () => {
             </div>
 
             <div className="w-full">
-              <MagicBento
-                textAutoHide={true}
-                enableStars
-                enableSpotlight
-                enableBorderGlow={true}
-                enableTilt
-                enableMagnetism={false}
-                clickEffect
-                spotlightRadius={300}
-                particleCount={12}
-                glowColor="16, 185, 129"
-                disableAnimations={false}
-              />
+              <SystemsSection />
             </div>
           </div>
         </section>
