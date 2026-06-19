@@ -232,10 +232,10 @@ const IRIS = () => {
                   "drop-shadow(0px 0px 15px rgba(57, 255, 20, 1)) drop-shadow(0px 0px 50px rgba(57, 255, 20, 0.8))",
               }}
             >
-              Meet IRIS AI
+              Built to Execute.
             </h1>
             <h2 className="text-2xl md:text-4xl lg:text-5xl text-gray-100 font-normal tracking-tight">
-              The Agentic Assistant Built for the Future
+              Lightning-fast voice response and massive context memory.
             </h2>
           </div>
           <div className="absolute left-6 sm:left-44 top-52 sm:top-90 w-24 sm:w-64 h-auto pointer-events-none">
@@ -272,25 +272,25 @@ const IRIS = () => {
             <div className="flex gap-4 sm:gap-6 relative">
               <div className="flex flex-col items-center justify-center w-28 h-28 sm:w-46 sm:h-46 rounded-3xl sm:rounded-4xl border border-[#10b981] bg-black/60 shadow-[0_0_20px_rgba(16,185,129,0.2)] backdrop-blur-md">
                 <span className="text-4xl sm:text-6xl font-bold text-transparent bg-clip-text bg-linear-to-b from-[#4ADE80] to-[#14532D]">
-                  24/7
+                  IRIS
                 </span>
                 <span className="text-[#10b981] text-sm sm:text-xl font-medium mt-1">
-                  Autonomous
+                  Wake Word
                 </span>
               </div>
 
               <div className="flex flex-col items-center justify-center w-28 h-28 sm:w-46 sm:h-46 rounded-3xl sm:rounded-4xl border border-[#10b981] bg-black/60 shadow-[0_0_20px_rgba(16,185,129,0.2)] backdrop-blur-md">
                 <span className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-linear-to-b from-[#4ADE80] to-[#14532D]">
-                  &lt;1.5s
+                  &lt;1s
                 </span>
                 <span className="text-[#10b981] text-sm sm:text-xl font-medium mt-1">
-                  Latency
+                  Voice Latency
                 </span>
               </div>
 
               <div className="flex flex-col items-center justify-center w-28 h-28 sm:w-46 sm:h-46 rounded-3xl sm:rounded-4xl border border-[#10b981] bg-black/60 shadow-[0_0_20px_rgba(16,185,129,0.2)] backdrop-blur-md">
                 <span className="text-4xl sm:text-6xl font-bold text-transparent bg-clip-text bg-linear-to-b from-[#4ADE80] to-[#14532D]">
-                  128K+
+                  1M+
                 </span>
                 <span className="text-[#10b981] text-sm sm:text-xl font-medium mt-1">
                   Context Window
