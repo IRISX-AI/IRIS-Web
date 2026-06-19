@@ -6,82 +6,187 @@ import {
   Code,
   ScanLine,
 } from "lucide-react";
-import { BentoGrid, BentoGridItem } from "../core/bento-grid";
 import Image from "next/image";
+import { type ComponentPropsWithoutRef, type ReactNode } from "react";
+import { cn } from "@/app/lib/utils"; // Ensure this path is correct
 
-// ── 1. The Premium Image Container ──
-// This perfectly frames your screenshots and adds a dark cinematic fade to the bottom
-const ImageHeader = ({ src, alt }: { src: string; alt: string }) => {
+// ── 1. The Modern Bento Components ──
+interface BentoGridProps extends ComponentPropsWithoutRef<"div"> {
+  children: ReactNode;
+  className?: string;
+}
+
+interface BentoCardProps extends ComponentPropsWithoutRef<"div"> {
+  name: string;
+  className: string;
+  background: ReactNode;
+  Icon: React.ElementType;
+  description: string;
+  href: string;
+  cta: string;
+}
+
+const BentoGrid = ({ children, className, ...props }: BentoGridProps) => {
   return (
-    <div className="flex flex-1 w-full h-full min-h-[8rem] rounded-xl overflow-hidden relative border border-white/5 group-hover/bento:border-[#10b981]/50 transition-colors duration-300">
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        className="object-cover object-top opacity-80 group-hover/bento:opacity-100 transition-all duration-500 group-hover/bento:scale-105"
-        unoptimized
-      />
-      {/* Cinematic shadow gradient so it blends with the dark card */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none" />
+    <div
+      className={cn(
+        "grid w-full auto-rows-[22rem] grid-cols-3 gap-4",
+        className,
+      )}
+      {...props}
+    >
+      {children}
     </div>
   );
 };
 
-// ── 2. The Hardcore Features Array (Now with Images) ──
+const BentoCard = ({
+  name,
+  className,
+  background,
+  Icon,
+  description,
+  href,
+  cta,
+  ...props
+}: BentoCardProps) => (
+  <div
+    key={name}
+    className={cn(
+      "group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl",
+      // light styles
+      "bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
+      // dark styles
+      "dark:bg-black transform-gpu dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] dark:[border:1px_solid_rgba(255,255,255,.1)]",
+      className,
+    )}
+    {...props}
+  >
+    {/* Background sits absolutely behind the content */}
+    <div>{background}</div>
+
+    {/* Content Area */}
+    <div className="p-6 relative z-10 flex flex-col h-full justify-end">
+      <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-2 transition-all duration-300 lg:group-hover:-translate-y-4">
+        {/* Enforced Emerald icon color in dark mode */}
+        <Icon className="h-10 w-10 origin-left transform-gpu text-neutral-700 dark:text-[#10b981] transition-all duration-300 ease-in-out group-hover:scale-75" />
+        <h3 className="text-xl font-bold text-neutral-700 dark:text-white tracking-tight">
+          {name}
+        </h3>
+        <p className="max-w-lg text-neutral-400 font-mono text-sm leading-relaxed">
+          {description}
+        </p>
+      </div>
+    </div>
+
+    <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/3 group-hover:dark:bg-neutral-800/10" />
+  </div>
+);
+
+// ── 2. The Absolute Cinematic Background ──
+// This frames the screenshots and ensures text readability using a deep gradient.
+const ImageHeader = ({ src, alt }: { src: string; alt: string }) => {
+  return (
+    <div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden">
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-cover object-top opacity-40 group-hover:opacity-70 transition-all duration-700 group-hover:scale-105"
+        unoptimized
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
+    </div>
+  );
+};
+
+// ── 3. The Features Array (Adapted for Modern Props) ──
 const items = [
   {
-    title: "Deep System & File Execution",
+    name: "Deep System & File Execution",
     description:
       "Total file system access. IRIS creates folders, reads code files, executes terminal scripts, and manages your local drives without lifting a finger.",
-    icon: <Terminal className="h-5 w-5 text-[#10b981]" />,
-    className: "md:col-span-2 border-white/10 hover:border-[#10b981]/50",
+    background: (
+      <ImageHeader src="/img/bento-files.png" alt="Terminal Execution" />
+    ),
+    Icon: Terminal, // Passed as a reference, not JSX
+    href: "#",
+    cta: "View Module",
+    className:
+      "md:col-span-2 border-white/5 hover:border-[#10b981]/50 bg-black",
   },
   {
-    title: "WhatsApp Automation",
+    name: "WhatsApp Automation",
     description:
-      "Bypass the browser. Schedule and dispatch WhatsApp messages and emails autonomously via background services.",
-
-    icon: <MessageSquare className="h-5 w-5 text-[#10b981]" />,
-    className: "md:col-span-1 border-white/10 hover:border-[#10b981]/50",
+      "Bypass the browser. Schedule and dispatch WhatsApp messages autonomously.",
+    background: (
+      <ImageHeader src="/img/bento-whatsapp.png" alt="WhatsApp Automation" />
+    ),
+    Icon: MessageSquare,
+    href: "#",
+    cta: "View Module",
+    className:
+      "md:col-span-1 border-white/5 hover:border-[#10b981]/50 bg-black",
   },
   {
-    title: "Mobile Telekinesis",
+    name: "Mobile Telekinesis",
     description:
-      "Absolute Android integration. Read incoming notifications, push files, launch apps, and trigger remote swipes directly from your PC.",
-    icon: <Smartphone className="h-5 w-5 text-[#10b981]" />,
-    className: "md:col-span-1 border-white/10 hover:border-[#10b981]/50",
+      "Absolute Android integration. Read incoming notifications, push files, and launch apps directly from your PC.",
+    background: <ImageHeader src="/img/bento-mobile.png" alt="Mobile Link" />,
+    Icon: Smartphone,
+    href: "#",
+    cta: "View Module",
+    className:
+      "md:col-span-1 border-white/5 hover:border-[#10b981]/50 bg-black",
   },
   {
-    title: "Autonomous Deep Research",
+    name: "Autonomous Deep Research",
     description:
-      "Deploys autonomous crawlers to scrape live web data, digest massive documentation, and synthesize full reports directly into your workspace.",
-    icon: <Globe className="h-5 w-5 text-[#10b981]" />,
-    className: "md:col-span-2 border-white/10 hover:border-[#10b981]/50",
+      "Deploys crawlers to scrape live web data, digest documentation, and synthesize full reports directly into your workspace.",
+    background: (
+      <ImageHeader src="/img/bento-research.png" alt="Deep RAG Search" />
+    ),
+    Icon: Globe,
+    href: "#",
+    cta: "View Module",
+    className:
+      "md:col-span-2 border-white/5 hover:border-[#10b981]/50 bg-black",
   },
   {
-    title: "Live Web & Browser Control",
+    name: "Live Web & Browser Control",
     description:
-      "Hack the DOM. IRIS manipulates live websites, extracts visual UI into raw code, and generates Tailwind components on the fly.",
-    icon: <Code className="h-5 w-5 text-[#10b981]" />,
-    className: "md:col-span-2 border-white/10 hover:border-[#10b981]/50",
+      "Hack the DOM. IRIS manipulates live websites, extracts visual UI into raw code, and generates Tailwind on the fly.",
+    background: (
+      <ImageHeader src="/img/bento-browser.png" alt="Live DOM Hacking" />
+    ),
+    Icon: Code,
+    href: "#",
+    cta: "View Module",
+    className:
+      "md:col-span-2 border-white/5 hover:border-[#10b981]/50 bg-black",
   },
   {
-    title: "Screen Peeling & Optics",
+    name: "Screen Peeling & Optics",
     description:
-      "IRIS sees your monitor. It extracts text via OCR, targets UI coordinates, and injects phantom keystrokes system-wide.",
-    icon: <ScanLine className="h-5 w-5 text-[#10b981]" />,
-    className: "md:col-span-1 border-white/10 hover:border-[#10b981]/50",
+      "IRIS sees your monitor. It targets UI coordinates, reads OCR text, and injects phantom keystrokes system-wide.",
+    background: (
+      <ImageHeader src="/img/bento-optics.png" alt="Screen Peeling" />
+    ),
+    Icon: ScanLine,
+    href: "#",
+    cta: "View Module",
+    className:
+      "md:col-span-1 border-white/5 hover:border-[#10b981]/50 bg-black",
   },
 ];
 
-// ── 3. The Main Section Wrapper ──
+// ── 4. The Main Section ──
 export default function SystemsSection() {
   return (
     <section
       id="systems"
-      className="min-h-screen w-full px-6 md:px-20 py-32 flex flex-col justify-center relative overflow-hidden bg-black"
+      className="min-h-screen w-full px-6 md:px-20 py-32 flex flex-col justify-center relative overflow-hidden bg-black dark"
     >
-      {/* Subtle Background Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#10b981]/5 rounded-full blur-[120px] pointer-events-none opacity-50" />
 
       <div className="w-full max-w-7xl mx-auto flex flex-col gap-16 relative z-10">
@@ -107,15 +212,16 @@ export default function SystemsSection() {
           </p>
         </div>
 
-        {/* The Bento Grid Rendering */}
         <BentoGrid className="max-w-6xl mx-auto w-full">
           {items.map((item, i) => (
-            <BentoGridItem
+            <BentoCard
               key={i}
-              title={item.title}
+              name={item.name}
               description={item.description}
-              header={item.header}
-              icon={item.icon}
+              background={item.background}
+              Icon={item.Icon}
+              href={item.href}
+              cta={item.cta}
               className={item.className}
             />
           ))}
