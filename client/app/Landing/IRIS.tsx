@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "../Components/Header";
 import { useRef, useState, useEffect } from "react";
 import Footer from "../Components/Footer";
-import MagicBento from "../utils/MagicBento";
 import Image from "next/image";
 import LogoLoop from "../utils/LogoLoop";
 import {
@@ -20,6 +19,14 @@ import {
   SiFramer,
   SiOllama,
 } from "react-icons/si";
+import {
+  Terminal,
+  Eye,
+  Smartphone,
+  Database,
+  Zap,
+  ShieldAlert,
+} from "lucide-react";
 import { FaYahoo } from "react-icons/fa6";
 import { PiOpenAiLogo } from "react-icons/pi";
 import { RiGeminiFill } from "react-icons/ri";
@@ -354,13 +361,15 @@ const IRIS = () => {
 
         <section
           id="systems"
-          className="min-h-screen w-full px-6 md:px-20 py-32 border-b border-white/5 flex flex-col justify-center relative overflow-hidden"
+          className="min-h-screen w-full px-6 md:px-20 py-32 border-b border-white/5 flex flex-col justify-center relative overflow-hidden bg-black"
         >
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-200 h-200 bg-[#10b981]/5 rounded-full blur-[120px] pointer-events-none opacity-50" />
+          {/* Subtle Background Glow */}
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#10b981]/5 rounded-full blur-[120px] pointer-events-none opacity-50" />
 
           <div className="w-full max-w-7xl mx-auto flex flex-col gap-16 relative z-10">
-            <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 px-4 relative z-10">
-              <div className="inline-flex items-center gap-3 px-4 py-1.5 mb-6 border border-[#10b981]/20 bg-[#10b981]/5 shadow-[0_0_15px_rgba(16,185,129,0.05)]">
+            {/* Header Area */}
+            <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-8 px-4 relative z-10">
+              <div className="inline-flex items-center gap-3 px-4 py-1.5 mb-6 border border-[#10b981]/20 bg-[#10b981]/5 shadow-[0_0_15px_rgba(16,185,129,0.05)] rounded-sm">
                 <span className="w-1.5 h-1.5 bg-[#10b981] animate-pulse rounded-full"></span>
                 <span className="text-[#10b981] font-mono text-[10px] md:text-xs tracking-[0.4em] uppercase font-bold">
                   IRIS_OS // ACTIVE_MODULES
@@ -374,32 +383,123 @@ const IRIS = () => {
                 </span>
               </h2>
 
-              <p className="text-gray-400 text-sm md:text-base leading-relaxed font-mono drop-shadow-md">
-                IRIS is not a chatbot; it is a deep-system neural extension. By
-                weaponizing{" "}
-                <span className="text-white font-bold">
-                  kernel-level execution hooks
-                </span>
-                , autonomous keystroke injection, and a persistent memory
-                matrix, IRIS bridges the gap between human thought and OS
-                execution.
+              {/* Clean, Factual Subtext */}
+              <p className="text-gray-400 text-sm md:text-lg leading-relaxed font-sans tracking-tight">
+                IRIS hooks directly into your operating system. It reads your
+                screen, controls your file system, automates your terminal, and
+                commands your mobile device. No wrappers. Just raw execution.
               </p>
             </div>
 
-            <div className="w-full">
-              <MagicBento
-                textAutoHide={true}
-                enableStars
-                enableSpotlight
-                enableBorderGlow={true}
-                enableTilt
-                enableMagnetism={false}
-                clickEffect
-                spotlightRadius={300}
-                particleCount={12}
-                glowColor="16, 185, 129"
-                disableAnimations={false}
-              />
+            {/* The Power Grid (Replacing MagicBento) */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-20">
+              {/* Card 1: Vision & UI */}
+              <div className="group relative p-8 rounded-2xl bg-zinc-950/80 border border-white/5 hover:border-[#10b981]/50 transition-all duration-500 overflow-hidden backdrop-blur-sm">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#10b981]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative z-10 flex flex-col gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-black border border-white/10 flex items-center justify-center group-hover:border-[#10b981]/50 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.4)] transition-all">
+                    <Eye className="w-6 h-6 text-[#10b981]" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white tracking-tight">
+                    Live Screen Optics
+                  </h3>
+                  <p className="text-sm text-gray-400 leading-relaxed font-mono">
+                    Seamless visual extraction. IRIS reads your screen, targets
+                    specific UI coordinates, and executes Phantom Typing
+                    directly into your active IDE or browser.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 2: Native OS */}
+              <div className="group relative p-8 rounded-2xl bg-zinc-950/80 border border-white/5 hover:border-[#10b981]/50 transition-all duration-500 overflow-hidden backdrop-blur-sm">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#10b981]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative z-10 flex flex-col gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-black border border-white/10 flex items-center justify-center group-hover:border-[#10b981]/50 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.4)] transition-all">
+                    <Terminal className="w-6 h-6 text-[#10b981]" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white tracking-tight">
+                    Native OS Execution
+                  </h3>
+                  <p className="text-sm text-gray-400 leading-relaxed font-mono">
+                    Total local control. Build files, run terminal sequences,
+                    generate directory structures, and deploy localhost
+                    wormholes without lifting a finger.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 3: Mobile Telekinesis */}
+              <div className="group relative p-8 rounded-2xl bg-zinc-950/80 border border-white/5 hover:border-[#10b981]/50 transition-all duration-500 overflow-hidden backdrop-blur-sm">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#10b981]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative z-10 flex flex-col gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-black border border-white/10 flex items-center justify-center group-hover:border-[#10b981]/50 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.4)] transition-all">
+                    <Smartphone className="w-6 h-6 text-[#10b981]" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white tracking-tight">
+                    Mobile Telekinesis
+                  </h3>
+                  <p className="text-sm text-gray-400 leading-relaxed font-mono">
+                    Deep Android integration. Read incoming notifications, pull
+                    files, launch apps, and execute remote swipes on your phone
+                    directly from your desktop.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 4: Local RAG */}
+              <div className="group relative p-8 rounded-2xl bg-zinc-950/80 border border-white/5 hover:border-[#10b981]/50 transition-all duration-500 overflow-hidden backdrop-blur-sm">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#10b981]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative z-10 flex flex-col gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-black border border-white/10 flex items-center justify-center group-hover:border-[#10b981]/50 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.4)] transition-all">
+                    <Database className="w-6 h-6 text-[#10b981]" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white tracking-tight">
+                    Local Knowledge & RAG
+                  </h3>
+                  <p className="text-sm text-gray-400 leading-relaxed font-mono">
+                    Instant vector retrieval. IRIS indexes your local codebase
+                    and syncs with your Notion databases for deep, context-aware
+                    memory extraction.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 5: Automation */}
+              <div className="group relative p-8 rounded-2xl bg-zinc-950/80 border border-white/5 hover:border-[#10b981]/50 transition-all duration-500 overflow-hidden backdrop-blur-sm">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#10b981]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative z-10 flex flex-col gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-black border border-white/10 flex items-center justify-center group-hover:border-[#10b981]/50 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.4)] transition-all">
+                    <Zap className="w-6 h-6 text-[#10b981]" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white tracking-tight">
+                    Autonomous Macros
+                  </h3>
+                  <p className="text-sm text-gray-400 leading-relaxed font-mono">
+                    Execute complex workflows. Hack live DOMs, generate
+                    Tailwind/GSAP code dynamically, and trigger multi-step JSON
+                    automation sequences instantly.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 6: Security */}
+              <div className="group relative p-8 rounded-2xl bg-zinc-950/80 border border-white/5 hover:border-[#10b981]/50 transition-all duration-500 overflow-hidden backdrop-blur-sm">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#10b981]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative z-10 flex flex-col gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-black border border-white/10 flex items-center justify-center group-hover:border-[#10b981]/50 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.4)] transition-all">
+                    <ShieldAlert className="w-6 h-6 text-[#10b981]" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white tracking-tight">
+                    Biometric OS Vault
+                  </h3>
+                  <p className="text-sm text-gray-400 leading-relaxed font-mono">
+                    Hardware-level security. Lock down your system instantly
+                    with multi-face recognition encryption and standard PIN
+                    protocols.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
