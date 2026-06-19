@@ -21,7 +21,7 @@ export function IRISCompare() {
         </span>
       </div>
 
-      <ImageComparison className="aspect-[16/10] w-full" enableHover>
+      <ImageComparison className="aspect-16/10 w-full" enableHover>
         {/* ── LEFT IMAGE (BEFORE) ── */}
         <ImageComparisonImage
           src="/compare/after.png"
