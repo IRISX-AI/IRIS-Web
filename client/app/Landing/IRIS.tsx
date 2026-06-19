@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "../Components/Header";
 import { useRef, useState, useEffect } from "react";
 import Footer from "../Components/Footer";
-import MagicBento from "../utils/MagicBento";
 import Image from "next/image";
 import LogoLoop from "../utils/LogoLoop";
 import {
