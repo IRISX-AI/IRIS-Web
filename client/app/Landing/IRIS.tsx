@@ -357,39 +357,8 @@ const IRIS = () => {
           id="systems"
           className="min-h-screen w-full px-6 md:px-20 py-32 border-b border-white/5 flex flex-col justify-center relative overflow-hidden"
         >
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-200 h-200 bg-[#10b981]/5 rounded-full blur-[120px] pointer-events-none opacity-50" />
-
-          <div className="w-full max-w-7xl mx-auto flex flex-col gap-16 relative z-10">
-            <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 px-4 relative z-10">
-              <div className="inline-flex items-center gap-3 px-4 py-1.5 mb-6 border border-[#10b981]/20 bg-[#10b981]/5 shadow-[0_0_15px_rgba(16,185,129,0.05)]">
-                <span className="w-1.5 h-1.5 bg-[#10b981] animate-pulse rounded-full"></span>
-                <span className="text-[#10b981] font-mono text-[10px] md:text-xs tracking-[0.4em] uppercase font-bold">
-                  IRIS_OS // ACTIVE_MODULES
-                </span>
-              </div>
-
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter mb-6 select-none">
-                System{" "}
-                <span className="text-[#10b981] drop-shadow-[0_0_25px_rgba(16,185,129,0.3)]">
-                  Capabilities.
-                </span>
-              </h2>
-
-              <p className="text-gray-400 text-sm md:text-base leading-relaxed font-mono drop-shadow-md">
-                IRIS is not a chatbot; it is a deep-system neural extension. By
-                weaponizing{" "}
-                <span className="text-white font-bold">
-                  kernel-level execution hooks
-                </span>
-                , autonomous keystroke injection, and a persistent memory
-                matrix, IRIS bridges the gap between human thought and OS
-                execution.
-              </p>
-            </div>
-
-            <div className="w-full">
-              <SystemsSection />
-            </div>
+          <div className="w-full">
+            <SystemsSection />
           </div>
         </section>
 
