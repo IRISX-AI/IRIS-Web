@@ -210,13 +210,14 @@ const IRIS = () => {
                       "drop-shadow(0px 0px 15px rgba(57, 255, 20, 1)) drop-shadow(0px 0px 50px rgba(57, 255, 20, 0.8))",
                   }}
                 >
-                  Your AI. Your Rules.
+                  Command Your Workspace.
                 </h1>
                 <h2
                   className="text-2xl md:text-4xl lg:text-5xl text-gray-100 font-normal tracking-tight"
                   style={{ textShadow: "0 0 10px rgba(0,0,0,0.8)" }}
                 >
-                  One Voice. Total Control Over Your Device.
+                  Navigate apps, manage files, and execute tasks using just your
+                  voice.
                 </h2>
               </div>
             }
