@@ -221,6 +221,36 @@ const IRIS = () => {
           </ContainerScroll>
         </section>
 
+        <section className="min-h-screen bg-black flex flex-col items-center pt-24 pb-20 relative overflow-hidden font-sans px-4">
+          <div className="text-center z-20 flex flex-col items-center mb-12">
+            <h1
+              className="text-5xl md:text-7xl font-bold tracking-tight bg-[url('/img/bright-neon-bg.png')] bg-cover bg-center bg-clip-text text-transparent mb-4 select-none"
+              style={{
+                filter: "drop-shadow(0px 0px 15px rgba(57, 255, 20, 0.8))",
+              }}
+            >
+              Rewritten for Speed.
+            </h1>
+            <h2 className="text-xl md:text-2xl text-gray-300 font-normal tracking-tight max-w-3xl">
+              v1.3 was a buggy prototype. The new engine is instantaneous,
+              stable, and completely native.
+            </h2>
+          </div>
+
+          <div className="w-full max-w-6xl relative z-10">
+            <IRISCompare />
+          </div>
+        </section>
+
+        <section
+          id="systems"
+          className="min-h-screen w-full px-6 md:px-20 py-32 border-b border-white/5 flex flex-col justify-center relative overflow-hidden"
+        >
+          <div className="w-full">
+            <SystemsSection />
+          </div>
+        </section>
+
         <section className="min-h-screen bg-black flex flex-col items-center pt-32 relative overflow-hidden font-sans">
           <div className="absolute top-[30%] left-1/2 -translate-x-1/2 w-150 h-150 bg-[#10b981]/15 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
           <div className="absolute top-[50%] left-1/2 -translate-x-1/2 w-200 h-100 bg-[#16a34a]/10 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
@@ -316,27 +346,6 @@ const IRIS = () => {
           </div>
         </section>
 
-        <section className="min-h-screen bg-black flex flex-col items-center pt-24 pb-20 relative overflow-hidden font-sans px-4">
-          <div className="text-center z-20 flex flex-col items-center mb-12">
-            <h1
-              className="text-5xl md:text-7xl font-bold tracking-tight bg-[url('/img/bright-neon-bg.png')] bg-cover bg-center bg-clip-text text-transparent mb-4 select-none"
-              style={{
-                filter: "drop-shadow(0px 0px 15px rgba(57, 255, 20, 0.8))",
-              }}
-            >
-              Rewritten for Speed.
-            </h1>
-            <h2 className="text-xl md:text-2xl text-gray-300 font-normal tracking-tight max-w-3xl">
-              v1.3 was a buggy prototype. The new engine is instantaneous,
-              stable, and completely native.
-            </h2>
-          </div>
-
-          <div className="w-full max-w-6xl relative z-10">
-            <IRISCompare />
-          </div>
-        </section>
-
         <section className="w-full px-6 md:px-0 py-12 relative overflow-hidden flex flex-col items-center z-20">
           <p className="text-[#10b981] text-sm tracking-widest uppercase mb-8 font-semibold drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]">
             Built with a bleeding-edge modern stack
@@ -351,15 +360,6 @@ const IRIS = () => {
             scaleOnHover={false}
             ariaLabel="IRIS Technology Stack"
           />
-        </section>
-
-        <section
-          id="systems"
-          className="min-h-screen w-full px-6 md:px-20 py-32 border-b border-white/5 flex flex-col justify-center relative overflow-hidden"
-        >
-          <div className="w-full">
-            <SystemsSection />
-          </div>
         </section>
 
         <Footer />
