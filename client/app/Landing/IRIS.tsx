@@ -210,14 +210,14 @@ const IRIS = () => {
                       "drop-shadow(0px 0px 15px rgba(57, 255, 20, 1)) drop-shadow(0px 0px 50px rgba(57, 255, 20, 0.8))",
                   }}
                 >
-                  Command Your Workspace.
+                  Total System Control.
                 </h1>
                 <h2
-                  className="text-2xl md:text-4xl lg:text-5xl text-gray-100 font-normal tracking-tight"
+                  className="text-2xl md:text-4xl lg:text-5xl text-gray-100 font-normal tracking-tight max-w-5xl"
                   style={{ textShadow: "0 0 10px rgba(0,0,0,0.8)" }}
                 >
-                  Navigate apps, manage files, and execute tasks using just your
-                  voice.
+                  Run terminals, automate UI, link your phone, and execute deep
+                  OS tasks hands-free.
                 </h2>
               </div>
             }
