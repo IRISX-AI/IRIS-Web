@@ -105,7 +105,7 @@ const items = [
     name: "Deep System & File Execution",
     description:
       "Total file system access. IRIS creates folders, reads code files, executes terminal scripts, and manages your local drives without lifting a finger.",
-    background: <ImageHeader src="/iris.png" alt="Terminal Execution" />,
+    background: <ImageHeader src="/bento/iris.png" alt="Terminal Execution" />,
     Icon: Terminal, // Passed as a reference, not JSX
     href: "#",
     cta: "View Module",
@@ -117,7 +117,7 @@ const items = [
     description:
       "Bypass the browser. Schedule and dispatch WhatsApp messages autonomously.",
     background: (
-      <ImageHeader src="/img/bento-whatsapp.png" alt="WhatsApp Automation" />
+      <ImageHeader src="/bento/bento-whatsapp.png" alt="WhatsApp Automation" />
     ),
     Icon: MessageSquare,
     href: "#",
@@ -129,7 +129,7 @@ const items = [
     name: "Mobile Telekinesis",
     description:
       "Absolute Android integration. Read incoming notifications, push files, and launch apps directly from your PC.",
-    background: <ImageHeader src="/img/bento-mobile.png" alt="Mobile Link" />,
+    background: <ImageHeader src="/bento/bento-mobile.png" alt="Mobile Link" />,
     Icon: Smartphone,
     href: "#",
     cta: "View Module",
@@ -141,7 +141,7 @@ const items = [
     description:
       "Deploys crawlers to scrape live web data, digest documentation, and synthesize full reports directly into your workspace.",
     background: (
-      <ImageHeader src="/img/bento-research.png" alt="Deep RAG Search" />
+      <ImageHeader src="/bento/deep-research.png" alt="Deep RAG Search" />
     ),
     Icon: Globe,
     href: "#",
@@ -153,9 +153,7 @@ const items = [
     name: "Live Web & Browser Control",
     description:
       "Hack the DOM. IRIS manipulates live websites, extracts visual UI into raw code, and generates Tailwind on the fly.",
-    background: (
-      <ImageHeader src="/img/bento-browser.png" alt="Live DOM Hacking" />
-    ),
+    background: <ImageHeader src="/bento/web.png" alt="Live DOM Hacking" />,
     Icon: Code,
     href: "#",
     cta: "View Module",
@@ -166,9 +164,7 @@ const items = [
     name: "Screen Peeling & Optics",
     description:
       "IRIS sees your monitor. It targets UI coordinates, reads OCR text, and injects phantom keystrokes system-wide.",
-    background: (
-      <ImageHeader src="/img/bento-optics.png" alt="Screen Peeling" />
-    ),
+    background: <ImageHeader src="/bento/peeler.png" alt="Screen Peeling" />,
     Icon: ScanLine,
     href: "#",
     cta: "View Module",
