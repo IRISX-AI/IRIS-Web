@@ -240,8 +240,8 @@ const IRIS = () => {
           <ContainerScroll
             titleComponent={
               <>
-                <h1 className="text-4xl font-semibold text-black dark:text-white">
-                  Run IRIS straight from your <br />
+                <h1 className="text-4xl font-semibold text-gray-200">
+                  Total command over your <br />
                   <span
                     className="text-4xl md:text-[6rem] font-bold mt-1 leading-none bg-[url('/img/bright-neon-bg.png')] bg-cover bg-center bg-clip-text text-transparent inline-block pb-2"
                     style={{
@@ -249,19 +249,22 @@ const IRIS = () => {
                         "drop-shadow(0px 0px 15px rgba(57, 255, 20, 1)) drop-shadow(0px 0px 50px rgba(57, 255, 20, 0.8))",
                     }}
                   >
-                    Terminal
+                    Mobile Device.
                   </span>
                 </h1>
-                <CodeBlock code="npm install -g iris-ai" />
+                <p className="mt-4 mb-8 text-gray-400 text-lg md:text-xl font-normal max-w-2xl mx-auto tracking-tight">
+                  Read notifications, push files, and launch Android
+                  applications directly from your desktop.
+                </p>
               </>
             }
           >
             <img
-              src={`/img/cli.png`}
-              alt="hero"
+              src={`/img/mobile-link.png`}
+              alt="IRIS Mobile Telekinesis"
               height={720}
               width={1400}
-              className="mx-auto rounded-2xl object-cover h-full `object-top-left"
+              className="mx-auto rounded-2xl object-cover h-full object-top-left border border-[#10b981]/20 shadow-[0_0_40px_rgba(16,185,129,0.1)]"
               draggable={false}
             />
           </ContainerScroll>
