@@ -83,8 +83,6 @@ const BentoCard = ({
   </div>
 );
 
-// ── 2. The Absolute Cinematic Background ──
-// This frames the screenshots and ensures text readability using a deep linear.
 const ImageHeader = ({ src, alt }: { src: string; alt: string }) => {
   return (
     <div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden">
