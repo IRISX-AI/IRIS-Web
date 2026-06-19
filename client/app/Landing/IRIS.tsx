@@ -221,6 +221,22 @@ const IRIS = () => {
           </ContainerScroll>
         </section>
 
+        <section className="w-full px-6 md:px-0 py-12 relative overflow-hidden flex flex-col items-center z-20">
+          <p className="text-[#10b981] text-sm tracking-widest uppercase mb-8 font-semibold drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]">
+            Built with a bleeding-edge modern stack
+          </p>
+          <LogoLoop
+            logos={actualTechLogos}
+            speed={100}
+            direction="left"
+            logoHeight={60}
+            gap={60}
+            hoverSpeed={0}
+            scaleOnHover={false}
+            ariaLabel="IRIS Technology Stack"
+          />
+        </section>
+
         <section className="min-h-screen bg-black flex flex-col items-center pt-24 pb-20 relative overflow-hidden font-sans px-4">
           <div className="text-center z-20 flex flex-col items-center mb-12">
             <h1
@@ -344,22 +360,6 @@ const IRIS = () => {
               </div>
             </div>
           </div>
-        </section>
-
-        <section className="w-full px-6 md:px-0 py-12 relative overflow-hidden flex flex-col items-center z-20">
-          <p className="text-[#10b981] text-sm tracking-widest uppercase mb-8 font-semibold drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]">
-            Built with a bleeding-edge modern stack
-          </p>
-          <LogoLoop
-            logos={actualTechLogos}
-            speed={100}
-            direction="left"
-            logoHeight={60}
-            gap={60}
-            hoverSpeed={0}
-            scaleOnHover={false}
-            ariaLabel="IRIS Technology Stack"
-          />
         </section>
 
         <Footer />
