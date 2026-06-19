@@ -22,10 +22,10 @@ const Skeleton = ({
 
   return (
     <div
-      className={`flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-black/40 border border-white/10 overflow-hidden relative items-center ${positionClass}`}
+      className={`flex flex-1 w-full h-full min-h-24 rounded-xl bg-black/40 border border-white/10 overflow-hidden relative items-center ${positionClass}`}
     >
       <div className="absolute w-32 h-32 bg-[#10b981]/20 rounded-full blur-3xl animate-pulse" />
-      <div className="w-full h-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+      <div className="w-full h-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[14px_24px] mask-[radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
     </div>
   );
 };
@@ -87,7 +87,7 @@ export default function SystemsSection() {
       id="systems"
       className="min-h-screen w-full px-6 md:px-20 py-32 flex flex-col justify-center relative overflow-hidden bg-black"
     >
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#10b981]/5 rounded-full blur-[120px] pointer-events-none opacity-50" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-200 h-200 bg-[#10b981]/5 rounded-full blur-[120px] pointer-events-none opacity-50" />
 
       <div className="w-full max-w-7xl mx-auto flex flex-col gap-16 relative z-10">
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-4 px-4 relative z-10">
