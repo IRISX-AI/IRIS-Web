@@ -32,7 +32,7 @@ export function IRISCompare() {
           position="right"
         />
 
-        <ImageComparisonSlider className="bg-[#10b981] shadow-[0_0_15px_rgba(16,185,129,0.8)] w-[2px]">
+        <ImageComparisonSlider className="bg-[#10b981] shadow-[0_0_15px_rgba(16,185,129,0.8)] w-0.5">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-black/90 border border-[#10b981] rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.5)] backdrop-blur-md">
             <svg
               width="18"
