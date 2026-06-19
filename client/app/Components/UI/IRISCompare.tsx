@@ -11,12 +11,12 @@ export function IRISCompare() {
       enableHover
     >
       <ImageComparisonImage
-        src="/img/screen.png"
+        src="/compare/after.png"
         alt="Motion Primitives Dark"
         position="left"
       />
       <ImageComparisonImage
-        src="/iris.png"
+        src="/compare/before.png"
         alt="Motion Primitives Light"
         position="right"
       />
