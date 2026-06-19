@@ -106,7 +106,7 @@ const items = [
     description:
       "Total file system access. IRIS creates folders, reads code files, executes terminal scripts, and manages your local drives without lifting a finger.",
     background: <ImageHeader src="/bento/iris.png" alt="Terminal Execution" />,
-    Icon: Terminal, // Passed as a reference, not JSX
+    Icon: Terminal,
     href: "#",
     cta: "View Module",
     className:
