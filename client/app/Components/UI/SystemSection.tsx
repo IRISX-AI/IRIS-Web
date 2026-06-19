@@ -100,7 +100,6 @@ const ImageHeader = ({ src, alt }: { src: string; alt: string }) => {
   );
 };
 
-// ── 3. The Features Array (Adapted for Modern Props) ──
 const items = [
   {
     name: "Deep System & File Execution",
@@ -180,7 +179,6 @@ const items = [
   },
 ];
 
-// ── 4. The Main Section ──
 export default function SystemsSection() {
   return (
     <section
