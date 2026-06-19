@@ -7,6 +7,7 @@ import {
   ScanLine,
 } from "lucide-react";
 import { BentoGrid, BentoGridItem } from "../core/bento-grid";
+import Image from "next/image";
 
 const Skeleton = ({
   glowPosition,
@@ -35,7 +36,7 @@ const items = [
     title: "Deep System & File Execution",
     description:
       "Total file system access. IRIS creates folders, reads code files, executes terminal scripts, and manages your local drives without lifting a finger.",
-    header: <Skeleton glowPosition="center" />,
+    header: <Image src='/iris/png' height={1000} width={1000}/>,
     icon: <Terminal className="h-5 w-5 text-[#10b981]" />,
     className: "md:col-span-2 border-white/10 hover:border-[#10b981]/50",
   },
