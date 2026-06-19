@@ -105,9 +105,7 @@ const items = [
     name: "Deep System & File Execution",
     description:
       "Total file system access. IRIS creates folders, reads code files, executes terminal scripts, and manages your local drives without lifting a finger.",
-    background: (
-      <ImageHeader src="/img/bento-files.png" alt="Terminal Execution" />
-    ),
+    background: <ImageHeader src="/iris.png" alt="Terminal Execution" />,
     Icon: Terminal, // Passed as a reference, not JSX
     href: "#",
     cta: "View Module",
