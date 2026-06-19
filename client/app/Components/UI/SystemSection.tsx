@@ -6,10 +6,8 @@ import {
   Code,
   ScanLine,
 } from "lucide-react";
-// 🚨 Make sure this path points correctly to your bento-grid file!
 import { BentoGrid, BentoGridItem } from "../core/bento-grid";
 
-// ── 1. The Custom Glowing Graphic (No images needed!) ──
 const Skeleton = ({
   glowPosition,
 }: {
@@ -32,7 +30,6 @@ const Skeleton = ({
   );
 };
 
-// ── 2. The Hardcore Features Array ──
 const items = [
   {
     title: "Deep System & File Execution",
@@ -84,7 +81,6 @@ const items = [
   },
 ];
 
-// ── 3. The Main Section Wrapper ──
 export default function SystemsSection() {
   return (
     <section
