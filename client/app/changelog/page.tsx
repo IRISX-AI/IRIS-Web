@@ -715,7 +715,6 @@ export default function ChangelogPage() {
               const idSafe = item.version.replace(/\./g, "-");
               return (
                 <div key={idx} className="relative">
-                  {/* Timeline Dot Node */}
                   <div
                     id={`dot-${idSafe}`}
                     className={`
@@ -730,7 +729,6 @@ export default function ChangelogPage() {
                     <Icon className="w-3.5 h-3.5 md:w-4 md:h-4" />
                   </div>
 
-                  {/* Log Card */}
                   <div
                     id={`card-${idSafe}`}
                     className="bg-[#0a0a0a] border border-white/5 rounded-2xl p-6 md:p-8 space-y-6 transition-all duration-300 relative overflow-hidden"
