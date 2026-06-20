@@ -441,11 +441,14 @@ export default function ChangelogPage() {
           const wrapperSelector = `#wrapper-${idSafe}`;
           const dotSelector = `#dot-${idSafe}`;
 
-          // Trigger for active state of the card
+          // Trigger for active state and PINNING of the card
           ScrollTrigger.create({
             trigger: wrapperSelector,
-            start: "top 180px",
-            end: "bottom 180px",
+            start: "top 160px",
+            endTrigger: "#timeline-window",
+            end: "bottom 760px",
+            pin: cardSelector,
+            pinSpacing: false,
             onToggle: (self) => {
               if (self.isActive) {
                 setActiveIndex(idx);
@@ -827,7 +830,7 @@ export default function ChangelogPage() {
                     <div
                       key={item.version}
                       id={`card-${idSafe}`}
-                      className="lg:sticky lg:top-[160px] bg-[#0a0a0a] border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between relative w-full h-auto lg:h-[600px] overflow-visible lg:overflow-y-auto transition-colors duration-300"
+                      className="bg-[#0a0a0a] border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between relative w-full h-auto lg:h-[600px] overflow-visible lg:overflow-y-auto transition-colors duration-300"
                       style={{
                         zIndex: idx + 10,
                       }}
