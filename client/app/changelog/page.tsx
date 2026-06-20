@@ -733,7 +733,6 @@ export default function ChangelogPage() {
                     id={`card-${idSafe}`}
                     className="bg-[#0a0a0a] border border-white/5 rounded-2xl p-6 md:p-8 space-y-6 transition-all duration-300 relative overflow-hidden"
                   >
-                    {/* Header */}
                     <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/5 pb-4">
                       <div className="flex items-center gap-3">
                         <span
@@ -762,7 +761,6 @@ export default function ChangelogPage() {
                       </span>
                     </div>
 
-                    {/* Metadata summary */}
                     <div className="space-y-1.5">
                       <h3 className="text-lg font-bold text-white font-mono leading-tight">
                         {item.title}
@@ -772,7 +770,6 @@ export default function ChangelogPage() {
                       </p>
                     </div>
 
-                    {/* Categories and details */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
                       {item.categories.map((cat, catIdx) => (
                         <div key={catIdx} className="category-block space-y-3">
