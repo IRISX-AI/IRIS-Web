@@ -165,7 +165,7 @@ export default function Footer() {
                 Parent Command
               </p>
               <p className="text-white font-bold tracking-wider">
-                IRIS AI v1.2.4 - Stable Release
+                IRIS AI v1.5.1 - Stable Release
               </p>
             </div>
           </div>
