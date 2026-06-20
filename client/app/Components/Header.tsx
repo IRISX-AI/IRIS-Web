@@ -86,14 +86,14 @@ const Header = () => {
             href="https://github.com/IRISX-AI"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex text-zinc-400 hover:text-[#39FF14] transition-colors"
+            className="hidden md:flex text-zinc-200 hover:text-[#39FF14] transition-colors"
             title="View Source on GitHub"
           >
             <Github className="w-5 h-5" />
           </a>
 
           <Link href="/download">
-            <div className="hidden md:block px-4 py-2 rounded-full border border-[#39FF14]/50 bg-[#39FF14]/10 text-[#ffffff] text-[10px] font-bold tracking-[0.3em] uppercase hover:bg-[#099443] hover:text-white hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all cursor-pointer">
+            <div className="hidden md:block px-4 py-2 rounded-full border border-[#39FF14]/80 bg-[#39FF14]/10 text-[#ffffff] text-[10px] font-bold tracking-[0.3em] uppercase hover:bg-[#39FF14]/30 hover:text-white hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all cursor-pointer">
               Download IRIS
             </div>
           </Link>
@@ -173,7 +173,7 @@ const Header = () => {
                   href="https://github.com/IRISX-AI"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 text-zinc-400 hover:text-[#39FF14] transition-colors"
+                  className="flex items-center justify-center gap-3 text-zinc-200 hover:text-[#39FF14] transition-colors"
                 >
                   <Github className="w-5 h-5" />
                   <span className="text-xs font-bold tracking-[0.2em] uppercase">

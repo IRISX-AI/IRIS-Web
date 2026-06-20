@@ -31,7 +31,7 @@ export default function InstallGuide() {
           <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-6 uppercase">
             How to Install <span className="text-[#39FF14]">IRIS</span>
           </h1>
-          <p className="max-w-2xl mx-auto text-zinc-400 text-lg">
+          <p className="max-w-2xl mx-auto text-zinc-200 text-lg">
             Step-by-step instructions to install the native IRIS Desktop
             Application.
           </p>
@@ -51,7 +51,7 @@ export default function InstallGuide() {
               <h3 className="text-xl font-bold text-white mb-2">
                 Prerequisite: API Keys
               </h3>
-              <p className="text-zinc-400 text-sm">
+              <p className="text-zinc-200 text-sm">
                 IRIS operates on a Bring Your Own Key (BYOK) model. You must
                 have a Google Gemini API key to run the application.
               </p>
@@ -89,7 +89,7 @@ export default function InstallGuide() {
                 <h4 className="text-lg font-bold text-white mb-2">
                   Download the Installer
                 </h4>
-                <p className="text-zinc-400 text-sm">
+                <p className="text-zinc-200 text-sm">
                   Navigate to the{" "}
                   <Link
                     href="/download"
@@ -113,7 +113,7 @@ export default function InstallGuide() {
                 <h4 className="text-lg font-bold text-white mb-2">
                   Run & Bypass Defender
                 </h4>
-                <p className="text-zinc-400 text-sm">
+                <p className="text-zinc-200 text-sm">
                   Run the installer. If the Windows SmartScreen popup appears,
                   click <strong className="text-white">More Info</strong> and
                   then <strong className="text-white">Run Anyway</strong>.
@@ -131,7 +131,7 @@ export default function InstallGuide() {
                 <h4 className="text-lg font-bold text-white mb-2">
                   Configure Keys & Launch
                 </h4>
-                <p className="text-zinc-400 text-sm">
+                <p className="text-zinc-200 text-sm">
                   Open the installed application, paste your Gemini API key into
                   the settings menu, and begin using the software.
                 </p>
@@ -162,13 +162,13 @@ export default function InstallGuide() {
           >
             <div className="flex items-center gap-4">
               <div className="p-4 bg-white/5 rounded-xl group-hover:bg-[#39FF14]/10 transition-colors">
-                <TerminalIcon className="w-8 h-8 text-zinc-400 group-hover:text-[#39FF14] transition-colors" />
+                <TerminalIcon className="w-8 h-8 text-zinc-200 group-hover:text-[#39FF14] transition-colors" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white mb-1 group-hover:text-[#39FF14] transition-colors">
                   Headless CLI Installation
                 </h3>
-                <p className="text-zinc-400 text-sm">
+                <p className="text-zinc-200 text-sm">
                   Looking to install the global NPM package? View the CLI
                   documentation.
                 </p>
@@ -197,7 +197,7 @@ export default function InstallGuide() {
                   IRIS-X Mobile
                 </h2>
               </div>
-              <p className="text-zinc-400 text-lg mb-6 leading-relaxed">
+              <p className="text-zinc-200 text-lg mb-6 leading-relaxed">
                 An upcoming Android companion app. Enable remote device control,
                 background task scheduling, and mobile notification syncing.
               </p>
