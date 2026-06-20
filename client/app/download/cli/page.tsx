@@ -151,7 +151,6 @@ export default function CliDownloadPage() {
           </div>
         </motion.section>
 
-        {/* Technical Specs Footer */}
         <motion.section className="mt-20 pt-8 border-t border-white/5 relative z-10">
           <div className="flex flex-wrap items-center gap-6 text-zinc-500 font-mono text-xs tracking-widest">
             <span className="flex items-center gap-2">
