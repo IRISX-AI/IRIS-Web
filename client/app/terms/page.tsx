@@ -72,7 +72,6 @@ export default function TermsOfServicePage() {
           viewport={{ once: true, margin: "-100px" }}
           className="space-y-12"
         >
-          {/* Card 1: Jurisdiction & Indian Judiciary Governance */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-[#39FF14]/25 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/45 transition-all duration-300"
@@ -92,7 +91,6 @@ export default function TermsOfServicePage() {
             </p>
           </motion.div>
 
-          {/* Card 2: 2-Device Sponsorship Ceiling & Anti-Piracy Checks */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
@@ -111,7 +109,6 @@ export default function TermsOfServicePage() {
             </div>
           </motion.div>
 
-          {/* Card 3: Assumption of Risk (Native OS Execution) - NO LIABILITY DISCLOSURE */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-red-500/20 rounded-2xl p-8 relative overflow-hidden group hover:border-red-500/40 transition-all duration-300"
