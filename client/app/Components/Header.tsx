@@ -48,7 +48,7 @@ const Header = () => {
     <>
       <div
         ref={headerRef}
-        className="fixed top-8 left-1/2 -translate-x-1/2 w-[90%] md:w-[85%] lg:w-[65%] px-8 py-6 flex justify-between items-center bg-black/40 backdrop-blur-lg z-100 border border-[#10b981]/20 rounded-full text-white shadow-[0_4px_30px_rgba(16,185,129,0.15)]"
+        className="fixed top-8 left-1/2 -translate-x-1/2 w-[90%] md:w-[85%] lg:w-[65%] px-8 py-6 flex justify-between items-center bg-black/40 backdrop-blur-lg z-100 border border-[#39FF14]/20 rounded-full text-white shadow-[0_4px_30px_rgba(16,185,129,0.15)]"
       >
         <Link href="/">
           <div className="flex items-center gap-2 cursor-pointer group">
@@ -60,7 +60,7 @@ const Header = () => {
               className="rounded-full group-hover:scale-105 transition-transform"
               unoptimized
             />
-            <span className="text-lg sm:text-xl font-black tracking-tighter text-[#10b981] drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]">
+            <span className="text-lg sm:text-xl font-black tracking-tighter text-[#39FF14] drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]">
               IRIS
             </span>
           </div>
@@ -72,10 +72,10 @@ const Header = () => {
               <Link
                 key={item}
                 href={`/${item.toLowerCase()}`}
-                className="hover:text-[#10b981] transition-all duration-300 relative group"
+                className="hover:text-[#39FF14] transition-all duration-300 relative group"
               >
                 {item}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#10b981] group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#39FF14] group-hover:w-full transition-all duration-300" />
               </Link>
             ),
           )}
@@ -86,20 +86,20 @@ const Header = () => {
             href="https://github.com/IRISX-AI"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex text-zinc-400 hover:text-[#10b981] transition-colors"
+            className="hidden md:flex text-zinc-400 hover:text-[#39FF14] transition-colors"
             title="View Source on GitHub"
           >
             <Github className="w-5 h-5" />
           </a>
 
           <Link href="/download">
-            <div className="hidden md:block px-4 py-2 rounded-full border border-[#10b981]/50 bg-[#10b981]/10 text-[#ffffff] text-[10px] font-bold tracking-[0.3em] uppercase hover:bg-[#099443] hover:text-white hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all cursor-pointer">
+            <div className="hidden md:block px-4 py-2 rounded-full border border-[#39FF14]/50 bg-[#39FF14]/10 text-[#ffffff] text-[10px] font-bold tracking-[0.3em] uppercase hover:bg-[#099443] hover:text-white hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all cursor-pointer">
               Download IRIS
             </div>
           </Link>
 
           <button
-            className="md:hidden text-[#10b981] p-1 rounded-full hover:bg-[#10b981]/10 transition-colors"
+            className="md:hidden text-[#39FF14] p-1 rounded-full hover:bg-[#39FF14]/10 transition-colors"
             onClick={() => setMobileMenuOpen(true)}
           >
             <Menu className="w-5 h-5" />
@@ -123,7 +123,7 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-[80%] max-w-[320px] bg-[#050505] border-l border-[#10b981]/20 z-102 flex flex-col p-8 shadow-[-20px_0_50px_rgba(0,0,0,0.8)] md:hidden"
+              className="fixed top-0 right-0 h-full w-[80%] max-w-[320px] bg-[#050505] border-l border-[#39FF14]/20 z-102 flex flex-col p-8 shadow-[-20px_0_50px_rgba(0,0,0,0.8)] md:hidden"
             >
               <Link href="/">
                 <div className="flex justify-between items-center mb-16">
@@ -136,13 +136,13 @@ const Header = () => {
                       className="rounded-full"
                       unoptimized
                     />
-                    <span className="text-xl font-black tracking-tighter text-[#10b981]">
+                    <span className="text-xl font-black tracking-tighter text-[#39FF14]">
                       IRIS
                     </span>
                   </div>
                   <button
                     onClick={() => setMobileMenuOpen(false)}
-                    className="p-2 -mr-2 text-gray-400 hover:text-[#10b981] rounded-full hover:bg-[#10b981]/10 transition-colors"
+                    className="p-2 -mr-2 text-gray-400 hover:text-[#39FF14] rounded-full hover:bg-[#39FF14]/10 transition-colors"
                   >
                     <X className="w-6 h-6" />
                   </button>
@@ -161,7 +161,7 @@ const Header = () => {
                     key={item}
                     href={`/${item.toLowerCase()}`}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="text-gray-300 hover:text-[#10b981] transition-colors border-b border-white/5 pb-4"
+                    className="text-gray-300 hover:text-[#39FF14] transition-colors border-b border-white/5 pb-4"
                   >
                     {item}
                   </Link>
@@ -173,7 +173,7 @@ const Header = () => {
                   href="https://github.com/IRISX-AI"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 text-zinc-400 hover:text-[#10b981] transition-colors"
+                  className="flex items-center justify-center gap-3 text-zinc-400 hover:text-[#39FF14] transition-colors"
                 >
                   <Github className="w-5 h-5" />
                   <span className="text-xs font-bold tracking-[0.2em] uppercase">
@@ -182,7 +182,7 @@ const Header = () => {
                 </a>
 
                 <Link href="/download">
-                  <div className="w-full text-center px-4 py-4 rounded-full border border-[#10b981]/50 bg-[#10b981]/10 text-[#10b981] text-xs font-bold tracking-[0.2em] uppercase hover:bg-[#10b981] hover:text-black hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all cursor-pointer">
+                  <div className="w-full text-center px-4 py-4 rounded-full border border-[#39FF14]/50 bg-[#39FF14]/10 text-[#39FF14] text-xs font-bold tracking-[0.2em] uppercase hover:bg-[#39FF14] hover:text-black hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all cursor-pointer">
                     Download IRIS
                   </div>
                 </Link>
