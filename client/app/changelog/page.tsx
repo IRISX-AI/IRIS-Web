@@ -17,7 +17,7 @@ import Footer from "../Components/Footer";
 interface ChangelogItem {
   version: string;
   date: string;
-  type: string; // "Major" | "Minor" | "Patch"
+  type: string; 
   title: string;
   desc: string;
   changes: string[];
