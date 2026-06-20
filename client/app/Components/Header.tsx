@@ -70,10 +70,10 @@ const Header = () => {
           {[
             "About",
             "Features",
-            "Docs",
             "Pricing",
             "how-to-install",
             "Guide",
+            "Docs",
           ].map((item) => (
             <Link
               key={item}
@@ -158,10 +158,10 @@ const Header = () => {
                 {[
                   "About",
                   "Features",
-                  "DOcs",
                   "Pricing",
                   "how-to-install",
                   "Guide",
+                  "Docs",
                 ].map((item) => (
                   <Link
                     key={item}
