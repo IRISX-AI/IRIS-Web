@@ -470,7 +470,7 @@ export default function SupportPage() {
               className="lg:col-span-3"
             >
               <a
-                href="https://github.com/IRISX-AI/iris/issues/new"
+                href="https://github.com/IRISX-AI/IRIS-AI/issues/new"
                 target="_blank"
                 rel="noopener noreferrer"
                 id="github-bug-report"
@@ -651,7 +651,7 @@ export default function SupportPage() {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <a
-                href="https://github.com/IRISX-AI/iris/discussions"
+                href="https://github.com/IRISX-AI/IRIS-AI/discussions"
                 target="_blank"
                 rel="noopener noreferrer"
                 id="github-discussions"
@@ -708,11 +708,11 @@ export default function SupportPage() {
             For billing disputes, license questions, or partnership enquiries.
           </p>
           <a
-            href="mailto:support@irisx.ai"
+            href="mailto:irisaidevop.gmail.com"
             id="contact-email"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[#39FF14]/30 bg-[#39FF14]/5 text-[#39FF14] text-sm font-bold font-mono hover:bg-[#39FF14]/15 hover:shadow-[0_0_30px_rgba(57,255,20,0.1)] transition-all duration-300"
           >
-            support@irisx.ai
+            irisaidevop.gmail.com
             <ArrowRight className="w-4 h-4" />
           </a>
           <p className="text-zinc-700 text-[10px] font-mono">
