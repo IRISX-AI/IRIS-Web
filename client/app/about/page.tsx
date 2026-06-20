@@ -172,7 +172,7 @@ const IRISAbout = () => {
           />
         </div>
 
-        <motion.div className="absolute z-0 w-[800px] h-[800px] bg-[#10b981]/10 blur-[150px] rounded-full pointer-events-none mix-blend-screen" />
+        <motion.div className="absolute z-0 w-200 h-200 bg-[#10b981]/10 blur-[150px] rounded-full pointer-events-none mix-blend-screen" />
 
         <div className="relative z-10 text-center px-6 pointer-events-none">
           <motion.div>
