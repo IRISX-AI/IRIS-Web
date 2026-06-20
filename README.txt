@@ -319,6 +319,32 @@ DISCLAIMER
 IRIS has deep system-level execution capabilities.
 Use responsibly. The maintainers are not liable for misuse.
 
+LICENSING & OPEN CORE MODEL
+
+Historically, IRIS was developed as a 100% free and open-source project. To
+fund continuous engineering cycles, integrate low-latency SDK solutions
+(Gemini Live API), and construct advanced tools, IRIS has transitioned to
+an Open Core licensing model.
+
+* What is Open-Source?
+The public repository contains the visual layout configuration, context-isolated
+preloads, visual React components, and general community templates. These parts
+are licensed under the standard MIT License (LICENSE).
+
+* What is Proprietary?
+The core reasoning orchestrator, dynamic tool execution main structures, and
+automated security locks are packaged inside unreadable V8 bytecode.
+
+* Source Access Tiers via GitHub Sponsors:
+- $15/mo Sponsor (Insider): Unlocks read access to 'iris-insiders' containing
+  functional hooks and code snippets. *Sponsorship at this level does not
+  provide the full code.*
+- $50/mo Sponsor (Alpha): Full read access to the raw, unprotected,
+  uncompiled source code, precompiled releases, and commercial licenses.
+
+For full license pricing breakdown and feature comparisons, visit our
+official Docs page (https://irisaiw.vercel.app/docs/tiers).
+
 ARCHITECT
 
 Harsh Pandey
@@ -329,7 +355,7 @@ GitHub: @201Harsh (https://github.com/IRISX-AI)
 
 LICENSE
 
-MIT License - see LICENSE file.
+Parts of the shell are licensed under the MIT License - see LICENSE file.
 
 ================================================================================
 FINAL NOTE

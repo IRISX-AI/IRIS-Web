@@ -14,6 +14,7 @@ import {
   Menu,
   X,
   ChevronRight,
+  Activity,
 } from "lucide-react";
 
 interface NavItem {
@@ -30,7 +31,10 @@ interface NavGroup {
 const sidebarNavItems: NavGroup[] = [
   {
     title: "Getting Started",
-    items: [{ name: "Overview", href: "/docs", icon: BookOpen }],
+    items: [
+      { name: "Overview", href: "/docs", icon: BookOpen },
+      { name: "Changelog", href: "/changelog", icon: Activity },
+    ],
   },
   {
     title: "Features & Operations",
