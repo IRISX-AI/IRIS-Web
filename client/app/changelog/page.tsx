@@ -418,96 +418,104 @@ export default function ChangelogPage() {
 
       // 1. DESKTOP LAYOUT ANIMATIONS (lg screen size >= 1024px)
       mm.add("(min-width: 1024px)", () => {
-        const totalDuration = changelogData.length - 1;
-
-        // Pinned timeline animation
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: timelineRef.current,
-            start: "top 120px",
-            end: `+=${changelogData.length * 600}px`,
-            scrub: true,
-            pin: true,
-            onUpdate: (self) => {
-              const progress = self.progress;
-              const idx = Math.min(
-                Math.round(progress * (changelogData.length - 1)),
-                changelogData.length - 1
-              );
-              setActiveIndex(idx);
-            },
-          },
-        });
-
-        // Vertical line track fill animation
-        tl.fromTo(
+        // Track progress of the entire timeline container to fill the vertical track line
+        gsap.fromTo(
           lineProgressRef.current,
           { height: "0%" },
-          { height: "100%", ease: "none", duration: totalDuration },
-          0
+          {
+            height: "100%",
+            ease: "none",
+            scrollTrigger: {
+              trigger: timelineRef.current,
+              start: "top 200px",
+              end: "bottom 80%",
+              scrub: true,
+            },
+          },
         );
 
-        // Sequence animations for stacking absolute cards
+        // Setup triggers for each wrapper and card
         changelogData.forEach((item, idx) => {
-          if (idx === 0) return;
-
           const idSafe = item.version.replace(/\./g, "-");
           const cardSelector = `#card-${idSafe}`;
+          const wrapperSelector = `#wrapper-${idSafe}`;
           const dotSelector = `#dot-${idSafe}`;
-          const prevIdSafe = changelogData[idx - 1].version.replace(/\./g, "-");
-          const prevCardSelector = `#card-${prevIdSafe}`;
-          const prevDotSelector = `#dot-${prevIdSafe}`;
-          const startTime = idx - 1;
 
-          // Slide active card up
-          tl.fromTo(
-            cardSelector,
-            { yPercent: 100 },
-            { yPercent: 0, ease: "power1.inOut", duration: 1 },
-            startTime
-          );
-
-          // Stagger lighting of corresponding dot
-          tl.to(
-            dotSelector,
-            {
-              borderColor: "#39FF14",
-              backgroundColor: "#39FF14",
-              boxShadow: "0 0 15px rgba(57,255,20,0.8)",
-              color: "#000000",
-              scale: 1.15,
-              duration: 1,
+          // Trigger for active state of the card
+          ScrollTrigger.create({
+            trigger: wrapperSelector,
+            start: "top 180px",
+            end: "bottom 180px",
+            onToggle: (self) => {
+              if (self.isActive) {
+                setActiveIndex(idx);
+                // Highlight dot
+                gsap.to(dotSelector, {
+                  borderColor: "#39FF14",
+                  backgroundColor: "#39FF14",
+                  boxShadow: "0 0 15px rgba(57,255,20,0.8)",
+                  color: "#000000",
+                  scale: 1.15,
+                  duration: 0.3,
+                });
+                // Highlight card border
+                gsap.to(cardSelector, {
+                  borderColor: "rgba(57,255,20,0.35)",
+                  backgroundColor: "rgba(57,255,20,0.03)",
+                  boxShadow: "0 0 40px rgba(57,255,20,0.03)",
+                  duration: 0.3,
+                });
+              } else {
+                // If it is inactive, reset
+                gsap.to(dotSelector, {
+                  borderColor: "rgba(255,255,255,0.1)",
+                  backgroundColor: "#000000",
+                  boxShadow: "none",
+                  color: "#4b5563",
+                  scale: 1,
+                  duration: 0.3,
+                });
+                gsap.to(cardSelector, {
+                  borderColor: "rgba(255,255,255,0.05)",
+                  backgroundColor: "#0a0a0a",
+                  boxShadow: "none",
+                  duration: 0.3,
+                });
+              }
             },
-            startTime
-          );
+            onEnter: () => setActiveIndex(idx),
+            onEnterBack: () => setActiveIndex(idx),
+          });
 
-          // Recycle/scale-down previous active card
-          tl.to(
-            prevCardSelector,
-            {
-              scale: 0.94,
-              opacity: 0.25,
-              yPercent: -12,
-              filter: "blur(2.5px)",
-              ease: "power1.inOut",
-              duration: 1,
-            },
-            startTime
-          );
+          // Stacking deck effect (scrub animation as the next card enters)
+          if (idx < changelogData.length - 1) {
+            const nextItem = changelogData[idx + 1];
+            const nextIdSafe = nextItem.version.replace(/\./g, "-");
+            const nextWrapperSelector = `#wrapper-${nextIdSafe}`;
 
-          // Reset previous dot style
-          tl.to(
-            prevDotSelector,
-            {
-              borderColor: "#39FF14",
-              backgroundColor: "#000000",
-              boxShadow: "none",
-              color: "#39FF14",
-              scale: 1,
-              duration: 1,
-            },
-            startTime
-          );
+            gsap.fromTo(
+              cardSelector,
+              {
+                scale: 1,
+                opacity: 1,
+                filter: "blur(0px)",
+                yPercent: 0,
+              },
+              {
+                scale: 0.94,
+                opacity: 0.25,
+                filter: "blur(2.5px)",
+                yPercent: -8,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: nextWrapperSelector,
+                  start: "top 85%",
+                  end: "top 160px",
+                  scrub: true,
+                },
+              },
+            );
+          }
         });
       });
 
@@ -526,7 +534,7 @@ export default function ChangelogPage() {
               end: "bottom 70%",
               scrub: true,
             },
-          }
+          },
         );
 
         // Highlight version index on entry
@@ -596,29 +604,20 @@ export default function ChangelogPage() {
                 start: "top 85%",
                 toggleActions: "play none none none",
               },
-            }
+            },
           );
         });
       });
     },
-    { scope: containerRef }
+    { scope: containerRef },
   );
 
   const scrollToVersion = (versionStr: string, idx: number) => {
     const idSafe = versionStr.replace(/\./g, "-");
-    const element = document.getElementById(`card-${idSafe}`);
+    const element = document.getElementById(`wrapper-${idSafe}`);
     if (element) {
-      if (window.innerWidth >= 1024) {
-        const trigger = timelineRef.current;
-        if (trigger) {
-          const triggerTop = trigger.getBoundingClientRect().top + window.scrollY;
-          const scrollOffset = triggerTop - 120 + idx * 600;
-          window.scrollTo({ top: scrollOffset, behavior: "smooth" });
-        }
-      } else {
-        const top = element.getBoundingClientRect().top + window.scrollY - 100;
-        window.scrollTo({ top, behavior: "smooth" });
-      }
+      const top = element.getBoundingClientRect().top + window.scrollY - 150;
+      window.scrollTo({ top, behavior: "smooth" });
     }
   };
 
@@ -672,8 +671,8 @@ export default function ChangelogPage() {
               In our earlier iterations (pre-v1.1.0), IRIS was developed as a
               100% free and open-source project. However, to fund continuous
               engineering cycles, integrate low-latency SDK solutions (Gemini
-              Live API), and construct advanced tools, IRIS has transitioned
-              to an <strong>Open Core model</strong>.
+              Live API), and construct advanced tools, IRIS has transitioned to
+              an <strong>Open Core model</strong>.
             </p>
             <p>
               <strong>What remains open-source?</strong> The public repository
@@ -715,7 +714,7 @@ export default function ChangelogPage() {
         className="py-16 px-6 relative z-20 max-w-7xl mx-auto"
         ref={timelineRef}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start lg:h-[620px]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column (Sticky active version display widget) */}
           <div className="lg:col-span-4 relative h-full">
             <div className="lg:sticky lg:top-36 space-y-6">
@@ -799,10 +798,8 @@ export default function ChangelogPage() {
             </div>
           </div>
 
-          {/* Right Column (Absolute overlapping stack view window) */}
-          <div
-            className="lg:col-span-8 relative pl-12 lg:pl-20 h-full"
-          >
+          {/* Right Column (Scrollable stack cards) */}
+          <div className="lg:col-span-8 relative pl-12 lg:pl-20 h-full">
             {/* Vertical timeline track line */}
             <div className="absolute left-6 lg:left-8 top-4 bottom-4 w-[2px] bg-zinc-800/40 rounded-full z-0 pointer-events-none">
               <div
@@ -815,7 +812,7 @@ export default function ChangelogPage() {
             {/* Slide Window Container */}
             <div
               id="timeline-window"
-              className="relative flex-1 h-auto lg:h-[600px] overflow-visible lg:overflow-hidden rounded-3xl border-0 lg:border border-white/5 bg-transparent lg:bg-[#050505] space-y-8 lg:space-y-0"
+              className="relative flex-1 space-y-24 lg:space-y-0"
             >
               {changelogData.map((item, idx) => {
                 const Icon = item.icon;
@@ -824,90 +821,99 @@ export default function ChangelogPage() {
                 return (
                   <div
                     key={item.version}
-                    id={`card-${idSafe}`}
-                    className="lg:absolute lg:inset-0 bg-[#0a0a0a] border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between relative w-full h-auto lg:h-full overflow-visible lg:overflow-y-auto"
-                    style={{
-                      zIndex: idx + 10,
-                    }}
+                    id={`wrapper-${idSafe}`}
+                    className="relative w-full min-h-0 lg:min-h-screen flex flex-col justify-start last:min-h-0 last:pb-12 lg:last:pb-24"
                   >
-                    {/* Projecting timeline dot */}
                     <div
-                      id={`dot-${idSafe}`}
-                      className={`
-                        absolute -left-9 lg:-left-16 top-[30px] w-6 h-6 lg:w-8 lg:h-8 rounded-full border bg-black flex items-center justify-center z-20 transition-all duration-300
-                        ${
-                          activeIndex === idx
-                            ? "border-[#39FF14] text-black bg-[#39FF14] shadow-[0_0_15px_rgba(57,255,20,0.6)] scale-110"
-                            : activeIndex >= idx
-                            ? "border-[#39FF14]/50 text-[#39FF14]"
-                            : "border-zinc-800 text-zinc-500"
-                        }
-                      `}
+                      key={item.version}
+                      id={`card-${idSafe}`}
+                      className="lg:sticky lg:top-[160px] bg-[#0a0a0a] border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between relative w-full h-auto lg:h-[600px] overflow-visible lg:overflow-y-auto transition-colors duration-300"
+                      style={{
+                        zIndex: idx + 10,
+                      }}
                     >
-                      <Icon className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
-                    </div>
-
-                    {/* Card Header info */}
-                    <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/5 pb-4">
-                      <div className="flex items-center gap-3">
-                        <span
-                          className={`text-xl font-bold font-mono ${
-                            isMajor ? "text-[#39FF14]" : "text-white"
-                          }`}
-                        >
-                          {item.version}
-                        </span>
-                        <span className="text-zinc-500 text-xs font-mono font-semibold flex items-center gap-1.5">
-                          <Calendar className="w-3.5 h-3.5" />
-                          {item.date}
-                        </span>
-                      </div>
-                      <span
+                      {/* Projecting timeline dot */}
+                      <div
+                        id={`dot-${idSafe}`}
                         className={`
-                          text-[9px] font-black uppercase font-mono px-2 py-0.5 rounded tracking-widest border
+                          absolute -left-9 lg:-left-16 top-[30px] w-6 h-6 lg:w-8 lg:h-8 rounded-full border bg-black flex items-center justify-center z-20 transition-all duration-300
                           ${
-                            isMajor
-                              ? "bg-[#39FF14]/10 border-[#39FF14]/20 text-[#39FF14]"
-                              : "bg-white/5 border-white/10 text-zinc-400"
+                            activeIndex === idx
+                              ? "border-[#39FF14] text-black bg-[#39FF14] shadow-[0_0_15px_rgba(57,255,20,0.6)] scale-110"
+                              : activeIndex >= idx
+                                ? "border-[#39FF14]/50 text-[#39FF14]"
+                                : "border-zinc-800 text-zinc-500"
                           }
                         `}
                       >
-                        {item.type} Release
-                      </span>
-                    </div>
+                        <Icon className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
+                      </div>
 
-                    {/* Title & Desc */}
-                    <div className="space-y-1.5 my-4">
-                      <h3 className="text-lg font-bold text-white font-mono leading-tight">
-                        {item.title}
-                      </h3>
-                      <p className="text-zinc-400 text-xs font-mono leading-relaxed">
-                        {item.desc}
-                      </p>
-                    </div>
-
-                    {/* Categories grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 flex-1 overflow-y-auto scrollbar-thin">
-                      {item.categories.map((cat, catIdx) => (
-                        <div key={catIdx} className="category-block space-y-3">
-                          <h4 className="text-xs font-bold text-white flex items-center gap-2 border-b border-white/5 pb-1 font-mono uppercase tracking-wider">
-                            {cat.title}
-                          </h4>
-                          <ul className="space-y-2 pl-1 font-mono text-[11px] text-zinc-400">
-                            {cat.items.map((bullet, bIdx) => (
-                              <li
-                                key={bIdx}
-                                className="leading-relaxed flex items-start gap-2"
-                              >
-                                <span className="text-[#39FF14] mt-1 shrink-0">
-                                  •
-                                </span>
-                                <span>{bullet}</span>
-                              </li>
-                            ))}
-                          </ul>
+                      {/* Card Header info */}
+                      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/5 pb-4">
+                        <div className="flex items-center gap-3">
+                          <span
+                            className={`text-xl font-bold font-mono ${
+                              isMajor ? "text-[#39FF14]" : "text-white"
+                            }`}
+                          >
+                            {item.version}
+                          </span>
+                          <span className="text-zinc-500 text-xs font-mono font-semibold flex items-center gap-1.5">
+                            <Calendar className="w-3.5 h-3.5" />
+                            {item.date}
+                          </span>
                         </div>
-                      ))}
+                        <span
+                          className={`
+                            text-[9px] font-black uppercase font-mono px-2 py-0.5 rounded tracking-widest border
+                            ${
+                              isMajor
+                                ? "bg-[#39FF14]/10 border-[#39FF14]/20 text-[#39FF14]"
+                                : "bg-white/5 border-white/10 text-zinc-400"
+                            }
+                          `}
+                        >
+                          {item.type} Release
+                        </span>
+                      </div>
+
+                      {/* Title & Desc */}
+                      <div className="space-y-1.5 my-4">
+                        <h3 className="text-lg font-bold text-white font-mono leading-tight">
+                          {item.title}
+                        </h3>
+                        <p className="text-zinc-400 text-xs font-mono leading-relaxed">
+                          {item.desc}
+                        </p>
+                      </div>
+
+                      {/* Categories grid */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 flex-1 overflow-y-auto scrollbar-thin">
+                        {item.categories.map((cat, catIdx) => (
+                          <div
+                            key={catIdx}
+                            className="category-block space-y-3"
+                          >
+                            <h4 className="text-xs font-bold text-white flex items-center gap-2 border-b border-white/5 pb-1 font-mono uppercase tracking-wider">
+                              {cat.title}
+                            </h4>
+                            <ul className="space-y-2 pl-1 font-mono text-[11px] text-zinc-400">
+                              {cat.items.map((bullet, bIdx) => (
+                                <li
+                                  key={bIdx}
+                                  className="leading-relaxed flex items-start gap-2"
+                                >
+                                  <span className="text-[#39FF14] mt-1 shrink-0">
+                                    •
+                                  </span>
+                                  <span>{bullet}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 );
