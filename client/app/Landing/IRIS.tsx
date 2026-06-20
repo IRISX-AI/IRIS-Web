@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "../Components/Header";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, lazy, Suspense } from "react";
 import Footer from "../Components/Footer";
 import Image from "next/image";
 import LogoLoop from "../utils/LogoLoop";
@@ -24,7 +24,7 @@ import { PiOpenAiLogo } from "react-icons/pi";
 import { RiGeminiFill } from "react-icons/ri";
 import { BsAnthropic } from "react-icons/bs";
 import { TbBrandSocketIo } from "react-icons/tb";
-import IrisHero from "../Components/UI/IrisHero";
+const IrisHero = lazy(() => import("../Components/UI/IrisHero"));
 import { MacbookScroll } from "../constants/MacbookScroll";
 import { ContainerScroll } from "../constants/ContainerScroll";
 import { IRISCompare } from "../Components/UI/IRISCompare";
@@ -39,16 +39,6 @@ const IRIS = () => {
 
   const [isHeroVisible, setIsHeroVisible] = useState(true);
   const [isHeroActive, setIsHeroActive] = useState(true);
-
-  useEffect(() => {
-    let timeout: NodeJS.Timeout;
-    if (isHeroVisible) {
-      setIsHeroActive(true);
-    } else {
-      timeout = setTimeout(() => setIsHeroActive(false), 700);
-    }
-    return () => clearTimeout(timeout);
-  }, [isHeroVisible]);
 
   const actualTechLogos = [
     {
@@ -131,6 +121,19 @@ const IRIS = () => {
         start: "top top",
         onEnter: () => setIsHeroVisible(false),
         onLeaveBack: () => setIsHeroVisible(true),
+        onRefresh: (self) => {
+          setIsHeroVisible(self.scroll() < self.start);
+        },
+      });
+
+      ScrollTrigger.create({
+        trigger: contentRef.current,
+        start: "top -100%",
+        onEnter: () => setIsHeroActive(false),
+        onLeaveBack: () => setIsHeroActive(true),
+        onRefresh: (self) => {
+          setIsHeroActive(self.scroll() < self.start);
+        },
       });
     },
     { scope: containerRef },
@@ -139,11 +142,17 @@ const IRIS = () => {
   return (
     <div ref={containerRef} className="bg-black text-white relative">
       <Header />
-      <IrisHero
-        heroTextRef={heroTextRef}
-        isHeroVisible={isHeroVisible}
-        isHeroActive={isHeroActive}
-      />
+      {isHeroActive && (
+        <Suspense
+          fallback={<div className="h-screen w-full bg-black animate-pulse" />}
+        >
+          <IrisHero
+            heroTextRef={heroTextRef}
+            isHeroVisible={isHeroVisible}
+            isHeroActive={isHeroActive}
+          />
+        </Suspense>
+      )}
 
       <div
         ref={contentRef}
