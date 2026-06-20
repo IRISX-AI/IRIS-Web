@@ -36,7 +36,7 @@ export default function RefundPolicyPage() {
 
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 text-white drop-shadow-2xl">
             LICENSING & <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#10b981] to-[#044a33]">
+            <span className="text-transparent bg-clip-text bg-linear-to-b from-[#10b981] to-[#044a33]">
               REFUNDS.
             </span>
           </h1>
