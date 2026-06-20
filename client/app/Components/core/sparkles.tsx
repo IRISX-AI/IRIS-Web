@@ -58,7 +58,7 @@ export const SparklesCore = (props: ParticlesProps) => {
           options={{
             background: {
               color: {
-                value: background || "#0ac529",
+                value: background || "#000000",
               },
             },
             fullScreen: {
@@ -119,7 +119,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                 },
               },
               color: {
-                value: particleColor || "#ffffff",
+                value: particleColor || "#000",
                 animation: {
                   h: {
                     count: 0,
@@ -377,7 +377,7 @@ export const SparklesCore = (props: ParticlesProps) => {
               links: {
                 blink: false,
                 color: {
-                  value: "#fff",
+                  value: "#000000",
                 },
                 consent: false,
                 distance: 100,
