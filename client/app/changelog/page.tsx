@@ -430,7 +430,6 @@ export default function ChangelogPage() {
         }
       );
 
-      // 2. Setup scroll triggers for each version block
       changelogData.forEach((item, idx) => {
         const idSafe = item.version.replace(/\./g, "-");
         const cardId = `#card-${idSafe}`;
