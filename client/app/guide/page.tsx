@@ -9,7 +9,7 @@ import {
   ShieldCheck,
   Settings,
 } from "lucide-react";
-import Header from "../Components/Header"; // Adjust paths if necessary
+import Header from "../Components/Header"; 
 import Footer from "../Components/Footer"; 
 
 const apiKeysData = [
