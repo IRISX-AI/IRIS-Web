@@ -28,7 +28,6 @@ import { FaWhatsapp } from "react-icons/fa6";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 
-/* ─────────────────────────── DATA ─────────────────────────── */
 
 const selfServiceLinks = [
   {
