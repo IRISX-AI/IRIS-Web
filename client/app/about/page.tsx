@@ -235,7 +235,7 @@ const IRISAbout = () => {
       <StoryChapter content={storyData} />
 
       <section className="py-40 bg-black text-center border-t border-white/5 relative overflow-hidden flex flex-col items-center justify-center">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#10b981]/10 blur-[120px] rounded-full pointer-events-none mix-blend-screen" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-[#10b981]/10 blur-[120px] rounded-full pointer-events-none mix-blend-screen" />
 
         <div className="relative z-20 flex flex-col items-center gap-10 px-6">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold max-w-5xl mx-auto text-center tracking-tight text-white drop-shadow-2xl">
