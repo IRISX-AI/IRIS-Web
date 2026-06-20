@@ -9,6 +9,8 @@ import {
   Smartphone,
   CheckCircle2,
   AlertTriangle,
+  Gavel,
+  Cpu,
 } from "lucide-react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
@@ -57,7 +59,7 @@ export default function PrivacyPolicyPage() {
           </h1>
 
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Local-First Architecture. You own your code, your system telemetry, and your keys.
+            Local-First Architecture, governed under Indian Judiciary Laws. Your system remains your own.
           </p>
         </motion.div>
       </section>
@@ -70,19 +72,69 @@ export default function PrivacyPolicyPage() {
           viewport={{ once: true, margin: "-100px" }}
           className="space-y-12"
         >
+          {/* Card 1: Indian Judiciary & Statutory Compliance */}
           <motion.div
             variants={itemVariants}
-            className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
+            className="bg-[#0a0a0a] border border-[#39FF14]/20 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/45 transition-all duration-300"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#39FF14]/5 blur-[80px] pointer-events-none" />
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20 shadow-[0_0_15px_rgba(57,255,20,0.1)]">
+                <Gavel className="w-6 h-6 text-[#39FF14]" />
+              </div>
+              <h2 className="text-2xl font-bold text-white tracking-tight">Indian Legislative & Statutory Compliance</h2>
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              This policy is drafted, administered, and maintained in strict compliance with the laws of the **Republic of India**, including the **Information Technology Act, 2000 (Section 43A)** and the **Digital Personal Data Protection Act, 2023 (DPDP Act)**.
+            </p>
+            <p className="text-zinc-500 text-xs leading-relaxed">
+              IRIS adheres to the statutory provisions of reasonable security practices, data minimization, and purpose-limitation. By utilizing the software, users consent to the local-first processing of metadata as outlined herein.
+            </p>
+          </motion.div>
+
+          {/* Card 2: HWID & IP Verification (Installation & Upgrading) */}
+          <motion.div
+            variants={itemVariants}
+            className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
+                <Cpu className="w-6 h-6 text-[#39FF14]" />
+              </div>
+              <h2 className="text-2xl font-bold text-white tracking-tight">Licensing Verification: HWID & IP Telemetry</h2>
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              To enforce licensing boundaries and prevent bulk key sharing, the IRIS Pro Engine collects minimal device-specific parameters:
+            </p>
+            <div className="grid md:grid-cols-2 gap-4 mt-4 text-xs font-mono">
+              <div className="p-4 rounded-xl bg-white/5 border border-white/5 space-y-2">
+                <span className="text-[#39FF14] font-bold block">1. Hardware Identifier (HWID)</span>
+                <span className="text-zinc-400 block leading-relaxed">
+                  A unique cryptographic hash of your hardware components is generated during installation to link the license to a maximum of **two (2) devices** per user ID.
+                </span>
+              </div>
+              <div className="p-4 rounded-xl bg-white/5 border border-white/5 space-y-2">
+                <span className="text-[#39FF14] font-bold block">2. IP Address Validation</span>
+                <span className="text-zinc-400 block leading-relaxed">
+                  The client machine's IP address is validated strictly at the **time of installation** and **licensing upgrade** to prevent bulk automated abuse and verify registry locations.
+                </span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Card 3: Local-First Principle */}
+          <motion.div
+            variants={itemVariants}
+            className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
                 <Lock className="w-6 h-6 text-[#39FF14]" />
               </div>
               <h2 className="text-2xl font-bold text-white tracking-tight">Local-First Architecture</h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              IRIS is designed for developers who care deeply about privacy, workspace security, and source-code intellectual property. Unlike cloud wrappers that harvest files, IRIS executes all structural orchestration locally.
+              Aside from license verification parameters, IRIS operates as a local binary client. Your workspace contents, files, and logs remain on your workstation.
             </p>
             <div className="grid md:grid-cols-2 gap-4 mt-6">
               <div className="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/5">
@@ -100,6 +152,7 @@ export default function PrivacyPolicyPage() {
             </div>
           </motion.div>
 
+          {/* Card 4: Zero Server Telemetry */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
@@ -125,6 +178,7 @@ export default function PrivacyPolicyPage() {
             </ul>
           </motion.div>
 
+          {/* Card 5: The BYOK Disclaimer */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-orange-500/20 rounded-2xl p-8 relative overflow-hidden group hover:border-orange-500/40 transition-all duration-300"
@@ -144,6 +198,7 @@ export default function PrivacyPolicyPage() {
             </div>
           </motion.div>
 
+          {/* Card 6: Local Storage & Vector DB */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
@@ -164,6 +219,7 @@ export default function PrivacyPolicyPage() {
             </ul>
           </motion.div>
 
+          {/* Card 7: Mobile App Bridge */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
@@ -183,6 +239,7 @@ export default function PrivacyPolicyPage() {
           </motion.div>
         </motion.div>
 
+        {/* Return Button */}
         <div className="mt-12 pt-8 border-t border-white/10 flex justify-between items-center text-xs text-zinc-500">
           <span>Last Updated: June 2026</span>
           <motion.a
