@@ -170,7 +170,7 @@ export default function RefundPolicyPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="md:col-span-2 bg-gradient-to-br from-[#0a0a0a] to-[#050505] border border-[#10b981]/20 rounded-2xl p-8 md:p-10 relative overflow-hidden"
+            className="md:col-span-2 bg-linear-to-br from-[#0a0a0a] to-[#050505] border border-[#10b981]/20 rounded-2xl p-8 md:p-10 relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#10b981]/5 blur-[80px] pointer-events-none" />
 
