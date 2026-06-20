@@ -768,7 +768,6 @@ export default function ChangelogPage() {
                     id={`card-${idSafe}`}
                     className="relative bg-[#0a0a0a] border border-white/10 rounded-3xl p-6 md:p-8 flex flex-col justify-between w-full h-auto lg:h-180 overflow-visible lg:overflow-y-auto transition-all duration-300 iris-scrollbar"
                   >
-                    {/* Projecting timeline dot */}
                     <div
                       id={`dot-${idSafe}`}
                       className="absolute -left-9 lg:-left-16 top-7.5] w-6 h-6 lg:w-8 lg:h-8 rounded-full border bg-black flex items-center justify-center z-20 transition-all duration-300"
@@ -776,7 +775,6 @@ export default function ChangelogPage() {
                       <Icon className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
                     </div>
 
-                    {/* Card Header info */}
                     <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/5 pb-4">
                       <div className="flex items-center gap-3">
                         <span
@@ -805,7 +803,6 @@ export default function ChangelogPage() {
                       </span>
                     </div>
 
-                    {/* Title & Desc */}
                     <div className="space-y-1.5 my-4">
                       <h3 className="text-lg font-bold text-white font-mono leading-tight">
                         {item.title}
@@ -815,7 +812,6 @@ export default function ChangelogPage() {
                       </p>
                     </div>
 
-                    {/* Categories grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 flex-1 overflow-y-auto iris-scrollbar pr-2">
                       {item.categories.map((cat, catIdx) => (
                         <div key={catIdx} className="category-block space-y-3">
