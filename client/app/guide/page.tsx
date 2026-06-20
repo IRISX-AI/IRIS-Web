@@ -162,7 +162,7 @@ export default function ApiKeysGuide() {
                 </span>
               </div>
 
-              <p className="text-zinc-400 text-sm mb-6 min-h-[40px]">
+              <p className="text-zinc-400 text-sm mb-6 min-h-10">
                 {key.description}
               </p>
 
@@ -189,7 +189,7 @@ export default function ApiKeysGuide() {
                 <h3 className="text-xs font-bold text-zinc-500 mb-3 uppercase tracking-widest font-mono">
                   Acquisition Steps
                 </h3>
-                <ul className="space-y-3 min-h-[120px]">
+                <ul className="space-y-3 min-h-30">
                   {key.steps.map((step, index) => (
                     <li
                       key={index}
