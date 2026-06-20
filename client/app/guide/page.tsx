@@ -177,7 +177,7 @@ export default function ApiKeysGuide() {
                 <h3 className="text-xs font-bold text-zinc-500 mb-3 uppercase tracking-widest font-mono">
                   Acquisition Steps
                 </h3>
-                <ul className="space-y-3 min-h-[120px]">
+                <ul className="space-y-3 min-h-30">
                   {key.steps.map((step, index) => (
                     <li
                       key={index}
