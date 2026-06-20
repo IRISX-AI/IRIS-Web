@@ -9,8 +9,8 @@ import {
   ShieldCheck,
   Settings,
 } from "lucide-react";
-import Header from "../Components/Header"; 
-import Footer from "../Components/Footer"; 
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 
 const apiKeysData = [
   {
@@ -92,7 +92,6 @@ export default function ApiKeysGuide() {
       <Header />
 
       <main className="grow max-w-6xl mx-auto w-full px-6 pb-24">
-        {/* ── HERO SECTION ── */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -112,7 +111,6 @@ export default function ApiKeysGuide() {
           </p>
         </motion.div>
 
-        {/* ── WORKFLOW INSTRUCTION ── */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -135,7 +133,6 @@ export default function ApiKeysGuide() {
           </div>
         </motion.div>
 
-        {/* ── API KEY CARDS GRID ── */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
