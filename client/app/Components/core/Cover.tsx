@@ -38,7 +38,7 @@ export const Cover = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       ref={ref}
-      className="relative hover:bg-neutral-900  group/cover inline-block dark:bg-neutral-900 bg-neutral-100 px-2 py-2  transition duration-200 rounded-sm"
+      className="relative hover:bg-[#0ac529] cursor-pointer group/cover inline-block dark:bg-green-950 bg-neutral-100 px-2 py-2  transition duration-200 rounded-sm"
     >
       <AnimatePresence>
         {hovered && (
@@ -72,7 +72,7 @@ export const Cover = ({
                 maxSize={1}
                 particleDensity={500}
                 className="w-full h-full"
-                particleColor="#FFFFFF"
+                particleColor="#000"
               />
               <SparklesCore
                 background="transparent"
@@ -80,7 +80,7 @@ export const Cover = ({
                 maxSize={1}
                 particleDensity={500}
                 className="w-full h-full"
-                particleColor="#FFFFFF"
+                particleColor="#000"
               />
             </motion.div>
           </motion.div>
@@ -131,7 +131,7 @@ export const Cover = ({
           },
         }}
         className={cn(
-          "dark:text-white inline-block text-neutral-900 relative z-20 group-hover/cover:text-white transition duration-200",
+          "dark:text-white inline-block  text-neutral-900 relative z-20 group-hover/cover:text-black transition duration-200",
           className,
         )}
       >
