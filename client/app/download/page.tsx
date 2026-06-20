@@ -105,9 +105,9 @@ export default function DownloadPage() {
             className="absolute inset-0 w-full h-full pointer-events-none z-0"
             style={{
               maskImage:
-                "radial-linear(circle at center, black 20%, transparent 70%)",
+                "radial-gradient(circle at center, black 20%, transparent 70%)",
               WebkitMaskImage:
-                "radial-linear(circle at center, black 20%, transparent 70%)",
+                "radial-gradient(circle at center, black 20%, transparent 70%)",
               opacity: 0.8,
             }}
           >
@@ -128,16 +128,16 @@ export default function DownloadPage() {
             PUBLIC BETA V1.3.0 LIVE
           </motion.div>
 
-          <motion.h1 className="relative z-10 text-6xl md:text-8xl font-black tracking-tight mb-6">
-            NATIVE{" "}
+          <motion.h1 className="relative z-10 text-6xl md:text-8xl font-black tracking-tight mb-6 uppercase">
+            DOWNLOAD{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-[#39FF14] to-[#ccffcc] drop-shadow-[0_0_30px_rgba(57,255,20,0.4)]">
-              ENGINE.
+              IRIS.
             </span>
           </motion.h1>
 
           <motion.p className="relative z-10 max-w-2xl text-zinc-300 text-lg md:text-xl mb-12 leading-relaxed">
-            Experience autonomous file management, local deep research, and
-            native OS automation. Download the primary desktop client below.
+            Install the primary desktop client. Execute local file management,
+            deep research, and system automation directly from your workstation.
           </motion.p>
 
           <motion.div className="relative z-10 flex flex-col items-center gap-6 mb-12 w-full">
@@ -173,7 +173,7 @@ export default function DownloadPage() {
           </motion.div>
         </motion.section>
 
-        <motion.section className="py-20 border-t border-white/5 relative z-10">
+        <motion.section className="py-20 border-t border-white/5 relative z-10 max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-2xl font-bold tracking-widest text-white uppercase font-mono">
               The Ecosystem
