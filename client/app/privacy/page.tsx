@@ -73,7 +73,6 @@ export default function PrivacyPolicyPage() {
           viewport={{ once: true, margin: "-100px" }}
           className="space-y-12"
         >
-          {/* Card 1: Indian Judiciary & Statutory Compliance */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-[#39FF14]/20 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/45 transition-all duration-300"
@@ -93,7 +92,6 @@ export default function PrivacyPolicyPage() {
             </p>
           </motion.div>
 
-          {/* Card 2: Google Authentication Collection */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
@@ -123,7 +121,6 @@ export default function PrivacyPolicyPage() {
             </div>
           </motion.div>
 
-          {/* Card 3: HWID & IP Verification (Installation & Upgrading) */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
