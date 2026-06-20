@@ -36,6 +36,7 @@ import { TbBrandSocketIo } from "react-icons/tb";
 import RippleGrid from "../constants/RippleGrid";
 import Image from "next/image";
 import { Cover } from "../Components/core/Cover";
+import Link from "next/link";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -248,10 +249,12 @@ const IRISAbout = () => {
             execution environment.
           </p>
 
-          <button className="group relative inline-flex items-center gap-3 px-10 py-5 bg-[#10b981] text-black font-bold text-lg rounded-full hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_60px_rgba(16,185,129,0.6)]">
-            <Download className="w-5 h-5 group-hover:-translate-y-1 transition-transform duration-300" />
-            Download IRIS Desktop
-          </button>
+          <Link href="/download">
+            <button className="group relative inline-flex items-center gap-3 px-10 py-5 bg-[#10b981] text-black font-bold text-lg rounded-full hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_60px_rgba(16,185,129,0.6)]">
+              <Download className="w-5 h-5 group-hover:-translate-y-1 transition-transform duration-300" />
+              Download IRIS Desktop
+            </button>
+          </Link>
         </div>
       </section>
 
