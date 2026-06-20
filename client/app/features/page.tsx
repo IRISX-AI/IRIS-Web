@@ -24,7 +24,6 @@ import Footer from "../Components/Footer";
 import StoryChapter, { StoryContent } from "../lib/StoryChapter";
 import Hyperspeed from "../Components/core/HyperSpeed";
 
-// ── 1. The Elite Feature Data (Zero Fluff, 100% Technical Accuracy) ──
 const storyData: StoryContent[] = [
   {
     num: "01",
@@ -152,7 +151,7 @@ export default function FeaturesPage() {
 
       <section className="relative h-screen flex flex-col justify-center items-center overflow-hidden border-b border-white/10 bg-[#050505] perspective-1000">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#10b981]/10 blur-[120px] rounded-full pointer-events-none mix-blend-screen" />
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#050505] to-transparent z-10"></div>
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-linear-to-t from-[#050505] to-transparent z-10"></div>
 
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
           <Hyperspeed
@@ -214,12 +213,11 @@ export default function FeaturesPage() {
               </span>
             </motion.div>
 
-            {/* Replaced 'PASSIVE CHAT' with 'NATIVE EXECUTION' to sound like a real engine */}
             <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-8 leading-[0.9]">
               CORE <br />
               <span className="relative inline-block">
                 <span className="absolute -inset-1 bg-[#10b981]/20 blur-lg opacity-50 animate-pulse"></span>
-                <span className="relative text-transparent bg-clip-text bg-gradient-to-b from-white via-gray-200 to-gray-600 drop-shadow-2xl">
+                <span className="relative text-transparent bg-clip-text bg-linear-to-b from-white via-gray-200 to-gray-600 drop-shadow-2xl">
                   FEATURES
                 </span>
               </span>
@@ -241,7 +239,6 @@ export default function FeaturesPage() {
           </motion.div>
         </div>
 
-        {/* This Status Bar looks incredible. I left it exactly as you built it. */}
         <div className="absolute bottom-0 w-full border-t border-white/10 bg-black/50 backdrop-blur-sm z-30">
           <div className="max-w-7xl mx-auto px-6 h-12 flex items-center justify-between text-[10px] md:text-xs font-mono text-gray-500 uppercase tracking-widest">
             <div className="flex items-center gap-4">
