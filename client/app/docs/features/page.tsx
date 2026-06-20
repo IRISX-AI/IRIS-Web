@@ -16,6 +16,7 @@ import {
   Mic,
   ChevronDown,
   ChevronUp,
+  Sparkles,
 } from "lucide-react";
 
 interface ToolDetail {
@@ -32,6 +33,40 @@ interface FeatureCategory {
 }
 
 const featuresData: FeatureCategory[] = [
+  {
+    title: "Special Features",
+    icon: Sparkles,
+    desc: "Autonomous voice activation hooks, advanced screen character peeling, and phantom inline input overlays.",
+    tools: [
+      {
+        name: "Wake Up Word Activation",
+        desc: "IRIS is configured for hands-free local startup. Speaking the wake word automatically opens the assistant window, performs local telemetry diagnostics, and checks real-time atmospheric updates.",
+        commands: [
+          '"Hey, IRIS"',
+          '"IRIS"',
+          '"Wake up, IRIS"',
+        ],
+      },
+      {
+        name: "Phantom Control (Ghost Keyboard)",
+        desc: "Inline typing injection overlay. Activating the shortcut creates a phantom input hook to inject typed keystrokes anywhere on the OS, integrating cleanly with VS Code.",
+        commands: [
+          '"Press Ctrl + Alt + Space"',
+          '"Activate Phantom Typer"',
+          '"Start Ghost Typer"',
+        ],
+      },
+      {
+        name: "ScreenPeeler (Multimodal AI OCR)",
+        desc: "Intelligent rectangular region screen selection. Takes a high-resolution snapshot of any screen coordinate area, runs local/cloud multimodal extraction, and populates extracted text to your clipboard.",
+        commands: [
+          '"Press Ctrl + Alt + X"',
+          '"Extract text from active workspace"',
+          '"Scan system screen portion"',
+        ],
+      },
+    ],
+  },
   {
     title: "System & File Management",
     icon: FolderOpen,
