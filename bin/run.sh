@@ -9,4 +9,3 @@ echo "" > servers/run.bat
 echo ""
 
 echo "Installing new updates..."
-
