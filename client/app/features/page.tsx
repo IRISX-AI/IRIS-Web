@@ -18,6 +18,7 @@ import {
   Search,
   LayoutTemplate,
   Braces,
+  ScanFace,
 } from "lucide-react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
@@ -30,7 +31,7 @@ const storyData: StoryContent[] = [
     title: "Offline Wake Word",
     text: "IRIS runs a localized acoustic engine. It listens passively with sub-second latency and triggers instantly without requiring a mouse click or keyboard shortcut.",
     icon: <Mic className="w-24 h-24 text-blue-400" />,
-    visualTitle: "AUDIO I/O",
+    visualTitle: "HEY, IRIS",
     visualSub: "Zero-Click Trigger",
   },
   {
