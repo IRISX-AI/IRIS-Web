@@ -10,6 +10,7 @@ import {
   Users,
   Cpu,
   Gavel,
+  ShieldAlert,
 } from "lucide-react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
@@ -106,31 +107,50 @@ export default function TermsOfServicePage() {
               Sponsoring the IRIS Pro Engine grants you a non-transferable, single-user license to deploy the software on a maximum of **two (2) separate devices** simultaneously.
             </p>
             <div className="p-4 rounded-xl bg-white/5 border border-white/5 text-xs text-zinc-400 leading-relaxed">
-              <strong>Anti-Piracy Enforcement:</strong> Licensing limits are enforced using cryptographic hashing of your Hardware ID (HWID). The system logs your HWID and verifies your IP address dynamically at the time of installation and license upgrade. Attempting to run a single license key across more than two devices will result in automatic license verification suspension.
+              <strong>Anti-Piracy Enforcement:</strong> Licensing limits are enforced using cryptographic hashing of your motherboard's Hardware ID (HWID). The system logs your HWID and verifies your IP address dynamically at the time of installation and license upgrade. Attempting to run a single license key across more than two devices will result in automatic license verification suspension.
             </div>
           </motion.div>
 
-          {/* Card 3: Assumption of Risk (Native OS Execution) */}
+          {/* Card 3: Assumption of Risk (Native OS Execution) - NO LIABILITY DISCLOSURE */}
           <motion.div
             variants={itemVariants}
-            className="bg-[#0a0a0a] border border-red-500/20 rounded-2xl p-8 relative overflow-hidden group hover:border-red-500/40 transition-all duration-300"
+            className="bg-[#0a0a0a] border border-red-500/20 rounded-2xl p-8 relative overflow-hidden group hover:border-red-500/40 transition-all duration-300 animate-pulse"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/5 blur-[80px] pointer-events-none" />
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center border border-red-500/20">
                 <AlertTriangle className="w-6 h-6 text-red-500" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight">Assumption of Risk (OS Execution)</h2>
+              <h2 className="text-2xl font-bold text-white tracking-tight">3. Assumption of Risk & System Damage Disclaimer</h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              IRIS performs advanced system-level actions including reading/writing local files, manipulating active windows, executing shell commands, and controlling your cursor coordinates.
+              IRIS performs advanced system-level actions including executing terminal scripts, directory manipulation, window controls, and keyboard macro injections. While IRIS is **not harmful** to install and contains no malicious code, local automation carries inherent risks.
             </p>
             <div className="p-4 rounded-xl border border-red-500/15 bg-red-500/5 text-red-400 text-xs leading-relaxed font-semibold">
-              CRITICAL NOTICE: By running IRIS, you assume 100% of the risk. We are not liable for any data loss, corrupted directories, process disruptions, file deletions, operating system damage, or unintended terminal script outcomes. You are solely responsible for verifying the actions you prompt the engine to execute.
+              DEVELOPER EXEMPTION CLAUSE: You assume 100% of the risk. We are not liable or legally accountable for any data loss, file deletion, system failures, OS corruption, hardware damage, financial loss, or mis-happenings. By installing and authenticating the IRIS Desktop client application, you explicitly agree to this absolute waiver of liability, which is also presented during authentication.
             </div>
           </motion.div>
 
-          {/* Card 4: Individual & Non-Commercial Limit */}
+          {/* Card 4: Misuse of AI & Tool Exemption */}
+          <motion.div
+            variants={itemVariants}
+            className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
+                <ShieldAlert className="w-6 h-6 text-[#39FF14]" />
+              </div>
+              <h2 className="text-2xl font-bold text-white tracking-tight">4. Exemption of Liability for AI Misuse</h2>
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              IRIS is a productivity execution system. Any misuse of the integrated AI engine, including generating harmful commands, executing hacking macros, or conducting illegal system tasks, is **strictly the responsibility of the user**.
+            </p>
+            <p className="text-zinc-500 text-xs leading-relaxed">
+              The creator (Harsh Pandey) and project contributors maintain no oversight over your local prompts and hold zero legal responsibility or accountability for the commands executed by the user.
+            </p>
+          </motion.div>
+
+          {/* Card 5: Individual & Non-Commercial Limit */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
@@ -139,7 +159,7 @@ export default function TermsOfServicePage() {
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
                 <Users className="w-6 h-6 text-[#39FF14]" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight">Individual, Non-Commercial License Limit</h2>
+              <h2 className="text-2xl font-bold text-white tracking-tight">5. Individual, Non-Commercial License Limit</h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
               The $5 Pro engine tier is strictly licensed for individual, personal, non-production usage.
@@ -149,7 +169,7 @@ export default function TermsOfServicePage() {
             </p>
           </motion.div>
 
-          {/* Card 5: API Cost Liability */}
+          {/* Card 6: API Cost & Partner Liability */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
@@ -158,18 +178,17 @@ export default function TermsOfServicePage() {
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
                 <HardDrive className="w-6 h-6 text-[#39FF14]" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight">API Usage Fees & Costs Liability</h2>
+              <h2 className="text-2xl font-bold text-white tracking-tight">6. Third-Party API Liability Exemption</h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
               Because IRIS operates under a Bring Your Own Key (BYOK) paradigm, you are solely responsible for configuring keys and paying for your queries.
             </p>
-            <ul className="space-y-2 text-zinc-500 text-xs">
-              <li>• We are not liable for bills, tokens overages, or rate limit fees incurred on Google AI Studio, Groq Cloud, or Tavily Search accounts.</li>
-              <li>• Any account locks, suspension, or developer key bans issued by third-party API providers are the sole responsibility of the user.</li>
-            </ul>
+            <p className="text-zinc-500 text-xs leading-relaxed mb-2">
+              IRIS is not responsible or legally accountable for data policies, server connectivity, overage fees, rate limits, or billing disputes on third-party integrations: **Google Gemini**, **Groq**, **Tavily**, or **Hugging Face**.
+            </p>
           </motion.div>
 
-          {/* Card 6: Strict No-Refund Policy */}
+          {/* Card 7: Strict No-Refund Policy */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
@@ -178,7 +197,7 @@ export default function TermsOfServicePage() {
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
                 <Coins className="w-6 h-6 text-[#39FF14]" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight">Strict No-Refund Policy</h2>
+              <h2 className="text-2xl font-bold text-white tracking-tight">7. Strict No-Refund Policy</h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
               IRIS Pro is distributed as a digital package consisting of compiled bytecode binaries delivered via GitHub Sponsors.
@@ -188,7 +207,7 @@ export default function TermsOfServicePage() {
             </div>
           </motion.div>
 
-          {/* Card 7: Access Revocation Conditions */}
+          {/* Card 8: Access Revocation Conditions */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
@@ -197,7 +216,7 @@ export default function TermsOfServicePage() {
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
                 <Ban className="w-6 h-6 text-[#39FF14]" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight">Repository Access Revocation</h2>
+              <h2 className="text-2xl font-bold text-white tracking-tight">8. Repository Access Revocation</h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
               We reserve the right to permanently terminate your developer access to the private GitHub repository network, updates stream, and Discord network for the following offenses:
