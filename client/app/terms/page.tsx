@@ -8,6 +8,8 @@ import {
   Coins,
   HardDrive,
   Users,
+  Cpu,
+  Gavel,
 } from "lucide-react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
@@ -56,7 +58,7 @@ export default function TermsOfServicePage() {
           </h1>
 
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Please read these terms carefully before deploying the IRIS Pro Engine.
+            Governed under Indian laws. Please read these terms carefully before deploying the IRIS Pro Engine.
           </p>
         </motion.div>
       </section>
@@ -69,16 +71,56 @@ export default function TermsOfServicePage() {
           viewport={{ once: true, margin: "-100px" }}
           className="space-y-12"
         >
+          {/* Card 1: Jurisdiction & Indian Judiciary Governance */}
           <motion.div
             variants={itemVariants}
-            className="bg-[#0a0a0a] border border-red-500/20 rounded-2xl p-8 relative overflow-hidden group hover:border-red-500/40 transition-all duration-300 animate-pulse"
+            className="bg-[#0a0a0a] border border-[#39FF14]/25 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/45 transition-all duration-300"
+          >
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#39FF14]/5 blur-[80px] pointer-events-none" />
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
+                <Gavel className="w-6 h-6 text-[#39FF14]" />
+              </div>
+              <h2 className="text-2xl font-bold text-white tracking-tight">EULA Governing Law & Indian Jurisdiction</h2>
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              This End User License Agreement (EULA) is governed, construed, and enforced in accordance with the laws of the **Republic of India** pursuant to the **Indian Contract Act, 1872** and the **Information Technology Act, 2000**.
+            </p>
+            <p className="text-zinc-500 text-xs leading-relaxed">
+              Any dispute, controversy, or litigation arising out of or related to this licensing model, payment gateway, or engine deployment shall be subject to the exclusive jurisdiction of the courts located in **New Delhi, India**.
+            </p>
+          </motion.div>
+
+          {/* Card 2: 2-Device Sponsorship Ceiling & Anti-Piracy Checks */}
+          <motion.div
+            variants={itemVariants}
+            className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
+                <Cpu className="w-6 h-6 text-[#39FF14]" />
+              </div>
+              <h2 className="text-2xl font-bold text-white tracking-tight">IRIS Pro Licensing Ceiling & Validation</h2>
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              Sponsoring the IRIS Pro Engine grants you a non-transferable, single-user license to deploy the software on a maximum of **two (2) separate devices** simultaneously.
+            </p>
+            <div className="p-4 rounded-xl bg-white/5 border border-white/5 text-xs text-zinc-400 leading-relaxed">
+              <strong>Anti-Piracy Enforcement:</strong> Licensing limits are enforced using cryptographic hashing of your Hardware ID (HWID). The system logs your HWID and verifies your IP address dynamically at the time of installation and license upgrade. Attempting to run a single license key across more than two devices will result in automatic license verification suspension.
+            </div>
+          </motion.div>
+
+          {/* Card 3: Assumption of Risk (Native OS Execution) */}
+          <motion.div
+            variants={itemVariants}
+            className="bg-[#0a0a0a] border border-red-500/20 rounded-2xl p-8 relative overflow-hidden group hover:border-red-500/40 transition-all duration-300"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/5 blur-[80px] pointer-events-none" />
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center border border-red-500/20">
                 <AlertTriangle className="w-6 h-6 text-red-500" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight">1. Assumption of Risk (Native OS Execution)</h2>
+              <h2 className="text-2xl font-bold text-white tracking-tight">Assumption of Risk (OS Execution)</h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
               IRIS performs advanced system-level actions including reading/writing local files, manipulating active windows, executing shell commands, and controlling your cursor coordinates.
@@ -88,6 +130,7 @@ export default function TermsOfServicePage() {
             </div>
           </motion.div>
 
+          {/* Card 4: Individual & Non-Commercial Limit */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
@@ -96,7 +139,7 @@ export default function TermsOfServicePage() {
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
                 <Users className="w-6 h-6 text-[#39FF14]" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight">2. Individual, Non-Commercial License Limit</h2>
+              <h2 className="text-2xl font-bold text-white tracking-tight">Individual, Non-Commercial License Limit</h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
               The $5 Pro engine tier is strictly licensed for individual, personal, non-production usage.
@@ -106,6 +149,7 @@ export default function TermsOfServicePage() {
             </p>
           </motion.div>
 
+          {/* Card 5: API Cost Liability */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
@@ -114,7 +158,7 @@ export default function TermsOfServicePage() {
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
                 <HardDrive className="w-6 h-6 text-[#39FF14]" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight">3. API Usage Fees & Costs Liability</h2>
+              <h2 className="text-2xl font-bold text-white tracking-tight">API Usage Fees & Costs Liability</h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
               Because IRIS operates under a Bring Your Own Key (BYOK) paradigm, you are solely responsible for configuring keys and paying for your queries.
@@ -125,6 +169,7 @@ export default function TermsOfServicePage() {
             </ul>
           </motion.div>
 
+          {/* Card 6: Strict No-Refund Policy */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
@@ -133,7 +178,7 @@ export default function TermsOfServicePage() {
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
                 <Coins className="w-6 h-6 text-[#39FF14]" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight">4. Strict No-Refund Policy</h2>
+              <h2 className="text-2xl font-bold text-white tracking-tight">Strict No-Refund Policy</h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
               IRIS Pro is distributed as a digital package consisting of compiled bytecode binaries delivered via GitHub Sponsors.
@@ -143,6 +188,7 @@ export default function TermsOfServicePage() {
             </div>
           </motion.div>
 
+          {/* Card 7: Access Revocation Conditions */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
@@ -151,7 +197,7 @@ export default function TermsOfServicePage() {
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
                 <Ban className="w-6 h-6 text-[#39FF14]" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight">5. Repository Access Revocation</h2>
+              <h2 className="text-2xl font-bold text-white tracking-tight">Repository Access Revocation</h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
               We reserve the right to permanently terminate your developer access to the private GitHub repository network, updates stream, and Discord network for the following offenses:
@@ -159,12 +205,13 @@ export default function TermsOfServicePage() {
             <ul className="space-y-2.5 text-zinc-500 text-xs pl-2 border-l border-red-500/20">
               <li>• Initiating payment chargebacks or bank payment disputes via GitHub Sponsors.</li>
               <li>• Sharing, redistributing, or publishing the proprietary compiled binary packages (.exe / .jsc / ASAR archives).</li>
-              <li>• Violating the non-commercial deployment boundaries.</li>
+              <li>• Violating the non-commercial deployment boundaries or device activation limits.</li>
               <li>• Reverse engineering bytecode files.</li>
             </ul>
           </motion.div>
         </motion.div>
 
+        {/* Return Button */}
         <div className="mt-12 pt-8 border-t border-white/10 flex justify-between items-center text-xs text-zinc-500">
           <span>Last Updated: June 2026</span>
           <motion.a
