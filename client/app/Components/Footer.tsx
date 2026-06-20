@@ -52,7 +52,7 @@ export default function Footer() {
                 IRIS
               </h3>
               <p className="text-[#39FF14] text-[10px] tracking-[0.2em] uppercase">
-                Execution Engine
+                Voice First AI Assistant
               </p>
             </div>
           </div>
