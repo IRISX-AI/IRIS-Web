@@ -104,7 +104,7 @@ export default function ApiKeysGuide() {
           <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6 uppercase">
             API <span className="text-[#39FF14]">Configuration.</span>
           </h1>
-          <p className="text-lg text-zinc-400 leading-relaxed font-mono">
+          <p className="text-lg text-zinc-400 leading-relaxed">
             IRIS operates on a strictly local Bring Your Own Key (BYOK)
             architecture. Acquire the required API keys below to enable external
             inference and data extraction.
