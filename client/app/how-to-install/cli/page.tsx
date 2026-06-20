@@ -66,7 +66,7 @@ export default function CliInstallGuide() {
               </span>
             </div>
 
-            <div className="p-4 md:p-6 h-[500px] overflow-y-auto custom-scrollbar">
+            <div className="p-4 md:p-6 h-125 overflow-y-auto custom-scrollbar">
               <Terminal
                 commands={[
                   "npm install -g iris-mini",
