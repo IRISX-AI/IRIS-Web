@@ -42,7 +42,6 @@ export default function Footer() {
         viewport={{ once: true, margin: "-100px" }}
         className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 text-sm relative z-10"
       >
-        {/* ── BRANDING & SOCIALS ── */}
         <motion.div variants={itemVariants} className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 border border-[#39FF14]/30 bg-[#39FF14]/10 rounded-xl flex items-center justify-center shadow-[0_0_15px_rgba(57,255,20,0.1)]">
@@ -86,7 +85,6 @@ export default function Footer() {
           </div>
         </motion.div>
 
-        {/* ── LEGAL & RESOURCES ── */}
         <motion.div variants={itemVariants} className="flex flex-col gap-4">
           <h5 className="text-white font-bold tracking-widest mb-2 flex items-center gap-2">
             <TerminalSquare size={16} className="text-[#39FF14]" /> RESOURCES
@@ -112,7 +110,6 @@ export default function Footer() {
           ))}
         </motion.div>
 
-        {/* ── COMPANY LINKS ── */}
         <motion.div variants={itemVariants} className="flex flex-col gap-4">
           <h5 className="text-white font-bold tracking-widest mb-2 flex items-center gap-2">
             <Activity size={16} className="text-[#39FF14]" /> ECOSYSTEM
