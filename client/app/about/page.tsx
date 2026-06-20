@@ -7,7 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   BrainCircuit,
   Target,
-  User,
   ShieldCheck,
   Rocket,
   Sparkles,
