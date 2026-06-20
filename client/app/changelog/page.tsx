@@ -9,7 +9,6 @@ import {
   ShieldCheck,
   Smartphone,
   Star,
-  Info,
   Calendar,
 } from "lucide-react";
 import Header from "../Components/Header";
