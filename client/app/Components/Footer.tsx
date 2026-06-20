@@ -167,10 +167,10 @@ export default function Footer() {
             <div className="h-px w-full bg-white/5" />
             <div>
               <p className="text-gray-500 text-[10px] uppercase tracking-wider mb-1 font-mono">
-                Engine Version
+                IRIS Version
               </p>
               <p className="text-white font-bold tracking-wider">
-                IRIS Desktop v1.3.0
+                IRIS Desktop v1.5.1
               </p>
             </div>
           </div>
