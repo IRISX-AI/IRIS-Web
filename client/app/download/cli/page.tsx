@@ -40,7 +40,6 @@ export default function CliDownloadPage() {
       <Header />
 
       <main className="max-w-5xl mx-auto px-6 relative z-10 pb-20">
-        {/* Back Navigation */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -80,7 +79,6 @@ export default function CliDownloadPage() {
             terminal without the GUI overhead.
           </motion.p>
 
-          {/* Core Installation Box */}
           <motion.div className="w-full relative z-10 mb-16">
             <div className="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-3 pl-1">
               Global Installation
@@ -107,9 +105,7 @@ export default function CliDownloadPage() {
             </div>
           </motion.div>
 
-          {/* Quick Start Guide */}
           <div className="w-full grid md:grid-cols-2 gap-8 relative z-10">
-            {/* Environment Setup */}
             <div className="bg-[#0a0a0a] border border-white/5 rounded-3xl p-8">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
                 <ShieldCheck className="w-5 h-5 text-[#39FF14]" />
@@ -137,7 +133,6 @@ export default function CliDownloadPage() {
               </div>
             </div>
 
-            {/* Execution Example */}
             <div className="bg-[#0a0a0a] border border-white/5 rounded-3xl p-8">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
                 <Zap className="w-5 h-5 text-[#39FF14]" />
