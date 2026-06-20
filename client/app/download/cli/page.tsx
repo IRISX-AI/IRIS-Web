@@ -69,7 +69,7 @@ export default function CliDownloadPage() {
 
           <motion.h1 className="relative z-10 text-5xl md:text-7xl font-black tracking-tight mb-6">
             HEADLESS <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#39FF14] to-[#ccffcc] drop-shadow-[0_0_30px_rgba(57,255,20,0.4)]">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#39FF14] to-[#ccffcc] drop-shadow-[0_0_30px_rgba(57,255,20,0.4)]">
               CLI ENGINE.
             </span>
           </motion.h1>
