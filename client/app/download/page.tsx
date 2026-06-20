@@ -137,8 +137,13 @@ export default function DownloadPage() {
 
           <motion.h1 className="relative z-10 text-6xl md:text-8xl font-black tracking-tight mb-6 uppercase">
             DOWNLOAD{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#39FF14] to-[#ccffcc] drop-shadow-[0_0_30px_rgba(57,255,20,0.4)]">
-              IRIS.
+            <span
+              className="font-bold bg-[url('/img/bright-neon-bg.png')] bg-cover bg-center bg-clip-text text-transparent mb-4 select-none"
+              style={{
+                filter: "drop-shadow(0px 0px 15px rgba(57, 255, 20, 0.8))",
+              }}
+            >
+              IRIS AI
             </span>
           </motion.h1>
 
