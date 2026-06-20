@@ -14,7 +14,7 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 
 export default function PrivacyPolicyPage() {
-  const containerVariants = {
+  const containerVariants: any = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: any = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
