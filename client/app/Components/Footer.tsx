@@ -92,6 +92,7 @@ export default function Footer() {
           {[
             { name: "About IRIS", path: "/about" },
             { name: "Documentation", path: "/docs" },
+            { name: "Changelog", path: "/changelog" },
             { name: "Refund Policy", path: "/refund-policy" },
             { name: "Privacy Policy", path: "/privacy" },
             { name: "Terms of Service", path: "/terms" },

@@ -162,11 +162,22 @@ export default function DocsTiersPage() {
       >
         <h3 className="text-lg font-bold text-white flex items-center gap-2 font-mono">
           <GitBranch className="w-5 h-5 text-[#39FF14]" />
-          Sustainable Engineering Model
+          Evolving to a Sustainable Open-Core Model
         </h3>
         <p className="text-zinc-400 text-xs leading-relaxed font-mono">
-          Open Core allows IRIS to distribute user interface configurations, templates, and widgets under a standard MIT license, while safeguarding proprietary agent orchestration techniques and live voice routing protocols under private code structures.
+          Before the release of our advanced Live SDK voice engines, IRIS was completely free and 100% open-source. However, to sustain continuous development, visual overrides, and advanced tooling updates, IRIS has evolved to a **partially open-source (Open-Core) model**.
         </p>
+        <div className="text-zinc-500 text-xs leading-relaxed font-mono space-y-2">
+          <p>
+            • <strong className="text-white">Disclosed:</strong> Part of the frontend UI visual elements and select preload bridging APIs are fully open and publicly inspectable.
+          </p>
+          <p>
+            • <strong className="text-white">Protected:</strong> The core voice routing engine, private system-level scripts execution, and the backend AI agent orchestration files remain protected inside V8 binary bytecode and are not disclosed in public repositories.
+          </p>
+          <p>
+            • <strong className="text-white">Code Access Inclusions:</strong> To back the project, a monthly GitHub sponsorship of a <strong className="text-[#39FF14]">minimum of $15/mo (IRIS Insider)</strong> grants read access to the <code className="text-[#39FF14]">iris-insiders</code> repository containing functional hooks and code snippets. <em className="text-orange-400 font-semibold">*Note that this does not provide the full code*</em>. The <strong className="text-purple-400">complete, raw, unprotected source code</strong> is only provided under the <strong className="text-purple-400">$50/mo (Alpha & Enterprise)</strong> tier.
+          </p>
+        </div>
       </motion.div>
 
       {/* COMPARISON OF FREE VS PAID SECTION */}
