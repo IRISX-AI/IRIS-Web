@@ -34,6 +34,7 @@ import { BsAnthropic } from "react-icons/bs";
 import { TbBrandSocketIo } from "react-icons/tb";
 import RippleGrid from "../constants/RippleGrid";
 import Image from "next/image";
+import { Cover } from "../Components/core/Cover";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -234,9 +235,9 @@ const IRISAbout = () => {
 
       <section className="py-40 bg-black text-center border-t border-[#10b981]/10 relative overflow-hidden">
         <div className="absolute inset-0 bg-[#10b981]/5 blur-3xl pointer-events-none"></div>
-        <h2 className="text-5xl md:text-8xl font-bold mb-8 relative z-10 text-white tracking-tighter">
-          EXPERIENCE <span className="text-[#10b981]">IRIS.</span>
-        </h2>
+        <h1 className="text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-linear-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
+          Build amazing websites <br /> at <Cover>warp speed</Cover>
+        </h1>
         <button className="relative z-10 px-12 py-5 bg-[#10b981] text-black font-bold text-xl rounded-full hover:scale-105 transition-transform shadow-[0_0_40px_rgba(16,185,129,0.4)]">
           Download Desktop App
         </button>
