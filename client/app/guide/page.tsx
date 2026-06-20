@@ -7,19 +7,19 @@ import {
   Key,
   CheckCircle2,
   AlertTriangle,
-  Terminal,
   Copy,
   Check,
+  ShieldCheck,
 } from "lucide-react";
-import Footer from "../Components/Footer";
-import Header from "../Components/Header";
+import Footer from "../Components/Header"; // Adjust paths if necessary
+import Header from "../Components/Footer"; // Adjust paths if necessary
 
 const apiKeysData = [
   {
     id: "gemini",
     name: "Google Gemini API",
     status: "Required",
-    description: "The primary reasoning and generative engine for IRIS.",
+    description: "Primary LLM provider required for core execution and natural language processing.",
     steps: [
       "Navigate to Google AI Studio.",
       "Sign in with your Google Account.",
@@ -34,8 +34,7 @@ const apiKeysData = [
     id: "groq",
     name: "Groq API",
     status: "Required",
-    description:
-      "Used for ultra-fast, low-latency agent routing and quick decisions.",
+    description: "Required for high-speed LPU inference and split-second tool-calling logic.",
     steps: [
       "Go to the Groq Cloud Console.",
       "Log in or create an account.",
@@ -50,7 +49,7 @@ const apiKeysData = [
     id: "tavily",
     name: "Tavily Search API",
     status: "Optional",
-    description: "Powers the Deep Research agent for real-time web crawling.",
+    description: "Required for autonomous web crawling and real-time search data extraction.",
     steps: [
       "Sign up at the Tavily Developer Portal.",
       "Navigate to your dashboard.",
@@ -64,7 +63,7 @@ const apiKeysData = [
     id: "huggingface",
     name: "Hugging Face Token",
     status: "Optional",
-    description: "Required only if you are downloading local inference models.",
+    description: "Required for accessing open-source visual models and local image generation.",
     steps: [
       "Create a Hugging Face account.",
       "Go to Settings > Access Tokens.",
@@ -89,7 +88,7 @@ export default function ApiKeysGuide() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.15 },
+      transition: { staggerChildren: 0.1 },
     },
   };
 
@@ -99,68 +98,53 @@ export default function ApiKeysGuide() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-black text-green-50 font-sans selection:bg-green-500/30">
+    <div className="flex flex-col min-h-screen bg-[#000000] text-zinc-100 font-sans selection:bg-[#39FF14]/30 pt-24">
       <Header />
 
-      <main className="grow p-6 md:p-12 lg:p-24 pt-24 mt-16">
+      <main className="grow max-w-6xl mx-auto w-full px-6 pb-24">
+        
+        {/* ── HERO SECTION ── */}
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="max-w-4xl mx-auto mb-16"
+          className="max-w-3xl mb-16"
         >
-          <div className="flex items-center gap-3 mb-4 text-green-500">
-            <Terminal size={32} />
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-              System Keys
-            </h1>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs font-mono tracking-widest mb-6 mt-8">
+            <ShieldCheck className="w-3 h-3" />
+            BYOK DOCUMENTATION
           </div>
-          <p className="text-lg text-green-100/60 leading-relaxed">
-            IRIS operates locally, but requires specific API keys to bridge the
-            gap to large language models and search engines. Follow this guide
-            to forge your keys and initialize the system. Your keys are stored
-            locally on your machine and never sent to our servers.
+          <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6 uppercase">
+            API <span className="text-[#39FF14]">Configuration.</span>
+          </h1>
+          <p className="text-lg text-zinc-400 leading-relaxed font-mono">
+            IRIS operates on a strictly local Bring Your Own Key (BYOK) architecture. Configure the required API keys below to enable external inference and data extraction. All keys are encrypted and stored solely on your local disk.
           </p>
         </motion.div>
 
+        {/* ── API KEY CARDS GRID ── */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
         >
           {apiKeysData.map((key) => (
             <motion.div
               key={key.id}
               variants={itemVariants}
-              className="group relative bg-zinc-950 border border-green-900/30 rounded-xl p-6 hover:border-green-500/50 transition-colors duration-300 overflow-hidden"
+              className="group relative bg-[#050505] border border-white/10 rounded-2xl p-6 md:p-8 hover:border-[#39FF14]/50 transition-all duration-300 shadow-xl"
             >
-              <div className="absolute inset-0 bg-linear-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-
-              <div className="flex justify-between items-start mb-4 relative z-10">
-                <div>
-                  <h2 className="text-2xl font-bold text-green-400 flex items-center gap-2">
-                    <Key size={20} />
-                    {key.name}
-                  </h2>
-
-                  <button
-                    onClick={() => handleCopy(key.envVar)}
-                    className="cursor-pointer flex items-center gap-2 text-xs text-green-500/50 mt-2 hover:text-green-400 transition-colors"
-                    title="Copy to clipboard"
-                  >
-                    <code>.env: {key.envVar}</code>
-                    {copiedVar === key.envVar ? (
-                      <Check size={14} className="text-green-400" />
-                    ) : (
-                      <Copy size={14} />
-                    )}
-                  </button>
-                </div>
+              {/* Header: Title & Badge */}
+              <div className="flex justify-between items-start mb-4">
+                <h2 className="text-2xl font-bold text-white flex items-center gap-3">
+                  <Key size={20} className="text-zinc-500 group-hover:text-[#39FF14] transition-colors" />
+                  {key.name}
+                </h2>
                 <span
-                  className={`px-3 py-1 text-xs font-semibold rounded-full flex items-center gap-1 ${
+                  className={`px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full flex items-center gap-1.5 ${
                     key.status === "Required"
-                      ? "bg-green-500/10 text-green-400 border border-green-500/20"
-                      : "bg-zinc-800 text-zinc-400 border border-zinc-700"
+                      ? "bg-red-500/10 text-red-400 border border-red-500/20"
+                      : "bg-zinc-800/50 text-zinc-400 border border-zinc-700/50"
                   }`}
                 >
                   {key.status === "Required" ? (
@@ -172,32 +156,57 @@ export default function ApiKeysGuide() {
                 </span>
               </div>
 
-              <p className="text-zinc-400 text-sm mb-6 relative z-10 min-h-10">
+              {/* Description */}
+              <p className="text-zinc-400 text-sm mb-6 min-h-[40px]">
                 {key.description}
               </p>
 
-              <div className="mb-6 relative z-10">
-                <h3 className="text-sm font-semibold text-green-500 mb-2 uppercase tracking-wider">
-                  How to get it:
+              {/* Environment Variable Copy Box */}
+              <div className="mb-6">
+                <div className="flex items-center justify-between bg-black border border-white/10 rounded-lg p-3 hover:border-zinc-700 transition-colors">
+                  <code className="text-xs font-mono text-zinc-300">
+                    <span className="text-zinc-500 mr-2">ENV</span> {key.envVar}
+                  </code>
+                  <button
+                    onClick={() => handleCopy(key.envVar)}
+                    className="text-zinc-500 hover:text-[#39FF14] transition-colors"
+                    title="Copy to clipboard"
+                  >
+                    {copiedVar === key.envVar ? (
+                      <Check size={16} className="text-[#39FF14]" />
+                    ) : (
+                      <Copy size={16} />
+                    )}
+                  </button>
+                </div>
+              </div>
+
+              {/* Instructions List */}
+              <div className="mb-8">
+                <h3 className="text-xs font-bold text-zinc-500 mb-3 uppercase tracking-widest font-mono">
+                  Acquisition Steps
                 </h3>
-                <ul className="space-y-2 min-h-25">
+                <ul className="space-y-3 min-h-[120px]">
                   {key.steps.map((step, index) => (
                     <li
                       key={index}
-                      className="text-sm text-zinc-300 flex items-start gap-2"
+                      className="text-sm text-zinc-300 flex items-start gap-3"
                     >
-                      <span className="text-green-500 mt-0.5">•</span>
+                      <span className="text-[#39FF14] font-mono text-xs mt-0.5">
+                        {index + 1}.
+                      </span>
                       {step}
                     </li>
                   ))}
                 </ul>
               </div>
 
+              {/* CTA Button */}
               <a
                 href={key.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 w-full justify-center bg-green-500/10 hover:bg-green-500/20 text-green-400 border border-green-500/30 py-2.5 px-4 rounded-lg transition-all duration-200 text-sm font-medium relative z-10 group-hover:border-green-500"
+                className="flex items-center justify-center gap-2 w-full bg-white/5 hover:bg-[#39FF14] text-zinc-300 hover:text-black border border-white/10 hover:border-[#39FF14] py-3 px-4 rounded-xl transition-all duration-200 text-sm font-bold"
               >
                 {key.buttonText} <ExternalLink size={16} />
               </a>
