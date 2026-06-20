@@ -13,7 +13,6 @@ import {
   AlertTriangle,
   Info,
   Terminal,
-  Check,
   Smartphone,
   Layers,
 } from "lucide-react";
