@@ -20,7 +20,6 @@ export default function InstallGuide() {
       <Header />
 
       <main className="max-w-5xl mx-auto px-6 relative z-10 pb-24">
-        {/* ── HERO ── */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -38,7 +37,6 @@ export default function InstallGuide() {
           </p>
         </motion.div>
 
-        {/* ── API KEY PREREQUISITE ── */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -68,7 +66,6 @@ export default function InstallGuide() {
           </Link>
         </motion.div>
 
-        {/* ── DESKTOP INSTALLATION STEPS ── */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -154,7 +151,6 @@ export default function InstallGuide() {
           </a>
         </motion.section>
 
-        {/* ── ROUTING CARD TO CLI ── */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -182,7 +178,6 @@ export default function InstallGuide() {
           </Link>
         </motion.div>
 
-        {/* ── MOBILE ECOSYSTEM PREVIEW ── */}
         <motion.section
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
