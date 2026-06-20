@@ -766,12 +766,12 @@ export default function ChangelogPage() {
                   <div
                     key={item.version}
                     id={`card-${idSafe}`}
-                    className="relative bg-[#0a0a0a] border border-white/10 rounded-3xl p-6 md:p-8 flex flex-col justify-between w-full h-auto lg:h-[720px] overflow-visible lg:overflow-y-auto transition-all duration-300 iris-scrollbar"
+                    className="relative bg-[#0a0a0a] border border-white/10 rounded-3xl p-6 md:p-8 flex flex-col justify-between w-full h-auto lg:h-180 overflow-visible lg:overflow-y-auto transition-all duration-300 iris-scrollbar"
                   >
                     {/* Projecting timeline dot */}
                     <div
                       id={`dot-${idSafe}`}
-                      className="absolute -left-9 lg:-left-16 top-[30px] w-6 h-6 lg:w-8 lg:h-8 rounded-full border bg-black flex items-center justify-center z-20 transition-all duration-300"
+                      className="absolute -left-9 lg:-left-16 top-7.5] w-6 h-6 lg:w-8 lg:h-8 rounded-full border bg-black flex items-center justify-center z-20 transition-all duration-300"
                     >
                       <Icon className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
                     </div>
