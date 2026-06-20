@@ -40,7 +40,6 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-// ── 1. The "About IRIS" Story Content ──
 const storyData: StoryContent[] = [
   {
     num: "01",
