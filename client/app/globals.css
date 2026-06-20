@@ -7,7 +7,6 @@ html,
 body {
   scroll-behavior: smooth;
   scrollbar-width: none;
-  overflow-x: hidden;
 }
 
 ::selection {

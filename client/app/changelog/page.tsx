@@ -414,6 +414,7 @@ export default function ChangelogPage() {
 
   useGSAP(
     () => {
+      // 1. Line progress tracks scroll position of timeline container
       gsap.fromTo(
         lineProgressRef.current,
         { height: "0%" },
@@ -429,11 +430,13 @@ export default function ChangelogPage() {
         },
       );
 
+      // 2. Focus/Highlight ScrollTrigger per card
       changelogData.forEach((item, idx) => {
         const idSafe = item.version.replace(/\./g, "-");
         const cardSelector = `#card-${idSafe}`;
         const dotSelector = `#dot-${idSafe}`;
 
+        // Initialize state on render: card 0 active, others dimmed
         if (idx === 0) {
           gsap.set(cardSelector, {
             scale: 1,
@@ -465,6 +468,8 @@ export default function ChangelogPage() {
             scale: 1,
           });
         }
+
+
 
         ScrollTrigger.create({
           trigger: cardSelector,
@@ -562,7 +567,7 @@ export default function ChangelogPage() {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#39FF14] selection:text-black"
+      className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#39FF14] selection:text-black overflow-x-hidden"
     >
       <Header />
 
@@ -596,6 +601,7 @@ export default function ChangelogPage() {
         </motion.div>
       </section>
 
+      {/* Open Core Transition Statement Section (Scrolls naturally above timeline) */}
       <section className="pt-20 pb-10 px-6 relative z-20 max-w-5xl mx-auto">
         <div className="bg-[#0a0a0a] border border-[#39FF14]/20 rounded-2xl p-6 md:p-8 space-y-4 relative overflow-hidden group">
           <div className="absolute top-0 left-0 w-full h-1 bg-[#39FF14]/15 shadow-[0_0_15px_#39FF14] pointer-events-none" />
@@ -646,12 +652,14 @@ export default function ChangelogPage() {
         </div>
       </section>
 
+      {/* Interactive Stacking Timeline Section */}
       <section
         className="py-16 px-6 relative z-20 max-w-7xl mx-auto"
         ref={timelineRef}
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          <div className="lg:col-span-4 relative">
+          {/* Left Column (Sticky active version display widget) */}
+          <div className="lg:col-span-4 relative h-full">
             <div className="lg:sticky lg:top-36 space-y-6">
               <div
                 id="pin-panel"
@@ -736,8 +744,10 @@ export default function ChangelogPage() {
             </div>
           </div>
 
-          <div className="lg:col-span-8 relative pl-12 lg:pl-20">
-            <div className="absolute left-6 lg:left-8 top-4 bottom-4 w-0.5 bg-zinc-800/40 rounded-full z-0 pointer-events-none">
+          {/* Right Column (Scrollable stack cards) */}
+          <div className="lg:col-span-8 relative pl-12 lg:pl-20 h-full">
+            {/* Vertical timeline track line */}
+            <div className="absolute left-6 lg:left-8 top-4 bottom-4 w-[2px] bg-zinc-800/40 rounded-full z-0 pointer-events-none">
               <div
                 ref={lineProgressRef}
                 className="absolute top-0 left-0 w-full bg-linear-to-b from-[#39FF14] to-emerald-500 origin-top h-0 shadow-[0_0_15px_rgba(57,255,20,0.6)]"
@@ -745,6 +755,7 @@ export default function ChangelogPage() {
               />
             </div>
 
+            {/* Slide Window Container */}
             <div
               id="timeline-window"
               className="relative w-full space-y-24 bg-transparent"
@@ -757,15 +768,17 @@ export default function ChangelogPage() {
                   <div
                     key={item.version}
                     id={`card-${idSafe}`}
-                    className="relative bg-[#0a0a0a] border border-white/10 rounded-3xl p-6 md:p-8 flex flex-col justify-between w-full h-auto lg:h-180 overflow-visible lg:overflow-y-auto transition-all duration-300 iris-scrollbar"
+                    className="relative bg-[#0a0a0a] border border-white/10 rounded-3xl p-6 md:p-8 flex flex-col justify-between w-full h-auto lg:h-[720px] overflow-visible lg:overflow-y-auto transition-all duration-300 iris-scrollbar"
                   >
+                    {/* Projecting timeline dot */}
                     <div
                       id={`dot-${idSafe}`}
-                      className="absolute -left-9 lg:-left-16 top-7.5] w-6 h-6 lg:w-8 lg:h-8 rounded-full border bg-black flex items-center justify-center z-20 transition-all duration-300"
+                      className="absolute -left-9 lg:-left-16 top-[30px] w-6 h-6 lg:w-8 lg:h-8 rounded-full border bg-black flex items-center justify-center z-20 transition-all duration-300"
                     >
                       <Icon className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
                     </div>
 
+                    {/* Card Header info */}
                     <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/5 pb-4">
                       <div className="flex items-center gap-3">
                         <span
@@ -794,6 +807,7 @@ export default function ChangelogPage() {
                       </span>
                     </div>
 
+                    {/* Title & Desc */}
                     <div className="space-y-1.5 my-4">
                       <h3 className="text-lg font-bold text-white font-mono leading-tight">
                         {item.title}
@@ -803,6 +817,7 @@ export default function ChangelogPage() {
                       </p>
                     </div>
 
+                    {/* Categories grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 flex-1 overflow-y-auto iris-scrollbar pr-2">
                       {item.categories.map((cat, catIdx) => (
                         <div key={catIdx} className="category-block space-y-3">
