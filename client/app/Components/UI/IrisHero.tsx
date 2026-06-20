@@ -54,7 +54,7 @@ export default function IrisHero({
             <h1
               className="text-[28vw] sm:text-[20vw] md:text-[13vw] font-bold tracking-tight bg-[url('/img/bright-neon-bg.png')] bg-cover bg-center bg-clip-text text-transparent mb-4 select-none"
               style={{
-                filter: "drop-shadow(0px 0px 15px rgba(57, 255, 20, 0.8))",
+                filter: "drop-shadow(0px 0px 1px rgba(57, 255, 20, 0.8))",
               }}
             >
               IRIS AI
