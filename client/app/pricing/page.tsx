@@ -1,23 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle2, Zap, Activity, Sparkles, Ticket } from "lucide-react";
+import { motion } from "framer-motion";
+import {
+  CheckCircle2,
+  Zap,
+  Activity,
+  Sparkles,
+  ShieldAlert,
+} from "lucide-react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import { ScratchCard } from "../Components/ScratchCard";
+import { FaGithub } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function PricingPage() {
-  const [discountActive, setDiscountActive] = useState(false);
-  const [discountPercent, setDiscountPercent] = useState(15);
-
-  useEffect(() => {
-    setDiscountPercent(Math.floor(Math.random() * 6) + 10);
-  }, []);
-
-  const basePrice = 499;
-  const discountedPrice = Math.floor(basePrice * (1 - discountPercent / 100));
-
   return (
     <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#10b981] selection:text-black">
       <Header />
@@ -33,55 +29,34 @@ export default function PricingPage() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#10b981]/30 bg-[#10b981]/5 text-[#10b981] text-xs font-mono mb-8 backdrop-blur-md">
             <Activity className="w-3 h-3" />
-            <span className="uppercase tracking-widest">System Deployment</span>
+            <span className="uppercase tracking-widest">
+              Pricing & Licensing
+            </span>
           </div>
+
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6">
-            CHOOSE YOUR <br />
+            SIMPLE <br />
             <span className="text-transparent bg-clip-text bg-linear-to-b from-[#10b981] to-[#044a33]">
-              INTELLIGENCE
+              PRICING.
             </span>
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Deploy IRIS as a powerful local OS controller, or unleash the full
-            autonomous ecosystem across your network and mobile devices.
+
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
+            One-time payment. Zero complicated setups or monthly subscriptions.
+            Secure a lifetime license to the IRIS Pro engine instantly via
+            GitHub Sponsors.
           </p>
+
+          <Link href="/refund-policy" className="inline-block">
+            <button className="cursor-pointer group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-orange-500/20 bg-orange-500/5 text-xs font-mono text-orange-400/80 hover:text-orange-400 hover:bg-orange-500/10 hover:border-orange-500/40 transition-all duration-300 shadow-[0_0_15px_rgba(249,115,22,0.05)] hover:shadow-[0_0_25px_rgba(249,115,22,0.15)]">
+              <ShieldAlert className="w-4 h-4 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
+              <span>Strict No-Refund Policy (Standard GitHub Terms)</span>
+            </button>
+          </Link>
         </motion.div>
       </section>
 
-      <section className="py-12 relative z-20">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="p-8 rounded-4xl bg-[#0a0a0a] border border-dashed border-[#10b981]/30 relative overflow-hidden"
-          >
-            <Ticket className="w-8 h-8 text-[#10b981] mx-auto mb-4 opacity-50" />
-            <h3 className="text-2xl font-bold mb-2">Decrypt a Network Key</h3>
-            <p className="text-gray-400 mb-8 text-sm max-w-md mx-auto">
-              Scratch the cryptographic foil below to reveal a specialized
-              network key for a lifetime discount on the Pro Engine.
-            </p>
-            <ScratchCard
-              onReveal={() => setDiscountActive(true)}
-              discountAmount={discountPercent}
-            />
-
-            <AnimatePresence>
-              {discountActive && (
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="text-[#10b981] font-mono text-sm mt-6 animate-pulse"
-                >
-                  {`> KEY ACCEPTED: ${discountPercent}% DISCOUNT APPLIED GLOBALLY`}
-                </motion.p>
-              )}
-            </AnimatePresence>
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="py-20 relative z-20 max-w-7xl mx-auto px-6">
+      <section className="py-12 relative z-20 max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -89,53 +64,49 @@ export default function PricingPage() {
             className="bg-[#0a0a0a] rounded-[2.5rem] p-10 border border-white/10 flex flex-col hover:border-white/20 transition-colors"
           >
             <div className="mb-8">
-              <h3 className="text-3xl font-bold mb-2">IRIS Free</h3>
+              <h3 className="text-3xl font-bold mb-2">IRIS Base Engine</h3>
               <div className="text-4xl font-black text-white mb-4">
-                ₹0
+                $0 / ₹0
                 <span className="text-lg font-normal text-gray-500 tracking-normal">
-                  /forever
+                  {" "}
+                  forever
                 </span>
               </div>
               <p className="text-sm text-gray-400 h-10">
-                The ultimate local workstation and OS controller.
+                The ultimate local workstation controller. Core OS integration
+                completely free.
               </p>
             </div>
 
             <div className="mb-8 p-4 rounded-xl bg-white/5 border border-white/5 font-mono text-xs">
               <div className="text-gray-500 mb-2 uppercase tracking-widest font-bold">
-                Rate Limits
+                Base Capabilities
               </div>
               <ul className="space-y-2 text-gray-300">
                 <li className="flex justify-between">
-                  <span>Active Devices:</span> <span>2 (Local Only)</span>
+                  <span>Architecture:</span>{" "}
+                  <span>Bring Your Own Key (BYOK)</span>
                 </li>
                 <li className="flex justify-between">
-                  <span>Voice Commands:</span> <span>50 / day</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Local RAG Queries:</span> <span>10 / day</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Llama 3 Web Crawls:</span> <span>5 / day</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Latency:</span>{" "}
-                  <span className="text-yellow-500">Standard</span>
+                  <span>Usage Limits:</span> <span>Unlimited Local</span>
                 </li>
               </ul>
             </div>
 
             <div className="space-y-4 flex-1">
-              <FeatureItem text="Desktop App & Process Control" />
-              <FeatureItem text="Deep File Operations & Drop Zones" />
-              <FeatureItem text="Local Vector Search & Vision API" />
-              <FeatureItem text="Terminal & Script Execution" />
-              <FeatureItem text="Window Teleportation & Live Widgets" />
+              <FeatureItem text="Native File System & Directory Access" />
+              <FeatureItem text="Terminal & CLI Script Execution" />
+              <FeatureItem text="Desktop Window Management" />
+              <FeatureItem text="Live DOM Manipulation (CSS/JS Injection)" />
+              <FeatureItem text="Screen Optics & OCR Text Extraction" />
+              <FeatureItem text="Push-to-Talk Voice Activation" />
             </div>
 
-            <button className="w-full mt-10 py-4 rounded-xl border border-white/20 bg-transparent text-white font-bold hover:bg-white/5 transition-colors">
-              Initialize Free Engine
-            </button>
+            <Link href="/download">
+              <button className="cursor-pointer w-full mt-10 py-4 rounded-xl border border-white/20 bg-transparent text-white font-bold hover:bg-white/5 transition-colors">
+                Download Base Engine
+              </button>
+            </Link>
           </motion.div>
 
           <motion.div
@@ -154,69 +125,46 @@ export default function PricingPage() {
                 </h3>
               </div>
               <div className="text-4xl font-black text-white mb-4 flex items-end gap-3">
-                {discountActive ? (
-                  <>
-                    <span className="text-2xl text-gray-500 line-through decoration-red-500/50">
-                      ₹{basePrice}
-                    </span>
-                    <span className="text-[#10b981]">₹{discountedPrice}</span>
-                  </>
-                ) : (
-                  <span>₹{basePrice}</span>
-                )}
+                <span>$5 / ₹500</span>
                 <span className="text-lg font-normal text-gray-500 tracking-normal mb-1">
-                  /month
+                  one-time
                 </span>
               </div>
               <p className="text-sm text-gray-400 h-10">
-                The powerhouse ecosystem with deep mobile links and action
-                agents.
+                Unlock the complete autonomous ecosystem. Private repository
+                access forever.
               </p>
             </div>
 
             <div className="mb-8 p-4 rounded-xl bg-[#10b981]/5 border border-[#10b981]/20 font-mono text-xs relative z-10">
               <div className="text-[#10b981] mb-2 uppercase tracking-widest font-bold">
-                Pro Rate Limits
+                Deployment Protocol
               </div>
               <ul className="space-y-2 text-gray-300">
                 <li className="flex justify-between">
-                  <span>Active Devices:</span>{" "}
-                  <span className="text-[#10b981]">Up to 4</span>
+                  <span>License Type:</span>{" "}
+                  <span className="text-[#10b981]">Lifetime Perpetual</span>
                 </li>
                 <li className="flex justify-between">
-                  <span>Voice Commands:</span>{" "}
-                  <span className="text-[#10b981]">Unlimited</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Local RAG Queries:</span>{" "}
-                  <span className="text-[#10b981]">Unlimited</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Llama 3 Web Crawls:</span> <span>500 / day</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Latency:</span>{" "}
-                  <span className="text-[#10b981]">
-                    Priority Groq LPU {"(<500ms)"}
-                  </span>
+                  <span>Delivery Method:</span>{" "}
+                  <span className="text-[#10b981]">Private GitHub Repo</span>
                 </li>
               </ul>
             </div>
 
             <div className="space-y-4 flex-1 relative z-10">
-              <FeatureItem text="Everything in Free, plus:" pro />
-              <FeatureItem
-                text="Full Mobile Link (ADB Telemetry & Control)"
-                pro
-              />
-              <FeatureItem text="Autonomous Deep Research & Notion Sync" pro />
-              <FeatureItem text="Live Web Forge & Localhost Wormholes" pro />
-              <FeatureItem text="Multi-Face Biometric OS Encryption" pro />
-              <FeatureItem text="Ghost Coder (Inline IDE Generation)" pro />
+              <FeatureItem text="Everything in Base Engine, plus:" pro />
+              <FeatureItem text="Passive Offline Wake Word Activation" pro />
+              <FeatureItem text="Mobile Bridge (ADB Telemetry & Control)" pro />
+              <FeatureItem text="Autonomous Deep Web Research" pro />
+              <FeatureItem text="Localhost Wormholes (Port Exposure)" pro />
+              <FeatureItem text="WhatsApp & Email Automation" pro />
+              <FeatureItem text="Biometric OS Vault Encryption" pro />
             </div>
 
-            <button className="w-full mt-10 py-4 rounded-xl bg-[#10b981] text-black font-bold hover:bg-emerald-400 transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] relative z-10">
-              Upgrade to Pro Engine
+            <button className="cursor-pointer group w-full flex justify-center items-center gap-2 mt-10 py-4 rounded-xl bg-[#10b981] text-black font-bold hover:bg-emerald-400 transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] relative z-10">
+              <FaGithub className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              Sponsor on GitHub to Unlock
             </button>
           </motion.div>
         </div>
@@ -228,7 +176,7 @@ export default function PricingPage() {
             Deep Architecture Comparison
           </h2>
           <p className="text-gray-400">
-            A detailed breakdown of system capabilities.
+            A precise technical breakdown of system access per tier.
           </p>
         </div>
 
@@ -237,46 +185,46 @@ export default function PricingPage() {
             <thead>
               <tr className="border-b border-white/10 text-xs font-mono uppercase tracking-widest text-gray-500">
                 <th className="py-4 px-6 font-bold">Capability</th>
-                <th className="py-4 px-6 font-bold text-center">Free</th>
+                <th className="py-4 px-6 font-bold text-center">
+                  Base Engine (Free)
+                </th>
                 <th className="py-4 px-6 font-bold text-center text-[#10b981]">
-                  Pro
+                  Pro ($5 Lifetime)
                 </th>
               </tr>
             </thead>
             <tbody className="text-sm text-gray-300">
               <TableRow
-                title="Connected Ecosystem Devices"
-                free="2"
-                pro="Up to 4"
-              />
-              <TableRow
-                title="Local File & Process Control"
+                title="Native File System & Directory Control"
                 free="Yes"
                 pro="Yes"
               />
               <TableRow
-                title="Semantic Vector Search"
-                free="Limited (10/day)"
-                pro="Unlimited"
-              />
-              <TableRow
-                title="Voice Latency Engine"
-                free="Standard WebSockets"
-                pro="Priority Groq LPU"
-              />
-              <TableRow
-                title="Mobile Notification Intercept"
-                free="No"
-                pro="Yes"
-              />
-              <TableRow
-                title="Mobile Screen Execution (Tap/Swipe)"
-                free="No"
-                pro="Yes"
-              />
-              <TableRow
-                title="Live Web Hacking (CSS/JS Injection)"
+                title="Terminal & OS Script Execution"
                 free="Yes"
+                pro="Yes"
+              />
+              <TableRow
+                title="Desktop Window Management"
+                free="Yes"
+                pro="Yes"
+              />
+              <TableRow title="Live DOM Manipulation" free="Yes" pro="Yes" />
+              <TableRow
+                title="Bring Your Own Key (BYOK) Logic"
+                free="Yes"
+                pro="Yes"
+              />
+
+              <TableRow title="Offline Passive Wake Word" free="No" pro="Yes" />
+              <TableRow
+                title="Mobile Device Bridge (ADB Integration)"
+                free="No"
+                pro="Yes"
+              />
+              <TableRow
+                title="Autonomous Deep Research Crawlers"
+                free="No"
                 pro="Yes"
               />
               <TableRow
@@ -285,17 +233,17 @@ export default function PricingPage() {
                 pro="Yes"
               />
               <TableRow
-                title="Autonomous Email Dispatch"
-                free="Drafts Only"
-                pro="Draft & Send"
+                title="WhatsApp & Email Automation"
+                free="No"
+                pro="Yes"
               />
               <TableRow
-                title="Biometric Security (Face ID)"
-                free="Basic PIN Lock"
-                pro="Multi-Face Encryption"
+                title="Biometric Security & System Lockdown"
+                free="No"
+                pro="Yes"
               />
               <TableRow
-                title="HuggingFace Image Generation"
+                title="Private GitHub Repository Access"
                 free="No"
                 pro="Yes"
               />
@@ -337,7 +285,7 @@ const TableRow = ({
   free: string;
   pro: string;
 }) => (
-  <tr className="border-b border-white/5 hover:bg-white/2 transition-colors">
+  <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
     <td className="py-4 px-6 font-medium text-gray-200">{title}</td>
     <td className="py-4 px-6 text-center text-gray-400">{free}</td>
     <td className="py-4 px-6 text-center font-medium text-[#10b981]">{pro}</td>

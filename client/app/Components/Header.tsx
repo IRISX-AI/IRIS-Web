@@ -67,16 +67,18 @@ const Header = () => {
         </Link>
 
         <nav className="hidden md:flex gap-6 text-[10px] lg:text-xs font-bold uppercase tracking-[0.2em]">
-          {["About", "Features", "how-to-install", "Guide"].map((item) => (
-            <Link
-              key={item}
-              href={`/${item.toLowerCase()}`}
-              className="hover:text-[#10b981] transition-all duration-300 relative group"
-            >
-              {item}
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#10b981] group-hover:w-full transition-all duration-300" />
-            </Link>
-          ))}
+          {["About", "Features", "Pricing", "how-to-install", "Guide"].map(
+            (item) => (
+              <Link
+                key={item}
+                href={`/${item.toLowerCase()}`}
+                className="hover:text-[#10b981] transition-all duration-300 relative group"
+              >
+                {item}
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#10b981] group-hover:w-full transition-all duration-300" />
+              </Link>
+            ),
+          )}
         </nav>
 
         <div className="flex items-center gap-4">
@@ -148,7 +150,13 @@ const Header = () => {
               </Link>
 
               <nav className="flex flex-col gap-10 text-sm font-bold uppercase tracking-[0.2em]">
-                {["About", "Features", "how-to-install", "Guide"].map((item) => (
+                {[
+                  "About",
+                  "Features",
+                  "Pricing",
+                  "how-to-install",
+                  "Guide",
+                ].map((item) => (
                   <Link
                     key={item}
                     href={`/${item.toLowerCase()}`}
