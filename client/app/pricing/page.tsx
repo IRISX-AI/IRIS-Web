@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import { FaGithub } from "react-icons/fa6";
 
 export default function PricingPage() {
   return (
@@ -159,7 +160,7 @@ export default function PricingPage() {
             </div>
 
             <button className="group w-full flex justify-center items-center gap-2 mt-10 py-4 rounded-xl bg-[#10b981] text-black font-bold hover:bg-emerald-400 transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] relative z-10">
-              <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <FaGithub className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Sponsor on GitHub to Unlock
             </button>
           </motion.div>
