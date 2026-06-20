@@ -340,7 +340,6 @@ export default function SupportPage() {
           })}
         </div>
 
-        {/* Live Status Panel (anchor target) */}
         <motion.div
           id="status"
           initial={{ opacity: 0, y: 20 }}
@@ -381,7 +380,6 @@ export default function SupportPage() {
         </motion.div>
       </section>
 
-      {/* ── FAQ Grid ── */}
       <section className="py-20 px-6 max-w-4xl mx-auto border-t border-white/5">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -425,7 +423,6 @@ export default function SupportPage() {
         </div>
       </section>
 
-      {/* ── Bug Reports & GitHub Issues ── */}
       <section className="py-20 px-6 border-t border-white/5">
         <div className="max-w-5xl mx-auto">
           <motion.div
@@ -504,7 +501,6 @@ export default function SupportPage() {
               </a>
             </motion.div>
 
-            {/* Required Info Card */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -557,7 +553,6 @@ export default function SupportPage() {
         </div>
       </section>
 
-      {/* ── Community Hub ── */}
       <section className="py-20 px-6 border-t border-white/5">
         <div className="max-w-5xl mx-auto">
           <motion.div
