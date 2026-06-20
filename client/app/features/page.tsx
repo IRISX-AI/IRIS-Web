@@ -4,9 +4,6 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import {
   Terminal,
-  CheckCircle2,
-  Zap,
-  Star,
   Mic,
   MousePointer2,
   Brain,
@@ -26,7 +23,6 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import StoryChapter, { StoryContent } from "../lib/StoryChapter";
 import Particles from "../utils/Particles";
-import ElectricBorder from "../utils/ElectricBorder";
 
 const storyData: StoryContent[] = [
   {
