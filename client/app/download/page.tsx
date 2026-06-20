@@ -111,7 +111,6 @@ export default function DownloadPage() {
               opacity: 0.8,
             }}
           >
-            {/* Updated Lightning hue to match the neon green */}
             <Lightning
               hue={120}
               xOffset={0}
@@ -151,7 +150,6 @@ export default function DownloadPage() {
               <div className="absolute inset-0 rounded-2xl border border-white/20 pointer-events-none" />
             </button>
 
-            {/* Seamless nested route link for power users */}
             <Link
               href="/download/cli"
               className="text-zinc-500 hover:text-[#39FF14] font-mono text-sm underline underline-offset-4 transition-colors"
