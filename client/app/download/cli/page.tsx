@@ -60,7 +60,7 @@ export default function CliDownloadPage() {
           className="relative flex flex-col items-start"
         >
           {/* Ambient Terminal Glow */}
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#39FF14]/5 blur-[120px] rounded-full pointer-events-none" />
+          <div className="absolute top-0 right-0 w-125 h-125 bg-[#39FF14]/5 blur-[120px] rounded-full pointer-events-none" />
 
           <motion.div className="relative z-10 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs font-mono tracking-widest mb-6">
             <Terminal className="w-3 h-3" />
