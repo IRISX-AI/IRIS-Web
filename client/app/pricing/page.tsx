@@ -6,8 +6,6 @@ import {
   Zap,
   Activity,
   Sparkles,
-  Github,
-  Shield,
   ShieldAlert,
 } from "lucide-react";
 import Header from "../Components/Header";
