@@ -23,6 +23,7 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import StoryChapter, { StoryContent } from "../lib/StoryChapter";
 import Particles from "../utils/Particles";
+import Hyperspeed from "../Components/core/HyperSpeed";
 
 const storyData: StoryContent[] = [
   {
@@ -154,16 +155,44 @@ export default function FeaturesPage() {
         <div className="absolute bottom-0 left-0 w-full h-32 bg-linear-to-t from-[#050505] to-transparent z-10"></div>
 
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-          <Particles
-            particleColors={["#34d399"]}
-            particleCount={1000}
-            particleSpread={10}
-            speed={0.2}
-            particleBaseSize={100}
-            moveParticlesOnHover
-            alphaParticles={false}
-            disableRotation={false}
-            pixelRatio={1}
+          <Hyperspeed
+            effectOptions={{
+              onSpeedUp: () => { },
+              onSlowDown: () => { },
+              distortion: 'turbulentDistortion',
+              length: 400,
+              roadWidth: 10,
+              islandWidth: 2,
+              lanesPerRoad: 4,
+              fov: 90,
+              fovSpeedUp: 150,
+              speedUp: 2,
+              carLightsFade: 0.4,
+              totalSideLightSticks: 20,
+              lightPairsPerRoadWay: 40,
+              shoulderLinesWidthPercentage: 0.05,
+              brokenLinesWidthPercentage: 0.1,
+              brokenLinesLengthPercentage: 0.5,
+              lightStickWidth: [0.12, 0.5],
+              lightStickHeight: [1.3, 1.7],
+              movingAwaySpeed: [60, 80],
+              movingCloserSpeed: [-120, -160],
+              carLightsLength: [400 * 0.03, 400 * 0.2],
+              carLightsRadius: [0.05, 0.14],
+              carWidthPercentage: [0.3, 0.5],
+              carShiftX: [-0.8, 0.8],
+              carFloorSeparation: [0, 5],
+              colors: {
+                roadColor: 0x080808,
+                islandColor: 0x0a0a0a,
+                background: 0x000000,
+                shoulderLines: 0xFFFFFF,
+                brokenLines: 0xFFFFFF,
+                leftCars: [0xD856BF, 0x6750A2, 0xC247AC],
+                rightCars: [0x03B3C3, 0x0E5EA5, 0x324555],
+                sticks: 0x03B3C3,
+              }
+            }}
           />
         </div>
 
