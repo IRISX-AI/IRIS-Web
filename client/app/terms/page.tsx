@@ -128,7 +128,6 @@ export default function TermsOfServicePage() {
             </div>
           </motion.div>
 
-          {/* Card 4: Misuse of AI & Tool Exemption */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
@@ -147,7 +146,6 @@ export default function TermsOfServicePage() {
             </p>
           </motion.div>
 
-          {/* Card 5: Individual & Non-Commercial Limit */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
@@ -166,7 +164,6 @@ export default function TermsOfServicePage() {
             </p>
           </motion.div>
 
-          {/* Card 6: API Cost & Partner Liability */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
