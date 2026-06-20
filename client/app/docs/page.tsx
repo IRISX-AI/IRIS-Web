@@ -35,7 +35,7 @@ export default function DocsOverviewPage() {
         className="relative rounded-3xl overflow-hidden border border-white/15 shadow-2xl"
       >
         <Image
-          src="/assests/banner.png"
+          src="/assets/banner.png"
           alt="IRIS AI Documentation Banner"
           width={1200}
           height={400}
