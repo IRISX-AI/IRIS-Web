@@ -28,7 +28,6 @@ import { FaWhatsapp } from "react-icons/fa6";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 
-
 const selfServiceLinks = [
   {
     id: "api-config",
@@ -70,7 +69,7 @@ const faqItems = [
     icon: Shield,
     question: "Windows Defender blocked the IRIS installer.",
     answer:
-      "IRIS does not carry a commercial EV code-signing certificate (those cost $300–$700/yr and are reserved for a future update). Windows SmartScreen flags any unsigned binary from an unrecognised publisher.\n\n**Fix:** Click \"More info\" → \"Run anyway\" on the SmartScreen popup. Alternatively, open Windows Security → Virus & Threat Protection → scroll to \"Current threats\" → Allow. If Windows Defender permanently blocked the file, whitelist the IRIS install directory: `%LOCALAPPDATA%\\IRIS AI`.\n\nThe complete bypass walkthrough with screenshots is in the Installation Manual above.",
+      'IRIS does not carry a commercial EV code-signing certificate (those cost $300–$700/yr and are reserved for a future update). Windows SmartScreen flags any unsigned binary from an unrecognised publisher.\n\n**Fix:** Click "More info" → "Run anyway" on the SmartScreen popup. Alternatively, open Windows Security → Virus & Threat Protection → scroll to "Current threats" → Allow. If Windows Defender permanently blocked the file, whitelist the IRIS install directory: `%LOCALAPPDATA%\\IRIS AI`.\n\nThe complete bypass walkthrough with screenshots is in the Installation Manual above.',
     tag: "Installation",
   },
   {
@@ -78,7 +77,7 @@ const faqItems = [
     icon: Mic,
     question: "Why is the voice engine delayed or unresponsive?",
     answer:
-      'IRIS voice runs entirely over the Gemini Live WebRTC pipeline — a real-time bidirectional audio stream to Google\'s inference cluster. Latency is almost entirely network-dependent.\n\n**Checklist:**\n• Run `ping 8.8.8.8` — latency above 80ms will cause noticeable lag.\n• Switch to a 5 GHz Wi-Fi band or use an Ethernet cable.\n• Ensure no VPN is active — VPNs add 30–100ms round-trip overhead.\n• Check your Gemini API key quota in the Google AI Studio dashboard. A quota-exceeded key silently stalls the stream.',
+      "IRIS voice runs entirely over the Gemini Live WebRTC pipeline — a real-time bidirectional audio stream to Google's inference cluster. Latency is almost entirely network-dependent.\n\n**Checklist:**\n• Run `ping 8.8.8.8` — latency above 80ms will cause noticeable lag.\n• Switch to a 5 GHz Wi-Fi band or use an Ethernet cable.\n• Ensure no VPN is active — VPNs add 30–100ms round-trip overhead.\n• Check your Gemini API key quota in the Google AI Studio dashboard. A quota-exceeded key silently stalls the stream.",
     tag: "Voice Engine",
   },
   {
@@ -94,7 +93,7 @@ const faqItems = [
     icon: Package,
     question: "CLI says 'iris: command not found'.",
     answer:
-      "**Root cause:** Either Node.js is not installed, or the global NPM binary directory is not in your system PATH.\n\n**Fix:**\n1. Verify Node.js 24+ is installed: `node -v`\n2. If missing, download from nodejs.org and install.\n3. After installing the IRIS CLI (`npm install -g iris-cli`), run `npm config get prefix` — this is where global binaries live.\n4. Add that path + `\\bin` to your system PATH variable: `setx PATH \"%PATH%;C:\\Users\\<you>\\AppData\\Roaming\\npm\"` (Windows).\n5. Restart your terminal. Run `iris --version` to confirm.",
+      '**Root cause:** Either Node.js is not installed, or the global NPM binary directory is not in your system PATH.\n\n**Fix:**\n1. Verify Node.js 24+ is installed: `node -v`\n2. If missing, download from nodejs.org and install.\n3. After installing the IRIS CLI (`npm install -g iris-cli`), run `npm config get prefix` — this is where global binaries live.\n4. Add that path + `\\bin` to your system PATH variable: `setx PATH "%PATH%;C:\\Users\\<you>\\AppData\\Roaming\\npm"` (Windows).\n5. Restart your terminal. Run `iris --version` to confirm.',
     tag: "CLI",
   },
   {
@@ -107,8 +106,15 @@ const faqItems = [
   },
 ];
 
-
-function FAQItem({ item, isOpen, onToggle }: { item: typeof faqItems[0]; isOpen: boolean; onToggle: () => void }) {
+function FAQItem({
+  item,
+  isOpen,
+  onToggle,
+}: {
+  item: (typeof faqItems)[0];
+  isOpen: boolean;
+  onToggle: () => void;
+}) {
   const Icon = item.icon;
   return (
     <motion.div
@@ -139,7 +145,9 @@ function FAQItem({ item, isOpen, onToggle }: { item: typeof faqItems[0]; isOpen:
           <div className="flex items-center justify-between gap-4">
             <span
               className={`text-sm font-bold font-mono transition-colors duration-300 ${
-                isOpen ? "text-[#39FF14]" : "text-white group-hover:text-[#39FF14]"
+                isOpen
+                  ? "text-[#39FF14]"
+                  : "text-white group-hover:text-[#39FF14]"
               }`}
             >
               {item.question}
@@ -172,7 +180,7 @@ function FAQItem({ item, isOpen, onToggle }: { item: typeof faqItems[0]; isOpen:
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <div className="px-6 pb-6 pl-[4.25rem]">
+            <div className="px-6 pb-6 pl-17">
               <div className="h-px bg-white/5 mb-4" />
               <div className="text-zinc-400 text-xs font-mono leading-relaxed whitespace-pre-line space-y-1">
                 {item.answer.split("\n").map((line, i) => {
@@ -194,7 +202,7 @@ function FAQItem({ item, isOpen, onToggle }: { item: typeof faqItems[0]; isOpen:
                             </strong>
                           ) : (
                             part
-                          )
+                          ),
                         )}
                       </p>
                     );
@@ -202,7 +210,9 @@ function FAQItem({ item, isOpen, onToggle }: { item: typeof faqItems[0]; isOpen:
                   if (line.startsWith("•")) {
                     return (
                       <p key={i} className="flex items-start gap-2">
-                        <span className="text-[#39FF14] mt-0.5 shrink-0">•</span>
+                        <span className="text-[#39FF14] mt-0.5 shrink-0">
+                          •
+                        </span>
                         <span>{line.slice(1).trim()}</span>
                       </p>
                     );
@@ -210,7 +220,9 @@ function FAQItem({ item, isOpen, onToggle }: { item: typeof faqItems[0]; isOpen:
                   if (line.match(/^\d\./)) {
                     return (
                       <p key={i} className="flex items-start gap-2 ml-1">
-                        <span className="text-[#39FF14] font-bold shrink-0">{line[0]}.</span>
+                        <span className="text-[#39FF14] font-bold shrink-0">
+                          {line[0]}.
+                        </span>
                         <span>{line.slice(2).trim()}</span>
                       </p>
                     );
@@ -226,7 +238,6 @@ function FAQItem({ item, isOpen, onToggle }: { item: typeof faqItems[0]; isOpen:
     </motion.div>
   );
 }
-
 
 export default function SupportPage() {
   const [openFAQ, setOpenFAQ] = useState<string | null>("defender");
@@ -590,7 +601,7 @@ export default function SupportPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 id="whatsapp-community"
-                className="group relative flex flex-col gap-6 p-8 rounded-2xl border border-[#25D366]/20 bg-[#0a0a0a] hover:border-[#25D366]/40 hover:shadow-[0_0_50px_rgba(37,211,102,0.07)] transition-all duration-300 block"
+                className="group relative flex flex-col gap-6 p-8 rounded-2xl border border-[#25D366]/20 bg-[#0a0a0a] hover:border-[#25D366]/40 hover:shadow-[0_0_50px_rgba(37,211,102,0.07)] transition-all duration-300"
               >
                 <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-[#25D366]/30 to-transparent" />
 
@@ -644,7 +655,7 @@ export default function SupportPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 id="github-discussions"
-                className="group relative flex flex-col gap-6 p-8 rounded-2xl border border-white/8 bg-[#0a0a0a] hover:border-[#39FF14]/30 hover:shadow-[0_0_50px_rgba(57,255,20,0.06)] transition-all duration-300 block"
+                className="group relative flex flex-col gap-6 p-8 rounded-2xl border border-white/8 bg-[#0a0a0a] hover:border-[#39FF14]/30 hover:shadow-[0_0_50px_rgba(57,255,20,0.06)] transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
                   <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#39FF14]/10 group-hover:border-[#39FF14]/20 transition-all duration-300 shrink-0">
