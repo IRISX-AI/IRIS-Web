@@ -1,12 +1,11 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   BrainCircuit,
-  Cpu,
   Target,
   User,
   ShieldCheck,
@@ -192,7 +191,7 @@ const IRISAbout = () => {
                   filter:
                     "drop-shadow(0px 0px 15px rgba(57, 255, 20, 1)) drop-shadow(0px 0px 50px rgba(57, 255, 20, 0.8))",
                 }}
-                className="text-transparent bg-clip-text bg-linear-to-br from-[#032000] to-[#001a01]"
+                className="text-transparent bg-clip-text bg-linear-to-b from-[#051a00] to-[#091a09]"
               >
                 IRIS AI.
               </span>
