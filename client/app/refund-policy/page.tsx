@@ -28,7 +28,7 @@ export default function RefundPolicyPage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative z-10"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-gray-300 text-xs font-mono mb-8 backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-gray-300 text-xs  mb-8 backdrop-blur-md">
             <Scale className="w-3 h-3 text-[#39FF14]" />
             <span className="uppercase tracking-widest">
               Legal & Compliance
@@ -68,7 +68,7 @@ export default function RefundPolicyPage() {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 text-gray-400 font-mono text-sm leading-relaxed">
+            <div className="grid md:grid-cols-2 gap-8 text-gray-400  text-sm leading-relaxed">
               <div>
                 <p className="mb-4">
                   Due to the nature of perpetual software licenses and the{" "}
@@ -115,20 +115,20 @@ export default function RefundPolicyPage() {
                 Commercial Use Ban
               </h2>
             </div>
-            <p className="text-gray-400 font-mono text-sm leading-relaxed mb-4">
+            <p className="text-gray-400  text-sm leading-relaxed mb-4">
               The IRIS $5 Pro license is strictly provisioned for{" "}
               <strong className="text-white">
                 individual, non-commercial use
               </strong>
               .
             </p>
-            <p className="text-gray-400 font-mono text-sm leading-relaxed mb-4">
+            <p className="text-gray-400  text-sm leading-relaxed mb-4">
               Deploying the IRIS Engine within a corporate, enterprise, or
               commercial production environment without explicit written
               authorization and an Enterprise License is a direct violation of
               our terms.
             </p>
-            <div className="flex items-start gap-2 mt-6 text-red-400/90 font-mono text-xs bg-red-500/5 p-3 rounded-lg border border-red-500/10">
+            <div className="flex items-start gap-2 mt-6 text-red-400/90  text-xs bg-red-500/5 p-3 rounded-lg border border-red-500/10">
               <Ban className="w-4 h-4 shrink-0 mt-0.5" />
               <p>
                 Unauthorized commercial deployment will result in immediate
@@ -151,11 +151,11 @@ export default function RefundPolicyPage() {
                 Disputes & Revocation
               </h2>
             </div>
-            <p className="text-gray-400 font-mono text-sm leading-relaxed mb-4">
+            <p className="text-gray-400  text-sm leading-relaxed mb-4">
               We operate on a zero-tolerance policy for payment fraud and
               unwarranted chargebacks.
             </p>
-            <p className="text-gray-400 font-mono text-sm leading-relaxed">
+            <p className="text-gray-400  text-sm leading-relaxed">
               In the event of a bank chargeback or payment dispute via GitHub
               Sponsors, your GitHub account will be flagged. Access to the
               private IRIS Pro repository, future updates, bug fixes, and the
@@ -184,7 +184,7 @@ export default function RefundPolicyPage() {
               </h2>
             </div>
 
-            <p className="text-gray-400 font-mono text-sm leading-relaxed mb-6 max-w-3xl">
+            <p className="text-gray-400  text-sm leading-relaxed mb-6 max-w-3xl">
               We do not want your money if the software does not execute
               properly on your specific hardware configuration. To ensure
               absolute compatibility, we offer the{" "}
@@ -197,19 +197,19 @@ export default function RefundPolicyPage() {
             <div className="grid md:grid-cols-3 gap-4 mb-6">
               <div className="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/5">
                 <CheckCircle2 className="w-5 h-5 text-[#39FF14] shrink-0" />
-                <span className="text-xs font-mono text-gray-300">
+                <span className="text-xs  text-gray-300">
                   Test core file system reading and terminal execution.
                 </span>
               </div>
               <div className="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/5">
                 <CheckCircle2 className="w-5 h-5 text-[#39FF14] shrink-0" />
-                <span className="text-xs font-mono text-gray-300">
+                <span className="text-xs  text-gray-300">
                   Verify BYOK (Bring Your Own Key) APIs connect successfully.
                 </span>
               </div>
               <div className="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/5">
                 <CheckCircle2 className="w-5 h-5 text-[#39FF14] shrink-0" />
-                <span className="text-xs font-mono text-gray-300">
+                <span className="text-xs  text-gray-300">
                   Only upgrade to Pro when you verify your system runs
                   perfectly.
                 </span>
@@ -219,7 +219,7 @@ export default function RefundPolicyPage() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 max-w-6xl mx-auto">
-          <span className="text-xs text-gray-500 font-mono uppercase tracking-widest">
+          <span className="text-xs text-gray-500  uppercase tracking-widest">
             Last Updated: June 2026
           </span>
           <Link

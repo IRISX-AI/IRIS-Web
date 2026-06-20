@@ -27,7 +27,7 @@ export default function PricingPage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative z-10"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#39FF14]/30 bg-[#39FF14]/5 text-[#39FF14] text-xs font-mono mb-8 backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#39FF14]/30 bg-[#39FF14]/5 text-[#39FF14] text-xs  mb-8 backdrop-blur-md">
             <Activity className="w-3 h-3" />
             <span className="uppercase tracking-widest">
               Pricing & Licensing
@@ -48,7 +48,7 @@ export default function PricingPage() {
           </p>
 
           <Link href="/refund-policy" className="inline-block">
-            <button className="cursor-pointer group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-orange-500/20 bg-orange-500/5 text-xs font-mono text-orange-400/80 hover:text-orange-400 hover:bg-orange-500/10 hover:border-orange-500/40 transition-all duration-300 shadow-[0_0_15px_rgba(249,115,22,0.05)] hover:shadow-[0_0_25px_rgba(249,115,22,0.15)]">
+            <button className="cursor-pointer group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-orange-500/20 bg-orange-500/5 text-xs  text-orange-400/80 hover:text-orange-400 hover:bg-orange-500/10 hover:border-orange-500/40 transition-all duration-300 shadow-[0_0_15px_rgba(249,115,22,0.05)] hover:shadow-[0_0_25px_rgba(249,115,22,0.15)]">
               <ShieldAlert className="w-4 h-4 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
               <span>Strict No-Refund Policy (Standard GitHub Terms)</span>
             </button>
@@ -78,7 +78,7 @@ export default function PricingPage() {
               </p>
             </div>
 
-            <div className="mb-8 p-4 rounded-xl bg-white/5 border border-white/5 font-mono text-xs">
+            <div className="mb-8 p-4 rounded-xl bg-white/5 border border-white/5  text-xs">
               <div className="text-gray-500 mb-2 uppercase tracking-widest font-bold">
                 Base Capabilities
               </div>
@@ -98,8 +98,9 @@ export default function PricingPage() {
               <FeatureItem text="Terminal & CLI Script Execution" />
               <FeatureItem text="Desktop Window Management" />
               <FeatureItem text="Live DOM Manipulation (CSS/JS Injection)" />
-              <FeatureItem text="Screen Optics & OCR Text Extraction" />
+              <FeatureItem text="WhatsApp Messaging & Broadcast Automation" />
               <FeatureItem text="Push-to-Talk Voice Activation" />
+              <FeatureItem text="Standard PIN-only OS Vault lockdown" />
             </div>
 
             <Link href="/download">
@@ -125,7 +126,7 @@ export default function PricingPage() {
                 </h3>
               </div>
               <div className="text-4xl font-black text-white mb-4 flex items-end gap-3">
-                <span>$5 / ₹475</span>
+                <span>$5 / ₹500</span>
                 <span className="text-lg font-normal text-gray-500 tracking-normal mb-1">
                   one-time
                 </span>
@@ -136,7 +137,7 @@ export default function PricingPage() {
               </p>
             </div>
 
-            <div className="mb-8 p-4 rounded-xl bg-[#39FF14]/5 border border-[#39FF14]/20 font-mono text-xs relative z-10">
+            <div className="mb-8 p-4 rounded-xl bg-[#39FF14]/5 border border-[#39FF14]/20  text-xs relative z-10">
               <div className="text-[#39FF14] mb-2 uppercase tracking-widest font-bold">
                 Deployment Protocol
               </div>
@@ -154,12 +155,36 @@ export default function PricingPage() {
 
             <div className="space-y-4 flex-1 relative z-10">
               <FeatureItem text="Everything in Base Engine, plus:" pro />
-              <FeatureItem text="Passive Offline Wake Word Activation" pro />
-              <FeatureItem text="Mobile Bridge (ADB Telemetry & Control)" pro />
-              <FeatureItem text="Autonomous Deep Web Research" pro />
-              <FeatureItem text="Localhost Wormholes (Port Exposure)" pro />
-              <FeatureItem text="WhatsApp & Email Automation" pro />
-              <FeatureItem text="Biometric OS Vault Encryption" pro />
+              <FeatureItem
+                text="Passive Offline Wake Word Activation ('Hey, IRIS')"
+                pro
+              />
+              <FeatureItem
+                text="ScreenPeeler Multimodal AI OCR (Ctrl + Alt + X)"
+                pro
+              />
+              <FeatureItem
+                text="Phantom Control Ghost Keyboard (Ctrl + Alt + Space)"
+                pro
+              />
+              <FeatureItem text="Gmail Integration & Email Automation" pro />
+              <FeatureItem
+                text="Mobile Device Bridge (ADB Telemetry & Control)"
+                pro
+              />
+              <FeatureItem
+                text="AI Image Generation (DALL-E / Midjourney)"
+                pro
+              />
+              <FeatureItem text="Autonomous Deep Web Research Crawlers" pro />
+              <FeatureItem
+                text="Localhost Wormholes (Secure Port Tunneling)"
+                pro
+              />
+              <FeatureItem
+                text="Biometric OS Vault Encryption (Face Recognition)"
+                pro
+              />
             </div>
 
             <button className="cursor-pointer group w-full flex justify-center items-center gap-2 mt-10 py-4 rounded-xl bg-[#39FF14] text-black font-bold hover:bg-green-400 transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] relative z-10">
@@ -183,7 +208,7 @@ export default function PricingPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="border-b border-white/10 text-xs font-mono uppercase tracking-widest text-gray-500">
+              <tr className="border-b border-white/10 text-xs  uppercase tracking-widest text-gray-500">
                 <th className="py-4 px-6 font-bold">Capability</th>
                 <th className="py-4 px-6 font-bold text-center">
                   Base Engine (Free)
@@ -215,10 +240,39 @@ export default function PricingPage() {
                 free="Yes"
                 pro="Yes"
               />
+              <TableRow
+                title="WhatsApp Messaging Automation"
+                free="Yes"
+                pro="Yes"
+              />
 
-              <TableRow title="Offline Passive Wake Word" free="No" pro="Yes" />
+              <TableRow
+                title="Offline Passive Wake Word Activation"
+                free="No"
+                pro="Yes"
+              />
+              <TableRow
+                title="ScreenPeeler Multimodal AI OCR"
+                free="No"
+                pro="Yes"
+              />
+              <TableRow
+                title="Phantom Control Ghost Keyboard"
+                free="No"
+                pro="Yes"
+              />
+              <TableRow
+                title="Gmail Integration & Email Automation"
+                free="No"
+                pro="Yes"
+              />
               <TableRow
                 title="Mobile Device Bridge (ADB Integration)"
+                free="No"
+                pro="Yes"
+              />
+              <TableRow
+                title="AI Image Generation (DALL-E/Midjourney)"
                 free="No"
                 pro="Yes"
               />
@@ -233,14 +287,9 @@ export default function PricingPage() {
                 pro="Yes"
               />
               <TableRow
-                title="WhatsApp & Email Automation"
-                free="No"
-                pro="Yes"
-              />
-              <TableRow
-                title="Biometric Security & System Lockdown"
-                free="No"
-                pro="Yes"
+                title="Biometric Security & Face Lockdown"
+                free="No (PIN Only)"
+                pro="Yes (Face Match + PIN)"
               />
               <TableRow
                 title="Private GitHub Repository Access"

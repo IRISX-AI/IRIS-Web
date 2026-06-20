@@ -188,7 +188,7 @@ const IRISAbout = () => {
 
         <div className="relative z-10 text-center px-6 pointer-events-none">
           <motion.div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#39FF14]/30 bg-[#39FF14]/10 text-[#39FF14] text-xs font-mono mb-8 backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#39FF14]/30 bg-[#39FF14]/10 text-[#39FF14] text-xs  mb-8 backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.2)]">
               <Sparkles className="w-3 h-3" />
               <span>THE STORY BEHIND THE SOFTWARE</span>
             </div>
@@ -244,7 +244,7 @@ const IRISAbout = () => {
             <Cover>Operating System.</Cover>
           </h1>
 
-          <p className="text-gray-400 text-lg md:text-xl max-w-2xl font-mono tracking-tight">
+          <p className="text-gray-400 text-lg md:text-xl max-w-2xl  tracking-tight">
             Install the IRIS Engine and transform your PC into an autonomous
             execution environment.
           </p>

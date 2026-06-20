@@ -47,7 +47,7 @@ export default function CliDownloadPage() {
         >
           <Link
             href="/download"
-            className="inline-flex items-center gap-2 text-zinc-500 hover:text-[#39FF14] font-mono text-sm transition-colors group"
+            className="inline-flex items-center gap-2 text-zinc-500 hover:text-[#39FF14]  text-sm transition-colors group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to Desktop Client
@@ -61,7 +61,7 @@ export default function CliDownloadPage() {
         >
           <div className="absolute top-0 right-0 w-125 h-125 bg-[#39FF14]/5 blur-[120px] rounded-full pointer-events-none" />
 
-          <motion.div className="relative z-10 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs font-mono tracking-widest mb-6">
+          <motion.div className="relative z-10 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs  tracking-widest mb-6">
             <Terminal className="w-3 h-3" />
             NPM REGISTRY V1.3.0
           </motion.div>
@@ -73,20 +73,20 @@ export default function CliDownloadPage() {
             </span>
           </motion.h1>
 
-          <motion.p className="relative z-10 max-w-2xl text-zinc-300 text-lg mb-10 leading-relaxed font-mono">
+          <motion.p className="relative z-10 max-w-2xl text-zinc-300 text-lg mb-10 leading-relaxed ">
             A lightweight, globally accessible Node.js package. Execute native
             OS commands, trigger macros, and manage files entirely through the
             terminal without the GUI overhead.
           </motion.p>
 
           <motion.div className="w-full relative z-10 mb-16">
-            <div className="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-3 pl-1">
+            <div className="text-xs  text-zinc-500 uppercase tracking-widest mb-3 pl-1">
               Global Installation
             </div>
             <div className="group flex items-center justify-between bg-[#0a0a0a] border border-white/10 hover:border-[#39FF14]/50 w-full rounded-2xl p-4 md:p-6 shadow-2xl transition-all">
               <div className="flex items-center gap-4 overflow-x-auto">
-                <span className="text-zinc-600 font-mono select-none">$</span>
-                <code className="text-lg md:text-xl font-mono text-zinc-200 whitespace-nowrap">
+                <span className="text-zinc-600  select-none">$</span>
+                <code className="text-lg md:text-xl  text-zinc-200 whitespace-nowrap">
                   <span className="text-[#39FF14]">npm</span> install -g
                   iris-mini
                 </code>
@@ -117,7 +117,7 @@ export default function CliDownloadPage() {
                 file.
               </p>
               <div className="flex items-center justify-between bg-black border border-white/10 rounded-xl p-3">
-                <code className="text-xs font-mono text-zinc-300 overflow-hidden text-ellipsis">
+                <code className="text-xs  text-zinc-300 overflow-hidden text-ellipsis">
                   iris config set GEMINI_API_KEY=...
                 </code>
                 <button
@@ -143,7 +143,7 @@ export default function CliDownloadPage() {
                 commands directly to the engine from any directory.
               </p>
               <div className="bg-black border border-white/10 rounded-xl p-3">
-                <code className="text-xs font-mono text-[#39FF14]">
+                <code className="text-xs  text-[#39FF14]">
                   $ iris run "organize my downloads folder"
                 </code>
               </div>
@@ -152,7 +152,7 @@ export default function CliDownloadPage() {
         </motion.section>
 
         <motion.section className="mt-20 pt-8 border-t border-white/5 relative z-10">
-          <div className="flex flex-wrap items-center gap-6 text-zinc-500 font-mono text-xs tracking-widest">
+          <div className="flex flex-wrap items-center gap-6 text-zinc-500  text-xs tracking-widest">
             <span className="flex items-center gap-2">
               <Server className="w-4 h-4 text-zinc-200" /> CI/CD COMPATIBLE
             </span>

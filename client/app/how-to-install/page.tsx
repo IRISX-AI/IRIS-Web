@@ -25,7 +25,7 @@ export default function InstallGuide() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center py-16"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs font-mono tracking-widest mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs  tracking-widest mb-6">
             DOCUMENTATION
           </div>
           <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-6 uppercase">
@@ -59,7 +59,7 @@ export default function InstallGuide() {
           </div>
           <Link
             href="/guide"
-            className="shrink-0 flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-[#39FF14]/20 border border-white/10 hover:border-[#39FF14]/50 text-white rounded-xl font-mono text-sm transition-all group"
+            className="shrink-0 flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-[#39FF14]/20 border border-white/10 hover:border-[#39FF14]/50 text-white rounded-xl  text-sm transition-all group"
           >
             Read API Guide
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-[#39FF14]" />
@@ -80,7 +80,7 @@ export default function InstallGuide() {
           <div className="space-y-6">
             <div className="flex gap-6">
               <div className="flex flex-col items-center">
-                <div className="w-8 h-8 shrink-0 rounded-full bg-zinc-900 border border-[#39FF14]/50 flex items-center justify-center text-[#39FF14] font-mono font-bold text-sm">
+                <div className="w-8 h-8 shrink-0 rounded-full bg-zinc-900 border border-[#39FF14]/50 flex items-center justify-center text-[#39FF14]  font-bold text-sm">
                   1
                 </div>
                 <div className="w-px h-full bg-linear-to-b from-[#39FF14]/50 to-transparent my-2"></div>
@@ -104,7 +104,7 @@ export default function InstallGuide() {
 
             <div className="flex gap-6">
               <div className="flex flex-col items-center">
-                <div className="w-8 h-8 shrink-0 rounded-full bg-zinc-900 border border-[#39FF14]/50 flex items-center justify-center text-[#39FF14] font-mono font-bold text-sm">
+                <div className="w-8 h-8 shrink-0 rounded-full bg-zinc-900 border border-[#39FF14]/50 flex items-center justify-center text-[#39FF14]  font-bold text-sm">
                   2
                 </div>
                 <div className="w-px h-full bg-linear-to-b from-[#39FF14]/50 to-transparent my-2"></div>
@@ -123,7 +123,7 @@ export default function InstallGuide() {
 
             <div className="flex gap-6">
               <div className="flex flex-col items-center">
-                <div className="w-8 h-8 shrink-0 rounded-full bg-[#39FF14] text-black flex items-center justify-center font-mono font-bold text-sm shadow-[0_0_15px_rgba(57,255,20,0.5)]">
+                <div className="w-8 h-8 shrink-0 rounded-full bg-[#39FF14] text-black flex items-center justify-center  font-bold text-sm shadow-[0_0_15px_rgba(57,255,20,0.5)]">
                   3
                 </div>
               </div>
@@ -215,9 +215,7 @@ export default function InstallGuide() {
                 <Smartphone className="w-12 h-12 text-[#39FF14]/50" />
               </div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-white font-mono font-bold text-lg">
-                  Q3
-                </span>
+                <span className="text-white  font-bold text-lg">Q3</span>
               </div>
             </div>
           </div>

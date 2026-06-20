@@ -78,7 +78,7 @@ export default function MagneticButton({
         )}
         <div className="flex flex-col items-start leading-tight text-left">
           <span>{title}</span>
-          <span className="text-[11px] font-mono opacity-80 uppercase tracking-wider">
+          <span className="text-[11px]  opacity-80 uppercase tracking-wider">
             {subtitle}
           </span>
         </div>

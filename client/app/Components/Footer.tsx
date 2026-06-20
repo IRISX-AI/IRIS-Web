@@ -151,7 +151,7 @@ export default function Footer() {
             <div className="absolute top-0 left-0 w-full h-1 bg-[#39FF14]/20 shadow-[0_0_15px_#39FF14] opacity-0 group-hover:opacity-100 animate-scan pointer-events-none" />
 
             <div className="flex items-center justify-between">
-              <span className="text-gray-500 text-xs uppercase tracking-wider font-mono">
+              <span className="text-gray-500 text-xs uppercase tracking-wider ">
                 Network
               </span>
               <div className="flex items-center gap-2">
@@ -166,7 +166,7 @@ export default function Footer() {
             </div>
             <div className="h-px w-full bg-white/5" />
             <div>
-              <p className="text-gray-500 text-[10px] uppercase tracking-wider mb-1 font-mono">
+              <p className="text-gray-500 text-[10px] uppercase tracking-wider mb-1 ">
                 IRIS Version
               </p>
               <p className="text-white font-bold tracking-wider">
@@ -177,7 +177,7 @@ export default function Footer() {
         </motion.div>
       </motion.div>
 
-      <div className="w-full max-w-7xl mx-auto mt-20 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-300 relative z-10 font-mono">
+      <div className="w-full max-w-7xl mx-auto mt-20 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-300 relative z-10 ">
         <p>© {new Date().getFullYear()} IRIS AI. All rights reserved.</p>
         <p className="tracking-widest uppercase">
           Engineered with ❤️ by{" "}

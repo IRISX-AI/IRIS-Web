@@ -68,7 +68,7 @@ export default function DownloadPage() {
                 certificate, Windows Defender might flag the installer.
               </p>
               <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4 mb-6">
-                <p className="text-sm text-zinc-200 font-mono flex flex-col gap-2">
+                <p className="text-sm text-zinc-200  flex flex-col gap-2">
                   <span className="text-white">
                     When the blue popup appears:
                   </span>
@@ -86,7 +86,7 @@ export default function DownloadPage() {
                 <span className="text-zinc-500 flex items-center gap-2">
                   <Info className="w-4 h-4" /> Downloading shortly...
                 </span>
-                <span className="font-mono font-bold text-[#39FF14] text-xl drop-shadow-[0_0_10px_rgba(57,255,20,0.5)]">
+                <span className=" font-bold text-[#39FF14] text-xl drop-shadow-[0_0_10px_rgba(57,255,20,0.5)]">
                   00:0{countdown}
                 </span>
               </div>
@@ -127,7 +127,7 @@ export default function DownloadPage() {
             />
           </div>
 
-          <motion.div className="relative z-10 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs font-mono tracking-widest mb-8">
+          <motion.div className="relative z-10 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs  tracking-widest mb-8">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#39FF14] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#39FF14]"></span>
@@ -164,13 +164,13 @@ export default function DownloadPage() {
 
             <Link
               href="/download/cli"
-              className="text-zinc-200 hover:text-[#39FF14] font-mono text-sm underline underline-offset-4 transition-colors"
+              className="text-zinc-200 hover:text-[#39FF14]  text-sm underline underline-offset-4 transition-colors"
             >
               Looking for the Headless CLI Version?
             </Link>
           </motion.div>
 
-          <motion.div className="relative z-10 flex flex-wrap justify-center items-center gap-3 md:gap-6 text-zinc-500 font-mono text-xs tracking-widest bg-black/50 px-6 py-3 rounded-full border border-white/5 backdrop-blur-md">
+          <motion.div className="relative z-10 flex flex-wrap justify-center items-center gap-3 md:gap-6 text-zinc-500  text-xs tracking-widest bg-black/50 px-6 py-3 rounded-full border border-white/5 backdrop-blur-md">
             <span className="flex items-center gap-1.5">
               <Monitor className="w-3 h-3" /> Win 10/11
             </span>
@@ -187,7 +187,7 @@ export default function DownloadPage() {
 
         <motion.section className="py-20 border-t border-white/5 relative z-10 max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-2xl font-bold tracking-widest text-white uppercase font-mono">
+            <h2 className="text-2xl font-bold tracking-widest text-white uppercase ">
               The Ecosystem
             </h2>
             <p className="text-zinc-500 mt-2">

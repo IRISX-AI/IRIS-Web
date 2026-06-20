@@ -66,7 +66,7 @@ export default function IrisHero({
           </div>
 
           <p
-            className="text-[11px] md:text-sm font-mono tracking-[0.35em] uppercase text-white mb-2 font-bold"
+            className="text-[11px] md:text-sm  tracking-[0.35em] uppercase text-white mb-2 font-bold"
             style={{
               textShadow:
                 "0 0 8px rgba(0,0,0,1), 0 0 16px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,0.9)",
@@ -76,7 +76,7 @@ export default function IrisHero({
           </p>
 
           <p
-            className="mt-5 max-w-xl text-sm md:text-lg text-white font-mono leading-relaxed"
+            className="mt-5 max-w-xl text-sm md:text-lg text-white  leading-relaxed"
             style={{
               textShadow: "0 1px 8px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.95)",
             }}
@@ -96,7 +96,7 @@ export default function IrisHero({
               ))}
             </div>
             <span
-              className="text-[11px] font-mono text-white tracking-widest uppercase font-semibold"
+              className="text-[11px]  text-white tracking-widest uppercase font-semibold"
               style={{ textShadow: "0 0 10px rgba(0,0,0,1)" }}
             >
               Native Voice Control
@@ -140,10 +140,10 @@ export default function IrisHero({
                 key={label}
                 className="flex items-center gap-2 px-3 py-1.5 rounded-md border border-[#39FF14]/30 bg-black/80 backdrop-blur-md"
               >
-                <span className="text-[10px] font-mono text-gray-300 uppercase tracking-widest">
+                <span className="text-[10px]  text-gray-300 uppercase tracking-widest">
                   {label}
                 </span>
-                <span className="text-[11px] font-mono text-[#34d399] font-bold">
+                <span className="text-[11px]  text-[#34d399] font-bold">
                   {value}
                 </span>
               </div>

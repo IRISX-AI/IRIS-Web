@@ -117,7 +117,7 @@ export default function LoginPage() {
               IRIS
             </span>
           </h1>
-          <p className="text-gray-400 text-sm font-mono tracking-widest uppercase">
+          <p className="text-gray-400 text-sm  tracking-widest uppercase">
             Access your control panel
           </p>
         </motion.div>
@@ -142,7 +142,7 @@ export default function LoginPage() {
 
           <form onSubmit={handleSubmit} className="space-y-5">
             <div className="space-y-1">
-              <label className="text-xs font-mono text-gray-200 uppercase tracking-wider ml-1">
+              <label className="text-xs  text-gray-200 uppercase tracking-wider ml-1">
                 Email Address
               </label>
               <div className="relative group">
@@ -164,12 +164,12 @@ export default function LoginPage() {
 
             <div className="space-y-1">
               <div className="flex items-center justify-between ml-1 pr-1">
-                <label className="text-xs font-mono text-gray-200 uppercase tracking-wider">
+                <label className="text-xs  text-gray-200 uppercase tracking-wider">
                   Secure Password
                 </label>
                 <Link
                   href="#"
-                  className="text-xs text-[#39FF14] hover:text-green-400 transition-colors font-mono"
+                  className="text-xs text-[#39FF14] hover:text-green-400 transition-colors "
                 >
                   Forgot?
                 </Link>
@@ -223,7 +223,7 @@ export default function LoginPage() {
 
           <div className="flex items-center gap-4 my-8">
             <div className="h-px bg-white/10 flex-1" />
-            <span className="text-xs font-mono text-gray-500 uppercase tracking-widest">
+            <span className="text-xs  text-gray-500 uppercase tracking-widest">
               Or Auth With
             </span>
             <div className="h-px bg-white/10 flex-1" />

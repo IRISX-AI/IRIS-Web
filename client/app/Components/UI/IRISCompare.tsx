@@ -8,13 +8,13 @@ export function IRISCompare() {
   return (
     <div className="relative w-full rounded-2xl overflow-hidden border border-[#39FF14]/20 shadow-[0_0_50px_rgba(16,185,129,0.1)]">
       <div className="absolute top-6 left-6 z-10 px-3 py-1.5 rounded-md bg-black/60 border border-white/10 backdrop-blur-md pointer-events-none">
-        <span className="text-[10px] sm:text-xs font-mono text-zinc-200 uppercase tracking-widest">
+        <span className="text-[10px] sm:text-xs  text-zinc-200 uppercase tracking-widest">
           Before: v1.3.0
         </span>
       </div>
 
       <div className="absolute top-6 right-6 z-10 px-3 py-1.5 rounded-md bg-[#39FF14]/20 border border-[#39FF14]/30 backdrop-blur-md pointer-events-none">
-        <span className="text-[10px] sm:text-xs font-mono text-[#39FF14] font-bold uppercase tracking-widest">
+        <span className="text-[10px] sm:text-xs  text-[#39FF14] font-bold uppercase tracking-widest">
           After: Current Build
         </span>
       </div>

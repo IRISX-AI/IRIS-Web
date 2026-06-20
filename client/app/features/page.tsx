@@ -204,7 +204,7 @@ export default function FeaturesPage() {
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#39FF14]/30 bg-[#39FF14]/5 text-[#39FF14] text-xs font-mono mb-8 backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.2)]"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#39FF14]/30 bg-[#39FF14]/5 text-[#39FF14] text-xs  mb-8 backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.2)]"
             >
               <Terminal className="w-3 h-3 animate-pulse" />
               <span className="tracking-widest uppercase">
@@ -239,7 +239,7 @@ export default function FeaturesPage() {
         </div>
 
         <div className="absolute bottom-0 w-full border-t border-white/10 bg-[#050505]/80 backdrop-blur-md z-30">
-          <div className="max-w-7xl mx-auto px-6 h-12 flex items-center justify-between text-[10px] md:text-xs font-mono text-gray-400 uppercase tracking-widest">
+          <div className="max-w-7xl mx-auto px-6 h-12 flex items-center justify-between text-[10px] md:text-xs  text-gray-400 uppercase tracking-widest">
             <div className="flex items-center gap-4 md:gap-6">
               <span className="flex items-center gap-2 text-[#39FF14] font-bold shadow-sm">
                 <span className="relative flex h-2 w-2">

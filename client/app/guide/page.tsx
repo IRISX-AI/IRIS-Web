@@ -97,7 +97,7 @@ export default function ApiKeysGuide() {
           animate={{ opacity: 1, y: 0 }}
           className="max-w-3xl mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs font-mono tracking-widest mb-6 mt-8">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs  tracking-widest mb-6 mt-8">
             <ShieldCheck className="w-3 h-3" />
             BYOK DOCUMENTATION
           </div>
@@ -124,7 +124,7 @@ export default function ApiKeysGuide() {
             <h3 className="text-white font-bold mb-1">
               How to apply your keys
             </h3>
-            <p className="text-zinc-200 text-sm font-mono leading-relaxed">
+            <p className="text-zinc-200 text-sm  leading-relaxed">
               You do not need to configure environment variables. Simply copy
               the generated key from the provider and paste it directly into the{" "}
               <strong className="text-white">Settings Tab</strong> within the
@@ -174,7 +174,7 @@ export default function ApiKeysGuide() {
               </p>
 
               <div className="mb-8">
-                <h3 className="text-xs font-bold text-zinc-500 mb-3 uppercase tracking-widest font-mono">
+                <h3 className="text-xs font-bold text-zinc-500 mb-3 uppercase tracking-widest ">
                   Acquisition Steps
                 </h3>
                 <ul className="space-y-3 min-h-30">
@@ -183,7 +183,7 @@ export default function ApiKeysGuide() {
                       key={index}
                       className="text-sm text-zinc-300 flex items-start gap-3"
                     >
-                      <span className="text-[#39FF14] font-mono text-xs mt-0.5">
+                      <span className="text-[#39FF14]  text-xs mt-0.5">
                         {index + 1}.
                       </span>
                       {step}

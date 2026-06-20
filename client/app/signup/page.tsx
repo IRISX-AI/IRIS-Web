@@ -110,7 +110,7 @@ export default function SignupPage() {
               IRIS
             </span>
           </h1>
-          <p className="text-gray-400 text-sm font-mono tracking-widest uppercase">
+          <p className="text-gray-400 text-sm  tracking-widest uppercase">
             Create your access key
           </p>
         </motion.div>
@@ -135,7 +135,7 @@ export default function SignupPage() {
 
           <form onSubmit={handleSubmit} className="space-y-5">
             <div className="space-y-1">
-              <label className="text-xs font-mono text-gray-200 uppercase tracking-wider ml-1">
+              <label className="text-xs  text-gray-200 uppercase tracking-wider ml-1">
                 Full Name
               </label>
               <div className="relative group">
@@ -156,7 +156,7 @@ export default function SignupPage() {
             </div>
 
             <div className="space-y-1">
-              <label className="text-xs font-mono text-gray-200 uppercase tracking-wider ml-1">
+              <label className="text-xs  text-gray-200 uppercase tracking-wider ml-1">
                 Email Address
               </label>
               <div className="relative group">
@@ -177,7 +177,7 @@ export default function SignupPage() {
             </div>
 
             <div className="space-y-1">
-              <label className="text-xs font-mono text-gray-200 uppercase tracking-wider ml-1">
+              <label className="text-xs  text-gray-200 uppercase tracking-wider ml-1">
                 Secure Password
               </label>
               <div className="relative group">
@@ -229,7 +229,7 @@ export default function SignupPage() {
 
           <div className="flex items-center gap-4 my-8">
             <div className="h-px bg-white/10 flex-1" />
-            <span className="text-xs font-mono text-gray-500 uppercase tracking-widest">
+            <span className="text-xs  text-gray-500 uppercase tracking-widest">
               Or Auth With
             </span>
             <div className="h-px bg-white/10 flex-1" />

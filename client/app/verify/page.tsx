@@ -85,7 +85,7 @@ function VerifyContent() {
             <Fingerprint className="w-10 h-10 text-blue-400 animate-pulse" />
           </div>
           <h2 className="text-2xl font-bold mb-2">Decrypting Key...</h2>
-          <p className="text-gray-400 font-mono text-xs tracking-widest uppercase flex items-center justify-center gap-2">
+          <p className="text-gray-400  text-xs tracking-widest uppercase flex items-center justify-center gap-2">
             <Loader2 className="w-3 h-3 animate-spin" /> Handshaking with IRIS
             Core
           </p>
@@ -104,7 +104,7 @@ function VerifyContent() {
           <h2 className="text-2xl font-bold mb-2 text-white">
             Identity Verified
           </h2>
-          <p className="text-[#39FF14] font-mono text-xs tracking-widest uppercase mb-6 animate-pulse">
+          <p className="text-[#39FF14]  text-xs tracking-widest uppercase mb-6 animate-pulse">
             Access Granted. Routing to Dashboard...
           </p>
         </motion.div>
@@ -120,7 +120,7 @@ function VerifyContent() {
             <XCircle className="w-12 h-12 text-red-500" />
           </div>
           <h2 className="text-2xl font-bold mb-2 text-white">Access Denied</h2>
-          <p className="text-red-400 font-mono text-xs tracking-widest uppercase mb-8">
+          <p className="text-red-400  text-xs tracking-widest uppercase mb-8">
             {errorMessage}
           </p>
           <Link
@@ -143,7 +143,7 @@ export default function VerifyPage() {
 
       <Suspense
         fallback={
-          <div className="text-gray-500 font-mono text-xs tracking-widest uppercase animate-pulse flex items-center gap-2">
+          <div className="text-gray-500  text-xs tracking-widest uppercase animate-pulse flex items-center gap-2">
             <Loader2 className="w-4 h-4 animate-spin" /> Initializing
             Scanners...
           </div>
