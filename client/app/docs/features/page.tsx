@@ -259,7 +259,6 @@ export default function DocsFeaturesPage() {
   return (
     <div className="space-y-10">
       
-      {/* Header */}
       <div className="space-y-4">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs font-mono tracking-widest uppercase">
           <Terminal className="w-3.5 h-3.5" />
@@ -273,7 +272,6 @@ export default function DocsFeaturesPage() {
         </p>
       </div>
 
-      {/* Accordion List */}
       <div className="space-y-4">
         {featuresData.map((category, index) => {
           const Icon = category.icon;
@@ -286,7 +284,6 @@ export default function DocsFeaturesPage() {
               transition={{ delay: index * 0.05 }}
               className="bg-[#050505] border border-white/10 rounded-2xl overflow-hidden hover:border-white/15 transition-all duration-300"
             >
-              {/* Header trigger */}
               <button
                 onClick={() => toggleCategory(index)}
                 className="w-full px-6 py-5 flex items-center justify-between text-left cursor-pointer group"
@@ -311,7 +308,6 @@ export default function DocsFeaturesPage() {
                 )}
               </button>
 
-              {/* Collapsible Content */}
               {isExpanded && (
                 <div className="px-6 pb-6 pt-2 border-t border-white/5 space-y-6">
                   {category.tools.map((tool, tIdx) => (
