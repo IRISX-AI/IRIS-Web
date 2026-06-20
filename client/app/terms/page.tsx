@@ -182,7 +182,6 @@ export default function TermsOfServicePage() {
             </p>
           </motion.div>
 
-          {/* Card 7: Strict No-Refund Policy */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
@@ -201,7 +200,6 @@ export default function TermsOfServicePage() {
             </div>
           </motion.div>
 
-          {/* Card 8: Access Revocation Conditions */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
@@ -224,7 +222,6 @@ export default function TermsOfServicePage() {
           </motion.div>
         </motion.div>
 
-        {/* Return Button */}
         <div className="mt-12 pt-8 border-t border-white/10 flex justify-between items-center text-xs text-zinc-500">
           <span>Last Updated: June 2026</span>
           <motion.a
