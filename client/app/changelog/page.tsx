@@ -128,7 +128,9 @@ export default function ChangelogPage() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#39FF14]/30 bg-[#39FF14]/5 text-[#39FF14] text-xs mb-8 backdrop-blur-md">
             <Activity className="w-3 h-3 text-[#39FF14]" />
-            <span className="uppercase tracking-widest">Ecosystem Momentum</span>
+            <span className="uppercase tracking-widest">
+              Ecosystem Momentum
+            </span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 text-white drop-shadow-2xl">
@@ -139,7 +141,8 @@ export default function ChangelogPage() {
           </h1>
 
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Review the structural iterations, feature extensions, and performance upgrades of IRIS.
+            Review the structural iterations, feature extensions, and
+            performance upgrades of IRIS.
           </p>
         </motion.div>
       </section>
@@ -158,20 +161,41 @@ export default function ChangelogPage() {
           </h3>
           <div className="text-zinc-400 text-xs font-mono leading-relaxed space-y-3">
             <p>
-              In our earlier iterations (pre-v1.1.0), IRIS was developed as a 100% free and open-source project. However, to fund continuous engineering cycles, integrate low-latency SDK solutions (Gemini Live API), and construct advanced tools, IRIS has transitioned to an <strong>Open Core model</strong>.
+              In our earlier iterations (pre-v1.1.0), IRIS was developed as a
+              100% free and open-source project. However, to fund continuous
+              engineering cycles, integrate low-latency SDK solutions (Gemini
+              Live API), and construct advanced tools, IRIS has transitioned to
+              an <strong>Open Core model</strong>.
             </p>
             <p>
-              <strong>What remains open-source?</strong> The public repository contains the visual layout configuration, context-isolated preloads, visual React components, and general community templates.
+              <strong>What remains open-source?</strong> The public repository
+              contains the visual layout configuration, context-isolated
+              preloads, visual React components, and general community
+              templates.
             </p>
             <p>
-              <strong>What is protected?</strong> The core reasoning orchestrator, dynamic tool execution main structures, and automated security locks are packaged inside unreadable V8 bytecode. 
+              <strong>What is protected?</strong> The core reasoning
+              orchestrator, dynamic tool execution main structures, and
+              automated security locks are packaged inside unreadable V8
+              bytecode.
             </p>
             <div className="p-4 rounded-xl bg-[#39FF14]/5 border border-[#39FF14]/10 text-[#39FF14]/90 space-y-2 mt-2">
               <span className="font-bold block">Sponsorship Inclusions:</span>
               <ul className="space-y-1 pl-2">
-                <li>• **$15/mo Sponsor (Insider)**: Unlocks read access to `iris-insiders` containing functional hooks and code snippets. *Sponsorship at this level does not provide the full code.*</li>
-                <li>• **$30/mo Sponsor (Builder)**: Access to testing prompts, logs, and workflow macros.</li>
-                <li>• **$50/mo Sponsor (Alpha)**: Full read access to the raw, unprotected, uncompiled source code, precompiled releases, and commercial licenses.</li>
+                <li>
+                  • **$15/mo Sponsor (Insider)**: Unlocks read access to
+                  `iris-insiders` containing functional hooks and code snippets.
+                  *Sponsorship at this level does not provide the full code.*
+                </li>
+                <li>
+                  • **$30/mo Sponsor (Builder)**: Access to testing prompts,
+                  logs, and workflow macros.
+                </li>
+                <li>
+                  • **$50/mo Sponsor (Alpha)**: Full read access to the raw,
+                  unprotected, uncompiled source code, precompiled releases, and
+                  commercial licenses.
+                </li>
               </ul>
             </div>
           </div>
@@ -189,11 +213,15 @@ export default function ChangelogPage() {
             const Icon = item.icon;
             const isMajor = item.type === "Major";
             return (
-              <motion.div key={idx} variants={itemVariants} className="relative">
+              <motion.div
+                key={idx}
+                variants={itemVariants}
+                className="relative"
+              >
                 {/* Timeline Dot */}
                 <div
                   className={`
-                    absolute -left-[35px] md:-left-[51px] top-1.5 w-5 h-5 rounded-full border flex items-center justify-center bg-black
+                    absolute -left-8.75 md:-left-12.75 top-1.5 w-5 h-5 rounded-full border flex items-center justify-center bg-black
                     ${isMajor ? "border-[#39FF14] text-[#39FF14] shadow-[0_0_10px_rgba(57,255,20,0.3)]" : "border-zinc-500 text-zinc-500"}
                   `}
                 >
@@ -204,7 +232,9 @@ export default function ChangelogPage() {
                 <div className="bg-[#0a0a0a] border border-white/5 hover:border-white/10 rounded-2xl p-6 md:p-8 space-y-4 transition-all duration-300">
                   <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/5 pb-3">
                     <div className="flex items-center gap-3">
-                      <span className={`text-xl font-bold font-mono ${isMajor ? "text-[#39FF14]" : "text-white"}`}>
+                      <span
+                        className={`text-xl font-bold font-mono ${isMajor ? "text-[#39FF14]" : "text-white"}`}
+                      >
                         {item.version}
                       </span>
                       <span className="text-zinc-500 text-xs font-mono font-semibold flex items-center gap-1.5">
@@ -227,12 +257,18 @@ export default function ChangelogPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <h3 className="text-lg font-bold text-white font-mono">{item.title}</h3>
-                    <p className="text-zinc-400 text-xs font-mono leading-relaxed">{item.desc}</p>
+                    <h3 className="text-lg font-bold text-white font-mono">
+                      {item.title}
+                    </h3>
+                    <p className="text-zinc-400 text-xs font-mono leading-relaxed">
+                      {item.desc}
+                    </p>
                   </div>
 
                   <div className="space-y-2 pt-2">
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 block">Changes:</span>
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 block">
+                      Changes:
+                    </span>
                     <ul className="space-y-2 font-mono text-xs text-zinc-400 pl-2 border-l border-white/10">
                       {item.changes.map((change, cIdx) => (
                         <li key={cIdx} className="leading-relaxed">
