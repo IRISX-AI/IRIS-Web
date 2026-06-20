@@ -42,7 +42,7 @@ export default function DownloadPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#000000] text-zinc-100 font-sans selection:bg-[#39FF14]/30 pt-24 overflow-hidden relative">
+    <div className="min-h-screen bg-[#000000] text-zinc-100 font-sans selection:bg-[#39FF14]/30 overflow-hidden relative">
       <Header />
 
       <AnimatePresence>
@@ -95,11 +95,11 @@ export default function DownloadPage() {
         )}
       </AnimatePresence>
 
-      <main className="max-w-7xl mx-auto px-6 relative z-10">
+      <main className="w-full relative z-10">
         <motion.section
           initial="hidden"
           animate="show"
-          className="relative py-20 flex flex-col justify-center items-center text-center min-h-[85vh]"
+          className="relative py-20 flex flex-col justify-center items-center text-center min-h-screen w-full"
         >
           <div
             className="absolute inset-0 w-full h-full pointer-events-none z-0"
