@@ -81,7 +81,6 @@ export default function DocsArchitecturePage() {
       animate="visible"
       className="space-y-12"
     >
-      {/* Header */}
       <motion.div variants={itemVariants} className="space-y-4">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs font-mono tracking-widest uppercase">
           <Cpu className="w-3.5 h-3.5" />
@@ -95,7 +94,6 @@ export default function DocsArchitecturePage() {
         </p>
       </motion.div>
 
-      {/* Tabs Selector */}
       <motion.div variants={itemVariants} className="flex border-b border-white/10 gap-2 font-mono text-xs overflow-x-auto pb-px">
         {[
           { id: "pipeline", label: "Execution Pipeline", icon: Network },
