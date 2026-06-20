@@ -185,7 +185,6 @@ export default function ApiKeysGuide() {
                 </div>
               </div>
 
-              {/* Instructions List */}
               <div className="mb-8">
                 <h3 className="text-xs font-bold text-zinc-500 mb-3 uppercase tracking-widest font-mono">
                   Acquisition Steps
@@ -205,7 +204,6 @@ export default function ApiKeysGuide() {
                 </ul>
               </div>
 
-              {/* CTA Button */}
               <a
                 href={key.link}
                 target="_blank"
