@@ -5,6 +5,7 @@ import { Command, Download, FileCode2, ArrowRight, Mic } from "lucide-react";
 import MagneticButton from "../../utils/MagneticButton";
 import GhostEther from "../GhostEther";
 import RippleGrid from "../../constants/RippleGrid";
+import FloatingLines from "../core/FloationgLines";
 
 interface IrisHeroProps {
   heroTextRef: React.RefObject<HTMLDivElement | null>;
@@ -24,19 +25,16 @@ export default function IrisHero({
         className="hero-section sticky top-0 h-screen w-full flex flex-col justify-center items-center z-0 overflow-hidden bg-black"
       >
         <div className="hidden md:block w-full h-full absolute inset-0 z-0 bg-black">
-          <RippleGrid
-            enableRainbow={false}
-            gridColor="#0f8218"
-            rippleIntensity={0.05}
-            gridSize={10}
-            gridThickness={5}
-            mouseInteraction={true}
-            mouseInteractionRadius={2}
-            opacity={0.8}
-            fadeDistance={1.5}
-            vignetteStrength={5}
-            glowIntensity={0.9}
-            gridRotation={0}
+          <FloatingLines
+            enabledWaves={["top", "middle", "bottom"]}
+            lineCount={6}
+            lineDistance={8}
+            bendRadius={8}
+            bendStrength={-2}
+            interactive
+            parallax={true}
+            animationSpeed={1}
+            linesGradient={["#24d307", "#144f01", "#2a8f2c"]}
           />
         </div>
         <div

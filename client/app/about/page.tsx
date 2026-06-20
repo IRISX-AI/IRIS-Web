@@ -157,7 +157,22 @@ const IRISAbout = () => {
       <Header />
 
       <section className="relative h-screen flex flex-col justify-center items-center overflow-hidden border-b border-white/10 perspective-1000 bg-black">
-        <div className="absolute inset-0 z-0"></div>
+        <div className="absolute inset-0 z-0">
+          <RippleGrid
+            enableRainbow={false}
+            gridColor="#0f8218"
+            rippleIntensity={0.05}
+            gridSize={10}
+            gridThickness={5}
+            mouseInteraction={true}
+            mouseInteractionRadius={2}
+            opacity={0.8}
+            fadeDistance={1.5}
+            vignetteStrength={5}
+            glowIntensity={0.9}
+            gridRotation={0}
+          />
+        </div>
 
         <motion.div className="absolute z-0 w-[800px] h-[800px] bg-[#10b981]/10 blur-[150px] rounded-full pointer-events-none mix-blend-screen" />
 
