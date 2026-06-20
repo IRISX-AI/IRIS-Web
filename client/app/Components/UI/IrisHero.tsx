@@ -107,7 +107,7 @@ export default function IrisHero({
           <div className="flex md:flex-row flex-col justify-center items-center gap-5 w-full sm:w-auto">
             <Link href="/download">
               <MagneticButton
-                title="Download for Windows"
+                title="Download IRIS AI"
                 subtitle="Get Early Access"
                 iconLeft={<Command className="w-6 h-6" />}
                 iconRight={
