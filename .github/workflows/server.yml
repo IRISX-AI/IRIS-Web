@@ -1,0 +1,38 @@
+name: Server CI (Express)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - "server/**"
+      - ".github/workflows/server.yml"
+  pull_request:
+    branches: ["main"]
+    paths:
+      - "server/**"
+      - ".github/workflows/server.yml"
+
+jobs:
+  build-server:
+    name: Validate Server
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./server
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "npm"
+          cache-dependency-path: "./server/package-lock.json"
+
+      - name: Install Dependencies
+        run: npm ci || npm install
+
+      - name: Typecheck & Build Backend
+        run: npm run build
