@@ -91,7 +91,7 @@ export default function Footer() {
           </h5>
           {[
             { name: "About IRIS", path: "/about" },
-            { name: "Documentation", path: "/how-to-install" },
+            { name: "Documentation", path: "/docs" },
             { name: "Refund Policy", path: "/refund-policy" },
             { name: "Privacy Policy", path: "/privacy" },
           ].map((link) => (
