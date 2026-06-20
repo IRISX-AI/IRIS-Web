@@ -107,7 +107,6 @@ const faqItems = [
   },
 ];
 
-/* ────────────────────────── COMPONENTS ────────────────────── */
 
 function FAQItem({ item, isOpen, onToggle }: { item: typeof faqItems[0]; isOpen: boolean; onToggle: () => void }) {
   const Icon = item.icon;
@@ -228,7 +227,6 @@ function FAQItem({ item, isOpen, onToggle }: { item: typeof faqItems[0]; isOpen:
   );
 }
 
-/* ─────────────────────────── PAGE ─────────────────────────── */
 
 export default function SupportPage() {
   const [openFAQ, setOpenFAQ] = useState<string | null>("defender");
@@ -241,7 +239,6 @@ export default function SupportPage() {
     <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#39FF14] selection:text-black overflow-x-hidden">
       <Header />
 
-      {/* ── Hero Section ── */}
       <section className="pt-40 pb-20 px-6 relative overflow-hidden flex flex-col items-center text-center border-b border-white/5">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-96 bg-[#39FF14]/8 blur-[130px] rounded-full pointer-events-none" />
         <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-[#39FF14]/4 blur-[100px] rounded-full pointer-events-none" />
@@ -272,7 +269,6 @@ export default function SupportPage() {
         </motion.div>
       </section>
 
-      {/* ── Self-Service Deflector ── */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
