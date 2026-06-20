@@ -46,9 +46,7 @@ export default function RefundPolicyPage() {
         </motion.div>
       </section>
 
-      {/* ── POLICY CONTENT ── */}
       <section className="py-20 px-6 relative z-20 max-w-4xl mx-auto">
-        {/* Strictly No Refunds Disclaimer */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -88,7 +86,6 @@ export default function RefundPolicyPage() {
           </div>
         </motion.div>
 
-        {/* The "Try Before You Buy" Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
