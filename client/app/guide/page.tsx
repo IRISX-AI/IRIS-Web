@@ -192,7 +192,6 @@ export default function ApiKeysGuide() {
                 </ul>
               </div>
 
-              {/* CTA Button */}
               <a
                 href={key.link}
                 target="_blank"
