@@ -414,6 +414,7 @@ export default function ChangelogPage() {
 
   useGSAP(
     () => {
+      // 1. Scroll-triggered vertical timeline track filling line
       gsap.fromTo(
         lineProgressRef.current,
         { height: "0%" },
@@ -422,22 +423,44 @@ export default function ChangelogPage() {
           ease: "none",
           scrollTrigger: {
             trigger: timelineRef.current,
-            start: "top 30%",
-            end: "bottom 70%",
+            start: "top 25%",
+            end: "bottom 75%",
             scrub: true,
           },
         },
       );
 
+      // 2. Setup scroll animations for each wrapper & card
       changelogData.forEach((item, idx) => {
         const idSafe = item.version.replace(/\./g, "-");
         const cardId = `#card-${idSafe}`;
+        const wrapperId = `#wrapper-${idSafe}`;
         const dotId = `#dot-${idSafe}`;
 
+        // Slide up card from below as it enters the viewport
+        gsap.fromTo(
+          cardId,
+          { y: 120, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.6,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: wrapperId,
+              start: "top 95%",
+              toggleActions: "play none none none",
+            },
+          },
+        );
+
+        // Pin the card inside its wrapper spacer as it hits the scroll threshold
         ScrollTrigger.create({
-          trigger: cardId,
-          start: "top 35%",
-          end: "bottom 35%",
+          trigger: wrapperId,
+          start: "top 160px",
+          end: "bottom 160px",
+          pin: cardId,
+          pinSpacing: false,
           onEnter: () => {
             setActiveIndex(idx);
             gsap.to(dotId, {
@@ -502,13 +525,14 @@ export default function ChangelogPage() {
           },
         });
 
+        // Category items reveal stagger animation
         gsap.fromTo(
           `${cardId} .category-block`,
           { opacity: 0, y: 15 },
           {
             opacity: 1,
             y: 0,
-            stagger: 0.06,
+            stagger: 0.05,
             duration: 0.4,
             scrollTrigger: {
               trigger: cardId,
@@ -517,6 +541,26 @@ export default function ChangelogPage() {
             },
           },
         );
+
+        // Stacking Deck 3D Effect: scale down and fade card when the next card slides up
+        if (idx < changelogData.length - 1) {
+          const nextIdSafe = changelogData[idx + 1].version.replace(/\./g, "-");
+          const nextWrapperId = `#wrapper-${nextIdSafe}`;
+
+          gsap.to(cardId, {
+            scale: 0.94,
+            opacity: 0.35,
+            filter: "blur(2.5px)",
+            y: -30,
+            ease: "power1.inOut",
+            scrollTrigger: {
+              trigger: nextWrapperId,
+              start: "top 80%",
+              end: "top 160px",
+              scrub: true,
+            },
+          });
+        }
       });
     },
     { scope: containerRef },
@@ -524,9 +568,9 @@ export default function ChangelogPage() {
 
   const scrollToVersion = (versionStr: string) => {
     const idSafe = versionStr.replace(/\./g, "-");
-    const element = document.getElementById(`card-${idSafe}`);
+    const element = document.getElementById(`wrapper-${idSafe}`);
     if (element) {
-      const top = element.getBoundingClientRect().top + window.scrollY - 160;
+      const top = element.getBoundingClientRect().top + window.scrollY - 150;
       window.scrollTo({ top, behavior: "smooth" });
     }
   };
@@ -649,8 +693,12 @@ export default function ChangelogPage() {
           </div>
         </div>
 
-        <div className="lg:col-span-8 relative pl-6 md:pl-12" ref={timelineRef}>
-          <div className="absolute left-3.5 md:left-5.5 top-4 bottom-4 w-0.5 bg-zinc-800/40 rounded-full">
+        <div
+          className="lg:col-span-8 relative pl-12 md:pl-20"
+          ref={timelineRef}
+        >
+          {/* Vertical Timeline Track Line */}
+          <div className="absolute left-6 md:left-10 top-4 bottom-4 w-[2px] bg-zinc-800/40 rounded-full">
             <div
               ref={lineProgressRef}
               className="absolute top-0 left-0 w-full bg-linear-to-b from-[#39FF14] to-emerald-500 origin-top h-0 shadow-[0_0_15px_rgba(57,255,20,0.6)]"
@@ -658,6 +706,7 @@ export default function ChangelogPage() {
             />
           </div>
 
+          {/* Open Core Transition Statement */}
           <div className="bg-[#0a0a0a] border border-[#39FF14]/20 rounded-2xl p-6 md:p-8 mb-16 space-y-4 relative overflow-hidden group">
             <div className="absolute top-0 left-0 w-full h-1 bg-[#39FF14]/15 shadow-[0_0_15px_#39FF14] pointer-events-none" />
             <h3 className="text-lg font-bold text-white flex items-center gap-2 font-mono">
@@ -707,31 +756,37 @@ export default function ChangelogPage() {
             </div>
           </div>
 
-          <div className="space-y-16">
+          {/* Timeline Cards Stacking Deck */}
+          <div className="space-y-0">
             {changelogData.map((item, idx) => {
               const Icon = item.icon;
               const isMajor = item.type === "Major";
               const idSafe = item.version.replace(/\./g, "-");
               return (
-                <div key={idx} className="relative">
-                  <div
-                    id={`dot-${idSafe}`}
-                    className={`
-                      absolute -left-5 md:-left-7 top-3.5 w-6 h-6 md:w-8 md:h-8 rounded-full border border-white/10 bg-black flex items-center justify-center z-10 transition-all duration-300
-                      ${
-                        isMajor
-                          ? "border-zinc-700 text-zinc-500 shadow-[0_0_10px_rgba(57,255,20,0.1)]"
-                          : "border-zinc-800 text-zinc-600"
-                      }
-                    `}
-                  >
-                    <Icon className="w-3.5 h-3.5 md:w-4 md:h-4" />
-                  </div>
-
+                <div
+                  key={idx}
+                  id={`wrapper-${idSafe}`}
+                  className="relative min-h-[550px] lg:min-h-[620px] pb-12 z-10"
+                >
                   <div
                     id={`card-${idSafe}`}
-                    className="bg-[#0a0a0a] border border-white/5 rounded-2xl p-6 md:p-8 space-y-6 transition-all duration-300 relative overflow-hidden"
+                    className="bg-[#0a0a0a] border border-white/5 rounded-2xl p-6 md:p-8 space-y-6 transition-all duration-300 relative overflow-hidden w-full"
                   >
+                    {/* Timeline Dot Node projected to the left (pins together with card) */}
+                    <div
+                      id={`dot-${idSafe}`}
+                      className={`
+                        absolute -left-9 md:-left-14 top-[30px] w-6 h-6 md:w-8 md:h-8 rounded-full border border-white/10 bg-black flex items-center justify-center z-10 transition-all duration-300
+                        ${
+                          isMajor
+                            ? "border-zinc-700 text-zinc-500 shadow-[0_0_10px_rgba(57,255,20,0.1)]"
+                            : "border-zinc-800 text-zinc-600"
+                        }
+                      `}
+                    >
+                      <Icon className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                    </div>
+
                     <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/5 pb-4">
                       <div className="flex items-center gap-3">
                         <span
