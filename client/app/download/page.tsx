@@ -19,6 +19,7 @@ import {
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import LightRays from "../Components/utils/LightRays";
+import LightPillar from "../utils/LightPillar";
 
 export default function DownloadPage() {
   const [showWarning, setShowWarning] = useState(false);
@@ -111,20 +112,19 @@ export default function DownloadPage() {
               opacity: 0.8,
             }}
           >
-            <LightRays
-              raysOrigin="top-center"
-              raysColor="#3dda08"
-              raysSpeed={1}
-              lightSpread={0.5}
-              rayLength={3}
-              followMouse={true}
-              mouseInfluence={0.5}
-              noiseAmount={0.15}
-              distortion={0}
-              className="custom-rays"
-              pulsating={false}
-              fadeDistance={2}
-              saturation={1}
+            <LightPillar
+              topColor="#4be90a"
+              bottomColor="#26ff01"
+              intensity={1}
+              rotationSpeed={0.3}
+              glowAmount={0.002}
+              pillarWidth={3}
+              pillarHeight={0.4}
+              noiseIntensity={0.5}
+              pillarRotation={25}
+              interactive={false}
+              mixBlendMode="lighten"
+              quality="high"
             />
           </div>
 
