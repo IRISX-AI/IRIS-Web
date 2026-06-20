@@ -69,18 +69,21 @@ export default function Footer() {
           </p>
           <div className="flex gap-4 mt-2">
             <a
+              target="_blank"
               href="https://www.instagram.com/irisx.ai/"
               className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#39FF14] hover:border-[#39FF14] hover:bg-[#39FF14]/10 transition-all duration-300"
             >
               <FaInstagram size={18} />
             </a>
             <a
+              target="_blank"
               href="https://github.com/IRISX-AI"
               className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#39FF14] hover:border-[#39FF14] hover:bg-[#39FF14]/10 transition-all duration-300"
             >
               <FaGithub size={18} />
             </a>
             <a
+              target="_blank"
               href="https://www.youtube.com/@irisx-ai"
               className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#39FF14] hover:border-[#39FF14] hover:bg-[#39FF14]/10 transition-all duration-300"
             >
