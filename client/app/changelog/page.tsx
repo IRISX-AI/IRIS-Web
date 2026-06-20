@@ -414,7 +414,6 @@ export default function ChangelogPage() {
 
   useGSAP(
     () => {
-      // 1. Line progress tracks scroll position of timeline container
       gsap.fromTo(
         lineProgressRef.current,
         { height: "0%" },
@@ -430,13 +429,11 @@ export default function ChangelogPage() {
         },
       );
 
-      // 2. Focus/Highlight ScrollTrigger per card
       changelogData.forEach((item, idx) => {
         const idSafe = item.version.replace(/\./g, "-");
         const cardSelector = `#card-${idSafe}`;
         const dotSelector = `#dot-${idSafe}`;
 
-        // Initialize state on render: card 0 active, others dimmed
         if (idx === 0) {
           gsap.set(cardSelector, {
             scale: 1,
@@ -599,7 +596,6 @@ export default function ChangelogPage() {
         </motion.div>
       </section>
 
-      {/* Open Core Transition Statement Section (Scrolls naturally above timeline) */}
       <section className="pt-20 pb-10 px-6 relative z-20 max-w-5xl mx-auto">
         <div className="bg-[#0a0a0a] border border-[#39FF14]/20 rounded-2xl p-6 md:p-8 space-y-4 relative overflow-hidden group">
           <div className="absolute top-0 left-0 w-full h-1 bg-[#39FF14]/15 shadow-[0_0_15px_#39FF14] pointer-events-none" />
@@ -650,13 +646,11 @@ export default function ChangelogPage() {
         </div>
       </section>
 
-      {/* Interactive Stacking Timeline Section */}
       <section
         className="py-16 px-6 relative z-20 max-w-7xl mx-auto"
         ref={timelineRef}
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          {/* Left Column (Sticky active version display widget) */}
           <div className="lg:col-span-4 relative">
             <div className="lg:sticky lg:top-36 space-y-6">
               <div
