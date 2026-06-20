@@ -18,7 +18,6 @@ export default function RefundPolicyPage() {
     <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#10b981] selection:text-black">
       <Header />
 
-      {/* ── HERO SECTION ── */}
       <section className="pt-40 pb-16 px-6 relative overflow-hidden flex flex-col items-center text-center border-b border-white/5">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-96 bg-[#10b981]/10 blur-[120px] rounded-full pointer-events-none" />
 
@@ -49,7 +48,6 @@ export default function RefundPolicyPage() {
         </motion.div>
       </section>
 
-      {/* ── GRID POLICY CONTENT ── */}
       <section className="py-20 px-6 relative z-20 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* 1. Strictly No Refunds (Spans full width on top) */}
