@@ -73,7 +73,7 @@ export default function DocsLayout({ children }: { children: ReactNode }) {
         {/* Sidebar Navigation */}
         <aside
           className={`
-            fixed md:sticky top-32 h-[calc(100vh-10rem)] w-[260px] shrink-0 overflow-y-auto border-r border-white/5 pr-6 z-40 bg-black/90 backdrop-blur-md md:bg-transparent md:backdrop-blur-none
+            fixed md:sticky top-32 h-[calc(100vh-10rem)] w-65 shrink-0 overflow-y-auto border-r border-white/5 pr-6 z-40 bg-black/90 backdrop-blur-md md:bg-transparent md:backdrop-blur-none
             transition-all duration-300 ease-in-out
             ${mobileOpen ? "left-6" : "-left-full md:left-0"}
           `}
