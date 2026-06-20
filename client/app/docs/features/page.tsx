@@ -320,7 +320,6 @@ export default function DocsFeaturesPage() {
                         {tool.desc}
                       </p>
 
-                      {/* Commands block */}
                       <div className="space-y-1.5 bg-black/60 p-3 rounded-xl border border-white/5">
                         <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 flex items-center gap-1.5">
                           <Mic className="w-3.5 h-3.5 text-[#39FF14]" />
