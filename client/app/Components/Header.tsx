@@ -93,7 +93,7 @@ const Header = () => {
           </a>
 
           <Link href="/download">
-            <div className="hidden md:block px-4 py-2 rounded-full border border-[#39FF14]/50 bg-[#39FF14]/10 text-[#ffffff] text-[10px] font-bold tracking-[0.3em] uppercase hover:bg-[#099443] hover:text-white hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all cursor-pointer">
+            <div className="hidden md:block px-4 py-2 rounded-full border border-[#39FF14]/80 bg-[#39FF14]/10 text-[#ffffff] text-[10px] font-bold tracking-[0.3em] uppercase hover:bg-[#39FF14]/30 hover:text-white hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all cursor-pointer">
               Download IRIS
             </div>
           </Link>
