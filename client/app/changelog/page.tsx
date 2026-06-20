@@ -742,9 +742,7 @@ export default function ChangelogPage() {
             </div>
           </div>
 
-          {/* Right Column (Scrollable stack cards) */}
           <div className="lg:col-span-8 relative pl-12 lg:pl-20">
-            {/* Vertical timeline track line */}
             <div className="absolute left-6 lg:left-8 top-4 bottom-4 w-0.5 bg-zinc-800/40 rounded-full z-0 pointer-events-none">
               <div
                 ref={lineProgressRef}
@@ -753,7 +751,6 @@ export default function ChangelogPage() {
               />
             </div>
 
-            {/* Slide Window Container */}
             <div
               id="timeline-window"
               className="relative w-full space-y-24 bg-transparent"
