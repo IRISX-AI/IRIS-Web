@@ -184,7 +184,7 @@ export default function InstallGuide() {
                   iris-setup.sh
                 </span>
               </div>
-              <div className="p-4 h-[400px] overflow-y-auto custom-scrollbar">
+              <div className="p-4 h-100 overflow-y-auto custom-scrollbar">
                 <Terminal
                   commands={[
                     "npm install -g iris-mini",
@@ -254,7 +254,7 @@ export default function InstallGuide() {
           className="mt-24 max-w-4xl mx-auto relative group"
         >
           <div className="absolute -inset-1 bg-linear-to-r from-[#39FF14] to-green-900 rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-          <div className="relative bg-[#050505] border border-white/10 rounded-[2rem] p-8 md:p-12 overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="relative bg-[#050505] border border-white/10 rounded-4xl p-8 md:p-12 overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="absolute top-0 right-0 p-8 opacity-5">
               <Smartphone className="w-48 h-48 text-[#39FF14]" />
             </div>
