@@ -304,7 +304,7 @@ const IRIS = () => {
 
           <div className="relative w-full max-w-6xl mt-20 flex justify-center z-10 group">
             <Image
-              src="/img/graphic.webp"
+              src="/img/iris-core.png"
               alt="3D tech elements"
               width={1400}
               height={900}
@@ -312,7 +312,7 @@ const IRIS = () => {
               className="w-[85%] h-[85%] object-contain mask-image-b relative z-20 transition-transform duration-1000 ease-out"
               style={{
                 filter:
-                  "drop-shadow(0px 0px 15px rgba(16, 185, 129, 0.6)) drop-shadow(0px 0px 45px rgba(16, 185, 129, 0.4))",
+                  "drop-shadow(0px 0px 15px rgba(57, 255, 20, 1)) drop-shadow(0px 0px 50px rgba(57, 255, 20, 0.8))",
               }}
             />
           </div>
