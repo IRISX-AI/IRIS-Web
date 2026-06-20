@@ -156,3 +156,27 @@ body {
   scrollbar-color: #9b9b9b transparent;
   scrollbar-width: auto;
 }
+
+/* Premium Cyber-Neon Scrollbar utility */
+.iris-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.iris-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 99px;
+}
+.iris-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(57, 255, 20, 0.15);
+  border-radius: 99px;
+  border: 1px solid rgba(57, 255, 20, 0.05);
+  transition: all 0.3s ease;
+}
+.iris-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(57, 255, 20, 0.5);
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+.iris-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(57, 255, 20, 0.15) transparent;
+}
