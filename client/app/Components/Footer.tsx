@@ -183,7 +183,7 @@ export default function Footer() {
             href="https://www.instagram.com/201harshs/"
             className="text-[#39FF14] hover:text-green-400 transition-colors font-bold"
           >
-            201Harsh
+            Harsh Pandey
           </a>
         </p>
       </div>
