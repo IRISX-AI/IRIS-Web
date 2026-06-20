@@ -191,7 +191,6 @@ export default function DownloadPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Windows */}
             <div className="bg-[#0a0a0a] border border-[#39FF14]/30 rounded-3xl p-8 relative overflow-hidden group hover:border-[#39FF14]/60 transition-colors">
               <div className="absolute top-0 right-0 p-6 opacity-10">
                 <Monitor className="w-32 h-32 text-[#39FF14]" />
@@ -207,7 +206,6 @@ export default function DownloadPage() {
               </span>
             </div>
 
-            {/* Headless CLI */}
             <div className="bg-[#0a0a0a] border border-[#39FF14]/30 rounded-3xl p-8 relative overflow-hidden group hover:border-[#39FF14]/60 transition-colors">
               <div className="absolute top-0 right-0 p-6 opacity-10">
                 <Command className="w-32 h-32 text-[#39FF14]" />
@@ -226,7 +224,6 @@ export default function DownloadPage() {
               </Link>
             </div>
 
-            {/* macOS */}
             <div className="bg-[#050505] border border-white/5 rounded-3xl p-8 relative overflow-hidden opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
               <div className="absolute top-0 right-0 p-6 opacity-5">
                 <Apple className="w-32 h-32 text-white" />
@@ -242,7 +239,6 @@ export default function DownloadPage() {
               </span>
             </div>
 
-            {/* IRIS-X Mobile */}
             <div className="bg-[#050505] border border-white/5 rounded-3xl p-8 relative overflow-hidden group hover:border-[#39FF14]/20 transition-colors duration-500">
               <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
                 <Smartphone className="w-32 h-32 text-[#39FF14]" />
