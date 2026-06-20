@@ -155,15 +155,36 @@ export default function PricingPage() {
 
             <div className="space-y-4 flex-1 relative z-10">
               <FeatureItem text="Everything in Base Engine, plus:" pro />
-              <FeatureItem text="Passive Offline Wake Word Activation ('Hey, IRIS')" pro />
-              <FeatureItem text="ScreenPeeler Multimodal AI OCR (Ctrl + Alt + X)" pro />
-              <FeatureItem text="Phantom Control Ghost Keyboard (Ctrl + Alt + Space)" pro />
+              <FeatureItem
+                text="Passive Offline Wake Word Activation ('Hey, IRIS')"
+                pro
+              />
+              <FeatureItem
+                text="ScreenPeeler Multimodal AI OCR (Ctrl + Alt + X)"
+                pro
+              />
+              <FeatureItem
+                text="Phantom Control Ghost Keyboard (Ctrl + Alt + Space)"
+                pro
+              />
               <FeatureItem text="Gmail Integration & Email Automation" pro />
-              <FeatureItem text="Mobile Device Bridge (ADB Telemetry & Control)" pro />
-              <FeatureItem text="AI Image Generation (DALL-E / Midjourney)" pro />
+              <FeatureItem
+                text="Mobile Device Bridge (ADB Telemetry & Control)"
+                pro
+              />
+              <FeatureItem
+                text="AI Image Generation (DALL-E / Midjourney)"
+                pro
+              />
               <FeatureItem text="Autonomous Deep Web Research Crawlers" pro />
-              <FeatureItem text="Localhost Wormholes (Secure Port Tunneling)" pro />
-              <FeatureItem text="Biometric OS Vault Encryption (Face Recognition)" pro />
+              <FeatureItem
+                text="Localhost Wormholes (Secure Port Tunneling)"
+                pro
+              />
+              <FeatureItem
+                text="Biometric OS Vault Encryption (Face Recognition)"
+                pro
+              />
             </div>
 
             <button className="cursor-pointer group w-full flex justify-center items-center gap-2 mt-10 py-4 rounded-xl bg-[#39FF14] text-black font-bold hover:bg-green-400 transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] relative z-10">
@@ -225,7 +246,11 @@ export default function PricingPage() {
                 pro="Yes"
               />
 
-              <TableRow title="Offline Passive Wake Word Activation" free="No" pro="Yes" />
+              <TableRow
+                title="Offline Passive Wake Word Activation"
+                free="No"
+                pro="Yes"
+              />
               <TableRow
                 title="ScreenPeeler Multimodal AI OCR"
                 free="No"
