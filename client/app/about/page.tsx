@@ -34,6 +34,7 @@ import { RiGeminiFill } from "react-icons/ri";
 import { BsAnthropic } from "react-icons/bs";
 import { TbBrandSocketIo } from "react-icons/tb";
 import RippleGrid from "../constants/RippleGrid";
+import Image from "next/image";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -52,7 +53,15 @@ const storyData: StoryContent[] = [
     num: "02",
     title: "The Architect",
     text: "Engineered entirely by Harsh Pandey, IRIS AI was built from the ground up to push the boundaries of what local software can do. Every line of code is optimized for raw speed and deep operating system integration.",
-    icon: <User className="w-24 h-24 text-[#10b981]" />,
+    icon: (
+      <Image
+        src="/iris.png"
+        alt="IRIS LOGO"
+        width={200}
+        height={200}
+        className="w-full h-full object-contain"
+      />
+    ),
     visualTitle: "THE CREATOR",
     visualSub: "Harsh Pandey",
   },
