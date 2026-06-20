@@ -138,7 +138,6 @@ export default function ApiKeysGuide() {
               variants={itemVariants}
               className="group relative bg-[#050505] border border-white/10 rounded-2xl p-6 md:p-8 hover:border-[#39FF14]/50 transition-all duration-300 shadow-xl"
             >
-              {/* Header: Title & Badge */}
               <div className="flex justify-between items-start mb-4">
                 <h2 className="text-2xl font-bold text-white flex items-center gap-3">
                   <Key
@@ -163,12 +162,10 @@ export default function ApiKeysGuide() {
                 </span>
               </div>
 
-              {/* Description */}
               <p className="text-zinc-400 text-sm mb-6 min-h-[40px]">
                 {key.description}
               </p>
 
-              {/* Environment Variable Copy Box */}
               <div className="mb-6">
                 <div className="flex items-center justify-between bg-black border border-white/10 rounded-lg p-3 hover:border-zinc-700 transition-colors">
                   <code className="text-xs font-mono text-zinc-300">
