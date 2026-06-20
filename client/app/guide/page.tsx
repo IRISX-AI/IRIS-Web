@@ -88,7 +88,7 @@ export default function ApiKeysGuide() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#000000] text-zinc-100 font-sans selection:bg-[#39FF14]/30 pt-24">
+    <div className="flex flex-col min-h-screen bg-[#000000] mt-16 text-zinc-100 font-sans selection:bg-[#39FF14]/30 pt-24">
       <Header />
 
       <main className="grow max-w-6xl mx-auto w-full px-6 pb-24">
