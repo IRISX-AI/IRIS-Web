@@ -15,7 +15,6 @@ import {
   Star,
   Calendar,
   RefreshCw,
-  Terminal,
   ArrowLeft,
 } from "lucide-react";
 import Header from "../Components/Header";
