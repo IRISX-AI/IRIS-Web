@@ -41,7 +41,7 @@ export default function InstallGuide() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.1 }}
-          className="w-full mb-12 bg-gradient-to-r from-zinc-900 to-zinc-950 border border-[#39FF14]/30 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-[0_0_30px_rgba(57,255,20,0.1)] hover:shadow-[0_0_40px_rgba(57,255,20,0.15)] transition-shadow"
+          className="w-full mb-12 bg-linear-to-r from-zinc-900 to-zinc-950 border border-[#39FF14]/30 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-[0_0_30px_rgba(57,255,20,0.1)] hover:shadow-[0_0_40px_rgba(57,255,20,0.15)] transition-shadow"
         >
           <div className="flex items-start gap-4">
             <div className="p-3 bg-[#39FF14]/10 rounded-xl">
@@ -83,7 +83,7 @@ export default function InstallGuide() {
                 <div className="w-8 h-8 shrink-0 rounded-full bg-zinc-900 border border-[#39FF14]/50 flex items-center justify-center text-[#39FF14] font-mono font-bold text-sm">
                   1
                 </div>
-                <div className="w-px h-full bg-gradient-to-b from-[#39FF14]/50 to-transparent my-2"></div>
+                <div className="w-px h-full bg-linear-to-b from-[#39FF14]/50 to-transparent my-2"></div>
               </div>
               <div className="pb-8 pt-1">
                 <h4 className="text-lg font-bold text-white mb-2">
@@ -107,7 +107,7 @@ export default function InstallGuide() {
                 <div className="w-8 h-8 shrink-0 rounded-full bg-zinc-900 border border-[#39FF14]/50 flex items-center justify-center text-[#39FF14] font-mono font-bold text-sm">
                   2
                 </div>
-                <div className="w-px h-full bg-gradient-to-b from-[#39FF14]/50 to-transparent my-2"></div>
+                <div className="w-px h-full bg-linear-to-b from-[#39FF14]/50 to-transparent my-2"></div>
               </div>
               <div className="pb-8 pt-1">
                 <h4 className="text-lg font-bold text-white mb-2">
@@ -145,7 +145,7 @@ export default function InstallGuide() {
             rel="noopener noreferrer"
             className="group relative flex items-center justify-center gap-3 w-full bg-black hover:bg-zinc-900 border border-white/10 hover:border-[#39FF14]/50 text-white font-bold py-5 rounded-2xl transition-all overflow-hidden mt-6"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#39FF14]/0 via-[#39FF14]/10 to-[#39FF14]/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+            <div className="absolute inset-0 bg-linear-to-r from-[#39FF14]/0 via-[#39FF14]/10 to-[#39FF14]/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
             <Play className="w-5 h-5 text-[#39FF14] fill-[#39FF14]" />
             Watch Video Tutorial
           </a>
@@ -184,7 +184,7 @@ export default function InstallGuide() {
           transition={{ delay: 0.4 }}
           className="mt-12 relative group"
         >
-          <div className="absolute -inset-1 bg-gradient-to-r from-[#39FF14] to-green-900 rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+          <div className="absolute -inset-1 bg-linear-to-r from-[#39FF14] to-green-900 rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
           <div className="relative bg-[#050505] border border-white/10 rounded-4xl p-8 md:p-12 overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="absolute top-0 right-0 p-8 opacity-5">
               <Smartphone className="w-48 h-48 text-[#39FF14]" />
