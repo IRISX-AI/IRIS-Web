@@ -34,7 +34,7 @@ import { PiOpenAiLogo } from "react-icons/pi";
 import { RiGeminiFill } from "react-icons/ri";
 import { BsAnthropic } from "react-icons/bs";
 import { TbBrandSocketIo } from "react-icons/tb";
-import FloatingLines from "../Components/core/FloationgLines";
+import RippleGrid from "../constants/RippleGrid";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
