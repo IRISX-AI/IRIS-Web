@@ -98,7 +98,6 @@ export default function DocsOverviewPage() {
         </div>
       </motion.div>
 
-      {/* Difference Column */}
       <motion.div
         variants={itemVariants}
         className="grid grid-cols-1 md:grid-cols-2 gap-6"
@@ -134,7 +133,6 @@ export default function DocsOverviewPage() {
           </ul>
         </div>
 
-        {/* Open Core Disclaimer */}
         <div className="bg-[#050505] border border-orange-500/20 rounded-2xl p-6 hover:border-orange-500/40 transition-all">
           <h4 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
             <AlertTriangle className="w-5 h-5 text-orange-500" />
