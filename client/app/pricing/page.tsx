@@ -11,6 +11,7 @@ import {
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import { FaGithub } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function PricingPage() {
   return (
@@ -101,9 +102,11 @@ export default function PricingPage() {
               <FeatureItem text="Push-to-Talk Voice Activation" />
             </div>
 
-            <button className="w-full mt-10 py-4 rounded-xl border border-white/20 bg-transparent text-white font-bold hover:bg-white/5 transition-colors">
-              Download Base Engine
-            </button>
+            <Link href="/download">
+              <button className="cursor-pointer w-full mt-10 py-4 rounded-xl border border-white/20 bg-transparent text-white font-bold hover:bg-white/5 transition-colors">
+                Download Base Engine
+              </button>
+            </Link>
           </motion.div>
 
           <motion.div
@@ -159,7 +162,7 @@ export default function PricingPage() {
               <FeatureItem text="Biometric OS Vault Encryption" pro />
             </div>
 
-            <button className="group w-full flex justify-center items-center gap-2 mt-10 py-4 rounded-xl bg-[#10b981] text-black font-bold hover:bg-emerald-400 transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] relative z-10">
+            <button className="cursor-pointer group w-full flex justify-center items-center gap-2 mt-10 py-4 rounded-xl bg-[#10b981] text-black font-bold hover:bg-emerald-400 transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] relative z-10">
               <FaGithub className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Sponsor on GitHub to Unlock
             </button>
