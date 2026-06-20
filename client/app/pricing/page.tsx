@@ -47,13 +47,11 @@ export default function PricingPage() {
             GitHub Sponsors.
           </p>
 
-          <Link href="/refund-policy">
-            <div className="flex items-center justify-center">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/5 bg-white/5 text-xs font-mono text-gray-400 cursor-default hover:bg-white/10 transition-colors">
-                <ShieldAlert className="w-4 h-4 text-orange-500/80" />
-                <span>Strict No-Refund Policy (Standard GitHub Terms)</span>
-              </div>
-            </div>
+          <Link href="/refund-policy" className="inline-block">
+            <button className="cursor-pointer group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-orange-500/20 bg-orange-500/5 text-xs font-mono text-orange-400/80 hover:text-orange-400 hover:bg-orange-500/10 hover:border-orange-500/40 transition-all duration-300 shadow-[0_0_15px_rgba(249,115,22,0.05)] hover:shadow-[0_0_25px_rgba(249,115,22,0.15)]">
+              <ShieldAlert className="w-4 h-4 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
+              <span>Strict No-Refund Policy (Standard GitHub Terms)</span>
+            </button>
           </Link>
         </motion.div>
       </section>
