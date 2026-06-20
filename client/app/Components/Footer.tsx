@@ -28,7 +28,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-black pt-16 pb-6 px-6 md:px-20 border-t border-white/5 relative overflow-hidden font-sans">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-linear-to-r from-transparent via-[#39FF14]/40 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-[#39FF14]/40 to-transparent" />
 
       <div className="hidden md:flex w-full justify-center items-center py-12 md:py-20 mb-12 border-b border-white/5 relative">
         <div className="absolute inset-0 pointer-events-none" />
@@ -42,9 +42,10 @@ export default function Footer() {
         viewport={{ once: true, margin: "-100px" }}
         className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 text-sm relative z-10"
       >
+        {/* ── BRANDING & SOCIALS ── */}
         <motion.div variants={itemVariants} className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 border border-[#39FF14]/30 bg-[#39FF14]/10 rounded-xl flex items-center justify-center shadow-[0_0_15px_rgba(16,185,129,0.1)]">
+            <div className="w-12 h-12 border border-[#39FF14]/30 bg-[#39FF14]/10 rounded-xl flex items-center justify-center shadow-[0_0_15px_rgba(57,255,20,0.1)]">
               <Cpu className="text-[#39FF14]" size={24} strokeWidth={1.5} />
             </div>
             <div>
@@ -52,13 +53,12 @@ export default function Footer() {
                 IRIS
               </h3>
               <p className="text-[#39FF14] text-[10px] tracking-[0.2em] uppercase">
-                Neural Interface
+                Execution Engine
               </p>
             </div>
           </div>
           <p className="text-gray-500 leading-relaxed pr-4 font-light">
-            Bypassing standard algorithms to deliver raw, unfiltered
-            system-level automation.
+            A native desktop client for local file management, deep research, and OS-level automation.
           </p>
           <div className="flex gap-4 mt-2">
             <a
@@ -85,43 +85,52 @@ export default function Footer() {
           </div>
         </motion.div>
 
+        {/* ── LEGAL & RESOURCES ── */}
         <motion.div variants={itemVariants} className="flex flex-col gap-4">
           <h5 className="text-white font-bold tracking-widest mb-2 flex items-center gap-2">
-            <TerminalSquare size={16} className="text-[#39FF14]" /> ABOUT
+            <TerminalSquare size={16} className="text-[#39FF14]" /> RESOURCES
           </h5>
-          {["About Us", "Support", "Terms and Condition", "Privacy Policy"].map(
-            (link) => (
-              <a
-                key={link}
-                href="#"
-                className="group flex items-center text-gray-400 hover:text-white transition-colors w-max"
-              >
-                <span className="text-[#39FF14] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 mr-2">
-                  <ArrowUpRight size={16} />
-                </span>
-                <span className="group-hover:translate-x-1 transition-transform duration-300">
-                  {link}
-                </span>
-              </a>
-            ),
-          )}
-        </motion.div>
-
-        <motion.div variants={itemVariants} className="flex flex-col gap-4">
-          <h5 className="text-white font-bold tracking-widest mb-2 flex items-center gap-2">
-            <Activity size={16} className="text-[#39FF14]" /> COMPANY
-          </h5>
-          {["Join Us", "Pricing", "Feedback"].map((link) => (
+          {[
+            { name: "About IRIS", path: "/about" },
+            { name: "Documentation", path: "/how-to-install" },
+            { name: "Refund Policy", path: "/refund-policy" },
+            { name: "Privacy Policy", path: "/privacy" }
+          ].map((link) => (
             <Link
-              key={link}
-              href={"/" + link.toLowerCase().replace(" ", "-")}
+              key={link.name}
+              href={link.path}
               className="group flex items-center text-gray-400 hover:text-white transition-colors w-max"
             >
               <span className="text-[#39FF14] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 mr-2">
                 <ArrowUpRight size={16} />
               </span>
               <span className="group-hover:translate-x-1 transition-transform duration-300">
-                {link}
+                {link.name}
+              </span>
+            </Link>
+          ))}
+        </motion.div>
+
+        {/* ── COMPANY LINKS ── */}
+        <motion.div variants={itemVariants} className="flex flex-col gap-4">
+          <h5 className="text-white font-bold tracking-widest mb-2 flex items-center gap-2">
+            <Activity size={16} className="text-[#39FF14]" /> ECOSYSTEM
+          </h5>
+          {[
+            { name: "Pricing & Tiers", path: "/pricing" },
+            { name: "Desktop Client", path: "/download" },
+            { name: "CLI Core", path: "/download/cli" }
+          ].map((link) => (
+            <Link
+              key={link.name}
+              href={link.path}
+              className="group flex items-center text-gray-400 hover:text-white transition-colors w-max"
+            >
+              <span className="text-[#39FF14] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 mr-2">
+                <ArrowUpRight size={16} />
+              </span>
+              <span className="group-hover:translate-x-1 transition-transform duration-300">
+                {link.name}
               </span>
             </Link>
           ))}
@@ -136,6 +145,7 @@ export default function Footer() {
           </a>
         </motion.div>
 
+        {/* ── SYSTEM STATUS ── */}
         <motion.div variants={itemVariants} className="flex flex-col gap-4">
           <h5 className="text-white font-bold tracking-widest mb-2">
             SYSTEM STATUS
@@ -160,22 +170,25 @@ export default function Footer() {
             <div className="h-px w-full bg-white/5" />
             <div>
               <p className="text-gray-500 text-[10px] uppercase tracking-wider mb-1 font-mono">
-                Parent Command
+                Engine Version
               </p>
               <p className="text-white font-bold tracking-wider">
-                IRIS AI v1.5.1 - Stable Release
+                IRIS Desktop v1.3.0
               </p>
             </div>
           </div>
         </motion.div>
       </motion.div>
 
+      {/* ── FOOTER META ── */}
       <div className="w-full max-w-7xl mx-auto mt-20 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600 relative z-10 font-mono">
         <p>© {new Date().getFullYear()} IRIS AI. All rights reserved.</p>
         <p className="tracking-widest uppercase">
-          Made with ❤️ by{" "}
+          Engineered by{" "}
           <a
             href="https://www.instagram.com/201harshs/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-[#39FF14] hover:text-green-400 transition-colors font-bold"
           >
             Harsh Pandey
