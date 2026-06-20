@@ -567,7 +567,7 @@ export default function ChangelogPage() {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#39FF14] selection:text-black overflow-x-hidden"
+      className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#39FF14] selection:text-black"
     >
       <Header />
 
@@ -659,7 +659,7 @@ export default function ChangelogPage() {
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column (Sticky active version display widget) */}
-          <div className="lg:col-span-4 relative h-full">
+          <div className="lg:col-span-4 relative">
             <div className="lg:sticky lg:top-36 space-y-6">
               <div
                 id="pin-panel"
@@ -745,7 +745,7 @@ export default function ChangelogPage() {
           </div>
 
           {/* Right Column (Scrollable stack cards) */}
-          <div className="lg:col-span-8 relative pl-12 lg:pl-20 h-full">
+          <div className="lg:col-span-8 relative pl-12 lg:pl-20">
             {/* Vertical timeline track line */}
             <div className="absolute left-6 lg:left-8 top-4 bottom-4 w-[2px] bg-zinc-800/40 rounded-full z-0 pointer-events-none">
               <div
