@@ -238,7 +238,6 @@ export default function PricingPage() {
   );
 }
 
-// ── Shared UI Components ──
 
 const FeatureItem = ({
   text,
