@@ -176,7 +176,6 @@ export default function DocsArchitecturePage() {
         })}
       </motion.div>
 
-      {/* Tab Contents */}
       <motion.div variants={itemVariants} className="min-h-75">
         {activeTab === "pipeline" && (
           <div className="space-y-6">
@@ -192,7 +191,6 @@ export default function DocsArchitecturePage() {
                 instantly back as audio.
               </p>
 
-              {/* Execution Flow Diagram */}
               <div className="space-y-4 pt-4">
                 {[
                   {
@@ -335,7 +333,6 @@ export default function DocsArchitecturePage() {
               </p>
             </div>
 
-            {/* Code Block */}
             <div className="bg-black/80 rounded-xl border border-white/10 overflow-hidden font-mono text-xs">
               <div className="bg-white/5 px-4 py-2 border-b border-white/5 text-zinc-500 text-[10px] uppercase font-bold tracking-widest flex items-center justify-between">
                 <span>IPC Bridge Signature</span>
@@ -381,7 +378,6 @@ ipcMain.handle('execute-tool', async (event, { tool, args }) => {
         )}
       </motion.div>
 
-      {/* Tech Stack Grid */}
       <motion.div
         variants={itemVariants}
         className="space-y-6 pt-6 border-t border-white/10"
