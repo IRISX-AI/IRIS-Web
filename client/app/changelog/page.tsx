@@ -434,7 +434,7 @@ export default function ChangelogPage() {
               const progress = self.progress;
               const idx = Math.min(
                 Math.round(progress * (changelogData.length - 1)),
-                changelogData.length - 1
+                changelogData.length - 1,
               );
               setActiveIndex(idx);
             },
@@ -446,7 +446,7 @@ export default function ChangelogPage() {
           lineProgressRef.current,
           { height: "0%" },
           { height: "100%", ease: "none", duration: totalDuration },
-          0
+          0,
         );
 
         // Sequence animations for stacking absolute cards inside the pinned window
@@ -464,7 +464,7 @@ export default function ChangelogPage() {
             cardSelector,
             { yPercent: 100 },
             { yPercent: 0, ease: "none", duration: 1 },
-            startTime
+            startTime,
           );
 
           // Recycle/scale-down and fade the previous active card underneath
@@ -478,7 +478,7 @@ export default function ChangelogPage() {
               ease: "none",
               duration: 1,
             },
-            startTime
+            startTime,
           );
         });
       });
@@ -573,7 +573,7 @@ export default function ChangelogPage() {
         });
       });
     },
-    { scope: containerRef }
+    { scope: containerRef },
   );
 
   const scrollToVersion = (versionStr: string, idx: number) => {
@@ -861,10 +861,7 @@ export default function ChangelogPage() {
                     {/* Categories grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 flex-1 overflow-y-auto scrollbar-thin">
                       {item.categories.map((cat, catIdx) => (
-                        <div
-                          key={catIdx}
-                          className="category-block space-y-3"
-                        >
+                        <div key={catIdx} className="category-block space-y-3">
                           <h4 className="text-xs font-bold text-white flex items-center gap-2 border-b border-white/5 pb-1 font-mono uppercase tracking-wider">
                             {cat.title}
                           </h4>
