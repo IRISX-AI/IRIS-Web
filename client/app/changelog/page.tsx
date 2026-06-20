@@ -449,6 +449,7 @@ export default function ChangelogPage() {
             end: "bottom 760px",
             pin: cardSelector,
             pinSpacing: false,
+            markers: true,
             onToggle: (self) => {
               if (self.isActive) {
                 setActiveIndex(idx);
