@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Command, Download, FileCode2, ArrowRight, Mic } from "lucide-react";
 import MagneticButton from "../../utils/MagneticButton";
 import GhostEther from "../GhostEther";
-import RippleGrid from "../../constants/RippleGrid";
 import FloatingLines from "../core/FloationgLines";
 
 interface IrisHeroProps {
