@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Home, ArrowLeft, Terminal, FileText, HelpCircle } from "lucide-react";
+import { Home, ArrowLeft, FileText, HelpCircle } from "lucide-react";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 
