@@ -240,14 +240,14 @@ export default function FeaturesPage() {
 
         <div className="absolute bottom-0 w-full border-t border-white/10 bg-[#050505]/80 backdrop-blur-md z-30">
           <div className="max-w-7xl mx-auto px-6 h-12 flex items-center justify-between text-[10px] md:text-xs font-mono text-gray-400 uppercase tracking-widest">
-            {/* Left: Core Engine & Listen State */}
+            {/* Left: Core Process & Listen State */}
             <div className="flex items-center gap-4 md:gap-6">
               <span className="flex items-center gap-2 text-[#10b981] font-bold shadow-sm">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10b981] opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-[#10b981]"></span>
                 </span>
-                IRIS_KERNEL: ACTIVE
+                BACKGROUND_DAEMON: RUNNING
               </span>
               <span className="hidden sm:block border-l border-white/10 pl-4 md:pl-6">
                 WAKE_WORD: LISTENING
@@ -261,7 +261,7 @@ export default function FeaturesPage() {
                 VECTOR_DB: MOUNTED
               </span>
               <span className="text-white border-l border-white/10 pl-4 md:pl-6">
-                SYS_ACCESS: <span className="text-[#10b981]">GRANTED</span>
+                DISK_ACCESS: <span className="text-[#10b981]">GRANTED</span>
               </span>
             </div>
           </div>
