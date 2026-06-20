@@ -28,7 +28,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-black pt-16 pb-6 px-6 md:px-20 border-t border-white/5 relative overflow-hidden font-sans">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-[#39FF14]/40 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-linear-to-r from-transparent via-[#39FF14]/40 to-transparent" />
 
       <div className="hidden md:flex w-full justify-center items-center py-12 md:py-20 mb-12 border-b border-white/5 relative">
         <div className="absolute inset-0 pointer-events-none" />
