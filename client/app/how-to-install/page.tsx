@@ -33,7 +33,8 @@ export default function InstallGuide() {
             How to Install <span className="text-[#39FF14]">IRIS</span>
           </h1>
           <p className="max-w-2xl mx-auto text-zinc-400 text-lg">
-            Step-by-step instructions to install the native IRIS Desktop Application.
+            Step-by-step instructions to install the native IRIS Desktop
+            Application.
           </p>
         </motion.div>
 
@@ -53,7 +54,8 @@ export default function InstallGuide() {
                 Prerequisite: API Keys
               </h3>
               <p className="text-zinc-400 text-sm">
-                IRIS operates on a Bring Your Own Key (BYOK) model. You must have a Google Gemini API key to run the application.
+                IRIS operates on a Bring Your Own Key (BYOK) model. You must
+                have a Google Gemini API key to run the application.
               </p>
             </div>
           </div>
@@ -91,7 +93,14 @@ export default function InstallGuide() {
                   Download the Installer
                 </h4>
                 <p className="text-zinc-400 text-sm">
-                  Navigate to the <Link href="/download" className="text-[#39FF14] hover:underline">Download page</Link> and get the latest native <code>.exe</code> file for Windows.
+                  Navigate to the{" "}
+                  <Link
+                    href="/download"
+                    className="text-[#39FF14] hover:underline"
+                  >
+                    Download page
+                  </Link>{" "}
+                  and get the latest native <code>.exe</code> file for Windows.
                 </p>
               </div>
             </div>
@@ -108,9 +117,9 @@ export default function InstallGuide() {
                   Run & Bypass Defender
                 </h4>
                 <p className="text-zinc-400 text-sm">
-                  Run the installer. If the Windows SmartScreen popup appears, click{" "}
-                  <strong className="text-white">More Info</strong> and then{" "}
-                  <strong className="text-white">Run Anyway</strong>.
+                  Run the installer. If the Windows SmartScreen popup appears,
+                  click <strong className="text-white">More Info</strong> and
+                  then <strong className="text-white">Run Anyway</strong>.
                 </p>
               </div>
             </div>
@@ -126,7 +135,8 @@ export default function InstallGuide() {
                   Configure Keys & Launch
                 </h4>
                 <p className="text-zinc-400 text-sm">
-                  Open the installed application, paste your Gemini API key into the settings menu, and begin using the software.
+                  Open the installed application, paste your Gemini API key into
+                  the settings menu, and begin using the software.
                 </p>
               </div>
             </div>
@@ -163,7 +173,8 @@ export default function InstallGuide() {
                   Headless CLI Installation
                 </h3>
                 <p className="text-zinc-400 text-sm">
-                  Looking to install the global NPM package? View the CLI documentation.
+                  Looking to install the global NPM package? View the CLI
+                  documentation.
                 </p>
               </div>
             </div>
@@ -192,7 +203,8 @@ export default function InstallGuide() {
                 </h2>
               </div>
               <p className="text-zinc-400 text-lg mb-6 leading-relaxed">
-                An upcoming Android companion app. Enable remote device control, background task scheduling, and mobile notification syncing.
+                An upcoming Android companion app. Enable remote device control,
+                background task scheduling, and mobile notification syncing.
               </p>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#39FF14]/10 text-[#39FF14] border border-[#39FF14]/20 rounded-lg text-sm font-bold tracking-widest uppercase">
                 <span className="relative flex h-2 w-2">
