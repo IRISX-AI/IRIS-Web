@@ -1,11 +1,10 @@
 "use client";
 
-import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Home, ArrowLeft, Terminal, FileText, HelpCircle } from "lucide-react";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
 
 export default function NotFound() {
   const containerVariants: any = {
@@ -73,7 +72,9 @@ export default function NotFound() {
             variants={itemVariants}
             className="text-zinc-400 text-center max-w-lg mb-12 text-sm md:text-base"
           >
-            The directory or file you requested is missing from the core index. It may have been relocated, deleted, or you might have used an invalid pointer.
+            The directory or file you requested is missing from the core index.
+            It may have been relocated, deleted, or you might have used an
+            invalid pointer.
           </motion.p>
 
           {/* Action Grid */}
@@ -86,7 +87,9 @@ export default function NotFound() {
                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:bg-[#39FF14]/20 group-hover:text-[#39FF14] transition-colors text-zinc-400">
                   <Home className="w-5 h-5" />
                 </div>
-                <h3 className="font-semibold text-white mb-1 group-hover:text-[#39FF14] transition-colors">Return Home</h3>
+                <h3 className="font-semibold text-white mb-1 group-hover:text-[#39FF14] transition-colors">
+                  Return Home
+                </h3>
                 <p className="text-xs text-zinc-500">Back to the neural core</p>
               </div>
             </Link>
@@ -96,7 +99,9 @@ export default function NotFound() {
                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:bg-[#39FF14]/20 group-hover:text-[#39FF14] transition-colors text-zinc-400">
                   <FileText className="w-5 h-5" />
                 </div>
-                <h3 className="font-semibold text-white mb-1 group-hover:text-[#39FF14] transition-colors">Documentation</h3>
+                <h3 className="font-semibold text-white mb-1 group-hover:text-[#39FF14] transition-colors">
+                  Documentation
+                </h3>
                 <p className="text-xs text-zinc-500">Read the manual</p>
               </div>
             </Link>
@@ -106,7 +111,9 @@ export default function NotFound() {
                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:bg-[#39FF14]/20 group-hover:text-[#39FF14] transition-colors text-zinc-400">
                   <HelpCircle className="w-5 h-5" />
                 </div>
-                <h3 className="font-semibold text-white mb-1 group-hover:text-[#39FF14] transition-colors">Support</h3>
+                <h3 className="font-semibold text-white mb-1 group-hover:text-[#39FF14] transition-colors">
+                  Support
+                </h3>
                 <p className="text-xs text-zinc-500">Get technical help</p>
               </div>
             </Link>
