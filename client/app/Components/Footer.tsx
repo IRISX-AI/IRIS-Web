@@ -94,6 +94,7 @@ export default function Footer() {
             { name: "Documentation", path: "/docs" },
             { name: "Refund Policy", path: "/refund-policy" },
             { name: "Privacy Policy", path: "/privacy" },
+            { name: "Terms of Service", path: "/terms" },
           ].map((link) => (
             <Link
               key={link.name}
