@@ -146,7 +146,6 @@ export default function Footer() {
           </a>
         </motion.div>
 
-        {/* ── SYSTEM STATUS ── */}
         <motion.div variants={itemVariants} className="flex flex-col gap-4">
           <h5 className="text-white font-bold tracking-widest mb-2">
             SYSTEM STATUS
@@ -181,7 +180,6 @@ export default function Footer() {
         </motion.div>
       </motion.div>
 
-      {/* ── FOOTER META ── */}
       <div className="w-full max-w-7xl mx-auto mt-20 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600 relative z-10 font-mono">
         <p>© {new Date().getFullYear()} IRIS AI. All rights reserved.</p>
         <p className="tracking-widest uppercase">
