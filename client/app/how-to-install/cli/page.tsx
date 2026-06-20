@@ -66,62 +66,69 @@ export default function CliInstallGuide() {
             </div>
             
             <div className="p-4 md:p-6 h-[500px] overflow-y-auto custom-scrollbar">
-              <Terminal
-                commands={[
-                  "npm install -g iris-mini",
-                  "iris",
-                  "AIzaSy...[REDACTED]",
-                  "Lyra",
-                  "y",
-                ]}
-                outputs={{
-                  0: [
-                    "added 42 packages in 3s",
-                    "✔ Installed iris-mini globally.",
-                  ],
-                  1: [
-                    "██╗██████╗ ██╗███████╗",
-                    "██║██╔══██╗██║██╔════╝",
-                    "██║██████╔╝██║███████╗",
-                    "██║██╔══██╗██║╚════██║",
-                    "██║██║  ██║██║███████║",
-                    "╚═╝╚═╝  ╚═╝╚═╝╚══════╝",
-                    "",
-                    "SETUP   ·   IRIS MINI CLI",
-                    "────────────────────────────────────────────────────────",
-                    "Initial setup required.",
-                    "",
-                    "─────── 1 / 2 · API KEY ───────",
-                    "? Enter your Gemini API key:",
-                  ],
-                  2: [
-                    "✔ Validating key format...",
-                    "",
-                    "─────── 2 / 2 · VOICE ───────",
-                    "? Pick a voice (Lyra/Puck)",
-                  ],
-                  3: [
-                    "─────── REVIEW ───────",
-                    "API key  →  •••••••••••••••••",
-                    "Voice    →  Lyra",
-                    "? Save and launch IRIS MINI? (Y/n)",
-                  ],
-                  4: [
-                    "✔ Configuration saved.",
-                    "",
-                    "─────── STARTING ───────",
-                    "✔ Loading config...",
-                    "✔ Connecting API...",
-                    "",
-                    "[ SYSTEM ONLINE ]",
-                    "[ PORT ]    http://localhost:6753",
-                    "[ EXIT ]    Press Ctrl + C to stop",
-                    "========================================================",
-                  ],
-                }}
-                typingSpeed={20}
-                delayBetweenCommands={1000}
-              />
+               <Terminal
+                  commands={[
+                    "npm install -g iris-mini",
+                    "iris",
+                    "AIzaSy...[REDACTED]",
+                    "Lyra",
+                    "y",
+                  ]}
+                  outputs={{
+                    0: [
+                      "added 42 packages, and audited 43 packages in 3s",
+                      "found 0 vulnerabilities",
+                      "✔ Installed iris-mini globally.",
+                    ],
+                    1: [
+                      "██╗██████╗ ██╗███████╗   ███╗   ███╗██╗███╗   ██╗██╗",
+                      "██║██╔══██╗██║██╔════╝   ████╗ ████║██║████╗  ██║██║",
+                      "██║██████╔╝██║███████╗   ██╔████╔██║██║██╔██╗ ██║██║",
+                      "██║██╔══██╗██║╚════██║   ██║╚██╔╝██║██║██║╚██╗██║██║",
+                      "██║██║  ██║██║███████║   ██║ ╚═╝ ██║██║██║ ╚████║██║",
+                      "╚═╝╚═╝  ╚═╝╚═╝╚══════╝   ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝",
+                      "",
+                      "SETUP   ·   Voice Assistant   ·   Powered by Gemini",
+                      "────────────────────────────────────────────────────────",
+                      "Looks like your first time here — let's get you set up.",
+                      "",
+                      "─────── 1 / 2 · API KEY ───────",
+                      "· Get your free key at -> https://aistudio.google.com/app/api-keys",
+                      "? Gemini API key",
+                    ],
+                    2: [
+                      "✔ Validating key format...",
+                      "",
+                      "─────── 2 / 2 · VOICE ───────",
+                      "? Pick a voice (Lyra/Puck)",
+                    ],
+                    3: [
+                      "─────── REVIEW ───────",
+                      "API key  →  •••••••••••••••••",
+                      "Voice    →  Lyra",
+                      "? Save and launch IRIS? (Y/n)",
+                    ],
+                    4: [
+                      "✔ Configuration saved.",
+                      "",
+                      "─────── STARTING ───────",
+                      "✔ Loading config...",
+                      "✔ Connecting API...",
+                      "",
+                      "[ NEURAL CORE ONLINE ]",
+                      "[ UI PORT ]  http://localhost:6753",
+                      "[ AGENT ]    Awaiting Connection...",
+                      "[ EXIT ]     Press Ctrl + C to stop",
+                      "========================================================",
+                      "CREATED BY  Harsh (@irisxai)",
+                      "GITHUB      https://github.com/IRISX-AI",
+                      "INSTAGRAM   https://www.instagram.com/201harshs/",
+                      "========================================================",
+                    ],
+                  }}
+                  typingSpeed={20}
+                  delayBetweenCommands={1000}
+                />
             </div>
           </div>
         </motion.section>
