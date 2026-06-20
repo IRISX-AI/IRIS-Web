@@ -539,7 +539,6 @@ export default function ChangelogPage() {
     >
       <Header />
 
-      {/* Hero Section */}
       <section className="pt-40 pb-16 px-6 relative overflow-hidden flex flex-col items-center text-center border-b border-white/5">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-96 bg-[#39FF14]/10 blur-[120px] rounded-full pointer-events-none" />
 
@@ -570,9 +569,7 @@ export default function ChangelogPage() {
         </motion.div>
       </section>
 
-      {/* Main Body Grid */}
       <section className="py-20 px-6 relative z-20 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
-        {/* Sticky/Pinned Left Column: Release Gauge Panel */}
         <div className="lg:col-span-4 relative h-fit">
           <div className="lg:sticky lg:top-36 space-y-6">
             <div className="bg-[#0a0a0a]/80 backdrop-blur-md border border-white/5 hover:border-[#39FF14]/20 rounded-2xl p-6 space-y-6 transition-all duration-300">
@@ -591,7 +588,6 @@ export default function ChangelogPage() {
 
               <div className="h-px bg-white/5" />
 
-              {/* Pinned Active Version Display */}
               <div className="space-y-3">
                 <div className="text-zinc-500 text-[10px] uppercase tracking-wider font-mono">
                   Currently Viewing
@@ -612,7 +608,6 @@ export default function ChangelogPage() {
 
               <div className="h-px bg-white/5" />
 
-              {/* Quick Jump List */}
               <div className="space-y-2.5">
                 <div className="text-zinc-500 text-[10px] uppercase tracking-wider font-mono">
                   Ecosystem Versions Index
@@ -645,7 +640,6 @@ export default function ChangelogPage() {
               </div>
             </div>
 
-            {/* Quick action back to docs */}
             <Link
               href="/docs"
               className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-white/5 border border-white/5 text-xs text-zinc-400 font-mono hover:text-[#39FF14] hover:border-[#39FF14]/30 hover:bg-[#39FF14]/5 transition-all w-full text-center"
