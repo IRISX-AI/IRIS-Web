@@ -169,7 +169,7 @@ export default function ApiKeysGuide() {
                 </span>
               </div>
 
-              <p className="text-zinc-400 text-sm mb-8 min-h-[40px]">
+              <p className="text-zinc-400 text-sm mb-8 min-h-10">
                 {key.description}
               </p>
 
