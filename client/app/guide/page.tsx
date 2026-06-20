@@ -10,7 +10,7 @@ import {
   Settings,
 } from "lucide-react";
 import Header from "../Components/Header"; // Adjust paths if necessary
-import Footer from "../Components/Footer"; // Adjust paths if necessary
+import Footer from "../Components/Footer"; 
 
 const apiKeysData = [
   {
