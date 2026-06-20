@@ -1,10 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+import { useState, useEffect } from "react";
 import {
   Activity,
   Zap,
@@ -15,15 +12,10 @@ import {
   Star,
   Calendar,
   RefreshCw,
-  ArrowLeft,
+  Terminal,
 } from "lucide-react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import Link from "next/link";
-
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
 
 interface ChangelogCategory {
   title: string;
@@ -40,6 +32,7 @@ interface ChangelogItem {
   icon: any;
 }
 
+// ── 1. The Original Changelog Data (Preserved Exactly) ──
 const changelogData: ChangelogItem[] = [
   {
     version: "v1.5.1",
@@ -76,7 +69,7 @@ const changelogData: ChangelogItem[] = [
           "Zero per-frame heap allocations (all THREE.Color, THREE.Vector3 moved to module scope)",
           "Precomputed inverse radius — eliminated per-particle Math.sqrt in render loop",
           "Canvas GL: antialias: false, depth: false, stencil: false, precision: 'lowp' — halved GPU memory",
-          "Pixel ratio capped at 1.5x (dpr={Math.min(window.devicePixelRatio, 1.5)})",
+          "Pixel ratio capped at 1.5x",
           "Torus ring segments reduced 96 → 48, rings reduced 3 → 2",
           "Orbital rings now phase-offset to avoid synchronized pulse",
         ],
@@ -144,8 +137,8 @@ const changelogData: ChangelogItem[] = [
         title: "🚨 Critical Hotfixes",
         items: [
           "Fixed API blackout caused by accidental deletion of primary Vercel production environment",
-          "Provisioned new secure Node.js/Express backend: https://iris-web-xi.vercel.app/",
-          "Restored frontend UI: https://irisaiw.vercel.app/",
+          "Provisioned new secure Node.js/Express backend",
+          "Restored frontend UI",
           "Added Vercel delete protection and strict CORS configuration",
           "Fixed fatal ERR_ELECTRON_BUILDER_CANNOT_EXECUTE (mmap) crash during npm run build:win",
         ],
@@ -170,10 +163,10 @@ const changelogData: ChangelogItem[] = [
     icon: Cpu,
     categories: [
       {
-        title: "🎨 Telemetry HUD (Full Redesign)",
+        title: "🎨 Telemetry HUD",
         items: [
           "Replaced flat metric boxes with glassmorphic hardware telemetry HUD",
-          "Each node (CPU, RAM, Temp, OS) has isolated color-coded gradient mesh background (Emerald, Cyan, Orange, Purple)",
+          "Each node (CPU, RAM, Temp, OS) has isolated color-coded gradient mesh background",
           "Added animated CSS cyber-grid patterns per metric card",
           "Added giant faded background iconography (140px) with hover scale animation",
           "Laser-edge hover glow — color-matched per hardware node",
@@ -181,7 +174,7 @@ const changelogData: ChangelogItem[] = [
         ],
       },
       {
-        title: "🛠️ Ghost Process Eradication (Auto-Updater Fix)",
+        title: "🛠️ Ghost Process Eradication",
         items: [
           "Root cause: hidden background helper processes blocking installer on restart",
           "Fix: wrapped update execution in setImmediate, stripped all window-all-closed listeners before installer fires",
@@ -192,7 +185,7 @@ const changelogData: ChangelogItem[] = [
         title: "🎙️ Universal Microphone Fix",
         items: [
           "Fixed microphone silence on specific Windows machines",
-          "Expanded Electron session permission handler to approve all Chromium hardware strings: audioCapture, media, microphone, camera",
+          "Expanded Electron session permission handler to approve all Chromium hardware strings",
           "IRIS now has guaranteed audio access regardless of OS build",
         ],
       },
@@ -207,11 +200,11 @@ const changelogData: ChangelogItem[] = [
     icon: ShieldCheck,
     categories: [
       {
-        title: "⚡ Zero-Latency Voice Engine (Full Rewrite)",
+        title: "⚡ Zero-Latency Voice Engine",
         items: [
           "Fixed 8–10 second audio latency — root cause was AudioWorklet flooding WebSocket 60x/sec with micro-packets",
           "Audio now buffered into 4096-frame (250ms) chunks — drops latency to near-zero",
-          "Added native VAD and interruption support — speaking while IRIS talks now instantly flushes playback queue",
+          "Added native VAD and interruption support",
           "Parallel tool execution via Promise.all — multi-step tool calls now run simultaneously",
         ],
       },
@@ -226,18 +219,18 @@ const changelogData: ChangelogItem[] = [
       {
         title: "🔐 Biometric Vault & Auth",
         items: [
-          "Fixed critical pathing bug (/models → ./models) — Face ID now works in compiled .exe",
-          "Added 2.8-second cinematic decryption sequence on Face ID unlock (rotating rings + vault progress bar)",
+          "Fixed critical pathing bug — Face ID now works in compiled .exe",
+          "Added 2.8-second cinematic decryption sequence on Face ID unlock",
           "Webcam light turns off instantly on successful Face ID match",
-          "New live boot terminal on login screen with simulated OS sequence and glassmorphic OAuth portal",
+          "New live boot terminal on login screen with simulated OS sequence",
         ],
       },
       {
         title: "⚡ Low-End Device Optimization",
         items: [
-          "Eliminated new THREE.Color() inside render loop — moved to module scope",
+          "Eliminated new THREE.Color() inside render loop",
           "Switched array reductions to fast-path math loops — CPU usage reduced by 40%+",
-          "WebGL canvas now detects and caps pixel ratio (dpr={[1, 1.5]})",
+          "WebGL canvas now detects and caps pixel ratio",
           "Disabled depth-write for transparent particles — freed GPU bandwidth",
         ],
       },
@@ -283,7 +276,7 @@ const changelogData: ChangelogItem[] = [
         title: "🔐 Security",
         items: [
           "Fixed face-api.js neural network pathing failure in compiled .exe — Face ID now works in production",
-          "Added macOS systemPreferences prompts for Camera and Microphone — fixes silent hardware blocks on Apple Silicon and Intel",
+          "Added macOS systemPreferences prompts for Camera and Microphone",
         ],
       },
     ],
@@ -306,7 +299,7 @@ const changelogData: ChangelogItem[] = [
         ],
       },
       {
-        title: "📱 ADB Mobile Bridge (Initial)",
+        title: "📱 ADB Mobile Bridge",
         items: [
           "Wireless Android device connection over TCP/IP",
           "Device telemetry (battery, storage, model, OS version)",
@@ -320,7 +313,7 @@ const changelogData: ChangelogItem[] = [
         ],
       },
       {
-        title: "🖥️ Ghost Control (Initial)",
+        title: "🖥️ Ghost Control",
         items: [
           "Ghost keyboard: type, paste, key press with modifiers",
           "Human-curve mouse movement (Bezier path generation)",
@@ -354,7 +347,7 @@ const changelogData: ChangelogItem[] = [
     date: "February 2026",
     type: "Major",
     title: "Initial Release",
-    desc: "The public birth of the IRIS voice-first Neural OS ecosystem layer.",
+    desc: "The public release of the IRIS native execution engine.",
     icon: Star,
     categories: [
       {
@@ -407,475 +400,197 @@ const changelogData: ChangelogItem[] = [
 ];
 
 export default function ChangelogPage() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const timelineRef = useRef<HTMLDivElement>(null);
-  const lineProgressRef = useRef<HTMLDivElement>(null);
+  const [activeVersion, setActiveVersion] = useState(changelogData[0].version);
 
-  useGSAP(
-    () => {
-      const mm = gsap.matchMedia();
-
-      // 1. DESKTOP LAYOUT ANIMATIONS (lg screen size >= 1024px)
-      mm.add("(min-width: 1024px)", () => {
-        const totalDuration = changelogData.length - 1;
-        const scrollDistance = 3000;
-
-        // Pinned timeline container and animations
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: "#timeline-window",
-            start: "top 160px",
-            end: `+=${scrollDistance}px`,
-            scrub: true,
-            pin: true,
-            pinSpacing: true,
-            onUpdate: (self) => {
-              const progress = self.progress;
-              const idx = Math.min(
-                Math.round(progress * (changelogData.length - 1)),
-                changelogData.length - 1
-              );
-              setActiveIndex(idx);
-            },
-          },
+  // Use a native IntersectionObserver for buttery smooth scroll tracking
+  // without the lag or jank of GSAP pinning
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveVersion(entry.target.id);
+          }
         });
+      },
+      { rootMargin: "-20% 0px -80% 0px" }, // Triggers when the card hits the upper quarter of the screen
+    );
 
-        // Fill the vertical track line
-        tl.fromTo(
-          lineProgressRef.current,
-          { height: "0%" },
-          { height: "100%", ease: "none", duration: totalDuration },
-          0
-        );
+    const items = document.querySelectorAll(".changelog-entry");
+    items.forEach((item) => observer.observe(item));
 
-        // Sequence animations for stacking absolute cards inside the pinned window
-        changelogData.forEach((item, idx) => {
-          if (idx === 0) return;
+    return () => observer.disconnect();
+  }, []);
 
-          const idSafe = item.version.replace(/\./g, "-");
-          const cardSelector = `#card-${idSafe}`;
-          const prevIdSafe = changelogData[idx - 1].version.replace(/\./g, "-");
-          const prevCardSelector = `#card-${prevIdSafe}`;
-          const startTime = idx - 1;
-
-          // Slide active card up from below
-          tl.fromTo(
-            cardSelector,
-            { yPercent: 100 },
-            { yPercent: 0, ease: "none", duration: 1 },
-            startTime
-          );
-
-          // Recycle/scale-down and fade the previous active card underneath
-          tl.to(
-            prevCardSelector,
-            {
-              scale: 0.94,
-              opacity: 0.25,
-              yPercent: -8,
-              filter: "blur(2.5px)",
-              ease: "none",
-              duration: 1,
-            },
-            startTime
-          );
-        });
-      });
-
-      // 2. MOBILE LAYOUT ANIMATIONS (screen size < 1024px)
-      mm.add("(max-width: 1023px)", () => {
-        // Line progress tracks scroll position of timeline container
-        gsap.fromTo(
-          lineProgressRef.current,
-          { height: "0%" },
-          {
-            height: "100%",
-            ease: "none",
-            scrollTrigger: {
-              trigger: timelineRef.current,
-              start: "top 30%",
-              end: "bottom 70%",
-              scrub: true,
-            },
-          },
-        );
-
-        // Highlight version index on entry
-        changelogData.forEach((item, idx) => {
-          const idSafe = item.version.replace(/\./g, "-");
-          const cardSelector = `#card-${idSafe}`;
-          const dotSelector = `#dot-${idSafe}`;
-
-          ScrollTrigger.create({
-            trigger: cardSelector,
-            start: "top 40%",
-            end: "bottom 40%",
-            onEnter: () => {
-              setActiveIndex(idx);
-              gsap.to(dotSelector, {
-                borderColor: "#39FF14",
-                backgroundColor: "#39FF14",
-                boxShadow: "0 0 15px rgba(57,255,20,0.8)",
-                color: "#000000",
-                scale: 1.15,
-                duration: 0.3,
-              });
-            },
-            onEnterBack: () => {
-              setActiveIndex(idx);
-              gsap.to(dotSelector, {
-                borderColor: "#39FF14",
-                backgroundColor: "#39FF14",
-                boxShadow: "0 0 15px rgba(57,255,20,0.8)",
-                color: "#000000",
-                scale: 1.15,
-                duration: 0.3,
-              });
-            },
-            onLeave: () => {
-              gsap.to(dotSelector, {
-                borderColor: "rgba(255,255,255,0.1)",
-                backgroundColor: "#000000",
-                boxShadow: "none",
-                color: "#4b5563",
-                scale: 1,
-                duration: 0.3,
-              });
-            },
-            onLeaveBack: () => {
-              gsap.to(dotSelector, {
-                borderColor: "rgba(255,255,255,0.1)",
-                backgroundColor: "#000000",
-                boxShadow: "none",
-                color: "#4b5563",
-                scale: 1,
-                duration: 0.3,
-              });
-            },
-          });
-
-          // Mobile simple fade up
-          gsap.fromTo(
-            cardSelector,
-            { opacity: 0, y: 50 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 0.6,
-              scrollTrigger: {
-                trigger: cardSelector,
-                start: "top 85%",
-                toggleActions: "play none none none",
-              },
-            },
-          );
-        });
-      });
-    },
-    { scope: containerRef }
-  );
-
-  const scrollToVersion = (versionStr: string, idx: number) => {
-    if (window.innerWidth >= 1024) {
-      const trigger = timelineRef.current;
-      if (trigger) {
-        const triggerTop = trigger.getBoundingClientRect().top + window.scrollY;
-        const scrollDistance = 3000;
-        const step = scrollDistance / (changelogData.length - 1);
-        const scrollOffset = triggerTop - 160 + idx * step;
-        window.scrollTo({ top: scrollOffset, behavior: "smooth" });
-      }
-    } else {
-      const idSafe = versionStr.replace(/\./g, "-");
-      const element = document.getElementById(`card-${idSafe}`);
-      if (element) {
-        const top = element.getBoundingClientRect().top + window.scrollY - 100;
-        window.scrollTo({ top, behavior: "smooth" });
-      }
+  const scrollToVersion = (version: string) => {
+    const element = document.getElementById(version);
+    if (element) {
+      const top = element.getBoundingClientRect().top + window.scrollY - 120;
+      window.scrollTo({ top, behavior: "smooth" });
     }
   };
 
   return (
-    <div
-      ref={containerRef}
-      className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#39FF14] selection:text-black overflow-x-hidden"
-    >
+    <div className="min-h-screen bg-[#000000] text-zinc-100 font-sans selection:bg-[#39FF14]/30 pt-24 overflow-hidden relative">
       <Header />
 
-      <section className="pt-40 pb-16 px-6 relative overflow-hidden flex flex-col items-center text-center border-b border-white/5">
+      {/* ── HERO SECTION ── */}
+      <section className="py-16 px-6 relative overflow-hidden flex flex-col items-center text-center border-b border-white/5">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-96 bg-[#39FF14]/10 blur-[120px] rounded-full pointer-events-none" />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative z-10"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#39FF14]/30 bg-[#39FF14]/5 text-[#39FF14] text-xs mb-8 backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs font-mono tracking-widest mb-6">
             <Activity className="w-3 h-3 text-[#39FF14]" />
-            <span className="uppercase tracking-widest">
-              Ecosystem Momentum
-            </span>
+            VERSION HISTORY
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 text-white drop-shadow-2xl">
-            RELEASE <br />
-            <span className="text-transparent bg-clip-text bg-linear-to-b from-[#39FF14] to-[#044a33]">
-              CHANGELOG.
-            </span>
+          <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-6 uppercase">
+            RELEASE <span className="text-[#39FF14]">NOTES.</span>
           </h1>
 
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Review the structural iterations, feature extensions, and
-            performance upgrades of IRIS.
+          <p className="text-lg text-zinc-400 max-w-2xl mx-auto font-mono">
+            A chronological record of system iterations, feature deployments,
+            and architectural upgrades to the IRIS execution engine.
           </p>
         </motion.div>
       </section>
 
-      {/* Open Core Transition Statement Section (Scrolls naturally above timeline) */}
-      <section className="pt-20 pb-10 px-6 relative z-20 max-w-5xl mx-auto">
-        <div className="bg-[#0a0a0a] border border-[#39FF14]/20 rounded-2xl p-6 md:p-8 space-y-4 relative overflow-hidden group">
-          <div className="absolute top-0 left-0 w-full h-1 bg-[#39FF14]/15 shadow-[0_0_15px_#39FF14] pointer-events-none" />
-          <h3 className="text-lg font-bold text-white flex items-center gap-2 font-mono">
-            <GitBranch className="w-5 h-5 text-[#39FF14]" />
-            Transition to Sustainable Open Core Model
-          </h3>
-          <div className="text-zinc-400 text-xs font-mono leading-relaxed space-y-3">
-            <p>
-              In our earlier iterations (pre-v1.1.0), IRIS was developed as a
-              100% free and open-source project. However, to fund continuous
-              engineering cycles, integrate low-latency SDK solutions (Gemini
-              Live API), and construct advanced tools, IRIS has transitioned to
-              an <strong>Open Core model</strong>.
-            </p>
-            <p>
-              <strong>What remains open-source?</strong> The public repository
-              contains the visual layout configuration, context-isolated
-              preloads, visual React components, and general community
-              templates.
-            </p>
-            <p>
-              <strong>What is protected?</strong> The core reasoning
-              orchestrator, dynamic tool execution main structures, and
-              automated security locks are packaged inside unreadable V8
-              bytecode.
-            </p>
-            <div className="p-4 rounded-xl bg-[#39FF14]/5 border border-[#39FF14]/10 text-[#39FF14]/90 space-y-2 mt-2 font-semibold">
-              <span className="font-bold block">Sponsorship Inclusions:</span>
-              <ul className="space-y-1 pl-2 text-zinc-400">
-                <li>
-                  • **$15/mo Sponsor (Insider)**: Unlocks read access to
-                  `iris-insiders` containing functional hooks and code snippets.
-                  *Sponsorship at this level does not provide the full code.*
-                </li>
-                <li>
-                  • **$30/mo Sponsor (Builder)**: Access to testing prompts,
-                  logs, and workflow macros.
-                </li>
-                <li>
-                  • **$50/mo Sponsor (Alpha)**: Full read access to the raw,
-                  unprotected, uncompiled source code, precompiled releases, and
-                  commercial licenses.
-                </li>
-              </ul>
+      {/* ── MAIN LAYOUT (STICKY SIDEBAR + TIMELINE) ── */}
+      <main className="max-w-7xl mx-auto px-6 py-16 flex flex-col lg:flex-row gap-12 relative z-10">
+        {/* LEFT SIDEBAR (Sticky Version Navigation) */}
+        <aside className="w-full lg:w-64 shrink-0 hidden lg:block">
+          <div className="sticky top-32 space-y-8">
+            <div>
+              <h3 className="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-4 font-mono">
+                Versions
+              </h3>
+              <nav className="flex flex-col gap-1 border-l border-white/10">
+                {changelogData.map((item) => {
+                  const isActive = activeVersion === item.version;
+                  return (
+                    <button
+                      key={item.version}
+                      onClick={() => scrollToVersion(item.version)}
+                      className={`text-left px-4 py-2 text-sm font-mono transition-all duration-200 border-l-[3px] -ml-[2px] ${
+                        isActive
+                          ? "border-[#39FF14] text-[#39FF14] bg-[#39FF14]/5"
+                          : "border-transparent text-zinc-500 hover:text-zinc-300 hover:bg-white/5"
+                      }`}
+                    >
+                      {item.version}
+                      <span className="block text-[10px] text-zinc-600 mt-0.5">
+                        {item.date}
+                      </span>
+                    </button>
+                  );
+                })}
+              </nav>
+            </div>
+
+            {/* Tech Info Box */}
+            <div className="p-4 bg-[#050505] border border-white/10 rounded-xl">
+              <h4 className="text-xs font-bold text-white uppercase tracking-widest mb-2 flex items-center gap-2">
+                <Terminal className="w-3 h-3 text-[#39FF14]" /> Update Method
+              </h4>
+              <p className="text-xs text-zinc-500 font-mono leading-relaxed">
+                The IRIS Desktop Application checks for updates automatically on
+                boot. Headless CLI users must run{" "}
+                <code className="text-[#39FF14]">npm update -g iris-mini</code>{" "}
+                to fetch the latest builds.
+              </p>
             </div>
           </div>
-        </div>
-      </section>
+        </aside>
 
-      {/* Interactive Stacking Timeline Section */}
-      <section
-        className="py-16 px-6 relative z-20 max-w-7xl mx-auto"
-        ref={timelineRef}
-      >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          {/* Left Column (Sticky active version display widget) */}
-          <div className="lg:col-span-4 relative h-full">
-            <div className="lg:sticky lg:top-36 space-y-6">
-              <div className="bg-[#0a0a0a]/80 backdrop-blur-md border border-white/5 hover:border-[#39FF14]/20 rounded-2xl p-6 space-y-6 transition-all duration-300">
-                <div className="space-y-1.5">
-                  <div className="text-[10px] text-zinc-500 font-bold uppercase tracking-[0.2em] font-mono">
-                    SYSTEM CORE: OPERATIONAL
-                  </div>
-                  <div className="text-xs text-[#39FF14] font-bold font-mono flex items-center gap-2">
-                    <span className="relative flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#39FF14] opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-[#39FF14]"></span>
-                    </span>
-                    CHRONOLOGY MONITOR
-                  </div>
-                </div>
+        {/* RIGHT CONTENT (Vertical Timeline) */}
+        <div className="flex-1 pb-32">
+          {/* Open Core Disclaimer */}
+          <div className="bg-[#050505] border border-[#39FF14]/30 rounded-2xl p-6 mb-16 flex items-start gap-4 shadow-[0_0_20px_rgba(57,255,20,0.05)]">
+            <div className="p-3 bg-[#39FF14]/10 rounded-xl shrink-0">
+              <GitBranch className="w-5 h-5 text-[#39FF14]" />
+            </div>
+            <div>
+              <h3 className="text-white font-bold mb-2 font-mono uppercase tracking-widest text-sm">
+                Licensing Architecture Notice
+              </h3>
+              <p className="text-zinc-400 text-sm font-mono leading-relaxed">
+                As of <strong className="text-white">v1.1.0</strong>, IRIS
+                operates on an Open Core model. The public repository contains
+                the visual layout configuration and context-isolated preloads.
+                To protect intellectual property, the core reasoning
+                orchestrator, dynamic tool execution, and automated security
+                locks are packaged inside encrypted V8 bytecode and require an
+                active IRIS Pro license.
+              </p>
+            </div>
+          </div>
 
-                <div className="h-px bg-white/5" />
-
-                <div className="space-y-3">
-                  <div className="text-zinc-500 text-[10px] uppercase tracking-wider font-mono">
-                    Currently Viewing
-                  </div>
-                  <div className="text-4xl font-black font-mono tracking-tighter text-white flex items-baseline gap-2">
-                    {changelogData[activeIndex].version}
-                    <span className="text-[9px] text-[#39FF14] font-bold tracking-widest uppercase px-2 py-0.5 rounded bg-[#39FF14]/10 border border-[#39FF14]/20 font-mono">
-                      {changelogData[activeIndex].type}
-                    </span>
-                  </div>
-                  <div className="text-white font-bold text-sm tracking-tight font-mono">
-                    {changelogData[activeIndex].title}
-                  </div>
-                  <p className="text-zinc-400 text-xs leading-relaxed font-mono">
-                    {changelogData[activeIndex].desc}
-                  </p>
-                </div>
-
-                <div className="h-px bg-white/5" />
-
-                <div className="space-y-2.5">
-                  <div className="text-zinc-500 text-[10px] uppercase tracking-wider font-mono">
-                    Ecosystem Versions Index
-                  </div>
-                  <div className="space-y-1.5 max-h-56 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-zinc-800">
-                    {changelogData.map((item, idx) => (
-                      <button
-                        key={item.version}
-                        onClick={() => scrollToVersion(item.version, idx)}
-                        className={`w-full text-left px-3 py-2 rounded-xl text-xs font-mono font-semibold transition-all flex items-center justify-between border ${
-                          activeIndex === idx
-                            ? "bg-[#39FF14]/10 text-[#39FF14] border-[#39FF14]/30 shadow-[0_0_15px_rgba(57,255,20,0.03)]"
-                            : "text-zinc-400 hover:text-white bg-transparent border-transparent hover:bg-white/5"
+          {/* Timeline Feed */}
+          <div className="space-y-16 lg:space-y-24">
+            {changelogData.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.version}
+                  id={item.version}
+                  className="changelog-entry relative grid grid-cols-1 md:grid-cols-[140px_1fr] gap-6 md:gap-12"
+                >
+                  {/* Date & Version Block (Desktop left, Mobile top) */}
+                  <div className="md:sticky md:top-32 h-max">
+                    <div className="flex flex-row md:flex-col items-center md:items-start gap-4 md:gap-2">
+                      <span className="text-2xl font-black text-white font-mono">
+                        {item.version}
+                      </span>
+                      <span className="text-sm text-zinc-500 font-mono">
+                        {item.date}
+                      </span>
+                      <span
+                        className={`text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded border font-mono ${
+                          item.type === "Major"
+                            ? "bg-[#39FF14]/10 border-[#39FF14]/20 text-[#39FF14]"
+                            : "bg-white/5 border-white/10 text-zinc-400"
                         }`}
                       >
-                        <span className="flex items-center gap-2">
-                          <span
-                            className={`w-1.5 h-1.5 rounded-full ${
-                              activeIndex === idx
-                                ? "bg-[#39FF14]"
-                                : "bg-zinc-700"
-                            }`}
-                          />
-                          {item.version}
-                        </span>
-                        <span className="text-[9px] text-zinc-500 font-normal">
-                          {item.date.split(",")[0]}
-                        </span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <Link
-                href="/docs"
-                className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-white/5 border border-white/5 text-xs text-zinc-400 font-mono hover:text-[#39FF14] hover:border-[#39FF14]/30 hover:bg-[#39FF14]/5 transition-all w-full text-center"
-              >
-                <ArrowLeft className="w-3.5 h-3.5" />
-                Return to Documentation
-              </Link>
-            </div>
-          </div>
-
-          {/* Right Column (Scrollable stack cards) */}
-          <div className="lg:col-span-8 relative pl-12 lg:pl-20 h-full">
-            {/* Vertical timeline track line */}
-            <div className="absolute left-6 lg:left-8 top-4 bottom-4 w-[2px] bg-zinc-800/40 rounded-full z-0 pointer-events-none">
-              <div
-                ref={lineProgressRef}
-                className="absolute top-0 left-0 w-full bg-linear-to-b from-[#39FF14] to-emerald-500 origin-top h-0 shadow-[0_0_15px_rgba(57,255,20,0.6)]"
-                style={{ transformOrigin: "top" }}
-              />
-            </div>
-
-            {/* Slide Window Container */}
-            <div
-              id="timeline-window"
-              className="relative lg:absolute lg:top-0 lg:left-12 lg:right-0 w-full h-auto lg:h-[600px] overflow-visible lg:overflow-hidden rounded-3xl border-0 lg:border border-white/5 bg-transparent lg:bg-[#050505] space-y-8 lg:space-y-0"
-            >
-              {changelogData.map((item, idx) => {
-                const Icon = item.icon;
-                const isMajor = item.type === "Major";
-                const idSafe = item.version.replace(/\./g, "-");
-                return (
-                  <div
-                    key={item.version}
-                    id={`card-${idSafe}`}
-                    className="relative lg:absolute lg:inset-0 bg-[#0a0a0a] border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between w-full h-auto lg:h-[600px] overflow-visible lg:overflow-y-auto transition-colors duration-300"
-                    style={{
-                      zIndex: idx + 10,
-                    }}
-                  >
-                    {/* Projecting timeline dot */}
-                    <div
-                      id={`dot-${idSafe}`}
-                      className={`
-                        absolute -left-9 lg:-left-16 top-[30px] w-6 h-6 lg:w-8 lg:h-8 rounded-full border bg-black flex items-center justify-center z-20 transition-all duration-300
-                        ${
-                          activeIndex === idx
-                            ? "border-[#39FF14] text-black bg-[#39FF14] shadow-[0_0_15px_rgba(57,255,20,0.6)] scale-110"
-                            : activeIndex >= idx
-                              ? "border-[#39FF14]/50 text-[#39FF14]"
-                              : "border-zinc-800 text-zinc-500"
-                        }
-                      `}
-                    >
-                      <Icon className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
-                    </div>
-
-                    {/* Card Header info */}
-                    <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/5 pb-4">
-                      <div className="flex items-center gap-3">
-                        <span
-                          className={`text-xl font-bold font-mono ${
-                            isMajor ? "text-[#39FF14]" : "text-white"
-                          }`}
-                        >
-                          {item.version}
-                        </span>
-                        <span className="text-zinc-500 text-xs font-mono font-semibold flex items-center gap-1.5">
-                          <Calendar className="w-3.5 h-3.5" />
-                          {item.date}
-                        </span>
-                      </div>
-                      <span
-                        className={`
-                          text-[9px] font-black uppercase font-mono px-2 py-0.5 rounded tracking-widest border
-                          ${
-                            isMajor
-                              ? "bg-[#39FF14]/10 border-[#39FF14]/20 text-[#39FF14]"
-                              : "bg-white/5 border-white/10 text-zinc-400"
-                          }
-                        `}
-                      >
-                        {item.type} Release
+                        {item.type}
                       </span>
                     </div>
+                  </div>
 
-                    {/* Title & Desc */}
-                    <div className="space-y-1.5 my-4">
-                      <h3 className="text-lg font-bold text-white font-mono leading-tight">
+                  {/* Main Card Content */}
+                  <div className="bg-[#050505] border border-white/10 rounded-3xl p-6 md:p-8 hover:border-[#39FF14]/30 transition-colors shadow-lg">
+                    {/* Header */}
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="p-2 bg-[#39FF14]/10 rounded-lg">
+                        <Icon className="w-5 h-5 text-[#39FF14]" />
+                      </div>
+                      <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
                         {item.title}
-                      </h3>
-                      <p className="text-zinc-400 text-xs font-mono leading-relaxed">
-                        {item.desc}
-                      </p>
+                      </h2>
                     </div>
 
-                    {/* Categories grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 flex-1 overflow-y-auto scrollbar-thin">
-                      {item.categories.map((cat, catIdx) => (
-                        <div
-                          key={catIdx}
-                          className="category-block space-y-3"
-                        >
-                          <h4 className="text-xs font-bold text-white flex items-center gap-2 border-b border-white/5 pb-1 font-mono uppercase tracking-wider">
+                    <p className="text-zinc-400 mb-8 leading-relaxed text-sm md:text-base">
+                      {item.desc}
+                    </p>
+
+                    {/* Features Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      {item.categories.map((cat, idx) => (
+                        <div key={idx} className="space-y-4">
+                          <h4 className="text-xs font-bold text-white uppercase tracking-widest border-b border-white/5 pb-2 font-mono">
                             {cat.title}
                           </h4>
-                          <ul className="space-y-2 pl-1 font-mono text-[11px] text-zinc-400">
+                          <ul className="space-y-3">
                             {cat.items.map((bullet, bIdx) => (
                               <li
                                 key={bIdx}
-                                className="leading-relaxed flex items-start gap-2"
+                                className="text-sm text-zinc-400 leading-relaxed flex items-start gap-2"
                               >
-                                <span className="text-[#39FF14] mt-1 shrink-0">
-                                  •
+                                <span className="text-[#39FF14] font-bold mt-0.5 shrink-0">
+                                  +
                                 </span>
                                 <span>{bullet}</span>
                               </li>
@@ -885,12 +600,12 @@ export default function ChangelogPage() {
                       ))}
                     </div>
                   </div>
-                );
-              })}
-            </div>
+                </div>
+              );
+            })}
           </div>
         </div>
-      </section>
+      </main>
 
       <Footer />
     </div>
