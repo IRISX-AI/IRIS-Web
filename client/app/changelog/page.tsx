@@ -408,118 +408,74 @@ const changelogData: ChangelogItem[] = [
 
 export default function ChangelogPage() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const timelineRef = useRef<HTMLDivElement>(null);
-  const lineProgressRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(
+  co  useGSAP(
     () => {
       const mm = gsap.matchMedia();
 
       // 1. DESKTOP LAYOUT ANIMATIONS (lg screen size >= 1024px)
       mm.add("(min-width: 1024px)", () => {
-        // Track progress of the entire timeline container to fill the vertical track line
-        gsap.fromTo(
-          lineProgressRef.current,
-          { height: "0%" },
-          {
-            height: "100%",
-            ease: "none",
-            scrollTrigger: {
-              trigger: timelineRef.current,
-              start: "top 200px",
-              end: "bottom 80%",
-              scrub: true,
+        const totalDuration = changelogData.length - 1;
+        const scrollDistance = 3000;
+
+        // Pinned timeline container and animations
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#timeline-window",
+            start: "top 160px",
+            end: `+=${scrollDistance}px`,
+            scrub: true,
+            pin: true,
+            pinSpacing: true,
+            onUpdate: (self) => {
+              const progress = self.progress;
+              const idx = Math.min(
+                Math.round(progress * (changelogData.length - 1)),
+                changelogData.length - 1
+              );
+              setActiveIndex(idx);
             },
           },
+        });
+
+        // Fill the vertical track line
+        tl.fromTo(
+          lineProgressRef.current,
+          { height: "0%" },
+          { height: "100%", ease: "none", duration: totalDuration },
+          0
         );
 
-        // Setup triggers for each wrapper and card
+        // Sequence animations for stacking absolute cards inside the pinned window
         changelogData.forEach((item, idx) => {
+          if (idx === 0) return;
+
           const idSafe = item.version.replace(/\./g, "-");
           const cardSelector = `#card-${idSafe}`;
-          const wrapperSelector = `#wrapper-${idSafe}`;
-          const dotSelector = `#dot-${idSafe}`;
+          const prevIdSafe = changelogData[idx - 1].version.replace(/\./g, "-");
+          const prevCardSelector = `#card-${prevIdSafe}`;
+          const startTime = idx - 1;
 
-          // Trigger for active state and PINNING of the card
-          ScrollTrigger.create({
-            trigger: wrapperSelector,
-            start: "top 160px",
-            endTrigger: "#timeline-window",
-            end: "bottom 760px",
-            pin: cardSelector,
-            pinSpacing: false,
-            markers: true,
-            onToggle: (self) => {
-              if (self.isActive) {
-                setActiveIndex(idx);
-                // Highlight dot
-                gsap.to(dotSelector, {
-                  borderColor: "#39FF14",
-                  backgroundColor: "#39FF14",
-                  boxShadow: "0 0 15px rgba(57,255,20,0.8)",
-                  color: "#000000",
-                  scale: 1.15,
-                  duration: 0.3,
-                });
-                // Highlight card border
-                gsap.to(cardSelector, {
-                  borderColor: "rgba(57,255,20,0.35)",
-                  backgroundColor: "rgba(57,255,20,0.03)",
-                  boxShadow: "0 0 40px rgba(57,255,20,0.03)",
-                  duration: 0.3,
-                });
-              } else {
-                // If it is inactive, reset
-                gsap.to(dotSelector, {
-                  borderColor: "rgba(255,255,255,0.1)",
-                  backgroundColor: "#000000",
-                  boxShadow: "none",
-                  color: "#4b5563",
-                  scale: 1,
-                  duration: 0.3,
-                });
-                gsap.to(cardSelector, {
-                  borderColor: "rgba(255,255,255,0.05)",
-                  backgroundColor: "#0a0a0a",
-                  boxShadow: "none",
-                  duration: 0.3,
-                });
-              }
+          // Slide active card up from below
+          tl.fromTo(
+            cardSelector,
+            { yPercent: 100 },
+            { yPercent: 0, ease: "none", duration: 1 },
+            startTime
+          );
+
+          // Recycle/scale-down and fade the previous active card underneath
+          tl.to(
+            prevCardSelector,
+            {
+              scale: 0.94,
+              opacity: 0.25,
+              yPercent: -8,
+              filter: "blur(2.5px)",
+              ease: "none",
+              duration: 1,
             },
-            onEnter: () => setActiveIndex(idx),
-            onEnterBack: () => setActiveIndex(idx),
-          });
-
-          // Stacking deck effect (scrub animation as the next card enters)
-          if (idx < changelogData.length - 1) {
-            const nextItem = changelogData[idx + 1];
-            const nextIdSafe = nextItem.version.replace(/\./g, "-");
-            const nextWrapperSelector = `#wrapper-${nextIdSafe}`;
-
-            gsap.fromTo(
-              cardSelector,
-              {
-                scale: 1,
-                opacity: 1,
-                filter: "blur(0px)",
-                yPercent: 0,
-              },
-              {
-                scale: 0.94,
-                opacity: 0.25,
-                filter: "blur(2.5px)",
-                yPercent: -8,
-                ease: "none",
-                scrollTrigger: {
-                  trigger: nextWrapperSelector,
-                  start: "top 85%",
-                  end: "top 160px",
-                  scrub: true,
-                },
-              },
-            );
-          }
+            startTime
+          );
         });
       });
 
@@ -607,6 +563,14 @@ export default function ChangelogPage() {
                 trigger: cardSelector,
                 start: "top 85%",
                 toggleActions: "play none none none",
+              },
+            },
+          );
+        });
+      });
+    },
+    { scope: containerRef }
+  );             toggleActions: "play none none none",
               },
             },
           );
