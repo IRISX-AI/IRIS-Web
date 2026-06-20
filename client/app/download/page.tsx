@@ -18,7 +18,6 @@ import {
 } from "lucide-react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import Lightning from "../utils/Lightning";
 import LightRays from "../Components/utils/LightRays";
 
 export default function DownloadPage() {
