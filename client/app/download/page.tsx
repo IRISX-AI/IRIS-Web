@@ -18,7 +18,6 @@ import {
 } from "lucide-react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import LightRays from "../Components/utils/LightRays";
 import LightPillar from "../utils/LightPillar";
 
 export default function DownloadPage() {
