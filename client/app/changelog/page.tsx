@@ -427,7 +427,7 @@ export default function ChangelogPage() {
             end: "bottom 70%",
             scrub: true,
           },
-        }
+        },
       );
 
       changelogData.forEach((item, idx) => {
@@ -516,11 +516,11 @@ export default function ChangelogPage() {
               start: "top 85%",
               toggleActions: "play none none none",
             },
-          }
+          },
         );
       });
     },
-    { scope: containerRef }
+    { scope: containerRef },
   );
 
   const scrollToVersion = (versionStr: string) => {
@@ -651,7 +651,7 @@ export default function ChangelogPage() {
         </div>
 
         <div className="lg:col-span-8 relative pl-6 md:pl-12" ref={timelineRef}>
-          <div className="absolute left-[14px] md:left-[22px] top-4 bottom-4 w-[2px] bg-zinc-800/40 rounded-full">
+          <div className="absolute left-3.5 md:left-5.5 top-4 bottom-4 w-0.5 bg-zinc-800/40 rounded-full">
             <div
               ref={lineProgressRef}
               className="absolute top-0 left-0 w-full bg-linear-to-b from-[#39FF14] to-emerald-500 origin-top h-0 shadow-[0_0_15px_rgba(57,255,20,0.6)]"
@@ -671,8 +671,8 @@ export default function ChangelogPage() {
                 In our earlier iterations (pre-v1.1.0), IRIS was developed as a
                 100% free and open-source project. However, to fund continuous
                 engineering cycles, integrate low-latency SDK solutions (Gemini
-                Live API), and construct advanced tools, IRIS has transitioned to
-                an <strong>Open Core model</strong>.
+                Live API), and construct advanced tools, IRIS has transitioned
+                to an <strong>Open Core model</strong>.
               </p>
               <p>
                 <strong>What remains open-source?</strong> The public repository
@@ -691,8 +691,9 @@ export default function ChangelogPage() {
                 <ul className="space-y-1 pl-2">
                   <li>
                     • **$15/mo Sponsor (Insider)**: Unlocks read access to
-                    `iris-insiders` containing functional hooks and code snippets.
-                    *Sponsorship at this level does not provide the full code.*
+                    `iris-insiders` containing functional hooks and code
+                    snippets. *Sponsorship at this level does not provide the
+                    full code.*
                   </li>
                   <li>
                     • **$30/mo Sponsor (Builder)**: Access to testing prompts,
@@ -700,8 +701,8 @@ export default function ChangelogPage() {
                   </li>
                   <li>
                     • **$50/mo Sponsor (Alpha)**: Full read access to the raw,
-                    unprotected, uncompiled source code, precompiled releases, and
-                    commercial licenses.
+                    unprotected, uncompiled source code, precompiled releases,
+                    and commercial licenses.
                   </li>
                 </ul>
               </div>
@@ -778,10 +779,7 @@ export default function ChangelogPage() {
                     {/* Categories and details */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
                       {item.categories.map((cat, catIdx) => (
-                        <div
-                          key={catIdx}
-                          className="category-block space-y-3"
-                        >
+                        <div key={catIdx} className="category-block space-y-3">
                           <h4 className="text-xs font-bold text-white flex items-center gap-2 border-b border-white/5 pb-1 font-mono uppercase tracking-wider">
                             {cat.title}
                           </h4>
@@ -813,4 +811,3 @@ export default function ChangelogPage() {
     </div>
   );
 }
-
