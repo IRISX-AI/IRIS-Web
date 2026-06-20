@@ -158,6 +158,7 @@ const Header = () => {
                 {[
                   "About",
                   "Features",
+                  "DOcs",
                   "Pricing",
                   "how-to-install",
                   "Guide",
