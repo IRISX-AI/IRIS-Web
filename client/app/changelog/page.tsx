@@ -650,9 +650,7 @@ export default function ChangelogPage() {
           </div>
         </div>
 
-        {/* Right Column: Timeline Logs */}
         <div className="lg:col-span-8 relative pl-6 md:pl-12" ref={timelineRef}>
-          {/* Vertical Timeline Track Line */}
           <div className="absolute left-[14px] md:left-[22px] top-4 bottom-4 w-[2px] bg-zinc-800/40 rounded-full">
             <div
               ref={lineProgressRef}
