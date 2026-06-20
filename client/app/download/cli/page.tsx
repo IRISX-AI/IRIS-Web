@@ -93,7 +93,7 @@ export default function CliDownloadPage() {
               </div>
               <button
                 onClick={handleCopyInstall}
-                className="cursor-pointer flex items-center justify-center shrink-0 w-12 h-12 bg-white/5 hover:bg-[#39FF14]/20 rounded-xl text-zinc-400 hover:text-[#39FF14] transition-colors ml-4"
+                className="cursor-pointer flex items-center justify-center shrink-0 w-12 h-12 bg-white/5 hover:bg-[#39FF14]/20 rounded-xl text-zinc-200 hover:text-[#39FF14] transition-colors ml-4"
                 title="Copy to clipboard"
               >
                 {copied ? (
@@ -111,7 +111,7 @@ export default function CliDownloadPage() {
                 <ShieldCheck className="w-5 h-5 text-[#39FF14]" />
                 1. Configuration
               </h3>
-              <p className="text-zinc-400 text-sm mb-6 leading-relaxed">
+              <p className="text-zinc-200 text-sm mb-6 leading-relaxed">
                 IRIS CLI requires your personal API key (BYOK) to execute
                 reasoning tasks. Store it securely in the local configuration
                 file.
@@ -138,7 +138,7 @@ export default function CliDownloadPage() {
                 <Zap className="w-5 h-5 text-[#39FF14]" />
                 2. Execution
               </h3>
-              <p className="text-zinc-400 text-sm mb-6 leading-relaxed">
+              <p className="text-zinc-200 text-sm mb-6 leading-relaxed">
                 Once configured, you can pass natural language execution
                 commands directly to the engine from any directory.
               </p>
@@ -154,13 +154,13 @@ export default function CliDownloadPage() {
         <motion.section className="mt-20 pt-8 border-t border-white/5 relative z-10">
           <div className="flex flex-wrap items-center gap-6 text-zinc-500 font-mono text-xs tracking-widest">
             <span className="flex items-center gap-2">
-              <Server className="w-4 h-4 text-zinc-400" /> CI/CD COMPATIBLE
+              <Server className="w-4 h-4 text-zinc-200" /> CI/CD COMPATIBLE
             </span>
             <span className="flex items-center gap-2">
-              <Cpu className="w-4 h-4 text-zinc-400" /> NODE.JS 24+ REQUIRED
+              <Cpu className="w-4 h-4 text-zinc-200" /> NODE.JS 24+ REQUIRED
             </span>
             <span className="flex items-center gap-2">
-              <HardDrive className="w-4 h-4 text-zinc-400" /> {"<"} 15MB
+              <HardDrive className="w-4 h-4 text-zinc-200" /> {"<"} 15MB
               FOOTPRINT
             </span>
           </div>

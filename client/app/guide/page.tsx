@@ -104,7 +104,7 @@ export default function ApiKeysGuide() {
           <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6 uppercase">
             API <span className="text-[#39FF14]">Configuration.</span>
           </h1>
-          <p className="text-lg text-zinc-400 leading-relaxed">
+          <p className="text-lg text-zinc-200 leading-relaxed">
             IRIS operates on a strictly local Bring Your Own Key (BYOK)
             architecture. Acquire the required API keys below to enable external
             inference and data extraction.
@@ -124,7 +124,7 @@ export default function ApiKeysGuide() {
             <h3 className="text-white font-bold mb-1">
               How to apply your keys
             </h3>
-            <p className="text-zinc-400 text-sm font-mono leading-relaxed">
+            <p className="text-zinc-200 text-sm font-mono leading-relaxed">
               You do not need to configure environment variables. Simply copy
               the generated key from the provider and paste it directly into the{" "}
               <strong className="text-white">Settings Tab</strong> within the
@@ -157,7 +157,7 @@ export default function ApiKeysGuide() {
                   className={`px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full flex items-center gap-1.5 ${
                     key.status === "Required"
                       ? "bg-red-500/10 text-red-400 border border-red-500/20"
-                      : "bg-zinc-800/50 text-zinc-400 border border-zinc-700/50"
+                      : "bg-zinc-800/50 text-zinc-200 border border-zinc-700/50"
                   }`}
                 >
                   {key.status === "Required" ? (
@@ -169,7 +169,7 @@ export default function ApiKeysGuide() {
                 </span>
               </div>
 
-              <p className="text-zinc-400 text-sm mb-8 min-h-10">
+              <p className="text-zinc-200 text-sm mb-8 min-h-10">
                 {key.description}
               </p>
 

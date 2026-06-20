@@ -86,7 +86,7 @@ const Header = () => {
             href="https://github.com/IRISX-AI"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex text-zinc-400 hover:text-[#39FF14] transition-colors"
+            className="hidden md:flex text-zinc-200 hover:text-[#39FF14] transition-colors"
             title="View Source on GitHub"
           >
             <Github className="w-5 h-5" />
@@ -173,7 +173,7 @@ const Header = () => {
                   href="https://github.com/IRISX-AI"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 text-zinc-400 hover:text-[#39FF14] transition-colors"
+                  className="flex items-center justify-center gap-3 text-zinc-200 hover:text-[#39FF14] transition-colors"
                 >
                   <Github className="w-5 h-5" />
                   <span className="text-xs font-bold tracking-[0.2em] uppercase">

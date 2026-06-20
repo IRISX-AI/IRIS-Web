@@ -40,7 +40,7 @@ export default function CliInstallGuide() {
               IRIS MINI <span className="text-zinc-500">CLI</span>
             </h1>
           </div>
-          <p className="text-zinc-400 text-lg">
+          <p className="text-zinc-200 text-lg">
             Global NPM package installation guide for IRIS MINI. Requires{" "}
             <strong className="text-white">Node.js 24+</strong> to be installed
             on your machine.

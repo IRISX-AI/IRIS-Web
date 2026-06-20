@@ -68,7 +68,7 @@ export default function DownloadPage() {
                 certificate, Windows Defender might flag the installer.
               </p>
               <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4 mb-6">
-                <p className="text-sm text-zinc-400 font-mono flex flex-col gap-2">
+                <p className="text-sm text-zinc-200 font-mono flex flex-col gap-2">
                   <span className="text-white">
                     When the blue popup appears:
                   </span>
@@ -202,7 +202,7 @@ export default function DownloadPage() {
               </div>
               <Monitor className="w-10 h-10 text-[#39FF14] mb-6 drop-shadow-[0_0_15px_rgba(57,255,20,0.5)]" />
               <h3 className="text-xl font-bold text-white mb-2">Windows</h3>
-              <p className="text-zinc-400 text-sm mb-8">
+              <p className="text-zinc-200 text-sm mb-8">
                 Full OS integration. Deep Windows API hooks for file management
                 and system automation.
               </p>
@@ -217,7 +217,7 @@ export default function DownloadPage() {
               </div>
               <Terminal className="w-10 h-10 text-[#39FF14] mb-6 drop-shadow-[0_0_15px_rgba(57,255,20,0.5)]" />
               <h3 className="text-xl font-bold text-white mb-2">CLI Core</h3>
-              <p className="text-zinc-400 text-sm mb-8">
+              <p className="text-zinc-200 text-sm mb-8">
                 Global NPM package. Blazing fast, headless terminal access
                 tailored for power users.
               </p>
@@ -233,13 +233,13 @@ export default function DownloadPage() {
               <div className="absolute top-0 right-0 p-6 opacity-5">
                 <Apple className="w-32 h-32 text-white" />
               </div>
-              <Apple className="w-10 h-10 text-zinc-400 mb-6" />
+              <Apple className="w-10 h-10 text-zinc-200 mb-6" />
               <h3 className="text-xl font-bold text-white mb-2">macOS</h3>
               <p className="text-zinc-500 text-sm mb-8">
                 Apple Silicon (M-Series) and Intel support. Deep integration
                 with Apple Keychain.
               </p>
-              <span className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 text-zinc-400 border border-white/10 rounded text-xs font-bold tracking-widest">
+              <span className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 text-zinc-200 border border-white/10 rounded text-xs font-bold tracking-widest">
                 <Cpu className="w-3 h-3" /> IN DEVELOPMENT
               </span>
             </div>
@@ -248,7 +248,7 @@ export default function DownloadPage() {
               <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
                 <Smartphone className="w-32 h-32 text-[#39FF14]" />
               </div>
-              <Layers className="w-10 h-10 text-zinc-400 group-hover:text-[#39FF14] transition-colors mb-6" />
+              <Layers className="w-10 h-10 text-zinc-200 group-hover:text-[#39FF14] transition-colors mb-6" />
               <h3 className="text-xl font-bold text-white mb-2">
                 IRIS-X Mobile
               </h3>
