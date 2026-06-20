@@ -414,164 +414,211 @@ export default function ChangelogPage() {
 
   useGSAP(
     () => {
-      // 1. Scroll-triggered vertical timeline track filling line
-      gsap.fromTo(
-        lineProgressRef.current,
-        { height: "0%" },
-        {
-          height: "100%",
-          ease: "none",
+      const mm = gsap.matchMedia();
+
+      // 1. DESKTOP LAYOUT ANIMATIONS (lg screen size >= 1024px)
+      mm.add("(min-width: 1024px)", () => {
+        const totalDuration = changelogData.length - 1;
+
+        // Pinned timeline animation
+        const tl = gsap.timeline({
           scrollTrigger: {
             trigger: timelineRef.current,
-            start: "top 25%",
-            end: "bottom 75%",
+            start: "top 120px",
+            end: `+=${changelogData.length * 600}px`,
             scrub: true,
-          },
-        },
-      );
-
-      // 2. Setup scroll animations for each wrapper & card
-      changelogData.forEach((item, idx) => {
-        const idSafe = item.version.replace(/\./g, "-");
-        const cardId = `#card-${idSafe}`;
-        const wrapperId = `#wrapper-${idSafe}`;
-        const dotId = `#dot-${idSafe}`;
-
-        // Slide up card from below as it enters the viewport
-        gsap.fromTo(
-          cardId,
-          { y: 120, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.6,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: wrapperId,
-              start: "top 95%",
-              toggleActions: "play none none none",
+            pin: true,
+            onUpdate: (self) => {
+              const progress = self.progress;
+              const idx = Math.min(
+                Math.round(progress * (changelogData.length - 1)),
+                changelogData.length - 1
+              );
+              setActiveIndex(idx);
             },
-          },
-        );
-
-        // Pin the card inside its wrapper spacer as it hits the scroll threshold
-        ScrollTrigger.create({
-          trigger: wrapperId,
-          start: "top 160px",
-          end: "bottom 160px",
-          pin: cardId,
-          pinSpacing: false,
-          onEnter: () => {
-            setActiveIndex(idx);
-            gsap.to(dotId, {
-              borderColor: "#39FF14",
-              backgroundColor: "#39FF14",
-              boxShadow: "0 0 15px rgba(57,255,20,0.8)",
-              scale: 1.15,
-              duration: 0.3,
-            });
-            gsap.to(cardId, {
-              borderColor: "rgba(57,255,20,0.35)",
-              backgroundColor: "rgba(57,255,20,0.03)",
-              boxShadow: "0 0 40px rgba(57,255,20,0.03)",
-              duration: 0.4,
-            });
-          },
-          onEnterBack: () => {
-            setActiveIndex(idx);
-            gsap.to(dotId, {
-              borderColor: "#39FF14",
-              backgroundColor: "#39FF14",
-              boxShadow: "0 0 15px rgba(57,255,20,0.8)",
-              scale: 1.15,
-              duration: 0.3,
-            });
-            gsap.to(cardId, {
-              borderColor: "rgba(57,255,20,0.35)",
-              backgroundColor: "rgba(57,255,20,0.03)",
-              boxShadow: "0 0 40px rgba(57,255,20,0.03)",
-              duration: 0.4,
-            });
-          },
-          onLeave: () => {
-            gsap.to(dotId, {
-              borderColor: "rgba(255,255,255,0.1)",
-              backgroundColor: "#000000",
-              boxShadow: "none",
-              scale: 1,
-              duration: 0.3,
-            });
-            gsap.to(cardId, {
-              borderColor: "rgba(255,255,255,0.05)",
-              backgroundColor: "#0a0a0a",
-              boxShadow: "none",
-              duration: 0.4,
-            });
-          },
-          onLeaveBack: () => {
-            gsap.to(dotId, {
-              borderColor: "rgba(255,255,255,0.1)",
-              backgroundColor: "#000000",
-              boxShadow: "none",
-              scale: 1,
-              duration: 0.3,
-            });
-            gsap.to(cardId, {
-              borderColor: "rgba(255,255,255,0.05)",
-              backgroundColor: "#0a0a0a",
-              boxShadow: "none",
-              duration: 0.4,
-            });
           },
         });
 
-        // Category items reveal stagger animation
-        gsap.fromTo(
-          `${cardId} .category-block`,
-          { opacity: 0, y: 15 },
-          {
-            opacity: 1,
-            y: 0,
-            stagger: 0.05,
-            duration: 0.4,
-            scrollTrigger: {
-              trigger: cardId,
-              start: "top 85%",
-              toggleActions: "play none none none",
-            },
-          },
+        // Vertical line track fill animation
+        tl.fromTo(
+          lineProgressRef.current,
+          { height: "0%" },
+          { height: "100%", ease: "none", duration: totalDuration },
+          0
         );
 
-        // Stacking Deck 3D Effect: scale down and fade card when the next card slides up
-        if (idx < changelogData.length - 1) {
-          const nextIdSafe = changelogData[idx + 1].version.replace(/\./g, "-");
-          const nextWrapperId = `#wrapper-${nextIdSafe}`;
+        // Sequence animations for stacking absolute cards
+        changelogData.forEach((item, idx) => {
+          if (idx === 0) return;
 
-          gsap.to(cardId, {
-            scale: 0.94,
-            opacity: 0.35,
-            filter: "blur(2.5px)",
-            y: -30,
-            ease: "power1.inOut",
+          const idSafe = item.version.replace(/\./g, "-");
+          const cardSelector = `#card-${idSafe}`;
+          const dotSelector = `#dot-${idSafe}`;
+          const prevIdSafe = changelogData[idx - 1].version.replace(/\./g, "-");
+          const prevCardSelector = `#card-${prevIdSafe}`;
+          const prevDotSelector = `#dot-${prevIdSafe}`;
+          const startTime = idx - 1;
+
+          // Slide active card up
+          tl.fromTo(
+            cardSelector,
+            { yPercent: 100 },
+            { yPercent: 0, ease: "power1.inOut", duration: 1 },
+            startTime
+          );
+
+          // Stagger lighting of corresponding dot
+          tl.to(
+            dotSelector,
+            {
+              borderColor: "#39FF14",
+              backgroundColor: "#39FF14",
+              boxShadow: "0 0 15px rgba(57,255,20,0.8)",
+              color: "#000000",
+              scale: 1.15,
+              duration: 1,
+            },
+            startTime
+          );
+
+          // Recycle/scale-down previous active card
+          tl.to(
+            prevCardSelector,
+            {
+              scale: 0.94,
+              opacity: 0.25,
+              yPercent: -12,
+              filter: "blur(2.5px)",
+              ease: "power1.inOut",
+              duration: 1,
+            },
+            startTime
+          );
+
+          // Reset previous dot style
+          tl.to(
+            prevDotSelector,
+            {
+              borderColor: "#39FF14",
+              backgroundColor: "#000000",
+              boxShadow: "none",
+              color: "#39FF14",
+              scale: 1,
+              duration: 1,
+            },
+            startTime
+          );
+        });
+      });
+
+      // 2. MOBILE LAYOUT ANIMATIONS (screen size < 1024px)
+      mm.add("(max-width: 1023px)", () => {
+        // Line progress tracks scroll position of timeline container
+        gsap.fromTo(
+          lineProgressRef.current,
+          { height: "0%" },
+          {
+            height: "100%",
+            ease: "none",
             scrollTrigger: {
-              trigger: nextWrapperId,
-              start: "top 80%",
-              end: "top 160px",
+              trigger: timelineRef.current,
+              start: "top 30%",
+              end: "bottom 70%",
               scrub: true,
             },
+          }
+        );
+
+        // Highlight version index on entry
+        changelogData.forEach((item, idx) => {
+          const idSafe = item.version.replace(/\./g, "-");
+          const cardSelector = `#card-${idSafe}`;
+          const dotSelector = `#dot-${idSafe}`;
+
+          ScrollTrigger.create({
+            trigger: cardSelector,
+            start: "top 40%",
+            end: "bottom 40%",
+            onEnter: () => {
+              setActiveIndex(idx);
+              gsap.to(dotSelector, {
+                borderColor: "#39FF14",
+                backgroundColor: "#39FF14",
+                boxShadow: "0 0 15px rgba(57,255,20,0.8)",
+                color: "#000000",
+                scale: 1.15,
+                duration: 0.3,
+              });
+            },
+            onEnterBack: () => {
+              setActiveIndex(idx);
+              gsap.to(dotSelector, {
+                borderColor: "#39FF14",
+                backgroundColor: "#39FF14",
+                boxShadow: "0 0 15px rgba(57,255,20,0.8)",
+                color: "#000000",
+                scale: 1.15,
+                duration: 0.3,
+              });
+            },
+            onLeave: () => {
+              gsap.to(dotSelector, {
+                borderColor: "rgba(255,255,255,0.1)",
+                backgroundColor: "#000000",
+                boxShadow: "none",
+                color: "#4b5563",
+                scale: 1,
+                duration: 0.3,
+              });
+            },
+            onLeaveBack: () => {
+              gsap.to(dotSelector, {
+                borderColor: "rgba(255,255,255,0.1)",
+                backgroundColor: "#000000",
+                boxShadow: "none",
+                color: "#4b5563",
+                scale: 1,
+                duration: 0.3,
+              });
+            },
           });
-        }
+
+          // Mobile simple fade up
+          gsap.fromTo(
+            cardSelector,
+            { opacity: 0, y: 50 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.6,
+              scrollTrigger: {
+                trigger: cardSelector,
+                start: "top 85%",
+                toggleActions: "play none none none",
+              },
+            }
+          );
+        });
       });
     },
-    { scope: containerRef },
+    { scope: containerRef }
   );
 
-  const scrollToVersion = (versionStr: string) => {
+  const scrollToVersion = (versionStr: string, idx: number) => {
     const idSafe = versionStr.replace(/\./g, "-");
-    const element = document.getElementById(`wrapper-${idSafe}`);
+    const element = document.getElementById(`card-${idSafe}`);
     if (element) {
-      const top = element.getBoundingClientRect().top + window.scrollY - 150;
-      window.scrollTo({ top, behavior: "smooth" });
+      if (window.innerWidth >= 1024) {
+        const trigger = timelineRef.current;
+        if (trigger) {
+          const triggerTop = trigger.getBoundingClientRect().top + window.scrollY;
+          const scrollOffset = triggerTop - 120 + idx * 600;
+          window.scrollTo({ top: scrollOffset, behavior: "smooth" });
+        }
+      } else {
+        const top = element.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
     }
   };
 
@@ -612,181 +659,195 @@ export default function ChangelogPage() {
         </motion.div>
       </section>
 
-      <section className="py-20 px-6 relative z-20 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <div className="lg:col-span-4 relative h-fit">
-          <div className="lg:sticky lg:top-36 space-y-6">
-            <div className="bg-[#0a0a0a]/80 backdrop-blur-md border border-white/5 hover:border-[#39FF14]/20 rounded-2xl p-6 space-y-6 transition-all duration-300">
-              <div className="space-y-1.5">
-                <div className="text-[10px] text-zinc-500 font-bold uppercase tracking-[0.2em] font-mono">
-                  SYSTEM CORE: OPERATIONAL
-                </div>
-                <div className="text-xs text-[#39FF14] font-bold font-mono flex items-center gap-2">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#39FF14] opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#39FF14]"></span>
-                  </span>
-                  CHRONOLOGY MONITOR
-                </div>
-              </div>
-
-              <div className="h-px bg-white/5" />
-
-              <div className="space-y-3">
-                <div className="text-zinc-500 text-[10px] uppercase tracking-wider font-mono">
-                  Currently Viewing
-                </div>
-                <div className="text-4xl font-black font-mono tracking-tighter text-white flex items-baseline gap-2">
-                  {changelogData[activeIndex].version}
-                  <span className="text-[9px] text-[#39FF14] font-bold tracking-widest uppercase px-2 py-0.5 rounded bg-[#39FF14]/10 border border-[#39FF14]/20 font-mono">
-                    {changelogData[activeIndex].type}
-                  </span>
-                </div>
-                <div className="text-white font-bold text-sm tracking-tight font-mono">
-                  {changelogData[activeIndex].title}
-                </div>
-                <p className="text-zinc-400 text-xs leading-relaxed font-mono">
-                  {changelogData[activeIndex].desc}
-                </p>
-              </div>
-
-              <div className="h-px bg-white/5" />
-
-              <div className="space-y-2.5">
-                <div className="text-zinc-500 text-[10px] uppercase tracking-wider font-mono">
-                  Ecosystem Versions Index
-                </div>
-                <div className="space-y-1.5 max-h-56 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-zinc-800">
-                  {changelogData.map((item, idx) => (
-                    <button
-                      key={item.version}
-                      onClick={() => scrollToVersion(item.version)}
-                      className={`w-full text-left px-3 py-2 rounded-xl text-xs font-mono font-semibold transition-all flex items-center justify-between border ${
-                        activeIndex === idx
-                          ? "bg-[#39FF14]/10 text-[#39FF14] border-[#39FF14]/30 shadow-[0_0_15px_rgba(57,255,20,0.03)]"
-                          : "text-zinc-400 hover:text-white bg-transparent border-transparent hover:bg-white/5"
-                      }`}
-                    >
-                      <span className="flex items-center gap-2">
-                        <span
-                          className={`w-1.5 h-1.5 rounded-full ${
-                            activeIndex === idx ? "bg-[#39FF14]" : "bg-zinc-700"
-                          }`}
-                        />
-                        {item.version}
-                      </span>
-                      <span className="text-[9px] text-zinc-500 font-normal">
-                        {item.date.split(",")[0]}
-                      </span>
-                    </button>
-                  ))}
-                </div>
-              </div>
+      {/* Open Core Transition Statement Section (Scrolls naturally above timeline) */}
+      <section className="pt-20 pb-10 px-6 relative z-20 max-w-5xl mx-auto">
+        <div className="bg-[#0a0a0a] border border-[#39FF14]/20 rounded-2xl p-6 md:p-8 space-y-4 relative overflow-hidden group">
+          <div className="absolute top-0 left-0 w-full h-1 bg-[#39FF14]/15 shadow-[0_0_15px_#39FF14] pointer-events-none" />
+          <h3 className="text-lg font-bold text-white flex items-center gap-2 font-mono">
+            <GitBranch className="w-5 h-5 text-[#39FF14]" />
+            Transition to Sustainable Open Core Model
+          </h3>
+          <div className="text-zinc-400 text-xs font-mono leading-relaxed space-y-3">
+            <p>
+              In our earlier iterations (pre-v1.1.0), IRIS was developed as a
+              100% free and open-source project. However, to fund continuous
+              engineering cycles, integrate low-latency SDK solutions (Gemini
+              Live API), and construct advanced tools, IRIS has transitioned
+              to an <strong>Open Core model</strong>.
+            </p>
+            <p>
+              <strong>What remains open-source?</strong> The public repository
+              contains the visual layout configuration, context-isolated
+              preloads, visual React components, and general community
+              templates.
+            </p>
+            <p>
+              <strong>What is protected?</strong> The core reasoning
+              orchestrator, dynamic tool execution main structures, and
+              automated security locks are packaged inside unreadable V8
+              bytecode.
+            </p>
+            <div className="p-4 rounded-xl bg-[#39FF14]/5 border border-[#39FF14]/10 text-[#39FF14]/90 space-y-2 mt-2 font-semibold">
+              <span className="font-bold block">Sponsorship Inclusions:</span>
+              <ul className="space-y-1 pl-2 text-zinc-400">
+                <li>
+                  • **$15/mo Sponsor (Insider)**: Unlocks read access to
+                  `iris-insiders` containing functional hooks and code snippets.
+                  *Sponsorship at this level does not provide the full code.*
+                </li>
+                <li>
+                  • **$30/mo Sponsor (Builder)**: Access to testing prompts,
+                  logs, and workflow macros.
+                </li>
+                <li>
+                  • **$50/mo Sponsor (Alpha)**: Full read access to the raw,
+                  unprotected, uncompiled source code, precompiled releases, and
+                  commercial licenses.
+                </li>
+              </ul>
             </div>
-
-            <Link
-              href="/docs"
-              className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-white/5 border border-white/5 text-xs text-zinc-400 font-mono hover:text-[#39FF14] hover:border-[#39FF14]/30 hover:bg-[#39FF14]/5 transition-all w-full text-center"
-            >
-              <ArrowLeft className="w-3.5 h-3.5" />
-              Return to Documentation
-            </Link>
           </div>
         </div>
+      </section>
 
-        <div
-          className="lg:col-span-8 relative pl-12 md:pl-20"
-          ref={timelineRef}
-        >
-          {/* Vertical Timeline Track Line */}
-          <div className="absolute left-6 md:left-10 top-4 bottom-4 w-[2px] bg-zinc-800/40 rounded-full">
-            <div
-              ref={lineProgressRef}
-              className="absolute top-0 left-0 w-full bg-linear-to-b from-[#39FF14] to-emerald-500 origin-top h-0 shadow-[0_0_15px_rgba(57,255,20,0.6)]"
-              style={{ transformOrigin: "top" }}
-            />
-          </div>
+      {/* Interactive Stacking Timeline Section */}
+      <section
+        className="py-16 px-6 relative z-20 max-w-7xl mx-auto"
+        ref={timelineRef}
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start lg:h-[620px]">
+          {/* Left Column (Sticky active version display widget) */}
+          <div className="lg:col-span-4 relative h-full">
+            <div className="lg:sticky lg:top-36 space-y-6">
+              <div className="bg-[#0a0a0a]/80 backdrop-blur-md border border-white/5 hover:border-[#39FF14]/20 rounded-2xl p-6 space-y-6 transition-all duration-300">
+                <div className="space-y-1.5">
+                  <div className="text-[10px] text-zinc-500 font-bold uppercase tracking-[0.2em] font-mono">
+                    SYSTEM CORE: OPERATIONAL
+                  </div>
+                  <div className="text-xs text-[#39FF14] font-bold font-mono flex items-center gap-2">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#39FF14] opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-[#39FF14]"></span>
+                    </span>
+                    CHRONOLOGY MONITOR
+                  </div>
+                </div>
 
-          {/* Open Core Transition Statement */}
-          <div className="bg-[#0a0a0a] border border-[#39FF14]/20 rounded-2xl p-6 md:p-8 mb-16 space-y-4 relative overflow-hidden group">
-            <div className="absolute top-0 left-0 w-full h-1 bg-[#39FF14]/15 shadow-[0_0_15px_#39FF14] pointer-events-none" />
-            <h3 className="text-lg font-bold text-white flex items-center gap-2 font-mono">
-              <GitBranch className="w-5 h-5 text-[#39FF14]" />
-              Transition to Sustainable Open Core Model
-            </h3>
-            <div className="text-zinc-400 text-xs font-mono leading-relaxed space-y-3">
-              <p>
-                In our earlier iterations (pre-v1.1.0), IRIS was developed as a
-                100% free and open-source project. However, to fund continuous
-                engineering cycles, integrate low-latency SDK solutions (Gemini
-                Live API), and construct advanced tools, IRIS has transitioned
-                to an <strong>Open Core model</strong>.
-              </p>
-              <p>
-                <strong>What remains open-source?</strong> The public repository
-                contains the visual layout configuration, context-isolated
-                preloads, visual React components, and general community
-                templates.
-              </p>
-              <p>
-                <strong>What is protected?</strong> The core reasoning
-                orchestrator, dynamic tool execution main structures, and
-                automated security locks are packaged inside unreadable V8
-                bytecode.
-              </p>
-              <div className="p-4 rounded-xl bg-[#39FF14]/5 border border-[#39FF14]/10 text-[#39FF14]/90 space-y-2 mt-2">
-                <span className="font-bold block">Sponsorship Inclusions:</span>
-                <ul className="space-y-1 pl-2">
-                  <li>
-                    • **$15/mo Sponsor (Insider)**: Unlocks read access to
-                    `iris-insiders` containing functional hooks and code
-                    snippets. *Sponsorship at this level does not provide the
-                    full code.*
-                  </li>
-                  <li>
-                    • **$30/mo Sponsor (Builder)**: Access to testing prompts,
-                    logs, and workflow macros.
-                  </li>
-                  <li>
-                    • **$50/mo Sponsor (Alpha)**: Full read access to the raw,
-                    unprotected, uncompiled source code, precompiled releases,
-                    and commercial licenses.
-                  </li>
-                </ul>
+                <div className="h-px bg-white/5" />
+
+                <div className="space-y-3">
+                  <div className="text-zinc-500 text-[10px] uppercase tracking-wider font-mono">
+                    Currently Viewing
+                  </div>
+                  <div className="text-4xl font-black font-mono tracking-tighter text-white flex items-baseline gap-2">
+                    {changelogData[activeIndex].version}
+                    <span className="text-[9px] text-[#39FF14] font-bold tracking-widest uppercase px-2 py-0.5 rounded bg-[#39FF14]/10 border border-[#39FF14]/20 font-mono">
+                      {changelogData[activeIndex].type}
+                    </span>
+                  </div>
+                  <div className="text-white font-bold text-sm tracking-tight font-mono">
+                    {changelogData[activeIndex].title}
+                  </div>
+                  <p className="text-zinc-400 text-xs leading-relaxed font-mono">
+                    {changelogData[activeIndex].desc}
+                  </p>
+                </div>
+
+                <div className="h-px bg-white/5" />
+
+                <div className="space-y-2.5">
+                  <div className="text-zinc-500 text-[10px] uppercase tracking-wider font-mono">
+                    Ecosystem Versions Index
+                  </div>
+                  <div className="space-y-1.5 max-h-56 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-zinc-800">
+                    {changelogData.map((item, idx) => (
+                      <button
+                        key={item.version}
+                        onClick={() => scrollToVersion(item.version, idx)}
+                        className={`w-full text-left px-3 py-2 rounded-xl text-xs font-mono font-semibold transition-all flex items-center justify-between border ${
+                          activeIndex === idx
+                            ? "bg-[#39FF14]/10 text-[#39FF14] border-[#39FF14]/30 shadow-[0_0_15px_rgba(57,255,20,0.03)]"
+                            : "text-zinc-400 hover:text-white bg-transparent border-transparent hover:bg-white/5"
+                        }`}
+                      >
+                        <span className="flex items-center gap-2">
+                          <span
+                            className={`w-1.5 h-1.5 rounded-full ${
+                              activeIndex === idx
+                                ? "bg-[#39FF14]"
+                                : "bg-zinc-700"
+                            }`}
+                          />
+                          {item.version}
+                        </span>
+                        <span className="text-[9px] text-zinc-500 font-normal">
+                          {item.date.split(",")[0]}
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
               </div>
+
+              <Link
+                href="/docs"
+                className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-white/5 border border-white/5 text-xs text-zinc-400 font-mono hover:text-[#39FF14] hover:border-[#39FF14]/30 hover:bg-[#39FF14]/5 transition-all w-full text-center"
+              >
+                <ArrowLeft className="w-3.5 h-3.5" />
+                Return to Documentation
+              </Link>
             </div>
           </div>
 
-          {/* Timeline Cards Stacking Deck */}
-          <div className="space-y-0">
-            {changelogData.map((item, idx) => {
-              const Icon = item.icon;
-              const isMajor = item.type === "Major";
-              const idSafe = item.version.replace(/\./g, "-");
-              return (
-                <div
-                  key={idx}
-                  id={`wrapper-${idSafe}`}
-                  className="relative min-h-[550px] lg:min-h-[620px] pb-12 z-10"
-                >
+          {/* Right Column (Absolute overlapping stack view window) */}
+          <div
+            className="lg:col-span-8 relative pl-12 lg:pl-20 h-full"
+          >
+            {/* Vertical timeline track line */}
+            <div className="absolute left-6 lg:left-8 top-4 bottom-4 w-[2px] bg-zinc-800/40 rounded-full z-0 pointer-events-none">
+              <div
+                ref={lineProgressRef}
+                className="absolute top-0 left-0 w-full bg-linear-to-b from-[#39FF14] to-emerald-500 origin-top h-0 shadow-[0_0_15px_rgba(57,255,20,0.6)]"
+                style={{ transformOrigin: "top" }}
+              />
+            </div>
+
+            {/* Slide Window Container */}
+            <div
+              id="timeline-window"
+              className="relative flex-1 h-auto lg:h-[600px] overflow-visible lg:overflow-hidden rounded-3xl border-0 lg:border border-white/5 bg-transparent lg:bg-[#050505] space-y-8 lg:space-y-0"
+            >
+              {changelogData.map((item, idx) => {
+                const Icon = item.icon;
+                const isMajor = item.type === "Major";
+                const idSafe = item.version.replace(/\./g, "-");
+                return (
                   <div
+                    key={item.version}
                     id={`card-${idSafe}`}
-                    className="bg-[#0a0a0a] border border-white/5 rounded-2xl p-6 md:p-8 space-y-6 transition-all duration-300 relative overflow-hidden w-full"
+                    className="lg:absolute lg:inset-0 bg-[#0a0a0a] border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between relative w-full h-auto lg:h-full overflow-visible lg:overflow-y-auto"
+                    style={{
+                      zIndex: idx + 10,
+                    }}
                   >
-                    {/* Timeline Dot Node projected to the left (pins together with card) */}
+                    {/* Projecting timeline dot */}
                     <div
                       id={`dot-${idSafe}`}
                       className={`
-                        absolute -left-9 md:-left-14 top-[30px] w-6 h-6 md:w-8 md:h-8 rounded-full border border-white/10 bg-black flex items-center justify-center z-10 transition-all duration-300
+                        absolute -left-9 lg:-left-16 top-[30px] w-6 h-6 lg:w-8 lg:h-8 rounded-full border bg-black flex items-center justify-center z-20 transition-all duration-300
                         ${
-                          isMajor
-                            ? "border-zinc-700 text-zinc-500 shadow-[0_0_10px_rgba(57,255,20,0.1)]"
-                            : "border-zinc-800 text-zinc-600"
+                          activeIndex === idx
+                            ? "border-[#39FF14] text-black bg-[#39FF14] shadow-[0_0_15px_rgba(57,255,20,0.6)] scale-110"
+                            : activeIndex >= idx
+                            ? "border-[#39FF14]/50 text-[#39FF14]"
+                            : "border-zinc-800 text-zinc-500"
                         }
                       `}
                     >
-                      <Icon className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                      <Icon className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
                     </div>
 
+                    {/* Card Header info */}
                     <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/5 pb-4">
                       <div className="flex items-center gap-3">
                         <span
@@ -815,7 +876,8 @@ export default function ChangelogPage() {
                       </span>
                     </div>
 
-                    <div className="space-y-1.5">
+                    {/* Title & Desc */}
+                    <div className="space-y-1.5 my-4">
                       <h3 className="text-lg font-bold text-white font-mono leading-tight">
                         {item.title}
                       </h3>
@@ -824,7 +886,8 @@ export default function ChangelogPage() {
                       </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                    {/* Categories grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 flex-1 overflow-y-auto scrollbar-thin">
                       {item.categories.map((cat, catIdx) => (
                         <div key={catIdx} className="category-block space-y-3">
                           <h4 className="text-xs font-bold text-white flex items-center gap-2 border-b border-white/5 pb-1 font-mono uppercase tracking-wider">
@@ -847,9 +910,9 @@ export default function ChangelogPage() {
                       ))}
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
