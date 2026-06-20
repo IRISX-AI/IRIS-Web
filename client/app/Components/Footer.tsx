@@ -3,9 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Cpu, Activity, TerminalSquare } from "lucide-react";
 import {
-  FaXTwitter,
   FaInstagram,
-  FaLinkedin,
   FaGithub,
   FaYoutube,
   // FaWhatsapp,
