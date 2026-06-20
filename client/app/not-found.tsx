@@ -29,7 +29,6 @@ export default function NotFound() {
       <Header />
 
       <main className="flex-1 relative flex flex-col items-center justify-center pt-32 pb-20 px-6">
-        {/* Background Effects */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-150 bg-[#39FF14]/5 blur-[150px] rounded-full pointer-events-none" />
         <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,transparent_0%,#050505_100%)] pointer-events-none" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
@@ -40,7 +39,6 @@ export default function NotFound() {
           animate="visible"
           className="relative z-10 flex flex-col items-center w-full max-w-4xl mx-auto"
         >
-          {/* Status Badge */}
           <motion.div variants={itemVariants} className="mb-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-red-500/30 bg-red-500/10 text-red-500 text-xs backdrop-blur-md">
               <span className="relative flex h-2 w-2">
@@ -53,7 +51,6 @@ export default function NotFound() {
             </div>
           </motion.div>
 
-          {/* Typography */}
           <motion.h1
             variants={itemVariants}
             className="text-8xl md:text-[10rem] font-black tracking-tighter leading-none mb-4 text-transparent bg-clip-text bg-linear-to-b from-white via-white/80 to-white/20 select-none drop-shadow-2xl"
@@ -77,7 +74,6 @@ export default function NotFound() {
             invalid pointer.
           </motion.p>
 
-          {/* Action Grid */}
           <motion.div
             variants={itemVariants}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full"
