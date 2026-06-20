@@ -38,7 +38,6 @@ export default function InstallGuide() {
           </p>
         </motion.div>
 
-        {/* API Key Prerequisite Box */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -70,7 +69,6 @@ export default function InstallGuide() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* ── DESKTOP INSTALLATION ── */}
           <motion.section
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -157,7 +155,6 @@ export default function InstallGuide() {
             </a>
           </motion.section>
 
-          {/* ── CLI INSTALLATION ── */}
           <motion.section
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
