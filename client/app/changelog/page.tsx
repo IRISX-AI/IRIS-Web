@@ -473,7 +473,7 @@ export default function ChangelogPage() {
           trigger: cardSelector,
           start: "top 60%",
           end: "bottom 40%",
-          pin: "",
+          pin: "#pin-panel",
           onEnter: () => {
             setActiveIndex(idx);
             gsap.to(cardSelector, {
@@ -660,7 +660,10 @@ export default function ChangelogPage() {
           {/* Left Column (Sticky active version display widget) */}
           <div className="lg:col-span-4 relative h-full">
             <div className="lg:sticky lg:top-36 space-y-6">
-              <div className="bg-[#0a0a0a]/80 backdrop-blur-md border border-white/5 hover:border-[#39FF14]/20 rounded-2xl p-6 space-y-6 transition-all duration-300">
+              <div
+                id="pin-panel"
+                className="bg-[#0a0a0a]/80 backdrop-blur-md border border-white/5 hover:border-[#39FF14]/20 rounded-2xl p-6 space-y-6 transition-all duration-300"
+              >
                 <div className="space-y-1.5">
                   <div className="text-[10px] text-zinc-500 font-bold uppercase tracking-[0.2em] font-mono">
                     SYSTEM CORE: OPERATIONAL
