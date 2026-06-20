@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import Link from "next/link";
 
 export default function RefundPolicyPage() {
   return (
@@ -63,7 +64,7 @@ export default function RefundPolicyPage() {
                 <ShieldAlert className="w-6 h-6 text-orange-500" />
               </div>
               <h2 className="text-2xl font-bold text-white tracking-tight">
-                No-Refund Policy 
+                No-Refund Policy
               </h2>
             </div>
 
@@ -221,12 +222,12 @@ export default function RefundPolicyPage() {
           <span className="text-xs text-gray-500 font-mono uppercase tracking-widest">
             Last Updated: June 2026
           </span>
-          <a
+          <Link
             href="/pricing"
             className="px-6 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-sm font-bold transition-colors"
           >
             Return to Pricing
-          </a>
+          </Link>
         </div>
       </section>
 
