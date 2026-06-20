@@ -718,7 +718,7 @@ export default function ChangelogPage() {
                   <div
                     id={`dot-${idSafe}`}
                     className={`
-                      absolute -left-[20px] md:-left-[28px] top-3.5 w-6 h-6 md:w-8 md:h-8 rounded-full border border-white/10 bg-black flex items-center justify-center z-10 transition-all duration-300
+                      absolute -left-5 md:-left-7 top-3.5 w-6 h-6 md:w-8 md:h-8 rounded-full border border-white/10 bg-black flex items-center justify-center z-10 transition-all duration-300
                       ${
                         isMajor
                           ? "border-zinc-700 text-zinc-500 shadow-[0_0_10px_rgba(57,255,20,0.1)]"
