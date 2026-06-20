@@ -74,6 +74,7 @@ const Header = () => {
             "how-to-install",
             "Guide",
             "Docs",
+            "Support",
           ].map((item) => (
             <Link
               key={item}
@@ -162,6 +163,7 @@ const Header = () => {
                   "how-to-install",
                   "Guide",
                   "Docs",
+                  "Support",
                 ].map((item) => (
                   <Link
                     key={item}
