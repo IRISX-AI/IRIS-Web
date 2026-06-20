@@ -11,8 +11,8 @@ import {
   Check,
   ShieldCheck,
 } from "lucide-react";
-import Footer from "../Components/Header"; // Adjust paths if necessary
-import Header from "../Components/Footer"; // Adjust paths if necessary
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 
 const apiKeysData = [
   {
