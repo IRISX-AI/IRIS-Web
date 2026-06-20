@@ -27,7 +27,7 @@ export const ScratchCard = ({
     ctx.fillText("SCRATCH TO REVEAL", canvas.width / 2, canvas.height / 2);
 
     for (let i = 0; i < 1000; i++) {
-      ctx.fillStyle = Math.random() > 0.5 ? "#14532D" : "#34D399";
+      ctx.fillStyle = Math.random() > 0.5 ? "#14532D" : "#39FF14";
       ctx.fillRect(
         Math.random() * canvas.width,
         Math.random() * canvas.height,

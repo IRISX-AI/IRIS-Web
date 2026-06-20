@@ -143,7 +143,7 @@ export default function IrisHero({
                 <span className="text-[10px]  text-gray-300 uppercase tracking-widest">
                   {label}
                 </span>
-                <span className="text-[11px]  text-[#34d399] font-bold">
+                <span className="text-[11px]  text-[#39FF14] font-bold">
                   {value}
                 </span>
               </div>
