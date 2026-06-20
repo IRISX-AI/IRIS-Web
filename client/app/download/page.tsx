@@ -111,13 +111,7 @@ export default function DownloadPage() {
               opacity: 0.8,
             }}
           >
-            <Lightning
-              hue={120}
-              xOffset={0}
-              speed={1.2}
-              intensity={1.5}
-              size={1.2}
-            />
+            
           </div>
 
           <motion.div className="relative z-10 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs font-mono tracking-widest mb-8">
