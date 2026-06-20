@@ -56,9 +56,7 @@ export default function DocsLayout({ children }: { children: ReactNode }) {
     <div className="min-h-screen bg-black text-zinc-100 font-sans selection:bg-[#39FF14]/30 flex flex-col mt-12">
       <Header />
 
-      {/* Main Container */}
       <div className="flex-1 max-w-7xl mx-auto w-full pt-32 px-6 flex gap-10 relative">
-        {/* Toggle Button for Mobile Sidebar */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden fixed bottom-6 right-6 z-50 p-4 rounded-full bg-[#39FF14] text-black shadow-lg hover:scale-105 transition-transform"
@@ -70,7 +68,6 @@ export default function DocsLayout({ children }: { children: ReactNode }) {
           )}
         </button>
 
-        {/* Sidebar Navigation */}
         <aside
           className={`
             fixed md:sticky top-32 h-[calc(100vh-10rem)] w-65 shrink-0 overflow-y-auto border-r border-white/5 pr-6 z-40 bg-black/90 backdrop-blur-md md:bg-transparent md:backdrop-blur-none
