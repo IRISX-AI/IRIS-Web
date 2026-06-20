@@ -63,7 +63,7 @@ const BentoCard = ({
 
     <div className="p-6 relative z-10 flex flex-col h-full justify-end">
       <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-2 transition-all duration-300 lg:group-hover:-translate-y-4">
-        <Icon className="h-10 w-10 origin-left transform-gpu text-neutral-700 dark:text-[#10b981] transition-all duration-300 ease-in-out group-hover:scale-75" />
+        <Icon className="h-10 w-10 origin-left transform-gpu text-neutral-700 dark:text-[#39FF14] transition-all duration-300 ease-in-out group-hover:scale-75" />
         <h3 className="text-xl font-bold text-neutral-700 dark:text-white tracking-tight">
           {name}
         </h3>
@@ -102,7 +102,7 @@ const items = [
     href: "#",
     cta: "View Module",
     className:
-      "md:col-span-2 border-white/5 hover:border-[#10b981]/50 bg-black",
+      "md:col-span-2 border-white/5 hover:border-[#39FF14]/50 bg-black",
   },
   {
     name: "WhatsApp Automation",
@@ -115,7 +115,7 @@ const items = [
     href: "#",
     cta: "View Module",
     className:
-      "md:col-span-1 border-white/5 hover:border-[#10b981]/50 bg-black",
+      "md:col-span-1 border-white/5 hover:border-[#39FF14]/50 bg-black",
   },
   {
     name: "Mobile Telekinesis",
@@ -126,7 +126,7 @@ const items = [
     href: "#",
     cta: "View Module",
     className:
-      "md:col-span-1 border-white/5 hover:border-[#10b981]/50 bg-black",
+      "md:col-span-1 border-white/5 hover:border-[#39FF14]/50 bg-black",
   },
   {
     name: "Autonomous Deep Research",
@@ -139,7 +139,7 @@ const items = [
     href: "#",
     cta: "View Module",
     className:
-      "md:col-span-2 border-white/5 hover:border-[#10b981]/50 bg-black",
+      "md:col-span-2 border-white/5 hover:border-[#39FF14]/50 bg-black",
   },
   {
     name: "Live Web & Browser Control",
@@ -150,7 +150,7 @@ const items = [
     href: "#",
     cta: "View Module",
     className:
-      "md:col-span-2 border-white/5 hover:border-[#10b981]/50 bg-black",
+      "md:col-span-2 border-white/5 hover:border-[#39FF14]/50 bg-black",
   },
   {
     name: "Screen Peeling & Optics",
@@ -161,7 +161,7 @@ const items = [
     href: "#",
     cta: "View Module",
     className:
-      "md:col-span-1 border-white/5 hover:border-[#10b981]/50 bg-black",
+      "md:col-span-1 border-white/5 hover:border-[#39FF14]/50 bg-black",
   },
 ];
 
@@ -171,20 +171,20 @@ export default function SystemsSection() {
       id="systems"
       className="min-h-screen w-full px-6 md:px-20 py-32 flex flex-col justify-center relative overflow-hidden bg-black dark"
     >
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-200 h-200 bg-[#10b981]/5 rounded-full blur-[120px] pointer-events-none opacity-50" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-200 h-200 bg-[#39FF14]/5 rounded-full blur-[120px] pointer-events-none opacity-50" />
 
       <div className="w-full max-w-7xl mx-auto flex flex-col gap-16 relative z-10">
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-4 px-4 relative z-10">
-          <div className="inline-flex items-center gap-3 px-4 py-1.5 mb-6 border border-[#10b981]/20 bg-[#10b981]/5 shadow-[0_0_15px_rgba(16,185,129,0.05)] rounded-sm">
-            <span className="w-1.5 h-1.5 bg-[#10b981] animate-pulse rounded-full"></span>
-            <span className="text-[#10b981] font-mono text-[10px] md:text-xs tracking-[0.4em] uppercase font-bold">
+          <div className="inline-flex items-center gap-3 px-4 py-1.5 mb-6 border border-[#39FF14]/20 bg-[#39FF14]/5 shadow-[0_0_15px_rgba(16,185,129,0.05)] rounded-sm">
+            <span className="w-1.5 h-1.5 bg-[#39FF14] animate-pulse rounded-full"></span>
+            <span className="text-[#39FF14] font-mono text-[10px] md:text-xs tracking-[0.4em] uppercase font-bold">
               Core Capabilities
             </span>
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter mb-6 select-none">
             Absolute Control. <br />
-            <span className="text-[#10b981] drop-shadow-[0_0_25px_rgba(16,185,129,0.3)]">
+            <span className="text-[#39FF14] drop-shadow-[0_0_25px_rgba(16,185,129,0.3)]">
               Zero Friction.
             </span>
           </h2>

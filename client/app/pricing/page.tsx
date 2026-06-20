@@ -15,11 +15,11 @@ import Link from "next/link";
 
 export default function PricingPage() {
   return (
-    <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#10b981] selection:text-black">
+    <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#39FF14] selection:text-black">
       <Header />
 
       <section className="pt-40 pb-20 px-6 relative overflow-hidden flex flex-col items-center text-center">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-96 bg-[#10b981]/10 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-96 bg-[#39FF14]/10 blur-[120px] rounded-full pointer-events-none" />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ export default function PricingPage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative z-10"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#10b981]/30 bg-[#10b981]/5 text-[#10b981] text-xs font-mono mb-8 backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#39FF14]/30 bg-[#39FF14]/5 text-[#39FF14] text-xs font-mono mb-8 backdrop-blur-md">
             <Activity className="w-3 h-3" />
             <span className="uppercase tracking-widest">
               Pricing & Licensing
@@ -36,7 +36,7 @@ export default function PricingPage() {
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6">
             SIMPLE <br />
-            <span className="text-transparent bg-clip-text bg-linear-to-b from-[#10b981] to-[#044a33]">
+            <span className="text-transparent bg-clip-text bg-linear-to-b from-[#39FF14] to-[#044a33]">
               PRICING.
             </span>
           </h1>
@@ -113,15 +113,15 @@ export default function PricingPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="bg-[#050505] rounded-[2.5rem] p-10 border border-[#10b981]/50 flex flex-col relative overflow-hidden shadow-[0_0_50px_rgba(16,185,129,0.1)]"
+            className="bg-[#050505] rounded-[2.5rem] p-10 border border-[#39FF14]/50 flex flex-col relative overflow-hidden shadow-[0_0_50px_rgba(16,185,129,0.1)]"
           >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#10b981]/20 blur-[80px] rounded-full pointer-events-none" />
-            <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-[#10b981] to-green-300" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#39FF14]/20 blur-[80px] rounded-full pointer-events-none" />
+            <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-[#39FF14] to-green-300" />
 
             <div className="mb-8 relative z-10">
               <div className="flex justify-between items-start">
                 <h3 className="text-3xl font-bold mb-2 flex items-center gap-2">
-                  IRIS Pro <Sparkles className="w-5 h-5 text-[#10b981]" />
+                  IRIS Pro <Sparkles className="w-5 h-5 text-[#39FF14]" />
                 </h3>
               </div>
               <div className="text-4xl font-black text-white mb-4 flex items-end gap-3">
@@ -136,18 +136,18 @@ export default function PricingPage() {
               </p>
             </div>
 
-            <div className="mb-8 p-4 rounded-xl bg-[#10b981]/5 border border-[#10b981]/20 font-mono text-xs relative z-10">
-              <div className="text-[#10b981] mb-2 uppercase tracking-widest font-bold">
+            <div className="mb-8 p-4 rounded-xl bg-[#39FF14]/5 border border-[#39FF14]/20 font-mono text-xs relative z-10">
+              <div className="text-[#39FF14] mb-2 uppercase tracking-widest font-bold">
                 Deployment Protocol
               </div>
               <ul className="space-y-2 text-gray-300">
                 <li className="flex justify-between">
                   <span>License Type:</span>{" "}
-                  <span className="text-[#10b981]">Lifetime Perpetual</span>
+                  <span className="text-[#39FF14]">Lifetime Perpetual</span>
                 </li>
                 <li className="flex justify-between">
                   <span>Delivery Method:</span>{" "}
-                  <span className="text-[#10b981]">Private GitHub Repo</span>
+                  <span className="text-[#39FF14]">Private GitHub Repo</span>
                 </li>
               </ul>
             </div>
@@ -162,7 +162,7 @@ export default function PricingPage() {
               <FeatureItem text="Biometric OS Vault Encryption" pro />
             </div>
 
-            <button className="cursor-pointer group w-full flex justify-center items-center gap-2 mt-10 py-4 rounded-xl bg-[#10b981] text-black font-bold hover:bg-green-400 transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] relative z-10">
+            <button className="cursor-pointer group w-full flex justify-center items-center gap-2 mt-10 py-4 rounded-xl bg-[#39FF14] text-black font-bold hover:bg-green-400 transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] relative z-10">
               <FaGithub className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Sponsor on GitHub to Unlock
             </button>
@@ -188,7 +188,7 @@ export default function PricingPage() {
                 <th className="py-4 px-6 font-bold text-center">
                   Base Engine (Free)
                 </th>
-                <th className="py-4 px-6 font-bold text-center text-[#10b981]">
+                <th className="py-4 px-6 font-bold text-center text-[#39FF14]">
                   Pro ($5 Lifetime)
                 </th>
               </tr>
@@ -266,7 +266,7 @@ const FeatureItem = ({
 }) => (
   <div className="flex items-start gap-3">
     {pro ? (
-      <Zap className="w-5 h-5 text-[#10b981] shrink-0 mt-0.5" />
+      <Zap className="w-5 h-5 text-[#39FF14] shrink-0 mt-0.5" />
     ) : (
       <CheckCircle2 className="w-5 h-5 text-gray-500 shrink-0 mt-0.5" />
     )}
@@ -288,6 +288,6 @@ const TableRow = ({
   <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
     <td className="py-4 px-6 font-medium text-gray-200">{title}</td>
     <td className="py-4 px-6 text-center text-gray-400">{free}</td>
-    <td className="py-4 px-6 text-center font-medium text-[#10b981]">{pro}</td>
+    <td className="py-4 px-6 text-center font-medium text-[#39FF14]">{pro}</td>
   </tr>
 );

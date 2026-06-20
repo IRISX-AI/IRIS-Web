@@ -84,8 +84,8 @@ export default function StoryChapter({ content }: StoryChapterProps) {
                 key={index}
                 className="story-step min-h-[60vh] flex flex-col justify-center border-l-2 border-transparent pl-8 ml-4 transition-all duration-500"
               >
-                <div className="chapter-num text-[#10b981] font-mono text-sm mb-4 font-bold tracking-widest flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[#10b981] rounded-full"></span>{" "}
+                <div className="chapter-num text-[#39FF14] font-mono text-sm mb-4 font-bold tracking-widest flex items-center gap-2">
+                  <span className="w-2 h-2 bg-[#39FF14] rounded-full"></span>{" "}
                   CHAPTER {item.num}
                 </div>
                 <h2 className="text-4xl md:text-6xl font-bold mb-6 mt-40 text-white leading-tight">
@@ -99,14 +99,14 @@ export default function StoryChapter({ content }: StoryChapterProps) {
           </div>
 
           <div className="hidden md:flex md:w-1/2 h-screen pinned-story sticky top-0 items-center justify-center p-12">
-            <div className="relative w-full h-1/2 bg-[#080808] border border-[#10b981]/20 rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(16,185,129,0.1)] flex items-center justify-center">
+            <div className="relative w-full h-1/2 bg-[#080808] border border-[#39FF14]/20 rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(16,185,129,0.1)] flex items-center justify-center">
               <AnimatePresence mode="wait">
                 <StoryVisual item={content[activeStory]} key={activeStory} />
               </AnimatePresence>
 
               <div className="absolute bottom-3 left-12 right-12 h-1 bg-white/5 rounded-full overflow-hidden">
                 <motion.div
-                  className="h-full bg-[#10b981] shadow-[0_0_10px_#10b981]"
+                  className="h-full bg-[#39FF14] shadow-[0_0_10px_#39FF14]"
                   animate={{
                     width: `${((activeStory + 1) / content.length) * 100}%`,
                   }}
@@ -132,7 +132,7 @@ const StoryVisual = ({ item }: { item: StoryContent }) => {
       transition={{ duration: 0.5, ease: "backOut" } as any}
       className="flex flex-col items-center justify-center h-full w-full absolute inset-0"
     >
-      <div className="mb-8 p-10 bg-[#10b981]/5 rounded-full border border-[#10b981]/20 shadow-[0_0_60px_rgba(16,185,129,0.1)] scale-110">
+      <div className="mb-8 p-10 bg-[#39FF14]/5 rounded-full border border-[#39FF14]/20 shadow-[0_0_60px_rgba(16,185,129,0.1)] scale-110">
         {item.icon}
       </div>
 
@@ -140,12 +140,12 @@ const StoryVisual = ({ item }: { item: StoryContent }) => {
         {item.visualTitle}
       </h3>
 
-      <div className="px-3 py-1 border border-[#10b981]/30 bg-[#10b981]/10 text-[#10b981] font-mono text-xs tracking-widest uppercase rounded mt-2">
+      <div className="px-3 py-1 border border-[#39FF14]/30 bg-[#39FF14]/10 text-[#39FF14] font-mono text-xs tracking-widest uppercase rounded mt-2">
         SYS_CORE :: {item.visualSub}
       </div>
 
-      <div className="absolute top-10 left-10 w-8 h-8 border-t-2 border-l-2 border-[#10b981]/40"></div>
-      <div className="absolute bottom-10 right-10 w-8 h-8 border-b-2 border-r-2 border-[#10b981]/40"></div>
+      <div className="absolute top-10 left-10 w-8 h-8 border-t-2 border-l-2 border-[#39FF14]/40"></div>
+      <div className="absolute bottom-10 right-10 w-8 h-8 border-b-2 border-r-2 border-[#39FF14]/40"></div>
     </motion.div>
   );
 };

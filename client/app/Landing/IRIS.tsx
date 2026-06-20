@@ -217,14 +217,14 @@ const IRIS = () => {
               alt="IRIS Mobile Telekinesis"
               height={720}
               width={1400}
-              className="mx-auto rounded-2xl object-cover h-full object-top-left border border-[#10b981]/20 shadow-[0_0_40px_rgba(16,185,129,0.1)]"
+              className="mx-auto rounded-2xl object-cover h-full object-top-left border border-[#39FF14]/20 shadow-[0_0_40px_rgba(16,185,129,0.1)]"
               draggable={false}
             />
           </ContainerScroll>
         </section>
 
         <section className="w-full px-6 md:px-0 py-12 relative overflow-hidden flex flex-col items-center z-20">
-          <p className="text-[#10b981] text-sm tracking-widest uppercase mb-8 font-semibold drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]">
+          <p className="text-[#39FF14] text-sm tracking-widest uppercase mb-8 font-semibold drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]">
             Built with a bleeding-edge modern stack
           </p>
           <LogoLoop
@@ -270,7 +270,7 @@ const IRIS = () => {
         </section>
 
         <section className="min-h-screen bg-black flex flex-col items-center pt-32 relative overflow-hidden font-sans">
-          <div className="absolute top-[30%] left-1/2 -translate-x-1/2 w-150 h-150 bg-[#10b981]/15 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
+          <div className="absolute top-[30%] left-1/2 -translate-x-1/2 w-150 h-150 bg-[#39FF14]/15 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
           <div className="absolute top-[50%] left-1/2 -translate-x-1/2 w-200 h-100 bg-[#16a34a]/10 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
 
           <div className="text-center z-20 px-4 flex flex-col items-center">
@@ -319,29 +319,29 @@ const IRIS = () => {
 
           <div className="w-full max-w-4xl mx-auto flex justify-center relative z-20 mt-12 mb-20">
             <div className="flex gap-4 sm:gap-6 relative">
-              <div className="flex flex-col items-center justify-center w-28 h-28 sm:w-46 sm:h-46 rounded-3xl sm:rounded-4xl border border-[#10b981] bg-black/60 shadow-[0_0_20px_rgba(16,185,129,0.2)] backdrop-blur-md">
+              <div className="flex flex-col items-center justify-center w-28 h-28 sm:w-46 sm:h-46 rounded-3xl sm:rounded-4xl border border-[#39FF14] bg-black/60 shadow-[0_0_20px_rgba(16,185,129,0.2)] backdrop-blur-md">
                 <span className="text-4xl sm:text-6xl font-bold text-transparent bg-clip-text bg-linear-to-b from-[#4ADE80] to-[#14532D]">
                   IRIS
                 </span>
-                <span className="text-[#10b981] text-sm sm:text-xl font-medium mt-1">
+                <span className="text-[#39FF14] text-sm sm:text-xl font-medium mt-1">
                   Wake Word
                 </span>
               </div>
 
-              <div className="flex flex-col items-center justify-center w-28 h-28 sm:w-46 sm:h-46 rounded-3xl sm:rounded-4xl border border-[#10b981] bg-black/60 shadow-[0_0_20px_rgba(16,185,129,0.2)] backdrop-blur-md">
+              <div className="flex flex-col items-center justify-center w-28 h-28 sm:w-46 sm:h-46 rounded-3xl sm:rounded-4xl border border-[#39FF14] bg-black/60 shadow-[0_0_20px_rgba(16,185,129,0.2)] backdrop-blur-md">
                 <span className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-linear-to-b from-[#4ADE80] to-[#14532D]">
                   &lt;1s
                 </span>
-                <span className="text-[#10b981] text-sm sm:text-xl font-medium mt-1">
+                <span className="text-[#39FF14] text-sm sm:text-xl font-medium mt-1">
                   Voice Latency
                 </span>
               </div>
 
-              <div className="flex flex-col items-center justify-center w-28 h-28 sm:w-46 sm:h-46 rounded-3xl sm:rounded-4xl border border-[#10b981] bg-black/60 shadow-[0_0_20px_rgba(16,185,129,0.2)] backdrop-blur-md">
+              <div className="flex flex-col items-center justify-center w-28 h-28 sm:w-46 sm:h-46 rounded-3xl sm:rounded-4xl border border-[#39FF14] bg-black/60 shadow-[0_0_20px_rgba(16,185,129,0.2)] backdrop-blur-md">
                 <span className="text-4xl sm:text-6xl font-bold text-transparent bg-clip-text bg-linear-to-b from-[#4ADE80] to-[#14532D]">
                   1M+
                 </span>
-                <span className="text-[#10b981] text-sm sm:text-xl font-medium mt-1">
+                <span className="text-[#39FF14] text-sm sm:text-xl font-medium mt-1">
                   Context Window
                 </span>
               </div>

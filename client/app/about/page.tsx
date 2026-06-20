@@ -162,7 +162,7 @@ const IRISAbout = () => {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen bg-black text-white selection:bg-[#10b981] selection:text-black font-sans overflow-x-hidden"
+      className="min-h-screen bg-black text-white selection:bg-[#39FF14] selection:text-black font-sans overflow-x-hidden"
     >
       <Header />
 
@@ -184,11 +184,11 @@ const IRISAbout = () => {
           />
         </div>
 
-        <motion.div className="absolute z-0 w-200 h-200 bg-[#10b981]/10 blur-[150px] rounded-full pointer-events-none mix-blend-screen" />
+        <motion.div className="absolute z-0 w-200 h-200 bg-[#39FF14]/10 blur-[150px] rounded-full pointer-events-none mix-blend-screen" />
 
         <div className="relative z-10 text-center px-6 pointer-events-none">
           <motion.div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#10b981]/30 bg-[#10b981]/10 text-[#10b981] text-xs font-mono mb-8 backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#39FF14]/30 bg-[#39FF14]/10 text-[#39FF14] text-xs font-mono mb-8 backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.2)]">
               <Sparkles className="w-3 h-3" />
               <span>THE STORY BEHIND THE SOFTWARE</span>
             </div>
@@ -236,7 +236,7 @@ const IRISAbout = () => {
       <StoryChapter content={storyData} />
 
       <section className="py-40 bg-black text-center border-t border-white/5 relative overflow-hidden flex flex-col items-center justify-center">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-[#10b981]/10 blur-[120px] rounded-full pointer-events-none mix-blend-screen" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-[#39FF14]/10 blur-[120px] rounded-full pointer-events-none mix-blend-screen" />
 
         <div className="relative z-20 flex flex-col items-center gap-10 px-6">
           <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold max-w-5xl mx-auto text-center tracking-tight text-white drop-shadow-2xl">
@@ -250,7 +250,7 @@ const IRISAbout = () => {
           </p>
 
           <Link href="/download">
-            <button className="group relative inline-flex items-center gap-3 px-10 py-5 bg-[#10b981] text-black font-bold text-lg rounded-full hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_60px_rgba(16,185,129,0.6)]">
+            <button className="group relative inline-flex items-center gap-3 px-10 py-5 bg-[#39FF14] text-black font-bold text-lg rounded-full hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_60px_rgba(16,185,129,0.6)]">
               <Download className="w-5 h-5 group-hover:-translate-y-1 transition-transform duration-300" />
               Download IRIS For Desktop
             </button>

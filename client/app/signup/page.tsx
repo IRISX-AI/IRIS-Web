@@ -93,20 +93,20 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white font-sans flex items-center justify-center p-6 relative overflow-hidden selection:bg-[#10b981] selection:text-black">
-      <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-[#10b981]/10 blur-[120px] rounded-full pointer-events-none" />
+    <div className="min-h-screen bg-[#050505] text-white font-sans flex items-center justify-center p-6 relative overflow-hidden selection:bg-[#39FF14] selection:text-black">
+      <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-[#39FF14]/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-[#044a33]/30 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="absolute inset-0 bg-[linear-linear(to_right,#ffffff03_1px,transparent_1px),linear-linear(to_bottom,#ffffff03_1px,transparent_1px)] bg-size-[40px_40px] pointer-events-none mix-blend-overlay" />
 
       <motion.div className="w-full max-w-md relative z-10">
         <motion.div className="text-center mb-10">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#10b981]/10 border border-[#10b981]/30 shadow-[0_0_20px_rgba(16,185,129,0.2)] mb-6">
-            <Cpu className="w-8 h-8 text-[#10b981]" />
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#39FF14]/10 border border-[#39FF14]/30 shadow-[0_0_20px_rgba(16,185,129,0.2)] mb-6">
+            <Cpu className="w-8 h-8 text-[#39FF14]" />
           </div>
           <h1 className="text-3xl md:text-4xl font-black tracking-tighter mb-2">
             Initialize{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#10b981] to-green-200">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#39FF14] to-green-200">
               IRIS
             </span>
           </h1>
@@ -116,7 +116,7 @@ export default function SignupPage() {
         </motion.div>
 
         <motion.div className="bg-[#0a0a0a] border border-white/10 rounded-4xl p-8 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-[#10b981]/50 to-transparent opacity-50" />
+          <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-[#39FF14]/50 to-transparent opacity-50" />
 
           {error && (
             <ErrorBox
@@ -140,7 +140,7 @@ export default function SignupPage() {
               </label>
               <div className="relative group">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <User className="h-5 w-5 text-gray-300 group-focus-within:text-[#10b981] transition-colors" />
+                  <User className="h-5 w-5 text-gray-300 group-focus-within:text-[#39FF14] transition-colors" />
                 </div>
                 <input
                   id="name"
@@ -150,7 +150,7 @@ export default function SignupPage() {
                   type="text"
                   required
                   placeholder="Harsh Pandey"
-                  className="w-full bg-[#050505] border border-white/10 rounded-xl py-3.5 pl-12 pr-4 text-white placeholder-gray-600 focus:outline-none focus:border-[#10b981] focus:ring-1 focus:ring-[#10b981] transition-all"
+                  className="w-full bg-[#050505] border border-white/10 rounded-xl py-3.5 pl-12 pr-4 text-white placeholder-gray-600 focus:outline-none focus:border-[#39FF14] focus:ring-1 focus:ring-[#39FF14] transition-all"
                 />
               </div>
             </div>
@@ -161,7 +161,7 @@ export default function SignupPage() {
               </label>
               <div className="relative group">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <Mail className="h-5 w-5 text-gray-300 group-focus-within:text-[#10b981] transition-colors" />
+                  <Mail className="h-5 w-5 text-gray-300 group-focus-within:text-[#39FF14] transition-colors" />
                 </div>
                 <input
                   id="email"
@@ -171,7 +171,7 @@ export default function SignupPage() {
                   type="email"
                   required
                   placeholder="harsh@vitalstudios.com"
-                  className="w-full bg-[#050505] border border-white/10 rounded-xl py-3.5 pl-12 pr-4 text-white placeholder-gray-400 focus:outline-none focus:border-[#10b981] focus:ring-1 focus:ring-[#10b981] transition-all"
+                  className="w-full bg-[#050505] border border-white/10 rounded-xl py-3.5 pl-12 pr-4 text-white placeholder-gray-400 focus:outline-none focus:border-[#39FF14] focus:ring-1 focus:ring-[#39FF14] transition-all"
                 />
               </div>
             </div>
@@ -182,7 +182,7 @@ export default function SignupPage() {
               </label>
               <div className="relative group">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <Lock className="h-5 w-5 text-gray-300 group-focus-within:text-[#10b981] transition-colors" />
+                  <Lock className="h-5 w-5 text-gray-300 group-focus-within:text-[#39FF14] transition-colors" />
                 </div>
                 <input
                   id="password"
@@ -192,12 +192,12 @@ export default function SignupPage() {
                   type={showPassword ? "text" : "password"}
                   required
                   placeholder="••••••••••••"
-                  className="w-full bg-[#050505] border border-white/10 rounded-xl py-3.5 pl-12 pr-12 text-white placeholder-gray-600 focus:outline-none focus:border-[#10b981] focus:ring-1 focus:ring-[#10b981] transition-all"
+                  className="w-full bg-[#050505] border border-white/10 rounded-xl py-3.5 pl-12 pr-12 text-white placeholder-gray-600 focus:outline-none focus:border-[#39FF14] focus:ring-1 focus:ring-[#39FF14] transition-all"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="cursor-pointer absolute inset-y-0 right-0 pr-4 flex items-center text-gray-500 hover:text-[#10b981] transition-colors focus:outline-none"
+                  className="cursor-pointer absolute inset-y-0 right-0 pr-4 flex items-center text-gray-500 hover:text-[#39FF14] transition-colors focus:outline-none"
                 >
                   {showPassword ? (
                     <EyeOff className="h-5 w-5" />
@@ -211,7 +211,7 @@ export default function SignupPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="cursor-pointer w-full relative group overflow-hidden rounded-xl bg-[#10b981] text-black font-bold py-4 mt-2 transition-all hover:shadow-[0_0_30px_rgba(16,185,129,0.3)] disabled:opacity-70 disabled:cursor-not-allowed"
+              className="cursor-pointer w-full relative group overflow-hidden rounded-xl bg-[#39FF14] text-black font-bold py-4 mt-2 transition-all hover:shadow-[0_0_30px_rgba(16,185,129,0.3)] disabled:opacity-70 disabled:cursor-not-allowed"
             >
               <div className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
               <div className="flex items-center justify-center gap-2 relative z-10">
@@ -251,7 +251,7 @@ export default function SignupPage() {
             Already have an Account?{" "}
             <Link
               href="/login"
-              className="text-[#10b981] font-semibold hover:text-green-400 transition-colors flex items-center justify-center gap-1"
+              className="text-[#39FF14] font-semibold hover:text-green-400 transition-colors flex items-center justify-center gap-1"
             >
               Login <Sparkles className="w-3 h-3" />
             </Link>

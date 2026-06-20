@@ -47,13 +47,13 @@ const LoadingCore = () => {
         transition={
           { duration: 1.5, repeat: Infinity, repeatType: "reverse" } as any
         }
-        className="absolute w-100 h-100 rounded-full bg-[#10b981] blur-[120px] mix-blend-screen pointer-events-none"
+        className="absolute w-100 h-100 rounded-full bg-[#39FF14] blur-[120px] mix-blend-screen pointer-events-none"
       />
 
       <div className="relative flex items-center justify-center">
         <div
           ref={ringRef}
-          className="absolute w-56 h-56 border-2 border-dashed border-[#10b981]/30 rounded-full"
+          className="absolute w-56 h-56 border-2 border-dashed border-[#39FF14]/30 rounded-full"
           style={{
             boxShadow: "0 0 30px rgba(16,185,129,0.1) inset",
           }}
@@ -62,17 +62,17 @@ const LoadingCore = () => {
         <motion.div
           animate={{ rotate: -360 }}
           transition={{ duration: 3, repeat: Infinity, ease: "linear" } as any}
-          className="absolute w-36 h-36 border-t-2 border-b-2 border-[#10b981] rounded-full opacity-70"
+          className="absolute w-36 h-36 border-t-2 border-b-2 border-[#39FF14] rounded-full opacity-70"
         />
 
         <div
           ref={coreRef}
-          className="w-12 h-12 bg-[#10b981] flex items-center justify-center backdrop-blur-sm shadow-[0_0_40px_rgba(16,185,129,0.6)]"
+          className="w-12 h-12 bg-[#39FF14] flex items-center justify-center backdrop-blur-sm shadow-[0_0_40px_rgba(16,185,129,0.6)]"
           style={{
             transform: "rotate(45deg)",
           }}
         >
-          <div className="w-6 h-6 bg-black border border-[#10b981]/50 mix-blend-overlay" />
+          <div className="w-6 h-6 bg-black border border-[#39FF14]/50 mix-blend-overlay" />
         </div>
       </div>
 
@@ -82,10 +82,10 @@ const LoadingCore = () => {
         transition={{ duration: 0.6, delay: 0.2 } as any}
         className="mt-16 flex flex-col items-center gap-3"
       >
-        <div className="flex gap-2 items-center px-4 py-1.5 bg-[#10b981]/10 border border-[#10b981]/20 rounded-full backdrop-blur-md">
-          <span className="w-2 h-2 bg-[#10b981] animate-ping rounded-full absolute" />
-          <span className="w-2 h-2 bg-[#10b981] rounded-full relative" />
-          <p className="text-[#10b981] font-mono text-[11px] tracking-[0.4em] uppercase font-bold">
+        <div className="flex gap-2 items-center px-4 py-1.5 bg-[#39FF14]/10 border border-[#39FF14]/20 rounded-full backdrop-blur-md">
+          <span className="w-2 h-2 bg-[#39FF14] animate-ping rounded-full absolute" />
+          <span className="w-2 h-2 bg-[#39FF14] rounded-full relative" />
+          <p className="text-[#39FF14] font-mono text-[11px] tracking-[0.4em] uppercase font-bold">
             Loading_System_Core...
           </p>
         </div>
@@ -97,7 +97,7 @@ const LoadingCore = () => {
             transition={
               { duration: 1.2, repeat: Infinity, ease: "linear" } as any
             }
-            className="absolute top-0 bottom-0 left-0 w-1/2 bg-linear-to-r from-transparent via-[#10b981] to-transparent"
+            className="absolute top-0 bottom-0 left-0 w-1/2 bg-linear-to-r from-transparent via-[#39FF14] to-transparent"
           />
         </div>
       </motion.div>

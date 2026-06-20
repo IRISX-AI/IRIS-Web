@@ -596,7 +596,7 @@ const MagicBento: React.FC<BentoProps> = ({
       )}
 
       <div className="card__header flex justify-between gap-3 relative z-10 text-white">
-        <span className="card__label text-xs tracking-[0.2em] uppercase font-bold text-[#10b981] drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]">
+        <span className="card__label text-xs tracking-[0.2em] uppercase font-bold text-[#39FF14] drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]">
           {card.label}
         </span>
       </div>

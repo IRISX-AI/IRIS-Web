@@ -33,7 +33,7 @@ body {
   width: 2px;
   height: 14px;
   border-radius: 2px;
-  background: #10b981;
+  background: #39ff14;
   transform-origin: bottom;
   animation: iris-bar 1.2s ease-in-out infinite;
 }
@@ -116,13 +116,13 @@ body {
 .iris-title-shimmer {
   background: linear-gradient(
     105deg,
-    #10b981 0%,
+    #39ff14 0%,
     #34d399 25%,
     #6ee7b7 40%,
     #ffffff 50%,
     #6ee7b7 60%,
     #34d399 75%,
-    #10b981 100%
+    #39ff14 100%
   );
   background-size: 200% auto;
   background-clip: text;
