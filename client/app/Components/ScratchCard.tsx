@@ -109,7 +109,7 @@ export const ScratchCard = ({
   return (
     <div className="relative w-80 h-32 rounded-2xl overflow-hidden mx-auto shadow-[0_0_30px_rgba(16,185,129,0.2)] border border-[#39FF14]/30 bg-[#0a0a0a] flex items-center justify-center">
       <div className="absolute inset-0 flex flex-col items-center justify-center bg-linear-to-br from-[#0a0a0a] to-[#14532D]">
-        <span className="text-gray-400 text-xs font-mono mb-1 uppercase tracking-widest">
+        <span className="text-gray-400 text-xs  mb-1 uppercase tracking-widest">
           Unlocked {discountAmount}% Off
         </span>
         <span className="text-4xl font-black text-transparent bg-clip-text bg-linear-to-r from-white to-green-200 tracking-widest">

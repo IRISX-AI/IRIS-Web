@@ -84,7 +84,7 @@ export default function StoryChapter({ content }: StoryChapterProps) {
                 key={index}
                 className="story-step min-h-[60vh] flex flex-col justify-center border-l-2 border-transparent pl-8 ml-4 transition-all duration-500"
               >
-                <div className="chapter-num text-[#39FF14] font-mono text-sm mb-4 font-bold tracking-widest flex items-center gap-2">
+                <div className="chapter-num text-[#39FF14]  text-sm mb-4 font-bold tracking-widest flex items-center gap-2">
                   <span className="w-2 h-2 bg-[#39FF14] rounded-full"></span>{" "}
                   CHAPTER {item.num}
                 </div>
@@ -140,7 +140,7 @@ const StoryVisual = ({ item }: { item: StoryContent }) => {
         {item.visualTitle}
       </h3>
 
-      <div className="px-3 py-1 border border-[#39FF14]/30 bg-[#39FF14]/10 text-[#39FF14] font-mono text-xs tracking-widest uppercase rounded mt-2">
+      <div className="px-3 py-1 border border-[#39FF14]/30 bg-[#39FF14]/10 text-[#39FF14]  text-xs tracking-widest uppercase rounded mt-2">
         SYS_CORE :: {item.visualSub}
       </div>
 

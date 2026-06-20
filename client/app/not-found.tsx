@@ -37,8 +37,14 @@ export default function NotFound() {
   const springCfg = { damping: 30, stiffness: 100 };
   const rotX = useSpring(useTransform(mouseY, [-0.5, 0.5], [8, -8]), springCfg);
   const rotY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-8, 8]), springCfg);
-  const transX = useSpring(useTransform(mouseX, [-0.5, 0.5], [-20, 20]), springCfg);
-  const transY = useSpring(useTransform(mouseY, [-0.5, 0.5], [-20, 20]), springCfg);
+  const transX = useSpring(
+    useTransform(mouseX, [-0.5, 0.5], [-20, 20]),
+    springCfg,
+  );
+  const transY = useSpring(
+    useTransform(mouseY, [-0.5, 0.5], [-20, 20]),
+    springCfg,
+  );
 
   const handleMouseMove = useCallback(
     (e: React.MouseEvent) => {
@@ -50,11 +56,12 @@ export default function NotFound() {
       mouseY.set(y);
       setCoords({ x: e.clientX - rect.left, y: e.clientY - rect.top });
     },
-    [mouseX, mouseY]
+    [mouseX, mouseY],
   );
 
   useEffect(() => {
-    const chars = "01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン";
+    const chars =
+      "01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン";
     const original = "404";
     let interval: NodeJS.Timeout;
 
@@ -64,8 +71,12 @@ export default function NotFound() {
         setGlitchText(
           original
             .split("")
-            .map((c, i) => (i < iter ? original[i] : chars[Math.floor(Math.random() * chars.length)]))
-            .join("")
+            .map((c, i) =>
+              i < iter
+                ? original[i]
+                : chars[Math.floor(Math.random() * chars.length)],
+            )
+            .join(""),
         );
         iter += 0.4;
         if (iter >= original.length) clearInterval(inner);
@@ -84,50 +95,62 @@ export default function NotFound() {
       .fromTo(
         ".grid-h",
         { scaleX: 0, opacity: 0 },
-        { scaleX: 1, opacity: 0.15, duration: 1.2, stagger: 0.12, transformOrigin: "center" },
-        "-=1"
+        {
+          scaleX: 1,
+          opacity: 0.15,
+          duration: 1.2,
+          stagger: 0.12,
+          transformOrigin: "center",
+        },
+        "-=1",
       )
       .fromTo(
         ".grid-v",
         { scaleY: 0, opacity: 0 },
-        { scaleY: 1, opacity: 0.15, duration: 1.2, stagger: 0.12, transformOrigin: "center" },
-        "-=1.2"
+        {
+          scaleY: 1,
+          opacity: 0.15,
+          duration: 1.2,
+          stagger: 0.12,
+          transformOrigin: "center",
+        },
+        "-=1.2",
       )
       .fromTo(
         ".iris-badge",
         { y: -30, opacity: 0, scale: 0.9 },
         { y: 0, opacity: 1, scale: 1, duration: 0.8 },
-        "-=0.6"
+        "-=0.6",
       )
       .fromTo(
         titleRef.current,
         { y: 60, opacity: 0, skewX: 8 },
         { y: 0, opacity: 1, skewX: 0, duration: 1 },
-        "-=0.4"
+        "-=0.4",
       )
       .fromTo(
         ".sub-status",
         { opacity: 0, letterSpacing: "0px" },
         { opacity: 1, letterSpacing: "0.25em", duration: 0.8 },
-        "-=0.6"
+        "-=0.6",
       )
       .fromTo(
         diagRef.current,
         { opacity: 0, y: 30, scale: 0.95 },
         { opacity: 1, y: 0, scale: 1, duration: 0.8 },
-        "-=0.4"
+        "-=0.4",
       )
       .fromTo(
         ".iris-btn",
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.6, stagger: 0.1 },
-        "-=0.4"
+        "-=0.4",
       )
       .fromTo(
         ".corner-deco",
         { opacity: 0 },
         { opacity: 1, duration: 0.6, stagger: 0.1 },
-        "-=0.6"
+        "-=0.6",
       );
   }, []);
 
@@ -222,9 +245,12 @@ export default function NotFound() {
     <div
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className="relative min-h-screen w-full bg-black overflow-hidden text-[#00ff41] selection:bg-[#00ff41] selection:text-black font-mono"
+      className="relative min-h-screen w-full bg-black overflow-hidden text-[#00ff41] selection:bg-[#00ff41] selection:text-black "
     >
-      <canvas ref={canvasRef} className="iris-canvas absolute inset-0 z-0 opacity-0" />
+      <canvas
+        ref={canvasRef}
+        className="iris-canvas absolute inset-0 z-0 opacity-0"
+      />
 
       <div className="absolute inset-0 z-10 pointer-events-none bg-[linear-linear(rgba(0,255,65,0.04)_1px,transparent_1px)] bg-size-[100%_3px]" />
       <div className="absolute inset-0 z-10 pointer-events-none bg-[radial-linear(circle_at_center,transparent_40%,rgba(0,0,0,0.8)_100%)]" />
@@ -267,7 +293,11 @@ export default function NotFound() {
               ease: "linear",
             }}
           >
-            {i % 2 === 0 ? <Scan size={32 + i * 8} /> : <RiRadarLine size={32 + i * 8} />}
+            {i % 2 === 0 ? (
+              <Scan size={32 + i * 8} />
+            ) : (
+              <RiRadarLine size={32 + i * 8} />
+            )}
           </motion.div>
         ))}
       </div>
@@ -359,12 +389,20 @@ export default function NotFound() {
             </div>
           </div>
 
-          <div className="p-4 space-y-2 text-xs md:text-sm font-mono">
+          <div className="p-4 space-y-2 text-xs md:text-sm ">
             {[
-              { label: "ERROR_CODE", value: "0x404_PAGE_NULL", icon: AlertTriangle },
+              {
+                label: "ERROR_CODE",
+                value: "0x404_PAGE_NULL",
+                icon: AlertTriangle,
+              },
               { label: "AI_CORE", value: "IRIS_OFFLINE", icon: Activity },
               { label: "REALITY_ANCHOR", value: "UNSTABLE", icon: Zap },
-              { label: "TIMESTAMP", value: new Date().toISOString(), icon: RiSignalTowerLine },
+              {
+                label: "TIMESTAMP",
+                value: new Date().toISOString(),
+                icon: RiSignalTowerLine,
+              },
             ].map((row, idx) => (
               <div
                 key={idx}
@@ -374,7 +412,9 @@ export default function NotFound() {
                   <row.icon className="w-3.5 h-3.5" />
                   {row.label}
                 </span>
-                <span className="text-[#00ff41]/90 text-right truncate max-w-[50%]">{row.value}</span>
+                <span className="text-[#00ff41]/90 text-right truncate max-w-[50%]">
+                  {row.value}
+                </span>
               </div>
             ))}
           </div>
@@ -446,10 +486,14 @@ export default function NotFound() {
         {[...Array(10)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute top-0 text-[#00ff41] text-xs font-mono whitespace-nowrap"
+            className="absolute top-0 text-[#00ff41] text-xs  whitespace-nowrap"
             style={{ left: `${i * 10}%` }}
             animate={{ y: ["-10%", "110%"] }}
-            transition={{ duration: 8 + i * 2, repeat: Infinity, ease: "linear" }}
+            transition={{
+              duration: 8 + i * 2,
+              repeat: Infinity,
+              ease: "linear",
+            }}
           >
             {[...Array(20)].map(() => Math.round(Math.random())).join(" ")}
           </motion.div>

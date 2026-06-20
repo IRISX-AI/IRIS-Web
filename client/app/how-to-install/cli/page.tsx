@@ -20,7 +20,7 @@ export default function CliInstallGuide() {
         >
           <Link
             href="/how-to-install"
-            className="inline-flex items-center gap-2 text-zinc-500 hover:text-[#39FF14] font-mono text-sm transition-colors group"
+            className="inline-flex items-center gap-2 text-zinc-500 hover:text-[#39FF14]  text-sm transition-colors group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to Desktop Installation
@@ -58,7 +58,7 @@ export default function CliInstallGuide() {
               <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
               <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
               <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
-              <span className="text-zinc-500 font-mono text-xs ml-2">
+              <span className="text-zinc-500  text-xs ml-2">
                 iris-mini-setup.sh
               </span>
             </div>

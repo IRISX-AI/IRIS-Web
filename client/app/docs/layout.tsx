@@ -78,7 +78,7 @@ export default function DocsLayout({ children }: { children: ReactNode }) {
           <div className="space-y-8">
             {sidebarNavItems.map((group, idx) => (
               <div key={idx} className="space-y-3">
-                <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 font-mono">
+                <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 ">
                   {group.title}
                 </h4>
                 <nav className="space-y-1">

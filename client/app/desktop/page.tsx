@@ -135,7 +135,7 @@ function RedirectLogic() {
                   <h2 className="text-2xl font-bold mb-2">
                     Establishing Link...
                   </h2>
-                  <p className="text-gray-400 text-sm font-mono tracking-widest uppercase flex items-center justify-center gap-2">
+                  <p className="text-gray-400 text-sm  tracking-widest uppercase flex items-center justify-center gap-2">
                     <Loader2 className="w-3 h-3 animate-spin" /> Packaging Auth
                     Tokens
                   </p>
@@ -152,7 +152,7 @@ function RedirectLogic() {
                   <h2 className="text-2xl font-bold mb-2">
                     Launching IRIS Engine
                   </h2>
-                  <p className="text-[#39FF14] text-sm font-mono tracking-widest uppercase animate-pulse">
+                  <p className="text-[#39FF14] text-sm  tracking-widest uppercase animate-pulse">
                     Please confirm the browser prompt
                   </p>
                 </motion.div>
@@ -208,7 +208,7 @@ export default function DesktopRedirectPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen bg-[#050505] flex items-center justify-center text-[#39FF14] font-mono tracking-widest text-sm">
+        <div className="min-h-screen bg-[#050505] flex items-center justify-center text-[#39FF14]  tracking-widest text-sm">
           PREPARING NEURAL UPLINK...
         </div>
       }

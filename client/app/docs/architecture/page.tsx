@@ -127,14 +127,14 @@ export default function DocsArchitecturePage() {
       className="space-y-12"
     >
       <motion.div variants={itemVariants} className="space-y-4">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs font-mono tracking-widest uppercase">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs  tracking-widest uppercase">
           <Cpu className="w-3.5 h-3.5" />
           Systems Engineering
         </div>
         <h1 className="text-4xl md:text-6xl font-black tracking-tight uppercase">
           SYSTEM <span className="text-[#39FF14]">ARCHITECTURE.</span>
         </h1>
-        <p className="text-zinc-400 text-lg leading-relaxed max-w-3xl font-mono">
+        <p className="text-zinc-400 text-lg leading-relaxed max-w-3xl ">
           IRIS maps natural audio input directly into OS-level instructions.
           Explore the neural execution cycle, process isolation boundary, and
           complete system stack.
@@ -143,7 +143,7 @@ export default function DocsArchitecturePage() {
 
       <motion.div
         variants={itemVariants}
-        className="flex border-b border-white/10 gap-2 font-mono text-xs overflow-x-auto pb-px"
+        className="flex border-b border-white/10 gap-2  text-xs overflow-x-auto pb-px"
       >
         {[
           { id: "pipeline", label: "Execution Pipeline", icon: Network },
@@ -184,7 +184,7 @@ export default function DocsArchitecturePage() {
                 <Zap className="w-5 h-5 text-[#39FF14]" />
                 Real-Time Voice-To-System Pipeline
               </h3>
-              <p className="text-zinc-400 text-sm leading-relaxed max-w-3xl font-mono">
+              <p className="text-zinc-400 text-sm leading-relaxed max-w-3xl ">
                 IRIS establishes a persistent full-duplex WebRTC connection with
                 Gemini Live. Audio streams continuously; when intent is matched,
                 the state-machine locks and executes actions, feeding the output
@@ -228,21 +228,21 @@ export default function DocsArchitecturePage() {
                     key={idx}
                     className="flex flex-col md:flex-row items-start md:items-center gap-4 bg-black/60 border border-white/5 p-4 rounded-xl hover:border-white/10 transition-colors"
                   >
-                    <div className="text-xs font-mono font-bold px-2 py-1 rounded bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14]">
+                    <div className="text-xs  font-bold px-2 py-1 rounded bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14]">
                       {item.step}
                     </div>
                     <div className="flex-1">
-                      <div className="text-white font-bold text-sm font-mono">
+                      <div className="text-white font-bold text-sm ">
                         {item.name}
                       </div>
-                      <div className="text-zinc-500 text-xs font-mono mt-0.5">
+                      <div className="text-zinc-500 text-xs  mt-0.5">
                         {item.source}
                       </div>
                     </div>
                     <div className="hidden md:block text-zinc-500">
                       <ArrowRight className="w-4 h-4" />
                     </div>
-                    <div className="text-zinc-400 text-xs font-mono md:w-1/3">
+                    <div className="text-zinc-400 text-xs  md:w-1/3">
                       {item.desc}
                     </div>
                   </div>
@@ -263,12 +263,12 @@ export default function DocsArchitecturePage() {
                   Frontend Render Process
                 </h3>
               </div>
-              <p className="text-zinc-400 text-xs font-mono leading-relaxed">
+              <p className="text-zinc-400 text-xs  leading-relaxed">
                 The frontend operates as a standard Chromium view. It is
                 completely isolated and lacks direct access to the Node.js
                 runtime or direct filesystem endpoints.
               </p>
-              <ul className="space-y-2 text-zinc-500 font-mono text-xs pl-2 border-l border-[#39FF14]/30">
+              <ul className="space-y-2 text-zinc-500  text-xs pl-2 border-l border-[#39FF14]/30">
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-3.5 h-3.5 text-[#39FF14]" />
                   React 19 UI & Zustand Stores
@@ -291,17 +291,17 @@ export default function DocsArchitecturePage() {
                 </div>
                 <h3 className="text-lg font-bold text-white flex items-center gap-2">
                   Backend Main Process
-                  <span className="text-[10px] font-mono font-bold px-1.5 py-0.5 rounded bg-orange-500/10 border border-orange-500/20 text-orange-400 uppercase">
+                  <span className="text-[10px]  font-bold px-1.5 py-0.5 rounded bg-orange-500/10 border border-orange-500/20 text-orange-400 uppercase">
                     Protected
                   </span>
                 </h3>
               </div>
-              <p className="text-zinc-400 text-xs font-mono leading-relaxed">
+              <p className="text-zinc-400 text-xs  leading-relaxed">
                 The main process executes system operations. It compiles
                 directly into binary V8 bytecode, meaning reverse engineering
                 requires substantial resources.
               </p>
-              <ul className="space-y-2 text-zinc-500 font-mono text-xs pl-2 border-l border-[#39FF14]/30">
+              <ul className="space-y-2 text-zinc-500  text-xs pl-2 border-l border-[#39FF14]/30">
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-3.5 h-3.5 text-[#39FF14]" />
                   LangGraph Voice Orchestration
@@ -326,14 +326,14 @@ export default function DocsArchitecturePage() {
                 <Code className="w-5 h-5 text-[#39FF14]" />
                 Secure Context-Isolated IPC Tunnel
               </h3>
-              <p className="text-zinc-400 text-sm leading-relaxed max-w-3xl font-mono">
+              <p className="text-zinc-400 text-sm leading-relaxed max-w-3xl ">
                 Frontend render frames trigger tools through a strict,
                 whitelisted Inter-Process Communication (IPC) bridge. No direct
                 Node calls are made in client modules.
               </p>
             </div>
 
-            <div className="bg-black/80 rounded-xl border border-white/10 overflow-hidden font-mono text-xs">
+            <div className="bg-black/80 rounded-xl border border-white/10 overflow-hidden  text-xs">
               <div className="bg-white/5 px-4 py-2 border-b border-white/5 text-zinc-500 text-[10px] uppercase font-bold tracking-widest flex items-center justify-between">
                 <span>IPC Bridge Signature</span>
                 <span className="text-[#39FF14]">ipc-bridge.ts</span>
@@ -392,10 +392,10 @@ ipcMain.handle('execute-tool', async (event, { tool, args }) => {
               key={idx}
               className="bg-[#050505] border border-white/10 rounded-2xl p-6 space-y-4 hover:border-white/15 transition-all"
             >
-              <h4 className="text-sm font-bold text-[#39FF14] uppercase tracking-wider font-mono">
+              <h4 className="text-sm font-bold text-[#39FF14] uppercase tracking-wider ">
                 {category.title}
               </h4>
-              <div className="space-y-3 font-mono text-xs">
+              <div className="space-y-3  text-xs">
                 {category.items.map((item, iIdx) => (
                   <div key={iIdx} className="space-y-0.5">
                     <span className="text-white font-bold block">

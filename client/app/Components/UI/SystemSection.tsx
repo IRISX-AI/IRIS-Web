@@ -67,7 +67,7 @@ const BentoCard = ({
         <h3 className="text-xl font-bold text-neutral-700 dark:text-white tracking-tight">
           {name}
         </h3>
-        <p className="max-w-lg text-neutral-400 font-mono text-sm leading-relaxed">
+        <p className="max-w-lg text-neutral-400  text-sm leading-relaxed">
           {description}
         </p>
       </div>
@@ -177,7 +177,7 @@ export default function SystemsSection() {
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-4 px-4 relative z-10">
           <div className="inline-flex items-center gap-3 px-4 py-1.5 mb-6 border border-[#39FF14]/20 bg-[#39FF14]/5 shadow-[0_0_15px_rgba(16,185,129,0.05)] rounded-sm">
             <span className="w-1.5 h-1.5 bg-[#39FF14] animate-pulse rounded-full"></span>
-            <span className="text-[#39FF14] font-mono text-[10px] md:text-xs tracking-[0.4em] uppercase font-bold">
+            <span className="text-[#39FF14]  text-[10px] md:text-xs tracking-[0.4em] uppercase font-bold">
               Core Capabilities
             </span>
           </div>

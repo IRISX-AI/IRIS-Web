@@ -85,7 +85,7 @@ const LoadingCore = () => {
         <div className="flex gap-2 items-center px-4 py-1.5 bg-[#39FF14]/10 border border-[#39FF14]/20 rounded-full backdrop-blur-md">
           <span className="w-2 h-2 bg-[#39FF14] animate-ping rounded-full absolute" />
           <span className="w-2 h-2 bg-[#39FF14] rounded-full relative" />
-          <p className="text-[#39FF14] font-mono text-[11px] tracking-[0.4em] uppercase font-bold">
+          <p className="text-[#39FF14]  text-[11px] tracking-[0.4em] uppercase font-bold">
             Loading_System_Core...
           </p>
         </div>

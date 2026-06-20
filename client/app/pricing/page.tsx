@@ -27,7 +27,7 @@ export default function PricingPage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative z-10"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#39FF14]/30 bg-[#39FF14]/5 text-[#39FF14] text-xs font-mono mb-8 backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#39FF14]/30 bg-[#39FF14]/5 text-[#39FF14] text-xs  mb-8 backdrop-blur-md">
             <Activity className="w-3 h-3" />
             <span className="uppercase tracking-widest">
               Pricing & Licensing
@@ -48,7 +48,7 @@ export default function PricingPage() {
           </p>
 
           <Link href="/refund-policy" className="inline-block">
-            <button className="cursor-pointer group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-orange-500/20 bg-orange-500/5 text-xs font-mono text-orange-400/80 hover:text-orange-400 hover:bg-orange-500/10 hover:border-orange-500/40 transition-all duration-300 shadow-[0_0_15px_rgba(249,115,22,0.05)] hover:shadow-[0_0_25px_rgba(249,115,22,0.15)]">
+            <button className="cursor-pointer group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-orange-500/20 bg-orange-500/5 text-xs  text-orange-400/80 hover:text-orange-400 hover:bg-orange-500/10 hover:border-orange-500/40 transition-all duration-300 shadow-[0_0_15px_rgba(249,115,22,0.05)] hover:shadow-[0_0_25px_rgba(249,115,22,0.15)]">
               <ShieldAlert className="w-4 h-4 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
               <span>Strict No-Refund Policy (Standard GitHub Terms)</span>
             </button>
@@ -78,7 +78,7 @@ export default function PricingPage() {
               </p>
             </div>
 
-            <div className="mb-8 p-4 rounded-xl bg-white/5 border border-white/5 font-mono text-xs">
+            <div className="mb-8 p-4 rounded-xl bg-white/5 border border-white/5  text-xs">
               <div className="text-gray-500 mb-2 uppercase tracking-widest font-bold">
                 Base Capabilities
               </div>
@@ -136,7 +136,7 @@ export default function PricingPage() {
               </p>
             </div>
 
-            <div className="mb-8 p-4 rounded-xl bg-[#39FF14]/5 border border-[#39FF14]/20 font-mono text-xs relative z-10">
+            <div className="mb-8 p-4 rounded-xl bg-[#39FF14]/5 border border-[#39FF14]/20  text-xs relative z-10">
               <div className="text-[#39FF14] mb-2 uppercase tracking-widest font-bold">
                 Deployment Protocol
               </div>
@@ -183,7 +183,7 @@ export default function PricingPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="border-b border-white/10 text-xs font-mono uppercase tracking-widest text-gray-500">
+              <tr className="border-b border-white/10 text-xs  uppercase tracking-widest text-gray-500">
                 <th className="py-4 px-6 font-bold">Capability</th>
                 <th className="py-4 px-6 font-bold text-center">
                   Base Engine (Free)
