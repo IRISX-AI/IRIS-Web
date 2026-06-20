@@ -52,10 +52,9 @@ export default function IrisHero({
         <div className="relative z-20 flex flex-col items-center justify-center text-center px-6 w-full max-w-5xl gap-0">
           <div className="relative w-full flex justify-center flex-col items-center mb-2">
             <h1
-              className="text-[28vw] sm:text-[20vw] md:text-[13vw] font-black tracking-tighter leading-none select-none text-white"
+              className="text-[28vw] sm:text-[20vw] md:text-[13vw] font-bold tracking-tight bg-[url('/img/bright-neon-bg.png')] bg-cover bg-center bg-clip-text text-transparent mb-4 select-none"
               style={{
-                textShadow:
-                  "0 0 40px rgba(16,185,129,0.85), 0 0 80px rgba(16,185,129,0.4), 0 2px 6px rgba(0,0,0,1)",
+                filter: "drop-shadow(0px 0px 15px rgba(57, 255, 20, 0.8))",
               }}
             >
               IRIS AI
