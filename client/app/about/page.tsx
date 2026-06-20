@@ -182,9 +182,18 @@ const IRISAbout = () => {
               <span>THE STORY BEHIND THE SOFTWARE</span>
             </div>
 
-            <h1 className="text-7xl md:text-[9rem] font-black tracking-tighter mb-6 leading-[0.9] text-white drop-shadow-2xl">
+            <h1
+              className="text-7xl md:text-[10rem] lg:text-[12rem] font-black tracking-tight mb-2 leading-none text-white"
+              style={{ textShadow: "0 10px 40px rgba(0,0,0,0.9)" }}
+            >
               MEET <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#10b981] to-[#044a33]">
+              <span
+                style={{
+                  filter:
+                    "drop-shadow(0px 0px 15px rgba(57, 255, 20, 1)) drop-shadow(0px 0px 50px rgba(57, 255, 20, 0.8))",
+                }}
+                className="text-transparent bg-clip-text bg-linear-to-b from-[#032000] to-[#030a04]"
+              >
                 IRIS AI.
               </span>
             </h1>
