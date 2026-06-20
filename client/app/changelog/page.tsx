@@ -473,6 +473,7 @@ export default function ChangelogPage() {
           trigger: cardSelector,
           start: "top 60%",
           end: "bottom 40%",
+          pin: "",
           onEnter: () => {
             setActiveIndex(idx);
             gsap.to(cardSelector, {
