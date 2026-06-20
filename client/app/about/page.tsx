@@ -4,12 +4,10 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Draggable } from "gsap/all";
 import {
   Mic,
   MousePointer2,
   Smartphone,
-  Cpu,
   Zap,
   Workflow,
   Brain,
@@ -48,122 +46,90 @@ import { TbBrandSocketIo } from "react-icons/tb";
 import { GridScan } from "../utils/GridScan";
 
 if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger, Draggable);
+  gsap.registerPlugin(ScrollTrigger);
 }
 
-// ── 1. The Elite Story Content ──
+// ── 1. The Ultra-Precise Story Content (Zero Fluff) ──
 const storyData: StoryContent[] = [
   {
     num: "01",
-    title: "The Chatbot Flaw",
-    text: "Traditional AI waits in a browser tab. You type, wait, and copy-paste. We realized the world doesn't need another chatbot. It needs an executor.",
+    title: "The Execution Engine",
+    text: "Chatbots output text. IRIS outputs action. We built a native engine that translates human intent directly into local system commands.",
     icon: <User className="w-24 h-24 text-gray-500" />,
-    visualTitle: "PASSIVE AI",
-    visualSub: "The Browser Trap",
+    visualTitle: "CORE FOCUS",
+    visualSub: "System Execution",
   },
   {
     num: "02",
-    title: "Zero-Latency Wake Word",
-    text: "Powered by a 100% offline acoustic engine, IRIS listens passively and triggers instantly. No clicking microphones. Just speak from across the room.",
+    title: "Offline Wake Engine",
+    text: "IRIS runs a local acoustic model. It listens passively without latency, requiring zero physical input to initiate complex workflows.",
     icon: <Mic className="w-24 h-24 text-blue-400" />,
-    visualTitle: "VOICE FIRST",
-    visualSub: "Instant Handoff",
+    visualTitle: "VOICE I/O",
+    visualSub: "Zero Latency",
   },
   {
     num: "03",
-    title: "Deep System Execution",
-    text: "IRIS doesn't just give you a summary. It writes files, reads directories, executes shell scripts, and manages your local drives without you lifting a finger.",
+    title: "Native File Control",
+    text: "IRIS bypasses the browser. It writes code directly to disk, manages local directories, and executes terminal scripts natively.",
     icon: <Terminal className="w-24 h-24 text-[#10b981]" />,
-    visualTitle: "EXECUTION",
-    visualSub: "Native Control",
+    visualTitle: "SYSTEM",
+    visualSub: "Disk Access",
   },
   {
     num: "04",
-    title: "Multi-Model Core",
-    text: "Built for speed and reasoning. We route instantaneous tasks through fast LPUs and offload massive context handling to the Gemini Live streaming architecture.",
+    title: "Dual-Engine Logic",
+    text: "Tasks are routed dynamically. High-speed logic hits LPU hardware, while massive context operations route through Gemini streaming APIs.",
     icon: <Brain className="w-24 h-24 text-purple-500" />,
-    visualTitle: "THE BRAIN",
+    visualTitle: "COMPUTE",
     visualSub: "Dynamic Routing",
   },
   {
     num: "05",
-    title: "Local Knowledge & RAG",
-    text: "IRIS embeds your codebase and syncs with your Notion databases locally, allowing for instant semantic vector search and perfect context recall.",
+    title: "Vector Retrieval",
+    text: "IRIS embeds your codebase into a local vector database. It searches your files and Notion workspaces instantly via semantic RAG.",
     icon: <Database className="w-24 h-24 text-orange-500" />,
-    visualTitle: "LOCAL AI",
-    visualSub: "Vector Memory",
+    visualTitle: "MEMORY",
+    visualSub: "Local RAG",
   },
   {
     num: "06",
-    title: "Live Screen Optics",
-    text: "IRIS physically sees your monitor. It extracts text via OCR, targets UI coordinates, and injects phantom keystrokes system-wide.",
+    title: "Screen Optics",
+    text: "IRIS analyzes your active display. It reads UI elements, extracts visual text, and executes precise cursor and keyboard inputs.",
     icon: <ScanFace className="w-24 h-24 text-cyan-400" />,
     visualTitle: "VISION",
-    visualSub: "Screen Peeling",
+    visualSub: "UI Extraction",
   },
   {
     num: "07",
-    title: "Native Desktop OS",
-    text: "Escaping the browser sandbox. Built on Electron, IRIS operates natively on your machine with raw, unhindered access to system APIs.",
-    icon: <HardDrive className="w-24 h-24 text-pink-500" />,
-    visualTitle: "DESKTOP OS",
-    visualSub: "Electron Core",
+    title: "Cross-Device Link",
+    text: "IRIS bridges your PC and Android. It intercepts mobile notifications, transfers files, and launches phone applications remotely.",
+    icon: <Smartphone className="w-24 h-24 text-green-400" />,
+    visualTitle: "MOBILE",
+    visualSub: "Android Bridge",
   },
   {
     num: "08",
-    title: "Mobile Telekinesis",
-    text: "Your desktop and phone, unified. IRIS reads Android notifications, pushes files, and launches mobile apps remotely directly from your PC.",
-    icon: <Smartphone className="w-24 h-24 text-green-400" />,
-    visualTitle: "MOBILE BRIDGE",
-    visualSub: "Deep Link",
+    title: "Macro Automation",
+    text: "IRIS strings single actions into automated macros. Tell it to research a topic, build a UI, and deploy it to localhost in one command.",
+    icon: <Workflow className="w-24 h-24 text-[#10b981]" />,
+    visualTitle: "MACROS",
+    visualSub: "Multi-Step Sequences",
   },
   {
     num: "09",
-    title: "WebSocket Streaming",
-    text: "By stripping out HTTP overhead and streaming binary audio directly over persistent WebSockets, response latency drops below human perception.",
-    icon: <Zap className="w-24 h-24 text-yellow-400" />,
-    visualTitle: "ZERO LATENCY",
-    visualSub: "Binary Streams",
+    title: "Real-Time UI",
+    text: "Built on React and GSAP, the visual interface acts as a live telemetry dashboard, providing instant feedback on background operations.",
+    icon: <Layers className="w-24 h-24 text-indigo-400" />,
+    visualTitle: "DASHBOARD",
+    visualSub: "Live Telemetry",
   },
   {
     num: "10",
-    title: "Autonomous Workflows",
-    text: "Hack the DOM, scrape live web data, and dispatch WhatsApp messages autonomously. IRIS chains system tools together to execute complex macros.",
-    icon: <Workflow className="w-24 h-24 text-[#10b981]" />,
-    visualTitle: "AUTOMATION",
-    visualSub: "Tool Chaining",
-  },
-  {
-    num: "11",
-    title: "Cinematic Interface",
-    text: "While voice is primary, visual feedback is absolute. Built with React, Tailwind, and GSAP, the UI breathes and reacts to live system telemetry perfectly.",
-    icon: <Layers className="w-24 h-24 text-indigo-400" />,
-    visualTitle: "UI LAYER",
-    visualSub: "React + GSAP",
-  },
-  {
-    num: "12",
-    title: "Engineered for Scale",
-    text: "Engineered by Harsh Pandey. Built from the ground up to push the absolute limits of frontend performance, AI infrastructure, and OS-level execution.",
-    icon: <Code2 className="w-24 h-24 text-white" />,
-    visualTitle: "ARCHITECT",
-    visualSub: "Harsh Pandey",
-  },
-  {
-    num: "13",
-    title: "Secure OS Vault",
-    text: "Protected by multi-face recognition and local encryption, IRIS strictly locks down your secure data before executing sensitive commands.",
+    title: "Biometric Lockdown",
+    text: "IRIS secures your data. Critical file access and terminal commands are locked behind local face recognition and PIN authentication.",
     icon: <Shield className="w-24 h-24 text-red-500" />,
-    visualTitle: "COMPANION",
-    visualSub: "Digital Security",
-  },
-  {
-    num: "14",
-    title: "Total Control",
-    text: "The era of typing is ending. The era of pure execution has begun. Prepare to upgrade your operating system to true intelligence.",
-    icon: <Globe className="w-24 h-24 text-[#10b981]" />,
-    visualTitle: "THE ERA",
-    visualSub: "Future of OS",
+    visualTitle: "SECURITY",
+    visualSub: "Vault Encryption",
   },
 ];
 
@@ -231,19 +197,6 @@ const actualTechLogos = [
 
 const IRISAbout = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const heroRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      Draggable.create(".draggable-code", {
-        bounds: heroRef.current,
-        inertia: true,
-        edgeResistance: 0.65,
-        type: "x,y",
-      });
-    }, containerRef);
-    return () => ctx.revert();
-  }, []);
 
   return (
     <div
@@ -252,10 +205,7 @@ const IRISAbout = () => {
     >
       <Header />
 
-      <section
-        ref={heroRef}
-        className="relative h-screen flex flex-col justify-center items-center overflow-hidden border-b border-white/10 perspective-1000 bg-black"
-      >
+      <section className="relative h-screen flex flex-col justify-center items-center overflow-hidden border-b border-white/10 perspective-1000 bg-black">
         <div className="absolute inset-0 z-0">
           <GridScan
             sensitivity={0.55}
@@ -277,69 +227,28 @@ const IRISAbout = () => {
           <motion.div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#10b981]/30 bg-[#10b981]/10 text-[#10b981] text-xs font-mono mb-8 backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.2)]">
               <Sparkles className="w-3 h-3" />
-              <span>PROJECT JARVIS • THE AUTONOMOUS AGENT</span>
+              <span>IRIS KERNEL • DESKTOP EDITION</span>
             </div>
-            <h1 className="text-7xl md:text-[10rem] font-bold tracking-tighter mb-6 leading-[0.9] text-white drop-shadow-2xl">
-              NOT A <br />
+
+            {/* ── Updated, Hard-Hitting Hero Text ── */}
+            <h1 className="text-7xl md:text-[9rem] font-black tracking-tighter mb-6 leading-[0.9] text-white drop-shadow-2xl">
+              SYSTEM <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#10b981] to-[#044a33]">
-                CHATBOT.
+                OVERRIDE.
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              IRIS is an{" "}
-              <span className="text-white font-bold border-b border-[#10b981]">
-                Autonomous Executor
-              </span>{" "}
-              that controls your desktop, mobile, and workflow entirely
-              hands-free.
+              IRIS connects natural language directly to your operating system.
+              Navigate files, automate terminals, and execute desktop workflows
+              completely hands-free.
             </p>
           </motion.div>
-        </div>
-
-        {/* ── The Authentic Code Block Update ── */}
-        <div className="draggable-code absolute z-20 top-[20%] right-[10%] cursor-grab active:cursor-grabbing hidden md:block">
-          <div className="w-80 md:w-96 bg-[#050505]/90 backdrop-blur-xl border border-white/10 rounded-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden transform rotate-3 hover:rotate-0 transition-transform duration-300 hover:border-[#10b981]/50">
-            <div className="h-8 bg-white/5 border-b border-white/5 flex items-center justify-between px-3 cursor-grab active:cursor-grabbing">
-              <div className="flex gap-1.5">
-                <div className="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
-                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div>
-                <div className="w-2.5 h-2.5 rounded-full bg-green-500/50"></div>
-              </div>
-              <div className="flex items-center gap-1 text-[10px] font-mono text-gray-500">
-                <Cpu className="w-3 h-3" /> iris-core.ts
-              </div>
-            </div>
-            <div className="p-4 font-mono text-xs text-gray-400 leading-relaxed pointer-events-none select-none">
-              <p>
-                <span className="text-purple-400">import</span>{" "}
-                {"{ GoogleGenAI }"}{" "}
-                <span className="text-purple-400">from</span>{" "}
-                <span className="text-green-400">'@google/genai'</span>;
-              </p>
-              <br />
-              <p>
-                <span className="text-blue-400">const</span> session ={" "}
-                <span className="text-purple-400">await</span> ai.live.connect(
-                {"{"}
-              </p>
-              <p className="pl-4 text-gray-300">
-                model:{" "}
-                <span className="text-green-400">'gemini-3.1-flash'</span>,
-              </p>
-              <p className="pl-4 text-gray-300">
-                tools: [systemToolDeclarations]
-              </p>
-              <p>{"});"}</p>
-              <br />
-              <p className="text-[#10b981] animate-pulse">{`> Acoustic Wake Word Online...`}</p>
-            </div>
-          </div>
         </div>
       </section>
 
       <section className="w-full px-6 md:px-0 py-12 relative overflow-hidden flex flex-col items-center z-20">
         <p className="text-[#10b981] text-sm tracking-widest uppercase mb-8 font-semibold drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]">
-          Built with a bleeding-edge modern stack
+          Core Technology Stack
         </p>
         <LogoLoop
           logos={actualTechLogos}
@@ -358,7 +267,7 @@ const IRISAbout = () => {
       <section className="py-40 bg-black text-center border-t border-[#10b981]/10 relative overflow-hidden">
         <div className="absolute inset-0 bg-[#10b981]/5 blur-3xl pointer-events-none"></div>
         <h2 className="text-5xl md:text-8xl font-bold mb-8 relative z-10 text-white tracking-tighter">
-          READY TO <span className="text-[#10b981]">AUTOMATE?</span>
+          INITIATE <span className="text-[#10b981]">SYSTEM.</span>
         </h2>
         <button className="relative z-10 px-12 py-5 bg-[#10b981] text-black font-bold text-xl rounded-full hover:scale-105 transition-transform shadow-[0_0_40px_rgba(16,185,129,0.4)]">
           Download IRIS Desktop
