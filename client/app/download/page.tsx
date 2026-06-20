@@ -124,7 +124,7 @@ export default function DownloadPage() {
               pillarRotation={25}
               interactive={false}
               mixBlendMode="lighten"
-              quality="high"
+              quality="medium"
             />
           </div>
 
