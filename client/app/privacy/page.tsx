@@ -183,7 +183,6 @@ export default function PrivacyPolicyPage() {
           </motion.div>
         </motion.div>
 
-        {/* Return Button */}
         <div className="mt-12 pt-8 border-t border-white/10 flex justify-between items-center text-xs text-zinc-500">
           <span>Last Updated: June 2026</span>
           <motion.a
