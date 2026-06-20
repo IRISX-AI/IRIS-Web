@@ -57,7 +57,7 @@ const storyData: StoryContent[] = [
     text: "Engineered entirely by Harsh Pandey, IRIS AI was built from the ground up to push the boundaries of what local software can do. Every line of code is optimized for raw speed and deep operating system integration.",
     icon: (
       <Image
-        src="/author/master.jpeg"
+        src="/author/master.jpg"
         alt="IRIS LOGO"
         width={10}
         height={10}
