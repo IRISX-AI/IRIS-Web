@@ -1,7 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2, Zap, Activity, Sparkles, Github } from "lucide-react";
+import {
+  CheckCircle2,
+  Zap,
+  Activity,
+  Sparkles,
+  Github,
+  Shield,
+  ShieldAlert,
+} from "lucide-react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 
@@ -19,28 +27,36 @@ export default function PricingPage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative z-10"
         >
-          {/* Changed badge to explicitly state Pricing */}
+          {/* Badge explicitly stating Pricing */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#10b981]/30 bg-[#10b981]/5 text-[#10b981] text-xs font-mono mb-8 backdrop-blur-md">
             <Activity className="w-3 h-3" />
             <span className="uppercase tracking-widest">
-              Pricing & Deployment
+              Pricing & Licensing
             </span>
           </div>
 
-          {/* Hard-hitting Pricing Heading */}
+          {/* Simple, instantly recognizable Heading */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6">
-            ENGINE <br />
+            SIMPLE <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#10b981] to-[#044a33]">
-              TIERS.
+              PRICING.
             </span>
           </h1>
 
-          {/* Crystal clear explanation of the payment model */}
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Choose your level of system access. No monthly subscriptions. Secure
-            a perpetual, lifetime license to the IRIS Pro engine via a one-time
-            GitHub Sponsorship.
+          {/* Value-driven subtext focused on lifetime and easy setup */}
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
+            One-time payment. Zero complicated setups or monthly subscriptions.
+            Secure a lifetime license to the IRIS Pro engine instantly via
+            GitHub Sponsors.
           </p>
+
+          {/* Transparent Policy Notice */}
+          <div className="flex items-center justify-center">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/5 bg-white/5 text-xs font-mono text-gray-400 cursor-default hover:bg-white/10 transition-colors">
+              <ShieldAlert className="w-4 h-4 text-orange-500/80" />
+              <span>Strict No-Refund Policy (Standard GitHub Terms)</span>
+            </div>
+          </div>
         </motion.div>
       </section>
 
