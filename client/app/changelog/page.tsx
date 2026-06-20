@@ -408,7 +408,11 @@ const changelogData: ChangelogItem[] = [
 
 export default function ChangelogPage() {
   const [activeIndex, setActiveIndex] = useState(0);
-  co  useGSAP(
+  const containerRef = useRef<HTMLDivElement>(null);
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const lineProgressRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
     () => {
       const mm = gsap.matchMedia();
 
@@ -570,22 +574,25 @@ export default function ChangelogPage() {
       });
     },
     { scope: containerRef }
-  );             toggleActions: "play none none none",
-              },
-            },
-          );
-        });
-      });
-    },
-    { scope: containerRef },
   );
 
   const scrollToVersion = (versionStr: string, idx: number) => {
-    const idSafe = versionStr.replace(/\./g, "-");
-    const element = document.getElementById(`wrapper-${idSafe}`);
-    if (element) {
-      const top = element.getBoundingClientRect().top + window.scrollY - 150;
-      window.scrollTo({ top, behavior: "smooth" });
+    if (window.innerWidth >= 1024) {
+      const trigger = timelineRef.current;
+      if (trigger) {
+        const triggerTop = trigger.getBoundingClientRect().top + window.scrollY;
+        const scrollDistance = 3000;
+        const step = scrollDistance / (changelogData.length - 1);
+        const scrollOffset = triggerTop - 160 + idx * step;
+        window.scrollTo({ top: scrollOffset, behavior: "smooth" });
+      }
+    } else {
+      const idSafe = versionStr.replace(/\./g, "-");
+      const element = document.getElementById(`card-${idSafe}`);
+      if (element) {
+        const top = element.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
     }
   };
 
@@ -780,7 +787,7 @@ export default function ChangelogPage() {
             {/* Slide Window Container */}
             <div
               id="timeline-window"
-              className="relative flex-1 space-y-24 lg:space-y-0"
+              className="relative lg:absolute lg:top-0 lg:left-12 lg:right-0 w-full h-auto lg:h-[600px] overflow-visible lg:overflow-hidden rounded-3xl border-0 lg:border border-white/5 bg-transparent lg:bg-[#050505] space-y-8 lg:space-y-0"
             >
               {changelogData.map((item, idx) => {
                 const Icon = item.icon;
@@ -789,99 +796,93 @@ export default function ChangelogPage() {
                 return (
                   <div
                     key={item.version}
-                    id={`wrapper-${idSafe}`}
-                    className="relative w-full min-h-0 lg:min-h-screen flex flex-col justify-start last:min-h-0 last:pb-12 lg:last:pb-24"
+                    id={`card-${idSafe}`}
+                    className="relative lg:absolute lg:inset-0 bg-[#0a0a0a] border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between w-full h-auto lg:h-[600px] overflow-visible lg:overflow-y-auto transition-colors duration-300"
+                    style={{
+                      zIndex: idx + 10,
+                    }}
                   >
+                    {/* Projecting timeline dot */}
                     <div
-                      key={item.version}
-                      id={`card-${idSafe}`}
-                      className="bg-[#0a0a0a] border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between relative w-full h-auto lg:h-[600px] overflow-visible lg:overflow-y-auto transition-colors duration-300"
-                      style={{
-                        zIndex: idx + 10,
-                      }}
+                      id={`dot-${idSafe}`}
+                      className={`
+                        absolute -left-9 lg:-left-16 top-[30px] w-6 h-6 lg:w-8 lg:h-8 rounded-full border bg-black flex items-center justify-center z-20 transition-all duration-300
+                        ${
+                          activeIndex === idx
+                            ? "border-[#39FF14] text-black bg-[#39FF14] shadow-[0_0_15px_rgba(57,255,20,0.6)] scale-110"
+                            : activeIndex >= idx
+                              ? "border-[#39FF14]/50 text-[#39FF14]"
+                              : "border-zinc-800 text-zinc-500"
+                        }
+                      `}
                     >
-                      {/* Projecting timeline dot */}
-                      <div
-                        id={`dot-${idSafe}`}
+                      <Icon className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
+                    </div>
+
+                    {/* Card Header info */}
+                    <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/5 pb-4">
+                      <div className="flex items-center gap-3">
+                        <span
+                          className={`text-xl font-bold font-mono ${
+                            isMajor ? "text-[#39FF14]" : "text-white"
+                          }`}
+                        >
+                          {item.version}
+                        </span>
+                        <span className="text-zinc-500 text-xs font-mono font-semibold flex items-center gap-1.5">
+                          <Calendar className="w-3.5 h-3.5" />
+                          {item.date}
+                        </span>
+                      </div>
+                      <span
                         className={`
-                          absolute -left-9 lg:-left-16 top-[30px] w-6 h-6 lg:w-8 lg:h-8 rounded-full border bg-black flex items-center justify-center z-20 transition-all duration-300
+                          text-[9px] font-black uppercase font-mono px-2 py-0.5 rounded tracking-widest border
                           ${
-                            activeIndex === idx
-                              ? "border-[#39FF14] text-black bg-[#39FF14] shadow-[0_0_15px_rgba(57,255,20,0.6)] scale-110"
-                              : activeIndex >= idx
-                                ? "border-[#39FF14]/50 text-[#39FF14]"
-                                : "border-zinc-800 text-zinc-500"
+                            isMajor
+                              ? "bg-[#39FF14]/10 border-[#39FF14]/20 text-[#39FF14]"
+                              : "bg-white/5 border-white/10 text-zinc-400"
                           }
                         `}
                       >
-                        <Icon className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
-                      </div>
+                        {item.type} Release
+                      </span>
+                    </div>
 
-                      {/* Card Header info */}
-                      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/5 pb-4">
-                        <div className="flex items-center gap-3">
-                          <span
-                            className={`text-xl font-bold font-mono ${
-                              isMajor ? "text-[#39FF14]" : "text-white"
-                            }`}
-                          >
-                            {item.version}
-                          </span>
-                          <span className="text-zinc-500 text-xs font-mono font-semibold flex items-center gap-1.5">
-                            <Calendar className="w-3.5 h-3.5" />
-                            {item.date}
-                          </span>
-                        </div>
-                        <span
-                          className={`
-                            text-[9px] font-black uppercase font-mono px-2 py-0.5 rounded tracking-widest border
-                            ${
-                              isMajor
-                                ? "bg-[#39FF14]/10 border-[#39FF14]/20 text-[#39FF14]"
-                                : "bg-white/5 border-white/10 text-zinc-400"
-                            }
-                          `}
+                    {/* Title & Desc */}
+                    <div className="space-y-1.5 my-4">
+                      <h3 className="text-lg font-bold text-white font-mono leading-tight">
+                        {item.title}
+                      </h3>
+                      <p className="text-zinc-400 text-xs font-mono leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+
+                    {/* Categories grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 flex-1 overflow-y-auto scrollbar-thin">
+                      {item.categories.map((cat, catIdx) => (
+                        <div
+                          key={catIdx}
+                          className="category-block space-y-3"
                         >
-                          {item.type} Release
-                        </span>
-                      </div>
-
-                      {/* Title & Desc */}
-                      <div className="space-y-1.5 my-4">
-                        <h3 className="text-lg font-bold text-white font-mono leading-tight">
-                          {item.title}
-                        </h3>
-                        <p className="text-zinc-400 text-xs font-mono leading-relaxed">
-                          {item.desc}
-                        </p>
-                      </div>
-
-                      {/* Categories grid */}
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 flex-1 overflow-y-auto scrollbar-thin">
-                        {item.categories.map((cat, catIdx) => (
-                          <div
-                            key={catIdx}
-                            className="category-block space-y-3"
-                          >
-                            <h4 className="text-xs font-bold text-white flex items-center gap-2 border-b border-white/5 pb-1 font-mono uppercase tracking-wider">
-                              {cat.title}
-                            </h4>
-                            <ul className="space-y-2 pl-1 font-mono text-[11px] text-zinc-400">
-                              {cat.items.map((bullet, bIdx) => (
-                                <li
-                                  key={bIdx}
-                                  className="leading-relaxed flex items-start gap-2"
-                                >
-                                  <span className="text-[#39FF14] mt-1 shrink-0">
-                                    •
-                                  </span>
-                                  <span>{bullet}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
-                      </div>
+                          <h4 className="text-xs font-bold text-white flex items-center gap-2 border-b border-white/5 pb-1 font-mono uppercase tracking-wider">
+                            {cat.title}
+                          </h4>
+                          <ul className="space-y-2 pl-1 font-mono text-[11px] text-zinc-400">
+                            {cat.items.map((bullet, bIdx) => (
+                              <li
+                                key={bIdx}
+                                className="leading-relaxed flex items-start gap-2"
+                              >
+                                <span className="text-[#39FF14] mt-1 shrink-0">
+                                  •
+                                </span>
+                                <span>{bullet}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 );
