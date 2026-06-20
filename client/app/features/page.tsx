@@ -232,7 +232,7 @@ export default function FeaturesPage() {
               className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed"
             >
               A complete technical breakdown of the IRIS engine.{" "}
-              <span className="text-green-400 font-bold border-b border-[#10b981]">
+              <span className="text-[#10b918] font-bold border-b border-[#10b981]">
                 Direct file system access,
               </span>{" "}
               Android device bridging, automated workflows, and local vector
