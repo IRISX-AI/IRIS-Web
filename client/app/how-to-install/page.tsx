@@ -33,7 +33,8 @@ export default function InstallGuide() {
             How to Install <span className="text-[#39FF14]">IRIS</span>
           </h1>
           <p className="max-w-2xl mx-auto text-zinc-400 text-lg">
-            Step-by-step instructions to install the IRIS Desktop Application or the Command Line Interface (CLI).
+            Step-by-step instructions to install the IRIS Desktop Application or
+            the Command Line Interface (CLI).
           </p>
         </motion.div>
 
@@ -53,7 +54,9 @@ export default function InstallGuide() {
                 Prerequisite: API Keys
               </h3>
               <p className="text-zinc-400 text-sm">
-                Both versions of IRIS operate on a Bring Your Own Key (BYOK) model. You must have a Google Gemini API key to run the application.
+                Both versions of IRIS operate on a Bring Your Own Key (BYOK)
+                model. You must have a Google Gemini API key to run the
+                application.
               </p>
             </div>
           </div>
@@ -67,7 +70,6 @@ export default function InstallGuide() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          
           {/* ── DESKTOP INSTALLATION ── */}
           <motion.section
             initial={{ opacity: 0, x: -20 }}
@@ -93,7 +95,15 @@ export default function InstallGuide() {
                     Download the Installer
                   </h4>
                   <p className="text-zinc-400 text-sm mb-3">
-                    Navigate to the <Link href="/download" className="text-[#39FF14] hover:underline">Download page</Link> and get the latest native <code>.exe</code> file for Windows.
+                    Navigate to the{" "}
+                    <Link
+                      href="/download"
+                      className="text-[#39FF14] hover:underline"
+                    >
+                      Download page
+                    </Link>{" "}
+                    and get the latest native <code>.exe</code> file for
+                    Windows.
                   </p>
                 </div>
               </div>
@@ -110,9 +120,9 @@ export default function InstallGuide() {
                     Run & Bypass Defender
                   </h4>
                   <p className="text-zinc-400 text-sm">
-                    Run the installer. If the Windows SmartScreen popup appears, click{" "}
-                    <strong className="text-white">More Info</strong> and then{" "}
-                    <strong className="text-white">Run Anyway</strong>.
+                    Run the installer. If the Windows SmartScreen popup appears,
+                    click <strong className="text-white">More Info</strong> and
+                    then <strong className="text-white">Run Anyway</strong>.
                   </p>
                 </div>
               </div>
@@ -128,7 +138,8 @@ export default function InstallGuide() {
                     Configure Keys & Launch
                   </h4>
                   <p className="text-zinc-400 text-sm">
-                    Open the installed application, paste your Gemini API key into the settings menu, and begin using the software.
+                    Open the installed application, paste your Gemini API key
+                    into the settings menu, and begin using the software.
                   </p>
                 </div>
               </div>
@@ -256,7 +267,9 @@ export default function InstallGuide() {
                 </h2>
               </div>
               <p className="text-zinc-400 text-lg mb-6 leading-relaxed">
-                An upcoming Android companion app. It will enable remote device control, background task scheduling, and mobile notification syncing.
+                An upcoming Android companion app. It will enable remote device
+                control, background task scheduling, and mobile notification
+                syncing.
               </p>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#39FF14]/10 text-[#39FF14] border border-[#39FF14]/20 rounded-lg text-sm font-bold tracking-widest uppercase">
                 <span className="relative flex h-2 w-2">
