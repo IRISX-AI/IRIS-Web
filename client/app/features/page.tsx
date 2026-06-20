@@ -11,13 +11,11 @@ import {
   Database,
   Smartphone,
   Code2,
-  Shield,
   Globe,
   Fingerprint,
   MessageCircle,
   Search,
   LayoutTemplate,
-  Braces,
   ScanFace,
 } from "lucide-react";
 import Header from "../Components/Header";
