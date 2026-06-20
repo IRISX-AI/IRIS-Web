@@ -38,7 +38,6 @@ export default function PricingPage() {
 
       <section className="py-12 relative z-20 max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-8">
-          {/* ── FREE TIER CARD ── */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -88,7 +87,6 @@ export default function PricingPage() {
             </button>
           </motion.div>
 
-          {/* ── PRO TIER CARD ── */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -196,7 +194,6 @@ export default function PricingPage() {
                 pro="Yes"
               />
 
-              {/* Premium Features start here */}
               <TableRow title="Offline Passive Wake Word" free="No" pro="Yes" />
               <TableRow
                 title="Mobile Device Bridge (ADB Integration)"
