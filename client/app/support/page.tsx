@@ -267,7 +267,7 @@ export default function SupportPage() {
 
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 text-white drop-shadow-2xl">
             HOW CAN WE{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#39FF14] to-[#044a33]">
+            <span className="text-transparent bg-clip-text bg-linear-to-b from-[#39FF14] to-[#044a33]">
               HELP?
             </span>
           </h1>
@@ -314,9 +314,9 @@ export default function SupportPage() {
                 <Link
                   href={item.href}
                   id={`self-service-${item.id}`}
-                  className={`group relative flex flex-col gap-5 p-6 rounded-2xl border bg-gradient-to-br ${item.linear} ${item.border} hover:shadow-[0_0_40px_rgba(57,255,20,0.08)] transition-all duration-300 block`}
+                  className={`group relative flex flex-col gap-5 p-6 rounded-2xl border bg-linear-to-br ${item.linear} ${item.border} hover:shadow-[0_0_40px_rgba(57,255,20,0.08)] transition-all duration-300 block`}
                 >
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#39FF14]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-[#39FF14]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                   <div className="relative flex items-start justify-between">
                     <div className="w-12 h-12 rounded-xl bg-[#39FF14]/10 border border-[#39FF14]/20 flex items-center justify-center group-hover:bg-[#39FF14]/20 group-hover:border-[#39FF14]/40 transition-all duration-300">
@@ -405,7 +405,7 @@ export default function SupportPage() {
           </div>
           <h2 className="text-3xl md:text-4xl font-black tracking-tighter text-white mb-3">
             COMMON{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#39FF14] to-emerald-400">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#39FF14] to-emerald-400">
               ISSUES
             </span>
           </h2>
@@ -449,7 +449,7 @@ export default function SupportPage() {
             </div>
             <h2 className="text-3xl md:text-4xl font-black tracking-tighter text-white mb-3">
               REPORT A{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#39FF14] to-emerald-400">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-[#39FF14] to-emerald-400">
                 BUG
               </span>
             </h2>
@@ -476,8 +476,8 @@ export default function SupportPage() {
                 id="github-bug-report"
                 className="group relative flex flex-col justify-between p-8 rounded-2xl border border-[#39FF14]/20 bg-[#0a0a0a] hover:border-[#39FF14]/40 hover:shadow-[0_0_50px_rgba(57,255,20,0.08)] transition-all duration-300 h-full"
               >
-                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#39FF14]/40 to-transparent" />
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#39FF14]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-[#39FF14]/40 to-transparent" />
+                <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-[#39FF14]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div className="relative">
                   <div className="flex items-center gap-3 mb-6">
@@ -579,7 +579,7 @@ export default function SupportPage() {
             </div>
             <h2 className="text-3xl md:text-4xl font-black tracking-tighter text-white mb-3">
               JOIN THE{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#39FF14] to-emerald-400">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-[#39FF14] to-emerald-400">
                 HUB
               </span>
             </h2>
@@ -603,7 +603,7 @@ export default function SupportPage() {
                 id="whatsapp-community"
                 className="group relative flex flex-col gap-6 p-8 rounded-2xl border border-[#25D366]/20 bg-[#0a0a0a] hover:border-[#25D366]/40 hover:shadow-[0_0_50px_rgba(37,211,102,0.07)] transition-all duration-300"
               >
-                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#25D366]/30 to-transparent" />
+                <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-[#25D366]/30 to-transparent" />
 
                 <div className="flex items-start gap-4">
                   <div className="w-14 h-14 rounded-2xl bg-[#25D366]/10 border border-[#25D366]/20 flex items-center justify-center group-hover:bg-[#25D366]/20 group-hover:border-[#25D366]/40 transition-all duration-300 shrink-0">
