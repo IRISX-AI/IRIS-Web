@@ -246,7 +246,6 @@ export default function InstallGuide() {
           </motion.section>
         </div>
 
-        {/* ── MOBILE ECOSYSTEM PREVIEW ── */}
         <motion.section
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
