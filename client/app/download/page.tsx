@@ -19,6 +19,7 @@ import {
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Lightning from "../utils/Lightning";
+import LightRays from "../Components/utils/LightRays";
 
 export default function DownloadPage() {
   const [showWarning, setShowWarning] = useState(false);
@@ -111,7 +112,21 @@ export default function DownloadPage() {
               opacity: 0.8,
             }}
           >
-            
+            <LightRays
+              raysOrigin="top-center"
+              raysColor="#3dda08"
+              raysSpeed={1}
+              lightSpread={0.5}
+              rayLength={3}
+              followMouse={true}
+              mouseInfluence={0.5}
+              noiseAmount={0.15}
+              distortion={0}
+              className="custom-rays"
+              pulsating
+              fadeDistance={2}
+              saturation={1}
+            />
           </div>
 
           <motion.div className="relative z-10 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs font-mono tracking-widest mb-8">
