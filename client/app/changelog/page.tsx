@@ -469,8 +469,6 @@ export default function ChangelogPage() {
           });
         }
 
-
-
         ScrollTrigger.create({
           trigger: cardSelector,
           start: "top 60%",
@@ -747,7 +745,7 @@ export default function ChangelogPage() {
           {/* Right Column (Scrollable stack cards) */}
           <div className="lg:col-span-8 relative pl-12 lg:pl-20">
             {/* Vertical timeline track line */}
-            <div className="absolute left-6 lg:left-8 top-4 bottom-4 w-[2px] bg-zinc-800/40 rounded-full z-0 pointer-events-none">
+            <div className="absolute left-6 lg:left-8 top-4 bottom-4 w-0.5 bg-zinc-800/40 rounded-full z-0 pointer-events-none">
               <div
                 ref={lineProgressRef}
                 className="absolute top-0 left-0 w-full bg-linear-to-b from-[#39FF14] to-emerald-500 origin-top h-0 shadow-[0_0_15px_rgba(57,255,20,0.6)]"
