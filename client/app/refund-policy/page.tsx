@@ -66,7 +66,7 @@ export default function RefundPolicyPage() {
                 <ShieldAlert className="w-6 h-6 text-orange-500" />
               </div>
               <h2 className="text-2xl font-bold text-white tracking-tight">
-                In-Depth No-Refund Policy
+                IRIS No-Refund Policy
               </h2>
             </div>
 
