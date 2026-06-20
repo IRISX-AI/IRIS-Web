@@ -105,9 +105,9 @@ export default function DownloadPage() {
             className="absolute inset-0 w-full h-full pointer-events-none z-0"
             style={{
               maskImage:
-                "radial-gradient(circle at center, black 20%, transparent 70%)",
+                "radial-linear(circle at center, black 20%, transparent 70%)",
               WebkitMaskImage:
-                "radial-gradient(circle at center, black 20%, transparent 70%)",
+                "radial-linear(circle at center, black 20%, transparent 70%)",
               opacity: 0.8,
             }}
           >
@@ -130,7 +130,7 @@ export default function DownloadPage() {
 
           <motion.h1 className="relative z-10 text-6xl md:text-8xl font-black tracking-tight mb-6">
             NATIVE{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#39FF14] to-[#ccffcc] drop-shadow-[0_0_30px_rgba(57,255,20,0.4)]">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#39FF14] to-[#ccffcc] drop-shadow-[0_0_30px_rgba(57,255,20,0.4)]">
               ENGINE.
             </span>
           </motion.h1>
@@ -248,7 +248,7 @@ export default function DownloadPage() {
                 Agentic Android control featuring an edge-to-edge portrait
                 interface, powered by the experimental React Compiler.
               </p>
-              <span className="inline-flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-[#39FF14]/20 to-[#003300] text-[#39FF14] border border-[#39FF14]/30 rounded text-xs font-bold tracking-widest shadow-[0_0_15px_rgba(57,255,20,0.15)]">
+              <span className="inline-flex items-center gap-2 px-3 py-1 bg-linear-to-r from-[#39FF14]/20 to-[#003300] text-[#39FF14] border border-[#39FF14]/30 rounded text-xs font-bold tracking-widest shadow-[0_0_15px_rgba(57,255,20,0.15)]">
                 <Smartphone className="w-3 h-3" /> COMING SOON
               </span>
             </div>
