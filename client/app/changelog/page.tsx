@@ -659,7 +659,6 @@ export default function ChangelogPage() {
             />
           </div>
 
-          {/* Open Core Transition Statement */}
           <div className="bg-[#0a0a0a] border border-[#39FF14]/20 rounded-2xl p-6 md:p-8 mb-16 space-y-4 relative overflow-hidden group">
             <div className="absolute top-0 left-0 w-full h-1 bg-[#39FF14]/15 shadow-[0_0_15px_#39FF14] pointer-events-none" />
             <h3 className="text-lg font-bold text-white flex items-center gap-2 font-mono">
@@ -709,7 +708,6 @@ export default function ChangelogPage() {
             </div>
           </div>
 
-          {/* Timeline Cards mapping */}
           <div className="space-y-16">
             {changelogData.map((item, idx) => {
               const Icon = item.icon;
