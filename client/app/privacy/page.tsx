@@ -156,7 +156,6 @@ export default function PrivacyPolicyPage() {
             </div>
           </motion.div>
 
-          {/* Card 4: Local-First Principle */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
@@ -186,7 +185,6 @@ export default function PrivacyPolicyPage() {
             </div>
           </motion.div>
 
-          {/* Card 5: Zero Server Telemetry */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
@@ -212,7 +210,6 @@ export default function PrivacyPolicyPage() {
             </ul>
           </motion.div>
 
-          {/* Card 6: The BYOK Disclaimer */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-orange-500/20 rounded-2xl p-8 relative overflow-hidden group hover:border-orange-500/40 transition-all duration-300"
