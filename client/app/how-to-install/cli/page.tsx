@@ -4,7 +4,7 @@ import Footer from "@/app/Components/Footer";
 import Header from "@/app/Components/Header";
 import { Terminal } from "@/app/constants/Terminal";
 import { motion } from "framer-motion";
-import { Terminal as TerminalIcon, ArrowLeft, Cpu } from "lucide-react";
+import { Terminal as TerminalIcon, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 export default function CliInstallGuide() {
@@ -66,7 +66,7 @@ export default function CliInstallGuide() {
               </span>
             </div>
 
-            <div className="p-4 md:p-6 h-[500px] overflow-y-auto custom-scrollbar">
+            <div className="p-4 md:p-6 h-125 overflow-y-auto custom-scrollbar">
               <Terminal
                 commands={[
                   "npm install -g iris-mini",
