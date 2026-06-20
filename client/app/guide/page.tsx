@@ -19,8 +19,7 @@ const apiKeysData = [
     id: "gemini",
     name: "Google Gemini API",
     status: "Required",
-    description:
-      "Primary LLM provider required for core execution and natural language processing.",
+    description: "Primary LLM provider required for core execution and natural language processing.",
     steps: [
       "Navigate to Google AI Studio.",
       "Sign in with your Google Account.",
@@ -35,8 +34,7 @@ const apiKeysData = [
     id: "groq",
     name: "Groq API",
     status: "Required",
-    description:
-      "Required for high-speed LPU inference and split-second tool-calling logic.",
+    description: "Required for high-speed LPU inference and split-second tool-calling logic.",
     steps: [
       "Go to the Groq Cloud Console.",
       "Log in or create an account.",
@@ -51,8 +49,7 @@ const apiKeysData = [
     id: "tavily",
     name: "Tavily Search API",
     status: "Optional",
-    description:
-      "Required for autonomous web crawling and real-time search data extraction.",
+    description: "Required for autonomous web crawling and real-time search data extraction.",
     steps: [
       "Sign up at the Tavily Developer Portal.",
       "Navigate to your dashboard.",
@@ -66,8 +63,7 @@ const apiKeysData = [
     id: "huggingface",
     name: "Hugging Face Token",
     status: "Optional",
-    description:
-      "Required for accessing open-source visual models and local image generation.",
+    description: "Required for accessing open-source visual models and local image generation.",
     steps: [
       "Create a Hugging Face account.",
       "Go to Settings > Access Tokens.",
@@ -106,6 +102,7 @@ export default function ApiKeysGuide() {
       <Header />
 
       <main className="grow max-w-6xl mx-auto w-full px-6 pb-24">
+        
         {/* ── HERO SECTION ── */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -120,10 +117,7 @@ export default function ApiKeysGuide() {
             API <span className="text-[#39FF14]">Configuration.</span>
           </h1>
           <p className="text-lg text-zinc-400 leading-relaxed font-mono">
-            IRIS operates on a strictly local Bring Your Own Key (BYOK)
-            architecture. Configure the required API keys below to enable
-            external inference and data extraction. All keys are encrypted and
-            stored solely on your local disk.
+            IRIS operates on a strictly local Bring Your Own Key (BYOK) architecture. Configure the required API keys below to enable external inference and data extraction. All keys are encrypted and stored solely on your local disk.
           </p>
         </motion.div>
 
@@ -143,10 +137,7 @@ export default function ApiKeysGuide() {
               {/* Header: Title & Badge */}
               <div className="flex justify-between items-start mb-4">
                 <h2 className="text-2xl font-bold text-white flex items-center gap-3">
-                  <Key
-                    size={20}
-                    className="text-zinc-500 group-hover:text-[#39FF14] transition-colors"
-                  />
+                  <Key size={20} className="text-zinc-500 group-hover:text-[#39FF14] transition-colors" />
                   {key.name}
                 </h2>
                 <span
