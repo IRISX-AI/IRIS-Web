@@ -159,9 +159,9 @@ export default function DownloadPage() {
 
             <Link
               href="/download/cli"
-              className="text-zinc-500 hover:text-[#39FF14] font-mono text-sm underline underline-offset-4 transition-colors"
+              className="text-zinc-200 hover:text-[#39FF14] font-mono text-sm underline underline-offset-4 transition-colors"
             >
-              Looking for the Headless CLI Engine?
+              Looking for the Headless CLI Version?
             </Link>
           </motion.div>
 
