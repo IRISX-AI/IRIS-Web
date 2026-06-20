@@ -138,7 +138,7 @@ export default function IrisHero({
             ].map(({ label, value }) => (
               <div
                 key={label}
-                className="flex items-center gap-2 px-3 py-1.5 rounded-md border border-[#39FF14]/30 bg-black/80 backdrop-blur-md"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-md border border-[#39FF14]/35 bg-black/80 backdrop-blur-md"
               >
                 <span className="text-[10px]  text-gray-300 uppercase tracking-widest">
                   {label}
