@@ -218,7 +218,7 @@ const IRISAbout = () => {
       </section>
 
       <section className="w-full px-6 md:px-0 py-12 relative overflow-hidden flex flex-col items-center z-20">
-        <p className="text-[#10b981] text-sm tracking-widest uppercase mb-8 font-semibold drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]">
+        <p className="text-[#32b910] text-sm tracking-widest uppercase mb-8 font-semibold drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]">
           Built with a bleeding-edge modern stack
         </p>
         <LogoLoop
