@@ -125,7 +125,7 @@ export default function PricingPage() {
                 </h3>
               </div>
               <div className="text-4xl font-black text-white mb-4 flex items-end gap-3">
-                <span>$5 / ₹500</span>
+                <span>$5 / ₹475</span>
                 <span className="text-lg font-normal text-gray-500 tracking-normal mb-1">
                   one-time
                 </span>
