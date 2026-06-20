@@ -207,9 +207,9 @@ const IRISAbout = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Not just an application. An autonomous digital operative built to
-              run your desktop, organize your life, and completely redefine how
-              you interact with your computer.
+              A true system-level intelligence. IRIS bypasses the browser to
+              read your screen, manage your local files, and execute complex
+              desktop workflows entirely hands-free.
             </p>
           </motion.div>
         </div>
