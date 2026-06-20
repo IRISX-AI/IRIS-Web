@@ -34,7 +34,6 @@ export default function TermsOfServicePage() {
     <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#39FF14] selection:text-black">
       <Header />
 
-      {/* Banner / Title */}
       <section className="pt-40 pb-16 px-6 relative overflow-hidden flex flex-col items-center text-center border-b border-white/5">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-96 bg-[#39FF14]/10 blur-[120px] rounded-full pointer-events-none" />
 
@@ -62,7 +61,6 @@ export default function TermsOfServicePage() {
         </motion.div>
       </section>
 
-      {/* Main Content Sections */}
       <section className="py-20 px-6 relative z-20 max-w-5xl mx-auto">
         <motion.div
           variants={containerVariants}
@@ -71,7 +69,6 @@ export default function TermsOfServicePage() {
           viewport={{ once: true, margin: "-100px" }}
           className="space-y-12"
         >
-          {/* Card 1: Assumption of Risk (Native OS Execution) - CRITICAL SHIELD */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-red-500/20 rounded-2xl p-8 relative overflow-hidden group hover:border-red-500/40 transition-all duration-300 animate-pulse"
@@ -91,7 +88,6 @@ export default function TermsOfServicePage() {
             </div>
           </motion.div>
 
-          {/* Card 2: Individual & Non-Commercial Limit */}
           <motion.div
             variants={itemVariants}
             className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
