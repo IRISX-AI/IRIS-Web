@@ -469,14 +469,7 @@ export default function ChangelogPage() {
           });
         }
 
-        ScrollTrigger.create({
-          trigger: cardSelector,
-          start: "top 30%",
-          end: "bottom 70%",
-          pin: "#pin-panel",
-          pinSpacing: true,
-          markers: true,
-        });
+
 
         ScrollTrigger.create({
           trigger: cardSelector,
