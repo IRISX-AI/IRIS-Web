@@ -116,7 +116,7 @@ export default function PricingPage() {
             className="bg-[#050505] rounded-[2.5rem] p-10 border border-[#10b981]/50 flex flex-col relative overflow-hidden shadow-[0_0_50px_rgba(16,185,129,0.1)]"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#10b981]/20 blur-[80px] rounded-full pointer-events-none" />
-            <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-[#10b981] to-emerald-300" />
+            <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-[#10b981] to-green-300" />
 
             <div className="mb-8 relative z-10">
               <div className="flex justify-between items-start">
@@ -162,7 +162,7 @@ export default function PricingPage() {
               <FeatureItem text="Biometric OS Vault Encryption" pro />
             </div>
 
-            <button className="cursor-pointer group w-full flex justify-center items-center gap-2 mt-10 py-4 rounded-xl bg-[#10b981] text-black font-bold hover:bg-emerald-400 transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] relative z-10">
+            <button className="cursor-pointer group w-full flex justify-center items-center gap-2 mt-10 py-4 rounded-xl bg-[#10b981] text-black font-bold hover:bg-green-400 transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] relative z-10">
               <FaGithub className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Sponsor on GitHub to Unlock
             </button>

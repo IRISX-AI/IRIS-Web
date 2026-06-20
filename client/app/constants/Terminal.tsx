@@ -245,7 +245,7 @@ function tokenizeBash(text: string): Token[] {
 }
 
 const tokenColors: Record<TokenType, string> = {
-  command: "text-emerald-400",
+  command: "text-green-400",
   flag: "text-sky-400",
   string: "text-amber-300",
   number: "text-purple-400",
@@ -414,7 +414,7 @@ export function Terminal({
   const prompt = (
     <span className="text-neutral-500">
       <span className="text-sky-500">{username}</span>
-      <span className="text-emerald-600">:</span>
+      <span className="text-green-600">:</span>
       <span className="text-sky-400">~</span>
       <span className="text-neutral-500">$</span>{" "}
     </span>

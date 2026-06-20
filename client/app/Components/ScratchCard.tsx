@@ -112,7 +112,7 @@ export const ScratchCard = ({
         <span className="text-gray-400 text-xs font-mono mb-1 uppercase tracking-widest">
           Unlocked {discountAmount}% Off
         </span>
-        <span className="text-4xl font-black text-transparent bg-clip-text bg-linear-to-r from-white to-emerald-200 tracking-widest">
+        <span className="text-4xl font-black text-transparent bg-clip-text bg-linear-to-r from-white to-green-200 tracking-widest">
           IRIS{discountAmount}
         </span>
       </div>

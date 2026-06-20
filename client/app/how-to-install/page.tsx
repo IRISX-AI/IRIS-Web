@@ -251,7 +251,7 @@ export default function InstallGuide() {
           transition={{ delay: 0.5 }}
           className="mt-24 max-w-4xl mx-auto relative group"
         >
-          <div className="absolute -inset-1 bg-linear-to-r from-[#10b981] to-emerald-900 rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+          <div className="absolute -inset-1 bg-linear-to-r from-[#10b981] to-green-900 rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
           <div className="relative bg-[#050505] border border-white/10 rounded-4xl p-8 md:p-12 overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="absolute top-0 right-0 p-8 opacity-5">
               <Smartphone className="w-48 h-48 text-[#10b981]" />

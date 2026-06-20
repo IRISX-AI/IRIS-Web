@@ -106,7 +106,7 @@ export default function SignupPage() {
           </div>
           <h1 className="text-3xl md:text-4xl font-black tracking-tighter mb-2">
             Initialize{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#10b981] to-emerald-200">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#10b981] to-green-200">
               IRIS
             </span>
           </h1>
@@ -251,7 +251,7 @@ export default function SignupPage() {
             Already have an Account?{" "}
             <Link
               href="/login"
-              className="text-[#10b981] font-semibold hover:text-emerald-400 transition-colors flex items-center justify-center gap-1"
+              className="text-[#10b981] font-semibold hover:text-green-400 transition-colors flex items-center justify-center gap-1"
             >
               Login <Sparkles className="w-3 h-3" />
             </Link>
