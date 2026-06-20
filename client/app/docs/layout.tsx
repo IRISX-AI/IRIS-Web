@@ -115,7 +115,6 @@ export default function DocsLayout({ children }: { children: ReactNode }) {
           </div>
         </aside>
 
-        {/* Main Docs Content Area */}
         <main className="flex-1 min-w-0 pb-20 relative">{children}</main>
       </div>
 
