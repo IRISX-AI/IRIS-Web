@@ -16,9 +16,7 @@ export default function RefundPolicyPage() {
     <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#10b981] selection:text-black">
       <Header />
 
-      {/* ── HERO SECTION ── */}
       <section className="pt-40 pb-16 px-6 relative overflow-hidden flex flex-col items-center text-center border-b border-white/5">
-        {/* Deep ambient glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-96 bg-[#10b981]/10 blur-[120px] rounded-full pointer-events-none" />
 
         <motion.div
