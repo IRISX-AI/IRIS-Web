@@ -122,7 +122,7 @@ export default function DownloadPage() {
               noiseAmount={0.15}
               distortion={0}
               className="custom-rays"
-              pulsating
+              pulsating={false}
               fadeDistance={2}
               saturation={1}
             />
