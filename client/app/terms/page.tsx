@@ -114,7 +114,7 @@ export default function TermsOfServicePage() {
           {/* Card 3: Assumption of Risk (Native OS Execution) - NO LIABILITY DISCLOSURE */}
           <motion.div
             variants={itemVariants}
-            className="bg-[#0a0a0a] border border-red-500/20 rounded-2xl p-8 relative overflow-hidden group hover:border-red-500/40 transition-all duration-300 animate-pulse"
+            className="bg-[#0a0a0a] border border-red-500/20 rounded-2xl p-8 relative overflow-hidden group hover:border-red-500/40 transition-all duration-300"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/5 blur-[80px] pointer-events-none" />
             <div className="flex items-center gap-4 mb-6">
