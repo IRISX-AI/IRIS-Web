@@ -415,7 +415,6 @@ export default function ChangelogPage() {
 
   useGSAP(
     () => {
-      // 1. Scroll-triggered vertical timeline track filling line
       gsap.fromTo(
         lineProgressRef.current,
         { height: "0%" },
