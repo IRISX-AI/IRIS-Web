@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "../Components/Header";
-import { useRef, useState, lazy, Suspense } from "react";
+import { useRef, useState } from "react";
 import Footer from "../Components/Footer";
 import Image from "next/image";
 import LogoLoop from "../utils/LogoLoop";
@@ -24,7 +24,7 @@ import { PiOpenAiLogo } from "react-icons/pi";
 import { RiGeminiFill } from "react-icons/ri";
 import { BsAnthropic } from "react-icons/bs";
 import { TbBrandSocketIo } from "react-icons/tb";
-const IrisHero = lazy(() => import("../Components/UI/IrisHero"));
+import IrisHero from "../Components/UI/IrisHero";
 import { MacbookScroll } from "../constants/MacbookScroll";
 import { ContainerScroll } from "../constants/ContainerScroll";
 import { IRISCompare } from "../Components/UI/IRISCompare";
@@ -142,17 +142,11 @@ const IRIS = () => {
   return (
     <div ref={containerRef} className="bg-black text-white relative">
       <Header />
-      {isHeroActive && (
-        <Suspense
-          fallback={<div className="h-screen w-full bg-black animate-pulse" />}
-        >
-          <IrisHero
-            heroTextRef={heroTextRef}
-            isHeroVisible={isHeroVisible}
-            isHeroActive={isHeroActive}
-          />
-        </Suspense>
-      )}
+      <IrisHero
+        heroTextRef={heroTextRef}
+        isHeroVisible={isHeroVisible}
+        isHeroActive={isHeroActive}
+      />
 
       <div
         ref={contentRef}
