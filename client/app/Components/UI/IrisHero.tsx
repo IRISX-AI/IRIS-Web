@@ -54,7 +54,7 @@ export default function IrisHero({
             <h1
               className="text-[28vw] sm:text-[20vw] md:text-[13vw] font-bold tracking-tight bg-[url('/img/bright-neon-bg.png')] bg-cover bg-center bg-clip-text text-transparent mb-4 select-none"
               style={{
-                filter: "drop-shadow(0px 0px 1px rgba(57, 255, 20, 0.8))",
+                filter: "drop-shadow(0px 0px 5px rgba(57, 255, 20, 0.8))",
               }}
             >
               IRIS AI
@@ -149,41 +149,6 @@ export default function IrisHero({
               </div>
             ))}
           </div>
-        </div>
-
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-3 pointer-events-none select-none">
-          <span
-            className="text-[10px] font-mono uppercase tracking-[0.35em] text-white/70"
-            style={{ textShadow: "0 0 8px rgba(0,0,0,1)" }}
-          >
-            Scroll to Explore
-          </span>
-          <svg
-            width="20"
-            height="30"
-            viewBox="0 0 20 30"
-            fill="none"
-            className="opacity-50"
-          >
-            <rect
-              x="1"
-              y="1"
-              width="18"
-              height="28"
-              rx="9"
-              stroke="#39FF14"
-              strokeWidth="1.5"
-            />
-            <rect
-              x="9"
-              y="6"
-              width="2"
-              height="6"
-              rx="1"
-              fill="#39FF14"
-              className="iris-scroll-dot"
-            />
-          </svg>
         </div>
       </div>
     </>
