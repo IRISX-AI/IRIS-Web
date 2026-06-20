@@ -24,17 +24,19 @@ export default function IrisHero({
         className="hero-section sticky top-0 h-screen w-full flex flex-col justify-center items-center z-0 overflow-hidden bg-black"
       >
         <div className="hidden md:block w-full h-full absolute inset-0 z-0 bg-black">
-          <FloatingLines
-            enabledWaves={["top", "middle", "bottom"]}
-            lineCount={6}
-            lineDistance={8}
-            bendRadius={8}
-            bendStrength={-2}
-            interactive
-            parallax={true}
-            animationSpeed={1}
-            linesGradient={["#24d307", "#144f01", "#2a8f2c"]}
-          />
+          {isHeroActive && (
+            <FloatingLines
+              enabledWaves={["top", "middle", "bottom"]}
+              lineCount={6}
+              lineDistance={8}
+              bendRadius={8}
+              bendStrength={-2}
+              interactive
+              parallax={true}
+              animationSpeed={1}
+              linesGradient={["#24d307", "#144f01", "#2a8f2c"]}
+            />
+          )}
         </div>
         <div
           className={`
@@ -44,7 +46,7 @@ export default function IrisHero({
           `}
           style={{ display: isHeroActive ? undefined : "none" }}
         >
-          <GhostEther className="block" />
+          {isHeroActive && <GhostEther className="block" />}
         </div>
 
         <div className="relative z-20 flex flex-col items-center justify-center text-center px-6 w-full max-w-5xl gap-0">
@@ -105,7 +107,7 @@ export default function IrisHero({
           <div className="flex md:flex-row flex-col justify-center items-center gap-5 w-full sm:w-auto">
             <Link href="/download">
               <MagneticButton
-                title="Download for Windows"
+                title="Download IRIS AI"
                 subtitle="Get Early Access"
                 iconLeft={<Command className="w-6 h-6" />}
                 iconRight={

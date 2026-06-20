@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "../Components/Header";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import Footer from "../Components/Footer";
 import Image from "next/image";
 import LogoLoop from "../utils/LogoLoop";
@@ -39,16 +39,6 @@ const IRIS = () => {
 
   const [isHeroVisible, setIsHeroVisible] = useState(true);
   const [isHeroActive, setIsHeroActive] = useState(true);
-
-  useEffect(() => {
-    let timeout: NodeJS.Timeout;
-    if (isHeroVisible) {
-      setIsHeroActive(true);
-    } else {
-      timeout = setTimeout(() => setIsHeroActive(false), 700);
-    }
-    return () => clearTimeout(timeout);
-  }, [isHeroVisible]);
 
   const actualTechLogos = [
     {
@@ -131,6 +121,19 @@ const IRIS = () => {
         start: "top top",
         onEnter: () => setIsHeroVisible(false),
         onLeaveBack: () => setIsHeroVisible(true),
+        onRefresh: (self) => {
+          setIsHeroVisible(self.scroll() < self.start);
+        },
+      });
+
+      ScrollTrigger.create({
+        trigger: contentRef.current,
+        start: "top -100%",
+        onEnter: () => setIsHeroActive(false),
+        onLeaveBack: () => setIsHeroActive(true),
+        onRefresh: (self) => {
+          setIsHeroActive(self.scroll() < self.start);
+        },
       });
     },
     { scope: containerRef },
