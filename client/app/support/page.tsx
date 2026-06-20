@@ -85,7 +85,7 @@ const faqItems = [
     icon: CreditCard,
     question: "I purchased IRIS Pro. Can I get a refund?",
     answer:
-      "**IRIS operates under a strict no-refund policy for all downloaded digital products.** Once the installer binary or license key is delivered, the product has been consumed and is non-returnable — this is standard policy for downloadable software under our Terms of Service.\n\nIf IRIS is technically non-functional on your machine, open a GitHub Issue with your OS version, IRIS version, and the full terminal error output. We will triage it as high-priority.\n\nFor billing disputes, contact: support@irisx.ai with your order confirmation.",
+      "**IRIS operates under a strict no-refund policy for all downloaded digital products.** Once the installer binary or license key is delivered, the product has been consumed and is non-returnable — this is standard policy for downloadable software under our Terms of Service.\n\nIf IRIS is technically non-functional on your machine, open a GitHub Issue with your OS version, IRIS version, and the full terminal error output. We will triage it as high-priority.\n\nFor billing disputes, contact: irisaidevop@gmail.com with your order confirmation.",
     tag: "Billing",
   },
   {
