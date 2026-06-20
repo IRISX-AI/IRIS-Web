@@ -22,7 +22,6 @@ import {
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import StoryChapter, { StoryContent } from "../lib/StoryChapter";
-import Particles from "../utils/Particles";
 import Hyperspeed from "../Components/core/HyperSpeed";
 
 const storyData: StoryContent[] = [
