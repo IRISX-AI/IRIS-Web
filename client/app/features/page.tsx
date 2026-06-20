@@ -68,7 +68,7 @@ const storyData: StoryContent[] = [
     num: "06",
     title: "Terminal & CLI Execution",
     text: "Native shell access. Open projects, trigger build sequences, and run complex terminal commands entirely through voice input.",
-    icon: <Terminal className="w-24 h-24 text-emerald-400" />,
+    icon: <Terminal className="w-24 h-24 text-green-400" />,
     visualTitle: "DEVELOPER TOOLS",
     visualSub: "Shell Execution",
   },

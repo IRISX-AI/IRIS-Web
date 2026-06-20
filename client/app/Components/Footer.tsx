@@ -178,7 +178,7 @@ export default function Footer() {
           Made with ❤️ by{" "}
           <a
             href="https://www.instagram.com/201harshs/"
-            className="text-[#10b981] hover:text-emerald-400 transition-colors font-bold"
+            className="text-[#10b981] hover:text-green-400 transition-colors font-bold"
           >
             201Harsh
           </a>

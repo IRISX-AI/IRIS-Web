@@ -113,7 +113,7 @@ export default function LoginPage() {
           </div>
           <h1 className="text-3xl md:text-4xl font-black tracking-tighter mb-2">
             Authenticate{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#10b981] to-emerald-200">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#10b981] to-green-200">
               IRIS
             </span>
           </h1>
@@ -169,7 +169,7 @@ export default function LoginPage() {
                 </label>
                 <Link
                   href="#"
-                  className="text-xs text-[#10b981] hover:text-emerald-400 transition-colors font-mono"
+                  className="text-xs text-[#10b981] hover:text-green-400 transition-colors font-mono"
                 >
                   Forgot?
                 </Link>
@@ -245,7 +245,7 @@ export default function LoginPage() {
             Don't have an Account?{" "}
             <Link
               href="/signup"
-              className="text-[#10b981] font-semibold hover:text-emerald-400 transition-colors flex items-center justify-center gap-1"
+              className="text-[#10b981] font-semibold hover:text-green-400 transition-colors flex items-center justify-center gap-1"
             >
               Sign Up <Sparkles className="w-3 h-3" />
             </Link>

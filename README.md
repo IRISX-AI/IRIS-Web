@@ -182,7 +182,7 @@ IRIS is forged using a high-performance stack combining web technologies with de
 
 - **Electron & Vite:** High-performance desktop compilation and split-process architecture.
 - **React 19:** Component-based, responsive frontend.
-- **Tailwind CSS v4:** Utility-first styling engine for the Neon Emerald aesthetic.
+- **Tailwind CSS v4:** Utility-first styling engine for the Neon green aesthetic.
 - **Framer Motion & GSAP:** Cinematic, hardware-accelerated UI animations.
 - **Three.js & React Three Fiber:** 3D rendering for complex neural visualizations.
 - **Zustand:** Fast, scalable global state management.
@@ -306,7 +306,6 @@ These keys unlock advanced, autonomous subsystems.
   - **Setup:** Create a Hugging Face account > Settings > Access Tokens > Create token with 'Read' permissions.
 
 > 💡 **Having trouble finding your keys?** Visit our official [Key Forging Guide](https://irisaiw.vercel.app/guide) for step-by-step instructions.
-
 
 # 📁 Project Structure
 

@@ -99,7 +99,7 @@ export default function ApiKeysGuide() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-black text-emerald-50 font-sans selection:bg-emerald-500/30">
+    <div className="flex flex-col min-h-screen bg-black text-green-50 font-sans selection:bg-green-500/30">
       <Header />
 
       <main className="grow p-6 md:p-12 lg:p-24 pt-24 mt-16">
@@ -108,13 +108,13 @@ export default function ApiKeysGuide() {
           animate={{ opacity: 1, y: 0 }}
           className="max-w-4xl mx-auto mb-16"
         >
-          <div className="flex items-center gap-3 mb-4 text-emerald-500">
+          <div className="flex items-center gap-3 mb-4 text-green-500">
             <Terminal size={32} />
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
               System Keys
             </h1>
           </div>
-          <p className="text-lg text-emerald-100/60 leading-relaxed">
+          <p className="text-lg text-green-100/60 leading-relaxed">
             IRIS operates locally, but requires specific API keys to bridge the
             gap to large language models and search engines. Follow this guide
             to forge your keys and initialize the system. Your keys are stored
@@ -132,25 +132,25 @@ export default function ApiKeysGuide() {
             <motion.div
               key={key.id}
               variants={itemVariants}
-              className="group relative bg-zinc-950 border border-emerald-900/30 rounded-xl p-6 hover:border-emerald-500/50 transition-colors duration-300 overflow-hidden"
+              className="group relative bg-zinc-950 border border-green-900/30 rounded-xl p-6 hover:border-green-500/50 transition-colors duration-300 overflow-hidden"
             >
-              <div className="absolute inset-0 bg-linear-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="absolute inset-0 bg-linear-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
               <div className="flex justify-between items-start mb-4 relative z-10">
                 <div>
-                  <h2 className="text-2xl font-bold text-emerald-400 flex items-center gap-2">
+                  <h2 className="text-2xl font-bold text-green-400 flex items-center gap-2">
                     <Key size={20} />
                     {key.name}
                   </h2>
 
                   <button
                     onClick={() => handleCopy(key.envVar)}
-                    className="cursor-pointer flex items-center gap-2 text-xs text-emerald-500/50 mt-2 hover:text-emerald-400 transition-colors"
+                    className="cursor-pointer flex items-center gap-2 text-xs text-green-500/50 mt-2 hover:text-green-400 transition-colors"
                     title="Copy to clipboard"
                   >
                     <code>.env: {key.envVar}</code>
                     {copiedVar === key.envVar ? (
-                      <Check size={14} className="text-emerald-400" />
+                      <Check size={14} className="text-green-400" />
                     ) : (
                       <Copy size={14} />
                     )}
@@ -159,7 +159,7 @@ export default function ApiKeysGuide() {
                 <span
                   className={`px-3 py-1 text-xs font-semibold rounded-full flex items-center gap-1 ${
                     key.status === "Required"
-                      ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
+                      ? "bg-green-500/10 text-green-400 border border-green-500/20"
                       : "bg-zinc-800 text-zinc-400 border border-zinc-700"
                   }`}
                 >
@@ -177,7 +177,7 @@ export default function ApiKeysGuide() {
               </p>
 
               <div className="mb-6 relative z-10">
-                <h3 className="text-sm font-semibold text-emerald-500 mb-2 uppercase tracking-wider">
+                <h3 className="text-sm font-semibold text-green-500 mb-2 uppercase tracking-wider">
                   How to get it:
                 </h3>
                 <ul className="space-y-2 min-h-25">
@@ -186,7 +186,7 @@ export default function ApiKeysGuide() {
                       key={index}
                       className="text-sm text-zinc-300 flex items-start gap-2"
                     >
-                      <span className="text-emerald-500 mt-0.5">•</span>
+                      <span className="text-green-500 mt-0.5">•</span>
                       {step}
                     </li>
                   ))}
@@ -197,7 +197,7 @@ export default function ApiKeysGuide() {
                 href={key.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 w-full justify-center bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 py-2.5 px-4 rounded-lg transition-all duration-200 text-sm font-medium relative z-10 group-hover:border-emerald-500"
+                className="inline-flex items-center gap-2 w-full justify-center bg-green-500/10 hover:bg-green-500/20 text-green-400 border border-green-500/30 py-2.5 px-4 rounded-lg transition-all duration-200 text-sm font-medium relative z-10 group-hover:border-green-500"
               >
                 {key.buttonText} <ExternalLink size={16} />
               </a>

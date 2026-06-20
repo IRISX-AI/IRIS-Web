@@ -47,7 +47,7 @@ export default function ErrorBox({
               </h3>
               <p
                 className={`text-sm mt-1 whitespace-pre-wrap ${
-                  isError ? "text-red-200/80" : "text-emerald-200/80"
+                  isError ? "text-red-200/80" : "text-green-200/80"
                 }`}
               >
                 {message}
@@ -61,7 +61,7 @@ export default function ErrorBox({
                 ${
                   isError
                     ? "text-red-400 hover:text-red-300"
-                    : "text-emerald-400 hover:text-[#10b981]"
+                    : "text-green-400 hover:text-[#10b981]"
                 }`}
             >
               <X className="w-5 h-5" />
@@ -72,4 +72,3 @@ export default function ErrorBox({
     </AnimatePresence>
   );
 }
-
