@@ -13,7 +13,6 @@ export default function CliInstallGuide() {
       <Header />
 
       <main className="max-w-4xl mx-auto px-6 relative z-10 pb-24">
-        {/* ── BACK NAVIGATION ── */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -28,7 +27,6 @@ export default function CliInstallGuide() {
           </Link>
         </motion.div>
 
-        {/* ── HERO ── */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
