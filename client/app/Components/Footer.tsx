@@ -180,7 +180,7 @@ export default function Footer() {
       <div className="w-full max-w-7xl mx-auto mt-20 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-300 relative z-10 font-mono">
         <p>© {new Date().getFullYear()} IRIS AI. All rights reserved.</p>
         <p className="tracking-widest uppercase">
-          Engineered by{" "}
+          Engineered with ❤️ by{" "}
           <a
             href="https://www.instagram.com/201harshs/"
             target="_blank"
