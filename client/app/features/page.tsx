@@ -216,11 +216,11 @@ export default function FeaturesPage() {
 
             {/* Replaced 'PASSIVE CHAT' with 'NATIVE EXECUTION' to sound like a real engine */}
             <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-8 leading-[0.9]">
-              NATIVE <br />
+              CORE <br />
               <span className="relative inline-block">
                 <span className="absolute -inset-1 bg-[#10b981]/20 blur-lg opacity-50 animate-pulse"></span>
                 <span className="relative text-transparent bg-clip-text bg-gradient-to-b from-white via-gray-200 to-gray-600 drop-shadow-2xl">
-                  EXECUTION
+                  FEATURES
                 </span>
               </span>
             </h1>
@@ -231,12 +231,12 @@ export default function FeaturesPage() {
               transition={{ delay: 0.5 }}
               className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
             >
-              Web wrappers are dead. <br className="hidden md:block" />
+              A complete technical breakdown of the IRIS engine.{" "}
               <span className="text-white font-bold border-b border-[#10b981]">
-                IRIS is a native execution engine
+                Direct file system access,
               </span>{" "}
-              that gives you raw access to your file system, local memory, and
-              mobile hardware.
+              Android device bridging, automated workflows, and local vector
+              memory.
             </motion.p>
           </motion.div>
         </div>
