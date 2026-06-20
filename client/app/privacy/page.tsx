@@ -35,7 +35,6 @@ export default function PrivacyPolicyPage() {
     <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#39FF14] selection:text-black">
       <Header />
 
-      {/* Banner / Title */}
       <section className="pt-40 pb-16 px-6 relative overflow-hidden flex flex-col items-center text-center border-b border-white/5">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-96 bg-[#39FF14]/10 blur-[120px] rounded-full pointer-events-none" />
 
@@ -63,7 +62,6 @@ export default function PrivacyPolicyPage() {
         </motion.div>
       </section>
 
-      {/* Main Content Sections */}
       <section className="py-20 px-6 relative z-20 max-w-5xl mx-auto">
         <motion.div
           variants={containerVariants}
