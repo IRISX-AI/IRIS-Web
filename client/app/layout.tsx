@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   },
   description:
     "IRIS is a local-first AI Operating System layer that executes real-world actions across your system, apps, and devices. Turn intent into execution.",
+  keywords: [
     "AI Assistant",
     "IRIS AI Assistant",
     "IRIS AI",
