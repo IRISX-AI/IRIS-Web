@@ -150,18 +150,22 @@ const Header = () => {
               </Link>
 
               <nav className="flex flex-col gap-10 text-sm font-bold uppercase tracking-[0.2em]">
-                {["About", "Features", "how-to-install", "Guide"].map(
-                  (item) => (
-                    <Link
-                      key={item}
-                      href={`/${item.toLowerCase()}`}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="text-gray-300 hover:text-[#10b981] transition-colors border-b border-white/5 pb-4"
-                    >
-                      {item}
-                    </Link>
-                  ),
-                )}
+                {[
+                  "About",
+                  "Features",
+                  "Pricing",
+                  "how-to-install",
+                  "Guide",
+                ].map((item) => (
+                  <Link
+                    key={item}
+                    href={`/${item.toLowerCase()}`}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="text-gray-300 hover:text-[#10b981] transition-colors border-b border-white/5 pb-4"
+                  >
+                    {item}
+                  </Link>
+                ))}
               </nav>
 
               <div className="mt-auto pt-8 flex flex-col gap-6">
