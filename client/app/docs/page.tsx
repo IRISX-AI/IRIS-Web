@@ -30,7 +30,6 @@ export default function DocsOverviewPage() {
       animate="visible"
       className="space-y-12"
     >
-      {/* Banner */}
       <motion.div
         variants={itemVariants}
         className="relative rounded-3xl overflow-hidden border border-white/15 shadow-2xl"
@@ -46,7 +45,6 @@ export default function DocsOverviewPage() {
         <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent" />
       </motion.div>
 
-      {/* Header Info */}
       <motion.div variants={itemVariants} className="space-y-4">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs font-mono tracking-widest uppercase">
           <BookOpen className="w-3.5 h-3.5" />
@@ -63,7 +61,6 @@ export default function DocsOverviewPage() {
         </p>
       </motion.div>
 
-      {/* Real-time Audio Processing Flow */}
       <motion.div
         variants={itemVariants}
         className="bg-[#050505] border border-white/10 rounded-2xl p-6 md:p-8 space-y-6"
@@ -79,7 +76,6 @@ export default function DocsOverviewPage() {
           listens, thinks, and executes dynamically.
         </p>
 
-        {/* Visual Pipeline */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 pt-4 text-center font-mono text-xs text-zinc-300">
           <div className="bg-white/5 border border-white/10 p-4 rounded-xl flex flex-col justify-center items-center gap-2">
             <span className="text-white font-bold">1. Voice Input</span>
