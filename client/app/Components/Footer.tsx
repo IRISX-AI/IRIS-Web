@@ -2,12 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, Cpu, Activity, TerminalSquare } from "lucide-react";
-import {
-  FaInstagram,
-  FaGithub,
-  FaYoutube,
-  // FaWhatsapp,
-} from "react-icons/fa6";
+import { FaInstagram, FaGithub, FaYoutube, FaWhatsapp } from "react-icons/fa6";
 import { TextHoverEffect } from "./TextHoverEffect";
 import Link from "next/link";
 
@@ -130,7 +125,7 @@ export default function Footer() {
               </span>
             </Link>
           ))}
-          {/* <a
+          <a
             href="#"
             className="group flex items-center text-gray-400 hover:text-white transition-colors w-max mt-2"
           >
@@ -138,7 +133,7 @@ export default function Footer() {
               <FaWhatsapp size={16} />
             </span>
             <span>WhatsApp Community</span>
-          </a> */}
+          </a>
         </motion.div>
 
         <motion.div variants={itemVariants} className="flex flex-col gap-4">
