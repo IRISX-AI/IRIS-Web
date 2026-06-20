@@ -58,7 +58,8 @@ export default function Footer() {
             </div>
           </div>
           <p className="text-gray-500 leading-relaxed pr-4 font-light">
-            A native desktop client for local file management, deep research, and OS-level automation.
+            A native desktop client for local file management, deep research,
+            and OS-level automation.
           </p>
           <div className="flex gap-4 mt-2">
             <a
@@ -94,7 +95,7 @@ export default function Footer() {
             { name: "About IRIS", path: "/about" },
             { name: "Documentation", path: "/how-to-install" },
             { name: "Refund Policy", path: "/refund-policy" },
-            { name: "Privacy Policy", path: "/privacy" }
+            { name: "Privacy Policy", path: "/privacy" },
           ].map((link) => (
             <Link
               key={link.name}
@@ -119,7 +120,7 @@ export default function Footer() {
           {[
             { name: "Pricing & Tiers", path: "/pricing" },
             { name: "Desktop Client", path: "/download" },
-            { name: "CLI Core", path: "/download/cli" }
+            { name: "CLI Core", path: "/download/cli" },
           ].map((link) => (
             <Link
               key={link.name}
