@@ -41,7 +41,7 @@ export default function DocsOverviewPage() {
           width={1200}
           height={400}
           priority
-          className="w-full h-auto object-cover max-h-[250px]"
+          className="w-full h-auto object-cover max-h-62.5"
         />
         <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent" />
       </motion.div>
