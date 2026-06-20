@@ -19,19 +19,27 @@ export default function PricingPage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative z-10"
         >
+          {/* Changed badge to explicitly state Pricing */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#10b981]/30 bg-[#10b981]/5 text-[#10b981] text-xs font-mono mb-8 backdrop-blur-md">
             <Activity className="w-3 h-3" />
-            <span className="uppercase tracking-widest">System Deployment</span>
+            <span className="uppercase tracking-widest">
+              Pricing & Deployment
+            </span>
           </div>
+
+          {/* Hard-hitting Pricing Heading */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6">
-            SECURE YOUR <br />
-            <span className="text-transparent bg-clip-text bg-linear-to-b from-[#10b981] to-[#044a33]">
-              LICENSE.
+            ENGINE <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#10b981] to-[#044a33]">
+              TIERS.
             </span>
           </h1>
+
+          {/* Crystal clear explanation of the payment model */}
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            No subscriptions. No recurring fees. Secure a lifetime license to
-            the IRIS Pro engine via a one-time GitHub Sponsorship.
+            Choose your level of system access. No monthly subscriptions. Secure
+            a perpetual, lifetime license to the IRIS Pro engine via a one-time
+            GitHub Sponsorship.
           </p>
         </motion.div>
       </section>
