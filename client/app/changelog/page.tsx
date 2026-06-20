@@ -21,7 +21,6 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Link from "next/link";
 
-// Register ScrollTrigger
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
