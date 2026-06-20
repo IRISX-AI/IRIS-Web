@@ -238,18 +238,31 @@ export default function FeaturesPage() {
           </motion.div>
         </div>
 
-        <div className="absolute bottom-0 w-full border-t border-white/10 bg-black/50 backdrop-blur-sm z-30">
-          <div className="max-w-7xl mx-auto px-6 h-12 flex items-center justify-between text-[10px] md:text-xs font-mono text-gray-500 uppercase tracking-widest">
-            <div className="flex items-center gap-4">
-              <span className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 bg-[#10b981] rounded-full animate-pulse"></div>
-                WEBSOCKET: STREAMING
+        <div className="absolute bottom-0 w-full border-t border-white/10 bg-[#050505]/80 backdrop-blur-md z-30">
+          <div className="max-w-7xl mx-auto px-6 h-12 flex items-center justify-between text-[10px] md:text-xs font-mono text-gray-400 uppercase tracking-widest">
+            {/* Left: Core Engine & Listen State */}
+            <div className="flex items-center gap-4 md:gap-6">
+              <span className="flex items-center gap-2 text-[#10b981] font-bold shadow-sm">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10b981] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#10b981]"></span>
+                </span>
+                IRIS_KERNEL: ACTIVE
               </span>
-              <span className="hidden md:block">LATENCY: {"<"}1.0s</span>
+              <span className="hidden sm:block border-l border-white/10 pl-4 md:pl-6">
+                WAKE_WORD: LISTENING
+              </span>
             </div>
-            <div className="flex items-center gap-4">
-              <span className="text-[#10b981]">SYSTEM WRITE: ENABLED</span>
-              <span className="hidden md:block">LOCAL MEM: INDEXED</span>
+
+            {/* Right: Hardware & File System Hooks */}
+            <div className="flex items-center gap-4 md:gap-6">
+              <span className="hidden md:block">ADB_LINK: SECURE</span>
+              <span className="hidden lg:block border-l border-white/10 pl-6">
+                VECTOR_DB: MOUNTED
+              </span>
+              <span className="text-white border-l border-white/10 pl-4 md:pl-6">
+                SYS_ACCESS: <span className="text-[#10b981]">GRANTED</span>
+              </span>
             </div>
           </div>
         </div>
