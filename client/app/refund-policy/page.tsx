@@ -16,11 +16,11 @@ import Link from "next/link";
 
 export default function RefundPolicyPage() {
   return (
-    <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#10b981] selection:text-black">
+    <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#39FF14] selection:text-black">
       <Header />
 
       <section className="pt-40 pb-16 px-6 relative overflow-hidden flex flex-col items-center text-center border-b border-white/5">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-96 bg-[#10b981]/10 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-96 bg-[#39FF14]/10 blur-[120px] rounded-full pointer-events-none" />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -29,7 +29,7 @@ export default function RefundPolicyPage() {
           className="relative z-10"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-gray-300 text-xs font-mono mb-8 backdrop-blur-md">
-            <Scale className="w-3 h-3 text-[#10b981]" />
+            <Scale className="w-3 h-3 text-[#39FF14]" />
             <span className="uppercase tracking-widest">
               Legal & Compliance
             </span>
@@ -37,7 +37,7 @@ export default function RefundPolicyPage() {
 
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 text-white drop-shadow-2xl">
             LICENSING & <br />
-            <span className="text-transparent bg-clip-text bg-linear-to-b from-[#10b981] to-[#044a33]">
+            <span className="text-transparent bg-clip-text bg-linear-to-b from-[#39FF14] to-[#044a33]">
               REFUNDS.
             </span>
           </h1>
@@ -171,13 +171,13 @@ export default function RefundPolicyPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="md:col-span-2 bg-linear-to-br from-[#0a0a0a] to-[#050505] border border-[#10b981]/20 rounded-2xl p-8 md:p-10 relative overflow-hidden"
+            className="md:col-span-2 bg-linear-to-br from-[#0a0a0a] to-[#050505] border border-[#39FF14]/20 rounded-2xl p-8 md:p-10 relative overflow-hidden"
           >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#10b981]/5 blur-[80px] pointer-events-none" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#39FF14]/5 blur-[80px] pointer-events-none" />
 
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 rounded-full bg-[#10b981]/10 flex items-center justify-center border border-[#10b981]/20">
-                <Terminal className="w-6 h-6 text-[#10b981]" />
+              <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
+                <Terminal className="w-6 h-6 text-[#39FF14]" />
               </div>
               <h2 className="text-2xl font-bold text-white tracking-tight">
                 Test Before Deployment
@@ -196,19 +196,19 @@ export default function RefundPolicyPage() {
 
             <div className="grid md:grid-cols-3 gap-4 mb-6">
               <div className="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/5">
-                <CheckCircle2 className="w-5 h-5 text-[#10b981] shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-[#39FF14] shrink-0" />
                 <span className="text-xs font-mono text-gray-300">
                   Test core file system reading and terminal execution.
                 </span>
               </div>
               <div className="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/5">
-                <CheckCircle2 className="w-5 h-5 text-[#10b981] shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-[#39FF14] shrink-0" />
                 <span className="text-xs font-mono text-gray-300">
                   Verify BYOK (Bring Your Own Key) APIs connect successfully.
                 </span>
               </div>
               <div className="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/5">
-                <CheckCircle2 className="w-5 h-5 text-[#10b981] shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-[#39FF14] shrink-0" />
                 <span className="text-xs font-mono text-gray-300">
                   Only upgrade to Pro when you verify your system runs
                   perfectly.

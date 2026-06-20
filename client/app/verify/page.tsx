@@ -68,7 +68,7 @@ function VerifyContent() {
           status === "verifying"
             ? "bg-linear-to-r from-transparent via-blue-500 to-transparent"
             : status === "success"
-              ? "bg-linear-to-r from-transparent via-[#10b981] to-transparent"
+              ? "bg-linear-to-r from-transparent via-[#39FF14] to-transparent"
               : "bg-linear-to-r from-transparent via-red-500 to-transparent"
         }`}
       />
@@ -98,13 +98,13 @@ function VerifyContent() {
           animate={{ opacity: 1, scale: 1 }}
           className="flex flex-col items-center"
         >
-          <div className="w-24 h-24 rounded-full bg-[#10b981]/10 border border-[#10b981]/30 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(16,185,129,0.3)]">
-            <CheckCircle2 className="w-12 h-12 text-[#10b981]" />
+          <div className="w-24 h-24 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/30 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(16,185,129,0.3)]">
+            <CheckCircle2 className="w-12 h-12 text-[#39FF14]" />
           </div>
           <h2 className="text-2xl font-bold mb-2 text-white">
             Identity Verified
           </h2>
-          <p className="text-[#10b981] font-mono text-xs tracking-widest uppercase mb-6 animate-pulse">
+          <p className="text-[#39FF14] font-mono text-xs tracking-widest uppercase mb-6 animate-pulse">
             Access Granted. Routing to Dashboard...
           </p>
         </motion.div>
@@ -137,8 +137,8 @@ function VerifyContent() {
 
 export default function VerifyPage() {
   return (
-    <div className="min-h-screen bg-[#050505] text-white font-sans flex items-center justify-center p-6 relative overflow-hidden selection:bg-[#10b981] selection:text-black">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-[#10b981]/5 blur-[150px] rounded-full pointer-events-none" />
+    <div className="min-h-screen bg-[#050505] text-white font-sans flex items-center justify-center p-6 relative overflow-hidden selection:bg-[#39FF14] selection:text-black">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-[#39FF14]/5 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-size-[40px_40px] pointer-events-none mix-blend-overlay" />
 
       <Suspense

@@ -28,19 +28,19 @@ export default function ErrorBox({
             ${
               isError
                 ? "bg-red-500/10 border-red-500/30"
-                : "bg-[#10b981]/10 border-[#10b981]/30"
+                : "bg-[#39FF14]/10 border-[#39FF14]/30"
             }`}
           >
             {isError ? (
               <AlertCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
             ) : (
-              <CheckCircle2 className="w-5 h-5 text-[#10b981] shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-5 h-5 text-[#39FF14] shrink-0 mt-0.5" />
             )}
 
             <div className="flex-1">
               <h3
                 className={`font-semibold text-sm ${
-                  isError ? "text-red-500" : "text-[#10b981]"
+                  isError ? "text-red-500" : "text-[#39FF14]"
                 }`}
               >
                 {isError ? "Authentication Error" : "Success"}
@@ -61,7 +61,7 @@ export default function ErrorBox({
                 ${
                   isError
                     ? "text-red-400 hover:text-red-300"
-                    : "text-green-400 hover:text-[#10b981]"
+                    : "text-green-400 hover:text-[#39FF14]"
                 }`}
             >
               <X className="w-5 h-5" />

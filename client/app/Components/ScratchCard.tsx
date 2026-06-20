@@ -17,7 +17,7 @@ export const ScratchCard = ({
     const ctx = canvas.getContext("2d", { willReadFrequently: true });
     if (!ctx) return;
 
-    ctx.fillStyle = "#10b981";
+    ctx.fillStyle = "#39FF14";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.fillStyle = "#044a33";
@@ -107,7 +107,7 @@ export const ScratchCard = ({
   }, [isRevealed, onReveal]);
 
   return (
-    <div className="relative w-80 h-32 rounded-2xl overflow-hidden mx-auto shadow-[0_0_30px_rgba(16,185,129,0.2)] border border-[#10b981]/30 bg-[#0a0a0a] flex items-center justify-center">
+    <div className="relative w-80 h-32 rounded-2xl overflow-hidden mx-auto shadow-[0_0_30px_rgba(16,185,129,0.2)] border border-[#39FF14]/30 bg-[#0a0a0a] flex items-center justify-center">
       <div className="absolute inset-0 flex flex-col items-center justify-center bg-linear-to-br from-[#0a0a0a] to-[#14532D]">
         <span className="text-gray-400 text-xs font-mono mb-1 uppercase tracking-widest">
           Unlocked {discountAmount}% Off

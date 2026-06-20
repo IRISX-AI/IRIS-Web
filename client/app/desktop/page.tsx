@@ -63,8 +63,8 @@ function RedirectLogic() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white font-sans flex items-center justify-center p-6 relative overflow-hidden selection:bg-[#10b981] selection:text-black">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-[#10b981]/10 blur-[150px] rounded-full pointer-events-none" />
+    <div className="min-h-screen bg-[#050505] text-white font-sans flex items-center justify-center p-6 relative overflow-hidden selection:bg-[#39FF14] selection:text-black">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-[#39FF14]/10 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-size-[40px_40px] pointer-events-none mix-blend-overlay" />
 
       <motion.div
@@ -78,7 +78,7 @@ function RedirectLogic() {
           className="bg-[#0a0a0a] border border-white/10 rounded-4xl p-10 shadow-[0_0_50px_rgba(16,185,129,0.05)] relative overflow-hidden text-center flex flex-col items-center"
         >
           <div
-            className={`absolute top-0 left-0 w-full h-1 opacity-50 transition-all duration-1000 ${status === "redirecting" ? "bg-linear-to-r from-transparent via-[#10b981] to-transparent" : "bg-white/10"}`}
+            className={`absolute top-0 left-0 w-full h-1 opacity-50 transition-all duration-1000 ${status === "redirecting" ? "bg-linear-to-r from-transparent via-[#39FF14] to-transparent" : "bg-white/10"}`}
           />
 
           <div className="relative w-28 h-28 flex items-center justify-center mb-8">
@@ -91,9 +91,9 @@ function RedirectLogic() {
                   exit={{ opacity: 0, scale: 1.2 }}
                   className="absolute inset-0 flex items-center justify-center"
                 >
-                  <div className="absolute inset-0 border-2 border-dashed border-[#10b981]/30 rounded-full animate-[spin_4s_linear_infinite]" />
-                  <div className="absolute inset-2 border-2 border-[#10b981]/20 rounded-full animate-ping opacity-20" />
-                  <Terminal className="w-10 h-10 text-[#10b981] animate-pulse" />
+                  <div className="absolute inset-0 border-2 border-dashed border-[#39FF14]/30 rounded-full animate-[spin_4s_linear_infinite]" />
+                  <div className="absolute inset-2 border-2 border-[#39FF14]/20 rounded-full animate-ping opacity-20" />
+                  <Terminal className="w-10 h-10 text-[#39FF14] animate-pulse" />
                 </motion.div>
               )}
 
@@ -105,8 +105,8 @@ function RedirectLogic() {
                   exit={{ opacity: 0, scale: 1.2 }}
                   className="absolute inset-0 flex items-center justify-center"
                 >
-                  <div className="absolute inset-0 border-2 border-[#10b981] rounded-full animate-spin border-t-transparent" />
-                  <ExternalLink className="w-10 h-10 text-[#10b981]" />
+                  <div className="absolute inset-0 border-2 border-[#39FF14] rounded-full animate-spin border-t-transparent" />
+                  <ExternalLink className="w-10 h-10 text-[#39FF14]" />
                 </motion.div>
               )}
 
@@ -115,9 +115,9 @@ function RedirectLogic() {
                   key="fallback"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="absolute inset-0 flex items-center justify-center bg-[#10b981]/10 border border-[#10b981]/30 rounded-full"
+                  className="absolute inset-0 flex items-center justify-center bg-[#39FF14]/10 border border-[#39FF14]/30 rounded-full"
                 >
-                  <CheckCircle2 className="w-12 h-12 text-[#10b981]" />
+                  <CheckCircle2 className="w-12 h-12 text-[#39FF14]" />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -152,7 +152,7 @@ function RedirectLogic() {
                   <h2 className="text-2xl font-bold mb-2">
                     Launching IRIS Engine
                   </h2>
-                  <p className="text-[#10b981] text-sm font-mono tracking-widest uppercase animate-pulse">
+                  <p className="text-[#39FF14] text-sm font-mono tracking-widest uppercase animate-pulse">
                     Please confirm the browser prompt
                   </p>
                 </motion.div>
@@ -192,7 +192,7 @@ function RedirectLogic() {
                   <ExternalLink className="w-4 h-4" /> Try Opening Again
                 </button>
 
-                <button className="w-full py-3 rounded-xl border border-[#10b981]/30 bg-[#10b981]/10 hover:bg-[#10b981]/20 text-[#10b981] font-medium transition-colors flex items-center justify-center gap-2 text-sm cursor-pointer">
+                <button className="w-full py-3 rounded-xl border border-[#39FF14]/30 bg-[#39FF14]/10 hover:bg-[#39FF14]/20 text-[#39FF14] font-medium transition-colors flex items-center justify-center gap-2 text-sm cursor-pointer">
                   <Download className="w-4 h-4" /> Download Local Engine
                 </button>
               </motion.div>
@@ -208,7 +208,7 @@ export default function DesktopRedirectPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen bg-[#050505] flex items-center justify-center text-[#10b981] font-mono tracking-widest text-sm">
+        <div className="min-h-screen bg-[#050505] flex items-center justify-center text-[#39FF14] font-mono tracking-widest text-sm">
           PREPARING NEURAL UPLINK...
         </div>
       }

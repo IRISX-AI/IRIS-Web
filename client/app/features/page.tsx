@@ -124,7 +124,7 @@ const storyData: StoryContent[] = [
     num: "13",
     title: "Biometric OS Vault",
     text: "System lockdown protocols. IRIS utilizes multi-face recognition and standard PIN validation to cryptographically lock your secure data and system controls.",
-    icon: <Fingerprint className="w-24 h-24 text-[#10b981]" />,
+    icon: <Fingerprint className="w-24 h-24 text-[#39FF14]" />,
     visualTitle: "SECURITY",
     visualSub: "Face Authentication",
   },
@@ -144,12 +144,12 @@ export default function FeaturesPage() {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen bg-[#050505] text-white font-sans overflow-x-hidden selection:bg-[#10b981] selection:text-black"
+      className="min-h-screen bg-[#050505] text-white font-sans overflow-x-hidden selection:bg-[#39FF14] selection:text-black"
     >
       <Header />
 
       <section className="relative h-screen flex flex-col justify-center items-center overflow-hidden border-b border-white/10 bg-[#050505] perspective-1000">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-125 bg-[#10b981]/10 blur-[120px] rounded-full pointer-events-none mix-blend-screen" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-125 bg-[#39FF14]/10 blur-[120px] rounded-full pointer-events-none mix-blend-screen" />
         <div className="absolute bottom-0 left-0 w-full h-32 bg-linear-to-t from-[#050505] to-transparent z-10"></div>
 
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
@@ -204,7 +204,7 @@ export default function FeaturesPage() {
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#10b981]/30 bg-[#10b981]/5 text-[#10b981] text-xs font-mono mb-8 backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.2)]"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#39FF14]/30 bg-[#39FF14]/5 text-[#39FF14] text-xs font-mono mb-8 backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.2)]"
             >
               <Terminal className="w-3 h-3 animate-pulse" />
               <span className="tracking-widest uppercase">
@@ -215,7 +215,7 @@ export default function FeaturesPage() {
             <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-8 leading-[0.9]">
               CORE <br />
               <span className="relative inline-block">
-                <span className="absolute -inset-1 bg-[#10b981]/20 blur-lg opacity-50 animate-pulse"></span>
+                <span className="absolute -inset-1 bg-[#39FF14]/20 blur-lg opacity-50 animate-pulse"></span>
                 <span className="relative text-transparent bg-clip-text bg-linear-to-b from-white via-gray-200 to-gray-600 drop-shadow-2xl">
                   FEATURES
                 </span>
@@ -229,7 +229,7 @@ export default function FeaturesPage() {
               className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed"
             >
               A complete technical breakdown of the IRIS engine.{" "}
-              <span className="text-[#10b918] font-bold border-b border-[#10b981]">
+              <span className="text-[#10b918] font-bold border-b border-[#39FF14]">
                 Direct file system access,
               </span>{" "}
               Android device bridging, automated workflows, and local vector
@@ -241,10 +241,10 @@ export default function FeaturesPage() {
         <div className="absolute bottom-0 w-full border-t border-white/10 bg-[#050505]/80 backdrop-blur-md z-30">
           <div className="max-w-7xl mx-auto px-6 h-12 flex items-center justify-between text-[10px] md:text-xs font-mono text-gray-400 uppercase tracking-widest">
             <div className="flex items-center gap-4 md:gap-6">
-              <span className="flex items-center gap-2 text-[#10b981] font-bold shadow-sm">
+              <span className="flex items-center gap-2 text-[#39FF14] font-bold shadow-sm">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10b981] opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#10b981]"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#39FF14] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#39FF14]"></span>
                 </span>
                 BACKGROUND_DAEMON: RUNNING
               </span>
@@ -259,7 +259,7 @@ export default function FeaturesPage() {
                 VECTOR_DB: MOUNTED
               </span>
               <span className="text-white border-l border-white/10 pl-4 md:pl-6">
-                DISK_ACCESS: <span className="text-[#10b981]">GRANTED</span>
+                DISK_ACCESS: <span className="text-[#39FF14]">GRANTED</span>
               </span>
             </div>
           </div>

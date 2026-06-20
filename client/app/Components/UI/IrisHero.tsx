@@ -111,7 +111,7 @@ export default function IrisHero({
                 subtitle="Get Early Access"
                 iconLeft={<Command className="w-6 h-6" />}
                 iconRight={
-                  <Download className="w-5 h-5 text-current group-hover:text-[#10b981]" />
+                  <Download className="w-5 h-5 text-current group-hover:text-[#39FF14]" />
                 }
                 className="bg-green-500/20 border border-green-500/30 text-white shadow-[0_0_30px_rgba(16,185,129,0.2)] hover:shadow-[0_0_60px_rgba(16,185,129,0.5)] hover:bg-green-500 hover:text-black"
               />
@@ -121,9 +121,9 @@ export default function IrisHero({
               <MagneticButton
                 title="Installation Guide"
                 subtitle="Watch Tutorial"
-                iconLeft={<FileCode2 className="w-6 h-6 text-[#10b981]" />}
+                iconLeft={<FileCode2 className="w-6 h-6 text-[#39FF14]" />}
                 iconRight={
-                  <ArrowRight className="w-5 h-5 text-current group-hover:text-[#10b981]" />
+                  <ArrowRight className="w-5 h-5 text-current group-hover:text-[#39FF14]" />
                 }
                 className="bg-transparent border border-white/15 text-white hover:bg-white/80 hover:text-black backdrop-blur-sm shadow-none"
               />
@@ -139,7 +139,7 @@ export default function IrisHero({
             ].map(({ label, value }) => (
               <div
                 key={label}
-                className="flex items-center gap-2 px-3 py-1.5 rounded-md border border-[#10b981]/30 bg-black/80 backdrop-blur-md"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-md border border-[#39FF14]/30 bg-black/80 backdrop-blur-md"
               >
                 <span className="text-[10px] font-mono text-gray-300 uppercase tracking-widest">
                   {label}
@@ -172,7 +172,7 @@ export default function IrisHero({
               width="18"
               height="28"
               rx="9"
-              stroke="#10b981"
+              stroke="#39FF14"
               strokeWidth="1.5"
             />
             <rect
@@ -181,7 +181,7 @@ export default function IrisHero({
               width="2"
               height="6"
               rx="1"
-              fill="#10b981"
+              fill="#39FF14"
               className="iris-scroll-dot"
             />
           </svg>
