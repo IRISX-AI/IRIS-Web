@@ -240,7 +240,6 @@ export default function FeaturesPage() {
 
         <div className="absolute bottom-0 w-full border-t border-white/10 bg-[#050505]/80 backdrop-blur-md z-30">
           <div className="max-w-7xl mx-auto px-6 h-12 flex items-center justify-between text-[10px] md:text-xs font-mono text-gray-400 uppercase tracking-widest">
-            {/* Left: Core Process & Listen State */}
             <div className="flex items-center gap-4 md:gap-6">
               <span className="flex items-center gap-2 text-[#10b981] font-bold shadow-sm">
                 <span className="relative flex h-2 w-2">
@@ -254,7 +253,6 @@ export default function FeaturesPage() {
               </span>
             </div>
 
-            {/* Right: Hardware & File System Hooks */}
             <div className="flex items-center gap-4 md:gap-6">
               <span className="hidden md:block">ADB_LINK: SECURE</span>
               <span className="hidden lg:block border-l border-white/10 pl-6">
