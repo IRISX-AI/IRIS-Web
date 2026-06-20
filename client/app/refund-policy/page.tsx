@@ -50,7 +50,6 @@ export default function RefundPolicyPage() {
 
       <section className="py-20 px-6 relative z-20 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* 1. Strictly No Refunds (Spans full width on top) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -101,7 +100,6 @@ export default function RefundPolicyPage() {
             </div>
           </motion.div>
 
-          {/* 2. Commercial Use Restriction (Half width) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -138,7 +136,6 @@ export default function RefundPolicyPage() {
             </div>
           </motion.div>
 
-          {/* 3. Disputes & Revocation (Half width) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -169,7 +166,6 @@ export default function RefundPolicyPage() {
             </p>
           </motion.div>
 
-          {/* 4. Test Before Deployment (Spans full width on bottom) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -221,7 +217,6 @@ export default function RefundPolicyPage() {
           </motion.div>
         </div>
 
-        {/* Footer Meta */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 max-w-6xl mx-auto">
           <span className="text-xs text-gray-500 font-mono uppercase tracking-widest">
             Last Updated: June 2026
