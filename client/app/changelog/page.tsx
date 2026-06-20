@@ -414,14 +414,29 @@ export default function ChangelogPage() {
 
   useGSAP(
     () => {
-      const mm = gsap.matchMedia();
+      // 1. Line progress tracks scroll position of timeline container
+      gsap.fromTo(
+        lineProgressRef.current,
+        { height: "0%" },
+        {
+          height: "100%",
+          ease: "none",
+          scrollTrigger: {
+            trigger: timelineRef.current,
+            start: "top 30%",
+            end: "bottom 70%",
+            scrub: true,
+          },
+        },
+      );
 
-      // 1. Initialize state on render: card 0 active, others dimmed
+      // 2. Focus/Highlight ScrollTrigger per card
       changelogData.forEach((item, idx) => {
         const idSafe = item.version.replace(/\./g, "-");
         const cardSelector = `#card-${idSafe}`;
         const dotSelector = `#dot-${idSafe}`;
 
+        // Initialize state on render: card 0 active, others dimmed
         if (idx === 0) {
           gsap.set(cardSelector, {
             scale: 1,
@@ -453,217 +468,85 @@ export default function ChangelogPage() {
             scale: 1,
           });
         }
-      });
 
-      // 2. Desktop layout: Right column logs section scrolls independently
-      mm.add("(min-width: 1024px)", () => {
-        // Line progress tracks scroll position of logs-container
-        gsap.fromTo(
-          lineProgressRef.current,
-          { height: "0%" },
-          {
-            height: "100%",
-            ease: "none",
-            scrollTrigger: {
-              trigger: "#timeline-window",
-              scroller: "#logs-container",
-              start: "top 25%",
-              end: "bottom 75%",
-              scrub: true,
-            },
+        ScrollTrigger.create({
+          trigger: cardSelector,
+          start: "top 60%",
+          end: "bottom 40%",
+          onEnter: () => {
+            setActiveIndex(idx);
+            gsap.to(cardSelector, {
+              scale: 1,
+              opacity: 1,
+              filter: "blur(0px)",
+              borderColor: "rgba(57, 255, 20, 0.4)",
+              boxShadow: "0 0 25px rgba(57, 255, 20, 0.05)",
+              duration: 0.3,
+            });
+            gsap.to(dotSelector, {
+              borderColor: "#39FF14",
+              backgroundColor: "#39FF14",
+              boxShadow: "0 0 15px rgba(57, 255, 20, 0.8)",
+              color: "#000000",
+              scale: 1.15,
+              duration: 0.3,
+            });
           },
-        );
-
-        // Highlight card & dot on entry relative to the logs-container viewport
-        changelogData.forEach((item, idx) => {
-          const idSafe = item.version.replace(/\./g, "-");
-          const cardSelector = `#card-${idSafe}`;
-          const dotSelector = `#dot-${idSafe}`;
-
-          ScrollTrigger.create({
-            trigger: cardSelector,
-            scroller: "#logs-container",
-            start: "top 50%",
-            end: "bottom 50%",
-            onEnter: () => {
-              setActiveIndex(idx);
-              gsap.to(cardSelector, {
-                scale: 1,
-                opacity: 1,
-                filter: "blur(0px)",
-                borderColor: "rgba(57, 255, 20, 0.4)",
-                boxShadow: "0 0 25px rgba(57, 255, 20, 0.05)",
-                duration: 0.3,
-              });
-              gsap.to(dotSelector, {
-                borderColor: "#39FF14",
-                backgroundColor: "#39FF14",
-                boxShadow: "0 0 15px rgba(57, 255, 20, 0.8)",
-                color: "#000000",
-                scale: 1.15,
-                duration: 0.3,
-              });
-            },
-            onEnterBack: () => {
-              setActiveIndex(idx);
-              gsap.to(cardSelector, {
-                scale: 1,
-                opacity: 1,
-                filter: "blur(0px)",
-                borderColor: "rgba(57, 255, 20, 0.4)",
-                boxShadow: "0 0 25px rgba(57, 255, 20, 0.05)",
-                duration: 0.3,
-              });
-              gsap.to(dotSelector, {
-                borderColor: "#39FF14",
-                backgroundColor: "#39FF14",
-                boxShadow: "0 0 15px rgba(57, 255, 20, 0.8)",
-                color: "#000000",
-                scale: 1.15,
-                duration: 0.3,
-              });
-            },
-            onLeave: () => {
-              gsap.to(cardSelector, {
-                scale: 0.97,
-                opacity: 0.25,
-                filter: "blur(2.5px)",
-                borderColor: "rgba(255, 255, 255, 0.05)",
-                boxShadow: "none",
-                duration: 0.3,
-              });
-              gsap.to(dotSelector, {
-                borderColor: "rgba(255, 255, 255, 0.1)",
-                backgroundColor: "#000000",
-                boxShadow: "none",
-                color: "#4b5563",
-                scale: 1,
-                duration: 0.3,
-              });
-            },
-            onLeaveBack: () => {
-              gsap.to(cardSelector, {
-                scale: 0.97,
-                opacity: 0.25,
-                filter: "blur(2.5px)",
-                borderColor: "rgba(255, 255, 255, 0.05)",
-                boxShadow: "none",
-                duration: 0.3,
-              });
-              gsap.to(dotSelector, {
-                borderColor: "rgba(255, 255, 255, 0.1)",
-                backgroundColor: "#000000",
-                boxShadow: "none",
-                color: "#4b5563",
-                scale: 1,
-                duration: 0.3,
-              });
-            },
-          });
-        });
-      });
-
-      // 3. Mobile layout: standard page window scroll
-      mm.add("(max-width: 1023px)", () => {
-        gsap.fromTo(
-          lineProgressRef.current,
-          { height: "0%" },
-          {
-            height: "100%",
-            ease: "none",
-            scrollTrigger: {
-              trigger: timelineRef.current,
-              start: "top 30%",
-              end: "bottom 70%",
-              scrub: true,
-            },
+          onEnterBack: () => {
+            setActiveIndex(idx);
+            gsap.to(cardSelector, {
+              scale: 1,
+              opacity: 1,
+              filter: "blur(0px)",
+              borderColor: "rgba(57, 255, 20, 0.4)",
+              boxShadow: "0 0 25px rgba(57, 255, 20, 0.05)",
+              duration: 0.3,
+            });
+            gsap.to(dotSelector, {
+              borderColor: "#39FF14",
+              backgroundColor: "#39FF14",
+              boxShadow: "0 0 15px rgba(57, 255, 20, 0.8)",
+              color: "#000000",
+              scale: 1.15,
+              duration: 0.3,
+            });
           },
-        );
-
-        changelogData.forEach((item, idx) => {
-          const idSafe = item.version.replace(/\./g, "-");
-          const cardSelector = `#card-${idSafe}`;
-          const dotSelector = `#dot-${idSafe}`;
-
-          ScrollTrigger.create({
-            trigger: cardSelector,
-            start: "top 60%",
-            end: "bottom 40%",
-            onEnter: () => {
-              setActiveIndex(idx);
-              gsap.to(cardSelector, {
-                scale: 1,
-                opacity: 1,
-                filter: "blur(0px)",
-                borderColor: "rgba(57, 255, 20, 0.4)",
-                boxShadow: "0 0 25px rgba(57, 255, 20, 0.05)",
-                duration: 0.3,
-              });
-              gsap.to(dotSelector, {
-                borderColor: "#39FF14",
-                backgroundColor: "#39FF14",
-                boxShadow: "0 0 15px rgba(57, 255, 20, 0.8)",
-                color: "#000000",
-                scale: 1.15,
-                duration: 0.3,
-              });
-            },
-            onEnterBack: () => {
-              setActiveIndex(idx);
-              gsap.to(cardSelector, {
-                scale: 1,
-                opacity: 1,
-                filter: "blur(0px)",
-                borderColor: "rgba(57, 255, 20, 0.4)",
-                boxShadow: "0 0 25px rgba(57, 255, 20, 0.05)",
-                duration: 0.3,
-              });
-              gsap.to(dotSelector, {
-                borderColor: "#39FF14",
-                backgroundColor: "#39FF14",
-                boxShadow: "0 0 15px rgba(57, 255, 20, 0.8)",
-                color: "#000000",
-                scale: 1.15,
-                duration: 0.3,
-              });
-            },
-            onLeave: () => {
-              gsap.to(cardSelector, {
-                scale: 0.97,
-                opacity: 0.25,
-                filter: "blur(2.5px)",
-                borderColor: "rgba(255, 255, 255, 0.05)",
-                boxShadow: "none",
-                duration: 0.3,
-              });
-              gsap.to(dotSelector, {
-                borderColor: "rgba(255, 255, 255, 0.1)",
-                backgroundColor: "#000000",
-                boxShadow: "none",
-                color: "#4b5563",
-                scale: 1,
-                duration: 0.3,
-              });
-            },
-            onLeaveBack: () => {
-              gsap.to(cardSelector, {
-                scale: 0.97,
-                opacity: 0.25,
-                filter: "blur(2.5px)",
-                borderColor: "rgba(255, 255, 255, 0.05)",
-                boxShadow: "none",
-                duration: 0.3,
-              });
-              gsap.to(dotSelector, {
-                borderColor: "rgba(255, 255, 255, 0.1)",
-                backgroundColor: "#000000",
-                boxShadow: "none",
-                color: "#4b5563",
-                scale: 1,
-                duration: 0.3,
-              });
-            },
-          });
+          onLeave: () => {
+            gsap.to(cardSelector, {
+              scale: 0.97,
+              opacity: 0.25,
+              filter: "blur(2.5px)",
+              borderColor: "rgba(255, 255, 255, 0.05)",
+              boxShadow: "none",
+              duration: 0.3,
+            });
+            gsap.to(dotSelector, {
+              borderColor: "rgba(255, 255, 255, 0.1)",
+              backgroundColor: "#000000",
+              boxShadow: "none",
+              color: "#4b5563",
+              scale: 1,
+              duration: 0.3,
+            });
+          },
+          onLeaveBack: () => {
+            gsap.to(cardSelector, {
+              scale: 0.97,
+              opacity: 0.25,
+              filter: "blur(2.5px)",
+              borderColor: "rgba(255, 255, 255, 0.05)",
+              boxShadow: "none",
+              duration: 0.3,
+            });
+            gsap.to(dotSelector, {
+              borderColor: "rgba(255, 255, 255, 0.1)",
+              backgroundColor: "#000000",
+              boxShadow: "none",
+              color: "#4b5563",
+              scale: 1,
+              duration: 0.3,
+            });
+          },
         });
       });
     },
@@ -674,25 +557,15 @@ export default function ChangelogPage() {
     const idSafe = versionStr.replace(/\./g, "-");
     const element = document.getElementById(`card-${idSafe}`);
     if (element) {
-      if (window.innerWidth >= 1024) {
-        const container = document.getElementById("logs-container");
-        if (container) {
-          const containerTop = container.getBoundingClientRect().top;
-          const elementTop = element.getBoundingClientRect().top;
-          const scrollOffset = elementTop - containerTop + container.scrollTop;
-          container.scrollTo({ top: scrollOffset, behavior: "smooth" });
-        }
-      } else {
-        const top = element.getBoundingClientRect().top + window.scrollY - 160;
-        window.scrollTo({ top, behavior: "smooth" });
-      }
+      const top = element.getBoundingClientRect().top + window.scrollY - 160;
+      window.scrollTo({ top, behavior: "smooth" });
     }
   };
 
   return (
     <div
       ref={containerRef}
-      className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#39FF14] selection:text-black overflow-x-clip"
+      className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#39FF14] selection:text-black overflow-x-hidden"
     >
       <Header />
 
@@ -867,10 +740,7 @@ export default function ChangelogPage() {
           </div>
 
           {/* Right Column (Scrollable stack cards) */}
-          <div
-            id="logs-container"
-            className="lg:col-span-8 relative pl-12 lg:pl-20 h-auto lg:h-[85vh] overflow-visible lg:overflow-y-auto no-scrollbar"
-          >
+          <div className="lg:col-span-8 relative pl-12 lg:pl-20 h-full">
             {/* Vertical timeline track line */}
             <div className="absolute left-6 lg:left-8 top-4 bottom-4 w-[2px] bg-zinc-800/40 rounded-full z-0 pointer-events-none">
               <div
@@ -893,7 +763,7 @@ export default function ChangelogPage() {
                   <div
                     key={item.version}
                     id={`card-${idSafe}`}
-                    className="relative bg-[#0a0a0a] border border-white/10 rounded-3xl p-6 md:p-8 flex flex-col justify-between w-full h-auto transition-all duration-300"
+                    className="relative bg-[#0a0a0a] border border-white/10 rounded-3xl p-6 md:p-8 flex flex-col justify-between w-full h-auto lg:h-[720px] overflow-visible lg:overflow-y-auto transition-all duration-300 iris-scrollbar"
                   >
                     {/* Projecting timeline dot */}
                     <div
@@ -943,7 +813,7 @@ export default function ChangelogPage() {
                     </div>
 
                     {/* Categories grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 flex-1">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 flex-1 overflow-y-auto iris-scrollbar pr-2">
                       {item.categories.map((cat, catIdx) => (
                         <div key={catIdx} className="category-block space-y-3">
                           <h4 className="text-xs font-bold text-white flex items-center gap-2 border-b border-white/5 pb-1 font-mono uppercase tracking-wider">
