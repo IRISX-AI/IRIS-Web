@@ -1,27 +1,16 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Draggable } from "gsap/all";
 import {
-  Mic,
-  MousePointer2,
-  Smartphone,
-  Cpu,
-  Zap,
-  Workflow,
-  Brain,
-  Shield,
-  HardDrive,
-  Globe,
-  User,
-  ScanFace,
-  Layers,
+  BrainCircuit,
+  Target,
+  ShieldCheck,
+  Rocket,
   Sparkles,
-  Code2,
-  Database,
+  Download,
 } from "lucide-react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
@@ -44,124 +33,64 @@ import { PiOpenAiLogo } from "react-icons/pi";
 import { RiGeminiFill } from "react-icons/ri";
 import { BsAnthropic } from "react-icons/bs";
 import { TbBrandSocketIo } from "react-icons/tb";
-import { GridScan } from "../utils/GridScan";
+import RippleGrid from "../constants/RippleGrid";
+import Image from "next/image";
+import { Cover } from "../Components/core/Cover";
+import Link from "next/link";
 
 if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger, Draggable);
+  gsap.registerPlugin(ScrollTrigger);
 }
 
 const storyData: StoryContent[] = [
   {
     num: "01",
-    title: "The Passive Flaw",
-    text: "Most AI apps today are passive text boxes. You type, wait, and get text back. They don't DO anything. We realized the world doesn't need another chatbot.",
-    icon: <User className="w-24 h-24 text-gray-500" />,
-    visualTitle: "PASSIVE AI",
-    visualSub: "The Chatbot Flaw",
+    title: "The Origin",
+    text: "IRIS was born from a simple frustration: AI assistants talk too much and do too little. We were tired of passive chatbots that just generated text. We wanted an active participant—an intelligence that could actually use a computer.",
+    icon: <Target className="w-24 h-24 text-red-500" />,
+    visualTitle: "THE PROBLEM",
+    visualSub: "Passive AI",
   },
   {
     num: "02",
-    title: "Voice First",
-    text: "IRIS is designed for real-time conversation. Using custom WebSockets, your voice is streamed instantly to the engine without the painful lag of traditional APIs.",
-    icon: <Mic className="w-24 h-24 text-blue-400" />,
-    visualTitle: "VOICE FIRST",
-    visualSub: "Natural Input",
-  },
-  {
-    num: "03",
-    title: "Autonomous Execution",
-    text: "Instead of giving you a summary, IRIS acts. It takes your voice command, processes the intent, and directly controls your files, applications, mouse, and keyboard.",
-    icon: <MousePointer2 className="w-24 h-24 text-red-400" />,
-    visualTitle: "EXECUTION",
-    visualSub: "OS Level Control",
-  },
-  {
-    num: "04",
-    title: "The Cognitive Engine",
-    text: "To be fast and smart, IRIS uses a dual-brain architecture. Groq LPUs handle split-second logic and tool-chaining, while Gemini 1.5 manages massive context and complex reasoning.",
-    icon: <Brain className="w-24 h-24 text-purple-500" />,
-    visualTitle: "THE BRAIN",
-    visualSub: "Gemini + Groq",
-  },
-  {
-    num: "05",
-    title: "Local Intelligence",
-    text: "Not everything needs the cloud. IRIS hooks into Local LLMs via Ollama. It can process offline tasks, organize local files, and execute scripts with zero data leaving your machine.",
-    icon: <HardDrive className="w-24 h-24 text-orange-500" />,
-    visualTitle: "LOCAL AI",
-    visualSub: "Ollama Privacy",
-  },
-  {
-    num: "06",
-    title: "The Eyes (Face Rec)",
-    text: "IRIS doesn't just hear you; it sees you. Integrated with a local Face Recognition System, it verifies your identity before executing sensitive OS-level commands or unlocking secure vaults.",
-    icon: <ScanFace className="w-24 h-24 text-cyan-400" />,
-    visualTitle: "VISION",
-    visualSub: "Face Recognition",
-  },
-  {
-    num: "07",
-    title: "The Desktop OS",
-    text: "Built on Electron, IRIS escapes the browser sandbox. It has raw, unhindered access to your operating system to launch apps, search directories, and execute shell commands.",
-    icon: <Database className="w-24 h-24 text-pink-500" />,
-    visualTitle: "DESKTOP OS",
-    visualSub: "Electron Core",
-  },
-  {
-    num: "08",
-    title: "The Mobile Bridge",
-    text: "Your phone shouldn't be disconnected from your workflow. IRIS connects to Android via ADB, allowing it to read notifications, mirror your screen, and open mobile apps remotely.",
-    icon: <Smartphone className="w-24 h-24 text-green-400" />,
-    visualTitle: "MOBILE BRIDGE",
-    visualSub: "ADB Integration",
-  },
-  {
-    num: "09",
-    title: "Zero Latency",
-    text: "A real assistant shouldn't make you wait. By stripping out HTTP overhead and streaming audio binaries directly over WebSockets, the response time drops below human perception.",
-    icon: <Zap className="w-24 h-24 text-yellow-400" />,
-    visualTitle: "ZERO LATENCY",
-    visualSub: "WebSocket Audio",
-  },
-  {
-    num: "10",
-    title: "Automation Chaining",
-    text: "IRIS thinks in steps. Tell it to 'Find my hardware specs, create a report, and save it to desktop.' The engine chains the OS read tool, the text generation tool, and the file write tool autonomously.",
-    icon: <Workflow className="w-24 h-24 text-[#10b981]" />,
-    visualTitle: "AUTOMATION",
-    visualSub: "Multi-Step Chains",
-  },
-  {
-    num: "11",
-    title: "The Fluid Interface",
-    text: "While voice is primary, the visual feedback is crucial. Built with React, Tailwind, GSAP, and Framer Motion, the UI breathes and reacts to system states in real-time.",
-    icon: <Layers className="w-24 h-24 text-indigo-400" />,
-    visualTitle: "UI LAYER",
-    visualSub: "React + GSAP",
-  },
-  {
-    num: "12",
     title: "The Architect",
-    text: "Engineered by Harsh Pandey. Built from the ground up to push the boundaries of frontend performance, AI infrastructure, and system-level automation.",
-    icon: <Code2 className="w-24 h-24 text-white" />,
-    visualTitle: "ARCHITECT",
+    text: "Engineered entirely by Harsh Pandey, IRIS AI was built from the ground up to push the boundaries of what local software can do. Every line of code is optimized for raw speed and deep operating system integration.",
+    icon: (
+      <Image
+        src="/author/master.jpeg"
+        alt="IRIS LOGO"
+        width={10}
+        height={10}
+        unoptimized
+        className="w-36 h-36 object-contain rounded-full"
+      />
+    ),
+    visualTitle: "THE CREATOR",
     visualSub: "Harsh Pandey",
   },
   {
-    num: "13",
-    title: "True Companion",
-    text: "This is Project Jarvis realized. Not a helper, but an autonomous companion that manages your digital life, secures your data, and executes your will.",
-    icon: <Shield className="w-24 h-24 text-red-500" />,
-    visualTitle: "COMPANION",
-    visualSub: "Digital Security",
+    num: "03",
+    title: "The Core Brain",
+    text: "To make IRIS truly intelligent, it had to understand context like a human. Powered by the Gemini ecosystem, IRIS is capable of deep reasoning, visual screen analysis, and maintaining a massive memory of your workflow.",
+    icon: <BrainCircuit className="w-24 h-24 text-purple-500" />,
+    visualTitle: "INTELLIGENCE",
+    visualSub: "Gemini Core",
   },
   {
-    num: "14",
-    title: "The Next Era",
-    text: "The era of typing is ending. The era of execution has begun. Prepare to upgrade your operating system to true intelligence.",
-    icon: <Globe className="w-24 h-24 text-[#10b981]" />,
-    visualTitle: "THE ERA",
-    visualSub: "Future of OS",
+    num: "04",
+    title: "The Mission",
+    text: "Our goal is total friction elimination. Whether it is organizing local files, writing code directly to your disk, or controlling your mobile device remotely, IRIS exists to execute your will instantaneously.",
+    icon: <Rocket className="w-24 h-24 text-yellow-400" />,
+    visualTitle: "THE MISSION",
+    visualSub: "Zero Friction",
+  },
+  {
+    num: "05",
+    title: "Uncompromising Privacy",
+    text: "True power requires trust. IRIS is designed with a strict local-first philosophy, utilizing offline wake words and biometric facial recognition to ensure your desktop vault remains entirely yours.",
+    icon: <ShieldCheck className="w-24 h-24 text-cyan-400" />,
+    visualTitle: "SECURITY",
+    visualSub: "Local First",
   },
 ];
 
@@ -224,24 +153,11 @@ const actualTechLogos = [
   },
   { node: <SiElectron className="text-4xl text-white" />, title: "Electron" },
   { node: <SiNotion className="text-4xl text-white" />, title: "Notion" },
-  { node: <FaYahoo className="text-4xl text-white" />, title: "Yahoo" },
+  { node: <FaYahoo className="text-4xl text-white" />, title: "Yahoo Finance" },
 ];
 
 const IRISAbout = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const heroRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      Draggable.create(".draggable-code", {
-        bounds: heroRef.current,
-        inertia: true,
-        edgeResistance: 0.65,
-        type: "x,y",
-      });
-    }, containerRef);
-    return () => ctx.revert();
-  }, []);
 
   return (
     <div
@@ -250,22 +166,21 @@ const IRISAbout = () => {
     >
       <Header />
 
-      <section
-        ref={heroRef}
-        className="relative h-screen flex flex-col justify-center items-center overflow-hidden border-b border-white/10 perspective-1000 bg-black"
-      >
+      <section className="relative h-screen flex flex-col justify-center items-center overflow-hidden border-b border-white/10 perspective-1000 bg-black">
         <div className="absolute inset-0 z-0">
-          <GridScan
-            sensitivity={0.55}
-            lineThickness={1}
-            linesColor="#10b981"
-            gridScale={0.1}
-            scanColor="#34d399"
-            scanOpacity={0.4}
-            enablePost
-            bloomIntensity={0.6}
-            chromaticAberration={0.002}
-            noiseIntensity={0.01}
+          <RippleGrid
+            enableRainbow={false}
+            gridColor="#0f8218"
+            rippleIntensity={0.05}
+            gridSize={10}
+            gridThickness={5}
+            mouseInteraction={true}
+            mouseInteractionRadius={2}
+            opacity={0.8}
+            fadeDistance={1.5}
+            vignetteStrength={5}
+            glowIntensity={0.9}
+            gridRotation={0}
           />
         </div>
 
@@ -275,59 +190,35 @@ const IRISAbout = () => {
           <motion.div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#10b981]/30 bg-[#10b981]/10 text-[#10b981] text-xs font-mono mb-8 backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.2)]">
               <Sparkles className="w-3 h-3" />
-              <span>PROJECT JARVIS • THE AUTONOMOUS AGENT</span>
+              <span>THE STORY BEHIND THE SOFTWARE</span>
             </div>
-            <h1 className="text-7xl md:text-[10rem] font-bold tracking-tighter mb-6 leading-[0.9] text-white drop-shadow-2xl">
-              NOT A <br />
-              <span className="text-transparent bg-clip-text bg-linear-to-b from-[#10b981] to-[#044a33]">
-                CHATBOT.
+
+            <h1
+              className="text-7xl md:text-[10rem] lg:text-[12rem] font-black tracking-tight mb-2 leading-none text-white"
+              style={{ textShadow: "0 10px 40px rgba(0,0,0,0.9)" }}
+            >
+              MEET <br />
+              <span
+                style={{
+                  filter:
+                    "drop-shadow(0px 0px 15px rgba(57, 255, 20, 1)) drop-shadow(0px 0px 50px rgba(57, 255, 20, 0.8))",
+                }}
+                className="text-transparent bg-clip-text bg-linear-to-b from-[#051a00] to-[#091a09]"
+              >
+                IRIS AI.
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              IRIS is an{" "}
-              <span className="text-white font-bold border-b border-[#10b981]">
-                Autonomous Orchestrator
-              </span>{" "}
-              that controls your desktop, mobile, and workflow through native
-              voice commands.
+              A true system-level intelligence. IRIS bypasses the browser to
+              read your screen, manage your local files, and execute complex
+              desktop workflows entirely hands-free.
             </p>
           </motion.div>
-        </div>
-
-        <div className="draggable-code absolute z-20 top-[20%] right-[10%] cursor-grab active:cursor-grabbing hidden md:block">
-          <div className="w-80 md:w-96 bg-[#050505]/90 backdrop-blur-xl border border-white/10 rounded-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden transform rotate-3 hover:rotate-0 transition-transform duration-300 hover:border-[#10b981]/50">
-            <div className="h-8 bg-white/5 border-b border-white/5 flex items-center justify-between px-3 cursor-grab active:cursor-grabbing">
-              <div className="flex gap-1.5">
-                <div className="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
-                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div>
-                <div className="w-2.5 h-2.5 rounded-full bg-green-500/50"></div>
-              </div>
-              <div className="flex items-center gap-1 text-[10px] font-mono text-gray-500">
-                <Cpu className="w-3 h-3" /> iris_kernel.ts
-              </div>
-            </div>
-            <div className="p-4 font-mono text-xs text-gray-400 leading-relaxed pointer-events-none select-none">
-              <p>
-                <span className="text-purple-400">import</span>{" "}
-                {"{ VoiceStream, ElectronBridge }"}{" "}
-                <span className="text-purple-400">from</span>{" "}
-                <span className="text-green-400">'@iris/core'</span>;
-              </p>
-              <br />
-              <p>
-                <span className="text-blue-400">const</span> agent ={" "}
-                <span className="text-yellow-300">new</span> VoiceStream();
-              </p>
-              <p>agent.connectFaceRec();</p>
-              <br />
-              <p className="text-[#10b981] animate-pulse">{`> Listening for Voice Input...`}</p>
-            </div>
-          </div>
         </div>
       </section>
 
       <section className="w-full px-6 md:px-0 py-12 relative overflow-hidden flex flex-col items-center z-20">
-        <p className="text-[#10b981] text-sm tracking-widest uppercase mb-8 font-semibold drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]">
+        <p className="text-[#0ac529] text-sm tracking-widest uppercase mb-8 font-semibold drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]">
           Built with a bleeding-edge modern stack
         </p>
         <LogoLoop
@@ -344,14 +235,27 @@ const IRISAbout = () => {
 
       <StoryChapter content={storyData} />
 
-      <section className="py-40 bg-black text-center border-t border-[#10b981]/10 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[#10b981]/5 blur-3xl pointer-events-none"></div>
-        <h2 className="text-5xl md:text-8xl font-bold mb-8 relative z-10 text-white tracking-tighter">
-          READY TO <span className="text-[#10b981]">AUTOMATE?</span>
-        </h2>
-        <button className="relative z-10 px-12 py-5 bg-[#10b981] text-black font-bold text-xl rounded-full hover:scale-105 transition-transform shadow-[0_0_40px_rgba(16,185,129,0.4)]">
-          Initialize IRIS Engine
-        </button>
+      <section className="py-40 bg-black text-center border-t border-white/5 relative overflow-hidden flex flex-col items-center justify-center">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-[#10b981]/10 blur-[120px] rounded-full pointer-events-none mix-blend-screen" />
+
+        <div className="relative z-20 flex flex-col items-center gap-10 px-6">
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold max-w-5xl mx-auto text-center tracking-tight text-white drop-shadow-2xl">
+            Take absolute command of your <br className="hidden md:block" />
+            <Cover>Operating System.</Cover>
+          </h1>
+
+          <p className="text-gray-400 text-lg md:text-xl max-w-2xl font-mono tracking-tight">
+            Install the IRIS Engine and transform your PC into an autonomous
+            execution environment.
+          </p>
+
+          <Link href="/download">
+            <button className="group relative inline-flex items-center gap-3 px-10 py-5 bg-[#10b981] text-black font-bold text-lg rounded-full hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_60px_rgba(16,185,129,0.6)]">
+              <Download className="w-5 h-5 group-hover:-translate-y-1 transition-transform duration-300" />
+              Download IRIS For Desktop
+            </button>
+          </Link>
+        </div>
       </section>
 
       <Footer />
