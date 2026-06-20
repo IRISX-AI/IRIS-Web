@@ -36,7 +36,7 @@ export default function Footer() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-linear-to-r from-transparent via-[#39FF14]/40 to-transparent" />
 
       <div className="hidden md:flex w-full justify-center items-center py-12 md:py-20 mb-12 border-b border-white/5 relative">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.08),transparent_50%)] pointer-events-none" />
+        <div className="absolute inset-0 pointer-events-none" />
         <TextHoverEffect text="IRIS AI" />
       </div>
 
