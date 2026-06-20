@@ -503,7 +503,6 @@ export default function ChangelogPage() {
           },
         });
 
-        // Stagger categories inside the active card on slide-in
         gsap.fromTo(
           `${cardId} .category-block`,
           { opacity: 0, y: 15 },
