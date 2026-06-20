@@ -24,118 +24,119 @@ import Footer from "../Components/Footer";
 import StoryChapter, { StoryContent } from "../lib/StoryChapter";
 import Hyperspeed from "../Components/core/HyperSpeed";
 
+// ── 1. The Elite Feature Data (Zero Fluff, 100% Technical Accuracy) ──
 const storyData: StoryContent[] = [
   {
     num: "01",
-    title: "The OS Layer",
-    text: "IRIS doesn't just chat; it controls. It natively manages your file system, opens applications, and sorts your messy directories into categorized drop zones automatically.",
+    title: "Native File System Access",
+    text: "IRIS executes local read/write operations autonomously. It navigates directories, structures project folders, and manages your hard drive without requiring manual input.",
     icon: <Database className="w-24 h-24 text-gray-400" />,
     visualTitle: "SYSTEM CONTROL",
-    visualSub: "Native OS Access",
+    visualSub: "OS-Level Access",
   },
   {
     num: "02",
-    title: "Voice First",
-    text: "Typing is friction. By stripping out HTTP overhead and streaming audio binaries directly over WebSockets, IRIS achieves sub-second latency for real-time conversation.",
+    title: "Acoustic WebSocket Engine",
+    text: "Typing is friction. By stripping HTTP overhead and streaming audio binaries directly over WebSockets, IRIS achieves sub-second latency for real-time voice execution.",
     icon: <Mic className="w-24 h-24 text-blue-400" />,
     visualTitle: "ZERO LATENCY",
-    visualSub: "WebSocket Audio",
+    visualSub: "Binary Streams",
   },
   {
     num: "03",
-    title: "Biometric Vault",
-    text: "Security isn't just a password. IRIS uses Local Face Recognition to verify your physical presence before executing sensitive OS-level commands or unlocking the system vault.",
+    title: "Hardware Security Vault",
+    text: "Security requires physical verification. IRIS utilizes local facial recognition algorithms to cryptographically verify your presence before executing sensitive terminal commands.",
     icon: <Fingerprint className="w-24 h-24 text-emerald-400" />,
-    visualTitle: "VISION SECURITY",
-    visualSub: "Multi-Face Encryption",
+    visualTitle: "BIOMETRICS",
+    visualSub: "Face Authentication",
   },
   {
     num: "04",
-    title: "The Mobile Bridge",
-    text: "Your PC and phone are now one. IRIS connects via ADB to read notifications, toggle hardware like Wi-Fi, and even swipe or tap specific coordinates on your mobile screen.",
+    title: "Android Telemetry",
+    text: "Your PC and mobile device, unified. IRIS interfaces via ADB to read local notifications, toggle hardware states, and execute remote coordinate taps on your mobile display.",
     icon: <Smartphone className="w-24 h-24 text-purple-400" />,
-    visualTitle: "ECOSYSTEM LINK",
-    visualSub: "Android Telemetry",
+    visualTitle: "ECOSYSTEM",
+    visualSub: "ADB Integration",
   },
   {
     num: "05",
-    title: "Neural Communication",
-    text: "Dictate and dispatch. IRIS can instantly draft emails, send WhatsApp messages, or even schedule delayed cron-based texts without you ever touching the keyboard.",
+    title: "Autonomous Communications",
+    text: "Direct API integration. IRIS drafts emails, dispatches WhatsApp messages, and schedules cron-based background notifications without manual UI interaction.",
     icon: <MessageCircle className="w-24 h-24 text-green-400" />,
-    visualTitle: "AUTONOMOUS COMMS",
+    visualTitle: "COMMS",
     visualSub: "WhatsApp & Email",
   },
   {
     num: "06",
-    title: "Deep Research Agent",
-    text: "Need a report? IRIS deploys an autonomous Llama 3 web crawler to scour the internet, synthesize data, and seamlessly sync the final research report directly to your Notion.",
+    title: "Automated Data Scraping",
+    text: "Deploy automated web crawlers to scour live internet data, synthesize documentation, and format structured reports directly into your local Notion databases.",
     icon: <Search className="w-24 h-24 text-orange-400" />,
     visualTitle: "RAG ENGINE",
-    visualSub: "Llama 3 Web Crawl",
+    visualSub: "Web Crawling",
   },
   {
     num: "07",
-    title: "UI Teleportation",
-    text: 'Command your workspace. Tell IRIS to "move code to the left and browser to the right." It physically resizes and stacks your application windows for ultimate flow state.',
+    title: "Window Management",
+    text: "IRIS interfaces directly with your OS window manager to physically resize, stack, and align your active application windows based on your current workflow context.",
     icon: <LayoutTemplate className="w-24 h-24 text-cyan-400" />,
-    visualTitle: "WORKSPACE MGR",
-    visualSub: "Window Teleportation",
+    visualTitle: "WORKSPACE",
+    visualSub: "Process Control",
   },
   {
     num: "08",
-    title: "The Live Forge",
-    text: "Describe a website, and watch it build. IRIS spawns a live window and generates fully animated React and GSAP components in real-time right before your eyes.",
+    title: "Live Code Generation",
+    text: "IRIS spawns local instances to generate, render, and execute React and GSAP components in real-time, bridging the gap between prompt and compiled code.",
     icon: <Code2 className="w-24 h-24 text-pink-400" />,
-    visualTitle: "AGENTIC BUILDER",
-    visualSub: "Tailvy Integration",
+    visualTitle: "COMPILER",
+    visualSub: "Live Rendering",
   },
   {
     num: "09",
-    title: "The Local Brain",
-    text: "Complete privacy. IRIS indexes your massive project folders into a local Vector Database, allowing you to semantically search and interact with your data completely offline.",
+    title: "Local Vector Memory",
+    text: "Complete privacy. IRIS embeds your project directories into a local LanceDB vector database, enabling instant, offline semantic search across your entire file system.",
     icon: <HardDrive className="w-24 h-24 text-yellow-400" />,
-    visualTitle: "VECTOR MEMORY",
+    visualTitle: "VECTOR DB",
     visualSub: "Semantic Indexing",
   },
   {
     num: "10",
-    title: "Visual Hacking",
-    text: 'A viral party trick with real power. Command IRIS to "Hack Apple," and it injects custom JavaScript to visually mutate live websites with your own cinematic text and themes.',
+    title: "Live DOM Manipulation",
+    text: "IRIS injects JavaScript locally to mutate live website Document Object Models (DOM), extracting visual UI layouts into raw code for immediate iteration.",
     icon: <Braces className="w-24 h-24 text-[#10b981]" />,
-    visualTitle: "DOM MUTATION",
-    visualSub: "Live CSS/JS Injection",
+    visualTitle: "DOM INJECTION",
+    visualSub: "Live CSS/JS",
   },
   {
     num: "11",
-    title: "Network Wormholes",
-    text: "Need to share localhost? IRIS can autonomously open a secure tunnel, exposing your local dev server to the public internet so clients can see your work instantly.",
+    title: "Localhost Tunnels",
+    text: "IRIS autonomously configures and deploys secure public endpoints, exposing your local development servers to the internet for instant client previews.",
     icon: <Globe className="w-24 h-24 text-indigo-400" />,
-    visualTitle: "PORT EXPOSURE",
-    visualSub: "Localhost Tunnels",
+    visualTitle: "NETWORKING",
+    visualSub: "Port Exposure",
   },
   {
     num: "12",
-    title: "The Cognitive Core",
-    text: "Powered by a dual-brain architecture. Groq LPUs handle split-second tool chaining and logic, while Gemini 2.5 Flash manages massive context and complex reasoning.",
+    title: "Dual-Compute Architecture",
+    text: "Groq LPUs handle split-second JSON tool-chaining, while the Gemini Flash streaming architecture manages massive context windows and complex reasoning.",
     icon: <Brain className="w-24 h-24 text-white" />,
-    visualTitle: "DUAL INTELLIGENCE",
+    visualTitle: "INTELLIGENCE",
     visualSub: "Gemini + Groq",
   },
   {
     num: "13",
-    title: "Absolute Automation",
-    text: "IRIS thinks in steps. It can execute complex JSON arrays of keyboard shortcuts, mouse movements, and UI clicks to automate your most repetitive daily tasks.",
+    title: "Macro Execution",
+    text: "IRIS processes complex JSON arrays to inject global keyboard shortcuts, mouse coordinates, and UI clicks, automating repetitive desktop workflows natively.",
     icon: <MousePointer2 className="w-24 h-24 text-red-500" />,
-    visualTitle: "MACRO ENGINE",
-    visualSub: "Ghost Typing & Clicks",
+    visualTitle: "MACROS",
+    visualSub: "Ghost Typing",
   },
   {
     num: "14",
-    title: "The Architect",
-    text: "Built from the ground up by Harsh Pandey to push the boundaries of what frontend performance, AI infrastructure, and system-level desktop automation can achieve together.",
+    title: "Engineered for Scale",
+    text: "Built by Harsh Pandey. Architected to push the absolute limits of local AI infrastructure, frontend performance, and native desktop execution.",
     icon: <Shield className="w-24 h-24 text-[#10b981]" />,
-    visualTitle: "PROJECT JARVIS",
-    visualSub: "The Next OS Standard",
+    visualTitle: "ARCHITECTURE",
+    visualSub: "Harsh Pandey",
   },
 ];
 
@@ -150,8 +151,8 @@ export default function FeaturesPage() {
       <Header />
 
       <section className="relative h-screen flex flex-col justify-center items-center overflow-hidden border-b border-white/10 bg-[#050505] perspective-1000">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-125 bg-[#10b981]/10 blur-[120px] rounded-full pointer-events-none mix-blend-screen" />
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-linear-to-t from-[#050505] to-transparent z-10"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#10b981]/10 blur-[120px] rounded-full pointer-events-none mix-blend-screen" />
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#050505] to-transparent z-10"></div>
 
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
           <Hyperspeed
@@ -213,12 +214,13 @@ export default function FeaturesPage() {
               </span>
             </motion.div>
 
+            {/* Replaced 'PASSIVE CHAT' with 'NATIVE EXECUTION' to sound like a real engine */}
             <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-8 leading-[0.9]">
-              BEYOND <br />
+              NATIVE <br />
               <span className="relative inline-block">
                 <span className="absolute -inset-1 bg-[#10b981]/20 blur-lg opacity-50 animate-pulse"></span>
-                <span className="relative text-transparent bg-clip-text bg-linear-to-b from-white via-gray-200 to-gray-600 drop-shadow-2xl">
-                  PASSIVE CHAT
+                <span className="relative text-transparent bg-clip-text bg-gradient-to-b from-white via-gray-200 to-gray-600 drop-shadow-2xl">
+                  EXECUTION
                 </span>
               </span>
             </h1>
@@ -233,12 +235,13 @@ export default function FeaturesPage() {
               <span className="text-white font-bold border-b border-[#10b981]">
                 IRIS is a native execution engine
               </span>{" "}
-              that gives you raw access to your file system, local NPU, and
+              that gives you raw access to your file system, local memory, and
               mobile hardware.
             </motion.p>
           </motion.div>
         </div>
 
+        {/* This Status Bar looks incredible. I left it exactly as you built it. */}
         <div className="absolute bottom-0 w-full border-t border-white/10 bg-black/50 backdrop-blur-sm z-30">
           <div className="max-w-7xl mx-auto px-6 h-12 flex items-center justify-between text-[10px] md:text-xs font-mono text-gray-500 uppercase tracking-widest">
             <div className="flex items-center gap-4">
