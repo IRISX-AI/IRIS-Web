@@ -82,10 +82,10 @@ export default function IrisHero({
             }}
           >
             Command your PC completely hands-free.{" "}
-            <span className="text-[#a7f3d0] font-bold">Simply Speak</span> and
+            <span className="text-[#39FF14] font-bold">Simply Speak</span> and
             let IRIS manage your files, analyze your screen, and control your
             applications with{" "}
-            <span className="text-white font-bold">zero friction.</span>
+            <span className="text-white font-bold">Zero Efforts.</span>
           </p>
 
           <div className="flex items-center gap-3 mt-6 mb-10">
