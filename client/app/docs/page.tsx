@@ -37,12 +37,12 @@ export default function DocsOverviewPage() {
         <Image
           src="/assets/banner.png"
           alt="IRIS AI Documentation Banner"
-          width={1200}
-          height={400}
+          width={1920}
+          height={1080}
           priority
-          className="w-full h-auto object-cover max-h-62.5"
+          className="w-full h-full object-cover max-h-70"
         />
-        <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/15 via-black/20 to-transparent" />
       </motion.div>
 
       <motion.div variants={itemVariants} className="space-y-4">
