@@ -88,7 +88,7 @@ export default function DeprecatedSite() {
             
             <div className="relative z-10 flex flex-col text-left sm:text-center">
               <span className="text-white font-bold text-xl uppercase tracking-wider group-hover:text-[#39FF14] transition-colors">
-                Visit Our New Site
+                Under Development...
               </span>
               <span className="text-zinc-500 text-[10px] uppercase tracking-widest mt-1 ">
                 New Websie Coming Soon
