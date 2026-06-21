@@ -36,7 +36,7 @@ export default function IRIS() {
         {/* ── TYPOGRAPHY ── */}
         <h1 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 uppercase text-white drop-shadow-lg">
           NEURAL CORE <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-b from-zinc-500 to-zinc-800">
+          <span className="text-transparent bg-clip-text bg-linear-to-b from-zinc-500 to-zinc-800">
             RELOCATED.
           </span>
         </h1>
