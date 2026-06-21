@@ -69,7 +69,7 @@ export default function DeprecatedSite() {
           transition={{ duration: 0.5, delay: 1 }}
           className="text-zinc-400 text-base md:text-lg max-w-lg mx-auto leading-relaxed mb-12 "
         >
-          The old version of IRIS has been completely shut down. We have moved everything to a brand new, secure website.
+          The old version of IRIS has been completely shut down. We have moved everything to a brand new, secure website. 
         </motion.p>
 
         <motion.div
