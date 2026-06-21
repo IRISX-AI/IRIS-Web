@@ -88,7 +88,7 @@ export default function SitemapPage() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#39FF14]/30 bg-[#39FF14]/5 text-[#39FF14] text-xs mb-8 backdrop-blur-md">
             <FileText className="w-3 h-3 text-[#39FF14]" />
-            <span className="uppercase tracking-widest font-mono">Sitemap</span>
+            <span className="uppercase tracking-widest ">Sitemap</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 text-white drop-shadow-2xl">
@@ -98,7 +98,7 @@ export default function SitemapPage() {
             </span>
           </h1>
 
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto font-mono">
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto ">
             Complete index of the IRIS ecosystem and documentation.
           </p>
         </motion.div>
@@ -119,7 +119,7 @@ export default function SitemapPage() {
               className="bg-[#050505] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-[#39FF14]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-              <h2 className="text-xl font-bold text-white tracking-widest uppercase mb-6 font-mono flex items-center gap-2">
+              <h2 className="text-xl font-bold text-white tracking-widest uppercase mb-6  flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-[#39FF14]/50" />
                 {category.category}
               </h2>
@@ -135,7 +135,7 @@ export default function SitemapPage() {
                         <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover/link:bg-[#39FF14]/10 group-hover/link:border-[#39FF14]/20 transition-all duration-300 shrink-0">
                           <Icon className="w-4 h-4 text-zinc-500 group-hover/link:text-[#39FF14] transition-colors" />
                         </div>
-                        <span className="font-mono text-sm group-hover/link:translate-x-1 transition-transform duration-300">
+                        <span className=" text-sm group-hover/link:translate-x-1 transition-transform duration-300">
                           {link.name}
                         </span>
                       </Link>

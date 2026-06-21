@@ -603,11 +603,11 @@ export default function ChangelogPage() {
       <section className="pt-20 pb-10 px-6 relative z-20 max-w-5xl mx-auto">
         <div className="bg-[#0a0a0a] border border-[#39FF14]/20 rounded-2xl p-6 md:p-8 space-y-4 relative overflow-hidden group">
           <div className="absolute top-0 left-0 w-full h-1 bg-[#39FF14]/15 shadow-[0_0_15px_#39FF14] pointer-events-none" />
-          <h3 className="text-lg font-bold text-white flex items-center gap-2 font-mono">
+          <h3 className="text-lg font-bold text-white flex items-center gap-2 ">
             <GitBranch className="w-5 h-5 text-[#39FF14]" />
             Transition to Sustainable Open Core Model
           </h3>
-          <div className="text-zinc-400 text-xs font-mono leading-relaxed space-y-3">
+          <div className="text-zinc-400 text-xs  leading-relaxed space-y-3">
             <p>
               In our earlier iterations (pre-v1.1.0), IRIS was developed as a
               100% free and open-source project. However, to fund continuous
@@ -664,10 +664,10 @@ export default function ChangelogPage() {
                 className="bg-[#0a0a0a]/80 backdrop-blur-md border border-white/5 hover:border-[#39FF14]/20 rounded-2xl p-6 space-y-6 transition-all duration-300"
               >
                 <div className="space-y-1.5">
-                  <div className="text-[10px] text-zinc-500 font-bold uppercase tracking-[0.2em] font-mono">
+                  <div className="text-[10px] text-zinc-500 font-bold uppercase tracking-[0.2em] ">
                     SYSTEM CORE: OPERATIONAL
                   </div>
-                  <div className="text-xs text-[#39FF14] font-bold font-mono flex items-center gap-2">
+                  <div className="text-xs text-[#39FF14] font-bold  flex items-center gap-2">
                     <span className="relative flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#39FF14] opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-[#39FF14]"></span>
@@ -679,19 +679,19 @@ export default function ChangelogPage() {
                 <div className="h-px bg-white/5" />
 
                 <div className="space-y-3">
-                  <div className="text-zinc-500 text-[10px] uppercase tracking-wider font-mono">
+                  <div className="text-zinc-500 text-[10px] uppercase tracking-wider ">
                     Currently Viewing
                   </div>
-                  <div className="text-4xl font-black font-mono tracking-tighter text-white flex items-baseline gap-2">
+                  <div className="text-4xl font-black  tracking-tighter text-white flex items-baseline gap-2">
                     {changelogData[activeIndex].version}
-                    <span className="text-[9px] text-[#39FF14] font-bold tracking-widest uppercase px-2 py-0.5 rounded bg-[#39FF14]/10 border border-[#39FF14]/20 font-mono">
+                    <span className="text-[9px] text-[#39FF14] font-bold tracking-widest uppercase px-2 py-0.5 rounded bg-[#39FF14]/10 border border-[#39FF14]/20 ">
                       {changelogData[activeIndex].type}
                     </span>
                   </div>
-                  <div className="text-white font-bold text-sm tracking-tight font-mono">
+                  <div className="text-white font-bold text-sm tracking-tight ">
                     {changelogData[activeIndex].title}
                   </div>
-                  <p className="text-zinc-400 text-xs leading-relaxed font-mono">
+                  <p className="text-zinc-400 text-xs leading-relaxed ">
                     {changelogData[activeIndex].desc}
                   </p>
                 </div>
@@ -699,7 +699,7 @@ export default function ChangelogPage() {
                 <div className="h-px bg-white/5" />
 
                 <div className="space-y-2.5">
-                  <div className="text-zinc-500 text-[10px] uppercase tracking-wider font-mono">
+                  <div className="text-zinc-500 text-[10px] uppercase tracking-wider ">
                     Ecosystem Versions Index
                   </div>
                   <div className="space-y-1.5 max-h-56 overflow-y-auto pr-1 iris-scrollbar">
@@ -707,7 +707,7 @@ export default function ChangelogPage() {
                       <button
                         key={item.version}
                         onClick={() => scrollToVersion(item.version, idx)}
-                        className={`w-full text-left px-3 py-2 rounded-xl text-xs font-mono font-semibold transition-all flex items-center justify-between border ${
+                        className={`w-full text-left px-3 py-2 rounded-xl text-xs  font-semibold transition-all flex items-center justify-between border ${
                           activeIndex === idx
                             ? "bg-[#39FF14]/10 text-[#39FF14] border-[#39FF14]/30 shadow-[0_0_15px_rgba(57,255,20,0.03)]"
                             : "text-zinc-400 hover:text-white bg-transparent border-transparent hover:bg-white/5"
@@ -734,7 +734,7 @@ export default function ChangelogPage() {
 
               <Link
                 href="/docs"
-                className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-white/5 border border-white/5 text-xs text-zinc-400 font-mono hover:text-[#39FF14] hover:border-[#39FF14]/30 hover:bg-[#39FF14]/5 transition-all w-full text-center"
+                className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-white/5 border border-white/5 text-xs text-zinc-400  hover:text-[#39FF14] hover:border-[#39FF14]/30 hover:bg-[#39FF14]/5 transition-all w-full text-center"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
                 Return to Documentation
@@ -780,20 +780,20 @@ export default function ChangelogPage() {
                     <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/5 pb-4">
                       <div className="flex items-center gap-3">
                         <span
-                          className={`text-xl font-bold font-mono ${
+                          className={`text-xl font-bold  ${
                             isMajor ? "text-[#39FF14]" : "text-white"
                           }`}
                         >
                           {item.version}
                         </span>
-                        <span className="text-zinc-500 text-xs font-mono font-semibold flex items-center gap-1.5">
+                        <span className="text-zinc-500 text-xs  font-semibold flex items-center gap-1.5">
                           <Calendar className="w-3.5 h-3.5" />
                           {item.date}
                         </span>
                       </div>
                       <span
                         className={`
-                          text-[9px] font-black uppercase font-mono px-2 py-0.5 rounded tracking-widest border
+                          text-[9px] font-black uppercase  px-2 py-0.5 rounded tracking-widest border
                           ${
                             isMajor
                               ? "bg-[#39FF14]/10 border-[#39FF14]/20 text-[#39FF14]"
@@ -807,10 +807,10 @@ export default function ChangelogPage() {
 
                     {/* Title & Desc */}
                     <div className="space-y-1.5 my-4">
-                      <h3 className="text-lg font-bold text-white font-mono leading-tight">
+                      <h3 className="text-lg font-bold text-white  leading-tight">
                         {item.title}
                       </h3>
-                      <p className="text-zinc-400 text-xs font-mono leading-relaxed">
+                      <p className="text-zinc-400 text-xs  leading-relaxed">
                         {item.desc}
                       </p>
                     </div>
@@ -819,10 +819,10 @@ export default function ChangelogPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 flex-1 overflow-y-auto iris-scrollbar pr-2">
                       {item.categories.map((cat, catIdx) => (
                         <div key={catIdx} className="category-block space-y-3">
-                          <h4 className="text-xs font-bold text-white flex items-center gap-2 border-b border-white/5 pb-1 font-mono uppercase tracking-wider">
+                          <h4 className="text-xs font-bold text-white flex items-center gap-2 border-b border-white/5 pb-1  uppercase tracking-wider">
                             {cat.title}
                           </h4>
-                          <ul className="space-y-2 pl-1 font-mono text-[11px] text-zinc-400">
+                          <ul className="space-y-2 pl-1  text-[11px] text-zinc-400">
                             {cat.items.map((bullet, bIdx) => (
                               <li
                                 key={bIdx}

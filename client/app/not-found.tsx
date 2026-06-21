@@ -45,7 +45,7 @@ export default function NotFound() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
               </span>
-              <span className="uppercase tracking-widest font-mono font-semibold">
+              <span className="uppercase tracking-widest  font-semibold">
                 Error 404
               </span>
             </div>
@@ -60,7 +60,7 @@ export default function NotFound() {
 
           <motion.h2
             variants={itemVariants}
-            className="text-xl md:text-3xl font-bold tracking-widest uppercase mb-6 text-[#39FF14] text-center font-mono"
+            className="text-xl md:text-3xl font-bold tracking-widest uppercase mb-6 text-[#39FF14] text-center "
           >
             System Pathway Not Found
           </motion.h2>

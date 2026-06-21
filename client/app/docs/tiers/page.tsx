@@ -182,14 +182,14 @@ export default function DocsTiersPage() {
     >
       {/* Header */}
       <motion.div variants={itemVariants} className="space-y-4">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs tracking-widest uppercase font-mono">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14] text-xs tracking-widest uppercase ">
           <Coins className="w-3.5 h-3.5" />
           Licensing Model
         </div>
         <h1 className="text-4xl md:text-6xl font-black tracking-tight uppercase">
           PRO <span className="text-[#39FF14]">TIERS.</span>
         </h1>
-        <p className="text-zinc-400 text-lg leading-relaxed max-w-3xl font-mono">
+        <p className="text-zinc-400 text-lg leading-relaxed max-w-3xl ">
           IRIS operates under an Open Core development methodology. Public repos
           host the frontend shell layouts. To activate the full experience:
           <br />
@@ -211,17 +211,17 @@ export default function DocsTiersPage() {
         variants={itemVariants}
         className="bg-[#050505] border border-white/10 rounded-2xl p-6 md:p-8 space-y-4"
       >
-        <h3 className="text-lg font-bold text-white flex items-center gap-2 font-mono">
+        <h3 className="text-lg font-bold text-white flex items-center gap-2 ">
           <GitBranch className="w-5 h-5 text-[#39FF14]" />
           Evolving to a Sustainable Open-Core Model
         </h3>
-        <p className="text-zinc-400 text-xs leading-relaxed font-mono">
+        <p className="text-zinc-400 text-xs leading-relaxed ">
           Before the release of our advanced Live SDK voice engines, IRIS was
           completely free and 100% open-source. However, to sustain continuous
           development, visual overrides, and advanced tooling updates, IRIS has
           evolved to a **partially open-source (Open-Core) model**.
         </p>
-        <div className="text-zinc-500 text-xs leading-relaxed font-mono space-y-2">
+        <div className="text-zinc-500 text-xs leading-relaxed  space-y-2">
           <p>
             • <strong className="text-white">Disclosed:</strong> Part of the
             frontend UI visual elements and select preload bridging APIs are
@@ -263,18 +263,18 @@ export default function DocsTiersPage() {
         variants={itemVariants}
         className="bg-[#050505] border border-white/10 rounded-2xl p-6 md:p-8 space-y-6"
       >
-        <h3 className="text-xl font-bold text-white flex items-center gap-2 font-mono">
+        <h3 className="text-xl font-bold text-white flex items-center gap-2 ">
           <Info className="w-5 h-5 text-[#39FF14]" />
           Free vs Paid (Pro) Matrix
         </h3>
-        <p className="text-zinc-400 text-xs leading-relaxed font-mono">
+        <p className="text-zinc-400 text-xs leading-relaxed ">
           Compare the core differences between the open-source Free UI Shell and
           the fully-loaded Paid (Pro) Engine.
         </p>
         <div className="mb-4">
           <a
             href="/compare"
-            className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-[#39FF14]/10 border border-[#39FF14]/30 text-[#39FF14] text-xs font-bold font-mono hover:bg-[#39FF14] hover:text-black transition-all duration-300"
+            className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-[#39FF14]/10 border border-[#39FF14]/30 text-[#39FF14] text-xs font-bold  hover:bg-[#39FF14] hover:text-black transition-all duration-300"
           >
             Detailed Full Comparison
           </a>
@@ -282,7 +282,7 @@ export default function DocsTiersPage() {
 
         {/* Comparison Grid Table */}
         <div className="overflow-x-auto border border-white/5 rounded-xl">
-          <table className="w-full text-left font-mono text-xs border-collapse">
+          <table className="w-full text-left  text-xs border-collapse">
             <thead>
               <tr className="bg-white/5 border-b border-white/10">
                 <th className="p-4 text-white font-bold">Feature Capability</th>
@@ -337,7 +337,7 @@ export default function DocsTiersPage() {
               {tier.badge && (
                 <div
                   className={`
-                    absolute top-4 right-4 text-[9px] font-black uppercase px-2 py-0.5 rounded tracking-widest font-mono
+                    absolute top-4 right-4 text-[9px] font-black uppercase px-2 py-0.5 rounded tracking-widest 
                     ${
                       isAlpha
                         ? "bg-purple-500/10 border border-purple-500/20 text-purple-400"
@@ -351,7 +351,7 @@ export default function DocsTiersPage() {
 
               {/* Title & Price */}
               <div className="space-y-4">
-                <div className="font-mono">
+                <div className="">
                   <h3 className="text-zinc-400 text-xs font-bold uppercase tracking-wider">
                     {tier.name}
                   </h3>
@@ -359,12 +359,12 @@ export default function DocsTiersPage() {
                     {tier.price}
                   </div>
                 </div>
-                <p className="text-zinc-500 text-xs leading-relaxed font-mono">
+                <p className="text-zinc-500 text-xs leading-relaxed ">
                   {tier.desc}
                 </p>
 
                 {/* Features Checklist */}
-                <div className="space-y-2.5 pt-4 border-t border-white/5 text-xs font-mono">
+                <div className="space-y-2.5 pt-4 border-t border-white/5 text-xs ">
                   {tier.features.map((feat, fIdx) => {
                     const isUnlocked = tier.unlocked[fIdx];
                     return (
@@ -398,7 +398,7 @@ export default function DocsTiersPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`
-                    w-full py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 cursor-pointer border transition-all duration-200 font-mono
+                    w-full py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 cursor-pointer border transition-all duration-200 
                     ${
                       isPro
                         ? "bg-[#39FF14] text-black border-[#39FF14] hover:bg-transparent hover:text-[#39FF14] shadow-[0_0_15px_rgba(57,255,20,0.3)]"
@@ -422,7 +422,7 @@ export default function DocsTiersPage() {
       {/* REFUND POLICY SECTION */}
       <motion.div
         variants={itemVariants}
-        className="bg-[#0f0a05] border border-orange-500/20 rounded-2xl p-6 md:p-8 space-y-4 font-mono text-xs"
+        className="bg-[#0f0a05] border border-orange-500/20 rounded-2xl p-6 md:p-8 space-y-4  text-xs"
       >
         <h4 className="text-sm font-bold text-white flex items-center gap-2">
           <ShieldAlert className="w-4 h-4 text-orange-500" />
@@ -462,7 +462,7 @@ export default function DocsTiersPage() {
       {/* Dual Licensing Details */}
       <motion.div
         variants={itemVariants}
-        className="bg-[#050505] border border-white/10 rounded-2xl p-6 md:p-8 space-y-4 text-xs font-mono"
+        className="bg-[#050505] border border-white/10 rounded-2xl p-6 md:p-8 space-y-4 text-xs "
       >
         <h4 className="text-sm font-bold text-white flex items-center gap-2">
           <ShieldCheck className="w-4 h-4 text-[#39FF14]" />
