@@ -149,7 +149,6 @@ vite.config.ts.timestamp-*
 # testing
 /coverage
 
-# next.js
 /.next/
 /out/
 
