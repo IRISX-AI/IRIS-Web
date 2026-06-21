@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import SmoothScroll from "./Components/SmoothScroll";
 
 const manrope = localFont({
   src: "../public/fonts/Manrope-VariableFont_wght.woff2",
@@ -117,7 +116,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col  antialiased bg-[#050505] text-white">
-        <SmoothScroll>{children}</SmoothScroll>
+        {children}
       </body>
     </html>
   );
