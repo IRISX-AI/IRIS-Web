@@ -96,7 +96,7 @@ export default function DeprecatedSite() {
             <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-[#39FF14]/10 to-transparent -translate-x-full group-hover:animate-[scan_1.5s_ease-in-out_infinite]" />
             
             <div className="relative z-10 flex flex-col text-left sm:text-center">
-              <span className="text-white font-black text-xl uppercase tracking-wider group-hover:text-[#39FF14] transition-colors">
+              <span className="text-white font-bold text-xl uppercase tracking-wider group-hover:text-[#39FF14] transition-colors">
                 Go To The New Website
               </span>
               <span className="text-zinc-500 text-[10px] uppercase tracking-widest mt-1 ">
