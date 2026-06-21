@@ -54,21 +54,21 @@ const tiersData: TierDetail[] = [
     ],
     unlocked: [true, true, true, true, true, true, true, true, true, true],
     badge: "One-Time",
-    link: "https://github.com/sponsors/201Harsh",
+    link: "#",
   },
   {
-    name: "Sponsor Tier (Base Backer)",
+    name: "Pro Licensee (Base Backer)",
     price: "$10 USD / mo",
     desc: "Directly back the IRIS core ecosystem and fund continuous development updates.",
     features: [
-      "GitHub Sponsor Verification Badge",
+      "Verified Licensee Badge",
       "Development Progress Logs & Logs Access",
       "Monthly Ecosystem Progress Reports",
       "Behind-the-Scenes Engineering Logs",
     ],
     unlocked: [true, true, true, true],
     badge: "Base Monthly",
-    link: "https://github.com/sponsors/201Harsh",
+    link: "#",
   },
   {
     name: "IRIS Insider",
@@ -82,7 +82,7 @@ const tiersData: TierDetail[] = [
     ],
     unlocked: [true, true, true, true],
     badge: "Popular",
-    link: "https://github.com/sponsors/201Harsh",
+    link: "#",
   },
   {
     name: "Alpha & Enterprise",
@@ -97,7 +97,7 @@ const tiersData: TierDetail[] = [
     ],
     unlocked: [true, true, true, true, true],
     badge: "Enterprise",
-    link: "https://github.com/sponsors/201Harsh",
+    link: "#",
   },
 ];
 
@@ -147,11 +147,15 @@ export default function DocsTiersPage() {
           Licensing Model
         </div>
         <h1 className="text-4xl md:text-6xl font-black tracking-tight uppercase">
-          SPONSORSHIP <span className="text-[#39FF14]">TIERS.</span>
+          PRO <span className="text-[#39FF14]">TIERS.</span>
         </h1>
         <p className="text-zinc-400 text-lg leading-relaxed max-w-3xl font-mono">
           IRIS operates under an Open Core development methodology. Public repos
-          host the frontend shell layouts, while sponsor licensing unlocks the core execution engine.
+          host the frontend shell layouts. To activate the full experience:
+          <br /><br />
+          <strong className="text-[#39FF14]">1. Authenticate with Google.</strong><br />
+          <strong className="text-[#39FF14]">2. Purchase a License.</strong><br />
+          <strong className="text-[#39FF14]">3. Unlock the IRIS Neural Core.</strong>
         </p>
       </motion.div>
 
@@ -175,7 +179,7 @@ export default function DocsTiersPage() {
             • <strong className="text-white">Protected:</strong> The core voice routing engine, private system-level scripts execution, and the backend AI agent orchestration files remain protected inside V8 binary bytecode and are not disclosed in public repositories.
           </p>
           <p>
-            • <strong className="text-white">Code Access Inclusions:</strong> To back the project, a monthly GitHub sponsorship of a <strong className="text-[#39FF14]">minimum of $15/mo (IRIS Insider)</strong> grants read access to the <code className="text-[#39FF14]">iris-insiders</code> repository containing functional hooks and code snippets. <em className="text-orange-400 font-semibold">*Note that this does not provide the full code*</em>. The <strong className="text-purple-400">complete, raw, unprotected source code</strong> is only provided under the <strong className="text-purple-400">$50/mo (Alpha & Enterprise)</strong> tier.
+            • <strong className="text-white">Code Access Inclusions:</strong> To back the project, a Pro Licensee subscription of a <strong className="text-[#39FF14]">minimum of $15/mo (IRIS Insider)</strong> grants read access to the <code className="text-[#39FF14]">iris-insiders</code> repository containing functional hooks and code snippets. <em className="text-orange-400 font-semibold">*Note that this does not provide the full code*</em>. The <strong className="text-purple-400">complete, raw, unprotected source code</strong> is only provided under the <strong className="text-purple-400">$50/mo (Alpha & Enterprise)</strong> tier.
           </p>
         </div>
       </motion.div>
@@ -319,7 +323,7 @@ export default function DocsTiersPage() {
                     }
                   `}
                 >
-                  {isAlpha ? "Contact Support" : "Support on GitHub"}
+                  {isAlpha ? "Contact Support" : "Purchase License"}
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
@@ -338,7 +342,7 @@ export default function DocsTiersPage() {
           Ecosystem Refund Policy Summary
         </h4>
         <p className="text-zinc-400 leading-relaxed">
-          Due to the nature of perpetual software licenses and the GitHub Sponsors platform integration, all transactions for the IRIS Pro Engine are <strong>100% final and non-refundable</strong>.
+          Due to the nature of perpetual software licenses and our Secure Checkout architecture, all transactions for the IRIS Pro Engine are <strong>100% final and non-refundable</strong>.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-zinc-500 pt-2 border-t border-white/5">
           <div className="space-y-1">
@@ -376,7 +380,7 @@ export default function DocsTiersPage() {
           </div>
           <div className="space-y-2">
             <span className="text-white font-bold block">
-              2. Commercial & Sponsor Code
+              2. Commercial & Licensed Code
             </span>
             <p className="leading-relaxed">
               Private repository scripts, custom core hooks, experimental agent parameters, and bytecode engines require commercial developer permissions. Redistribution of compiled V8 main loops is prohibited.
