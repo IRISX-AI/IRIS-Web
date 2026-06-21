@@ -42,7 +42,7 @@ export default function DownloadPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#000000] text-zinc-100 font-sans selection:bg-[#39FF14]/30 overflow-hidden relative">
+    <div className="min-h-screen bg-[#000000] text-zinc-100  selection:bg-[#39FF14]/30 overflow-hidden relative">
       <Header />
 
       <AnimatePresence>

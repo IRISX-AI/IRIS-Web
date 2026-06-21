@@ -63,7 +63,7 @@ function RedirectLogic() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white font-sans flex items-center justify-center p-6 relative overflow-hidden selection:bg-[#39FF14] selection:text-black">
+    <div className="min-h-screen bg-[#050505] text-white  flex items-center justify-center p-6 relative overflow-hidden selection:bg-[#39FF14] selection:text-black">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-[#39FF14]/10 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-size-[40px_40px] pointer-events-none mix-blend-overlay" />
 

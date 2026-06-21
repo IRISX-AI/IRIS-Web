@@ -189,7 +189,7 @@ export default function SystemsSection() {
             </span>
           </h2>
 
-          <p className="text-gray-400 text-sm md:text-lg leading-relaxed font-sans tracking-tight">
+          <p className="text-gray-400 text-sm md:text-lg leading-relaxed  tracking-tight">
             IRIS hooks directly into your operating system. It sees your screen,
             manages your files, automates your terminal, and commands your
             mobile device. No wrappers. Just raw execution.

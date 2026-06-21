@@ -247,7 +247,7 @@ export default function SupportPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#39FF14] selection:text-black overflow-x-hidden">
+    <div className="min-h-screen bg-[#050505] text-white  selection:bg-[#39FF14] selection:text-black overflow-x-hidden">
       <Header />
 
       <section className="pt-40 pb-20 px-6 relative overflow-hidden flex flex-col items-center text-center border-b border-white/5">

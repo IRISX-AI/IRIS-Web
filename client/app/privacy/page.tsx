@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#39FF14] selection:text-black">
+    <div className="min-h-screen bg-[#050505] text-white  selection:bg-[#39FF14] selection:text-black">
       <Header />
 
       <section className="pt-40 pb-16 px-6 relative overflow-hidden flex flex-col items-center text-center border-b border-white/5">
@@ -61,7 +61,7 @@ export default function PrivacyPolicyPage() {
             </span>
           </h1>
 
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto font-sans">
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto ">
             Local-First Architecture, governed under Indian Judiciary Laws. Your
             system remains your own.
           </p>
@@ -89,13 +89,13 @@ export default function PrivacyPolicyPage() {
                 Indian Legislative & Statutory Compliance
               </h2>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-4 font-sans">
+            <p className="text-gray-400 text-sm leading-relaxed mb-4 ">
               This policy is drafted, administered, and maintained in strict
               compliance with the laws of the **Republic of India**, including
               the **Information Technology Act, 2000 (Section 43A)** and the
               **Digital Personal Data Protection Act, 2023 (DPDP Act)**.
             </p>
-            <p className="text-zinc-500 text-xs leading-relaxed font-sans">
+            <p className="text-zinc-500 text-xs leading-relaxed ">
               IRIS adheres to the statutory provisions of reasonable security
               practices, data minimization, and purpose-limitation. By utilizing
               the software, users consent to the local-first processing of
@@ -111,16 +111,16 @@ export default function PrivacyPolicyPage() {
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
                 <Users className="w-6 h-6 text-[#39FF14]" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight font-sans">
+              <h2 className="text-2xl font-bold text-white tracking-tight ">
                 Google OAuth Authentication Data
               </h2>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-4 font-sans">
+            <p className="text-gray-400 text-sm leading-relaxed mb-4 ">
               IRIS utilizes Google Login protocols to securely verify
               identities. When logging in, we collect and store:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
-              <div className="p-3 bg-white/5 rounded-xl border border-white/5 font-sans">
+              <div className="p-3 bg-white/5 rounded-xl border border-white/5 ">
                 <strong className="text-[#39FF14] block mb-1">
                   User's Name
                 </strong>
@@ -128,7 +128,7 @@ export default function PrivacyPolicyPage() {
                   To personalize your workspace interface logs.
                 </span>
               </div>
-              <div className="p-3 bg-white/5 rounded-xl border border-white/5 font-sans">
+              <div className="p-3 bg-white/5 rounded-xl border border-white/5 ">
                 <strong className="text-[#39FF14] block mb-1">
                   Email Address
                 </strong>
@@ -136,7 +136,7 @@ export default function PrivacyPolicyPage() {
                   To verify licensing keys and Google Authentication.
                 </span>
               </div>
-              <div className="p-3 bg-white/5 rounded-xl border border-white/5 font-sans">
+              <div className="p-3 bg-white/5 rounded-xl border border-white/5 ">
                 <strong className="text-[#39FF14] block mb-1">
                   Profile Picture
                 </strong>
@@ -155,11 +155,11 @@ export default function PrivacyPolicyPage() {
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
                 <Shield className="w-6 h-6 text-[#39FF14]" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight font-sans">
+              <h2 className="text-2xl font-bold text-white tracking-tight ">
                 Payment Processing
               </h2>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-4 font-sans">
+            <p className="text-gray-400 text-sm leading-relaxed mb-4 ">
               We do not store your credit card details on our servers. All
               financial transactions are encrypted and processed directly by our
               PCI-compliant payment gateway (Razorpay).
@@ -174,11 +174,11 @@ export default function PrivacyPolicyPage() {
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
                 <Cpu className="w-6 h-6 text-[#39FF14]" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight font-sans">
+              <h2 className="text-2xl font-bold text-white tracking-tight ">
                 Licensing Verification & HWID Telemetry
               </h2>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-4 font-sans">
+            <p className="text-gray-400 text-sm leading-relaxed mb-4 ">
               To enforce licensing boundaries and prevent bulk key sharing, the
               IRIS Pro Engine collects minimal device-specific parameters:
             </p>
@@ -187,7 +187,7 @@ export default function PrivacyPolicyPage() {
                 <span className="text-[#39FF14] font-bold block">
                   1. Motherboard Unique ID (HWID)
                 </span>
-                <span className="text-zinc-200 block leading-relaxed font-sans">
+                <span className="text-zinc-200 block leading-relaxed ">
                   A unique cryptographic hash generated by the motherboard of
                   your computer to uniquely register the client machine.
                 </span>
@@ -196,7 +196,7 @@ export default function PrivacyPolicyPage() {
                 <span className="text-[#39FF14] font-bold block">
                   2. Connected Device Count
                 </span>
-                <span className="text-zinc-200 block leading-relaxed font-sans">
+                <span className="text-zinc-200 block leading-relaxed ">
                   Tracks how many devices are currently registered under your
                   license (enforcing the strict limit of **two [2] devices** per
                   user ID).
@@ -206,7 +206,7 @@ export default function PrivacyPolicyPage() {
                 <span className="text-[#39FF14] font-bold block">
                   3. IP Verification
                 </span>
-                <span className="text-zinc-200 block leading-relaxed font-sans">
+                <span className="text-zinc-200 block leading-relaxed ">
                   The client machine's IP address is verified strictly at the
                   **time of installation** and **licensing upgrade** to prevent
                   bulk automated abuse.
@@ -304,7 +304,7 @@ export default function PrivacyPolicyPage() {
               reasoning, code generation, search crawls, and multimodal tasks,
               the client routes local data queries to third-party endpoints.
             </p>
-            <div className="p-4 rounded-xl border border-orange-500/10 bg-orange-500/5 text-orange-400/80 text-xs leading-relaxed font-sans">
+            <div className="p-4 rounded-xl border border-orange-500/10 bg-orange-500/5 text-orange-400/80 text-xs leading-relaxed ">
               <strong>IMPORTANT:</strong> Because data is routed directly to
               third-party API providers: **Google Gemini**, **Groq**,
               **Tavily**, and **Hugging Face**, all prompt context parameters,

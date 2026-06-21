@@ -565,7 +565,7 @@ export default function ChangelogPage() {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#39FF14] selection:text-black overflow-x-hidden"
+      className="min-h-screen bg-[#050505] text-white  selection:bg-[#39FF14] selection:text-black overflow-x-hidden"
     >
       <Header />
 

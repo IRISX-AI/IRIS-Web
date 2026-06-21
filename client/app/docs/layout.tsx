@@ -57,7 +57,7 @@ export default function DocsLayout({ children }: { children: ReactNode }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-black text-zinc-100 font-sans selection:bg-[#39FF14]/30 flex flex-col mt-12">
+    <div className="min-h-screen bg-black text-zinc-100  selection:bg-[#39FF14]/30 flex flex-col mt-12">
       <Header />
 
       <div className="flex-1 max-w-7xl mx-auto w-full pt-32 px-6 flex gap-10 relative">

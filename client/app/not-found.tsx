@@ -25,7 +25,7 @@ export default function NotFound() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col mt-16 bg-[#050505] text-white font-sans selection:bg-[#39FF14] selection:text-black overflow-hidden">
+    <div className="min-h-screen flex flex-col mt-16 bg-[#050505] text-white  selection:bg-[#39FF14] selection:text-black overflow-hidden">
       <Header />
 
       <main className="flex-1 relative flex flex-col items-center justify-center pt-32 pb-20 px-6">

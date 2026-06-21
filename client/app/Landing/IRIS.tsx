@@ -239,7 +239,7 @@ const IRIS = () => {
           />
         </section>
 
-        <section className="min-h-screen bg-black flex flex-col items-center pt-24 pb-20 relative overflow-hidden font-sans px-4">
+        <section className="min-h-screen bg-black flex flex-col items-center pt-24 pb-20 relative overflow-hidden  px-4">
           <div className="text-center z-20 flex flex-col items-center mb-12">
             <h1
               className="text-5xl md:text-7xl font-bold tracking-tight bg-[url('/img/bright-neon-bg.png')] bg-cover bg-center bg-clip-text text-transparent mb-4 select-none"
@@ -269,7 +269,7 @@ const IRIS = () => {
           </div>
         </section>
 
-        <section className="min-h-screen bg-black flex flex-col items-center pt-32 relative overflow-hidden font-sans">
+        <section className="min-h-screen bg-black flex flex-col items-center pt-32 relative overflow-hidden ">
           <div className="absolute top-[30%] left-1/2 -translate-x-1/2 w-150 h-150 bg-[#39FF14]/15 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
           <div className="absolute top-[50%] left-1/2 -translate-x-1/2 w-200 h-100 bg-[#16a34a]/10 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
 

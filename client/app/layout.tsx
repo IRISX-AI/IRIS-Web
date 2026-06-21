@@ -116,7 +116,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col font-sans antialiased bg-[#050505] text-white">
+      <body className="min-h-full flex flex-col  antialiased bg-[#050505] text-white">
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

@@ -144,7 +144,7 @@ export default function FeaturesPage() {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen bg-[#050505] text-white font-sans overflow-x-hidden selection:bg-[#39FF14] selection:text-black"
+      className="min-h-screen bg-[#050505] text-white  overflow-x-hidden selection:bg-[#39FF14] selection:text-black"
     >
       <Header />
 
