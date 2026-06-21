@@ -630,19 +630,19 @@ export default function ChangelogPage() {
               bytecode.
             </p>
             <div className="p-4 rounded-xl bg-[#39FF14]/5 border border-[#39FF14]/10 text-[#39FF14]/90 space-y-2 mt-2 font-semibold">
-              <span className="font-bold block">Sponsorship Inclusions:</span>
+              <span className="font-bold block">Pro License Inclusions:</span>
               <ul className="space-y-1 pl-2 text-zinc-400">
                 <li>
-                  • **$15/mo Sponsor (Insider)**: Unlocks read access to
+                  • **$15/mo Pro Licensee (Insider)**: Unlocks read access to
                   `iris-insiders` containing functional hooks and code snippets.
-                  *Sponsorship at this level does not provide the full code.*
+                  *Licensing at this level does not provide the full code.*
                 </li>
                 <li>
-                  • **$30/mo Sponsor (Builder)**: Access to testing prompts,
+                  • **$30/mo Pro Licensee (Builder)**: Access to testing prompts,
                   logs, and workflow macros.
                 </li>
                 <li>
-                  • **$50/mo Sponsor (Alpha)**: Full read access to the raw,
+                  • **$50/mo Pro Licensee (Alpha)**: Full read access to the raw,
                   unprotected, uncompiled source code, precompiled releases, and
                   commercial licenses.
                 </li>
