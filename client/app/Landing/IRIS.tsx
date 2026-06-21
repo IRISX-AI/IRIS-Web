@@ -6,7 +6,6 @@ import { Lock, Terminal, Activity } from "lucide-react";
 export default function IRIS() {
   return (
     <div className="min-h-screen bg-[#000000] text-zinc-100 font-sans selection:bg-[#39FF14] selection:text-black flex flex-col items-center justify-center relative overflow-hidden">
-      {/* ── BACKGROUND EFFECTS ── */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-[#39FF14]/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,transparent_0%,#000000_100%)] pointer-events-none" />
       
