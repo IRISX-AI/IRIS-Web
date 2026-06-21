@@ -14,7 +14,7 @@ export default function AuthPage() {
       <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-[#39FF14]/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-[#044a33]/30 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none mix-blend-overlay" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-size-[40px_40px] pointer-events-none mix-blend-overlay" />
 
       <motion.div className="w-full max-w-md relative z-10">
         <motion.div className="text-center mb-10">
@@ -37,9 +37,12 @@ export default function AuthPage() {
 
           <div className="mb-8 flex flex-col items-center">
             <ShieldCheck className="w-12 h-12 text-[#39FF14] mb-4 opacity-80" />
-            <h2 className="text-xl font-bold mb-2 text-white">Identity Verification</h2>
+            <h2 className="text-xl font-bold mb-2 text-white">
+              Identity Verification
+            </h2>
             <p className="text-sm text-gray-400 leading-relaxed max-w-xs mx-auto">
-              IRIS Pro requires a secure identity check. We use Google Authentication to provision your unique system instance.
+              IRIS Pro requires a secure identity check. We use Google
+              Authentication to provision your unique system instance.
             </p>
           </div>
 
@@ -53,9 +56,9 @@ export default function AuthPage() {
               Continue With Google
             </span>
           </button>
-          
+
           <div className="mt-6 flex items-center justify-center gap-2 text-xs text-gray-500 uppercase tracking-wider font-mono">
-             SSL ENCRYPTED CONNECTION
+            SSL ENCRYPTED CONNECTION
           </div>
         </motion.div>
       </motion.div>
