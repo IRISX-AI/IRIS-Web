@@ -24,7 +24,6 @@ function RedirectLogic() {
   });
 
   useEffect(() => {
-    // Hide tokens from URL immediately to secure them
     if (tokensRef.current.access || tokensRef.current.refresh) {
       const url = new URL(window.location.href);
       url.searchParams.delete("accessToken");
