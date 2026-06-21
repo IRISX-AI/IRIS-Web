@@ -1,136 +1,117 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { AlertOctagon, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
-import { PowerOff, Lock, Github, Mail } from "lucide-react";
 
-const BOOT_LINES = [
-  "neural_core.shutdown()",
-  "terminating active sessions...",
-  "revoking public endpoints...",
-  "archiving deployment...",
-  "status: OFFLINE",
-];
-
-const IRIS = () => {
-  const [bootIndex, setBootIndex] = useState(0);
-  const [bootDone, setBootDone] = useState(false);
+export default function DeprecatedSite() {
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    if (bootIndex >= BOOT_LINES.length) {
-      setBootDone(true);
-      return;
-    }
-    const t = setTimeout(() => setBootIndex((i) => i + 1), 280);
-    return () => clearTimeout(t);
-  }, [bootIndex]);
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white font-mono selection:bg-[#39FF14] selection:text-black relative overflow-hidden flex items-center justify-center px-6">
-      {/* Cyber-grid ambient background */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-80 bg-[#39FF14]/10 blur-[120px] rounded-full pointer-events-none" />
+    <div className="min-h-screen bg-[#000000] text-zinc-100 flex flex-col items-center justify-center relative overflow-hidden font-mono px-6 selection:bg-[#39FF14] selection:text-black">
+      {/* --- CINEMATIC BACKGROUND --- */}
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,transparent_0%,#000000_100%)] pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(rgba(57,255,20,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(57,255,20,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
+
+      {/* Scanning Laser Line */}
+      <motion.div
+        animate={{ top: ["-10%", "110%"] }}
+        transition={{ duration: 3, ease: "linear", repeat: Infinity }}
+        className="absolute left-0 w-full h-[2px] bg-[#39FF14]/50 shadow-[0_0_20px_#39FF14] z-0 pointer-events-none"
+      />
 
       <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-        className="relative z-10 w-full max-w-xl"
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative z-10 w-full max-w-2xl flex flex-col items-center text-center"
       >
-        <div className="bg-[#0a0a0a]/90 backdrop-blur-md border border-white/10 rounded-2xl p-8 md:p-12 space-y-8 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)]">
-          {/* Status row */}
-          <div className="flex items-center justify-between border-b border-white/5 pb-5">
-            <div className="flex items-center gap-2.5">
-              <span className="relative flex h-2 w-2">
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500" />
+        {/* --- WARNING GLITCH SEQUENCE --- */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: [0, 1, 0.5, 1], y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mb-8"
+        >
+          <div className="w-20 h-20 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-center justify-center shadow-[0_0_30px_rgba(239,68,68,0.2)] mx-auto relative overflow-hidden">
+            <div className="absolute inset-0 bg-red-500/20 animate-pulse" />
+            <AlertOctagon className="w-10 h-10 text-red-500 relative z-10" />
+          </div>
+        </motion.div>
+
+        {/* --- TYPOGRAPHY --- */}
+        <motion.div
+          initial={{ clipPath: "inset(0 100% 0 0)" }}
+          animate={{ clipPath: "inset(0 0% 0 0)" }}
+          transition={{ duration: 0.8, delay: 0.5, ease: "anticipate" }}
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#39FF14]/30 bg-[#39FF14]/10 text-[#39FF14] text-xs mb-6 tracking-widest uppercase font-bold">
+            <span className="w-2 h-2 rounded-full bg-[#39FF14] animate-ping" />
+            Deployment Terminated
+          </div>
+        </motion.div>
+
+        <motion.h1
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-6 text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]"
+        >
+          THIS DOMAIN IS{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-b from-red-500 to-red-900">
+            DEAD.
+          </span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          className="text-zinc-400 text-base md:text-lg max-w-lg mx-auto leading-relaxed mb-12"
+        >
+          The legacy IRIS infrastructure has been permanently scrapped and
+          wiped from this server. The entire ecosystem has been rebuilt and
+          relocated to a new, secure headquarters.
+        </motion.p>
+
+        {/* --- REDIRECT CTA --- */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1.3 }}
+          className="w-full sm:w-auto"
+        >
+          <a
+            href="https://YOUR-NEW-SITE-URL.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative flex items-center justify-between sm:justify-center gap-6 px-8 py-5 rounded-2xl bg-[#050505] border border-[#39FF14]/40 hover:border-[#39FF14] transition-all duration-300 shadow-[0_0_20px_rgba(57,255,20,0.1)] hover:shadow-[0_0_40px_rgba(57,255,20,0.3)] w-full overflow-hidden"
+          >
+            {/* Button Hover Sweep */}
+            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-[#39FF14]/10 to-transparent -translate-x-full group-hover:animate-[scan_1.5s_ease-in-out_infinite]" />
+
+            <div className="relative z-10 flex flex-col text-left sm:text-center">
+              <span className="text-white font-black text-lg uppercase tracking-wider group-hover:text-[#39FF14] transition-colors">
+                Initialize New HQ
               </span>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-zinc-500 font-bold">
-                System Status
+              <span className="text-zinc-500 text-[10px] uppercase tracking-widest mt-1">
+                Secure Redirect Routing
               </span>
             </div>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-red-400/90 font-bold px-2 py-0.5 rounded border border-red-400/20 bg-red-400/5">
-              Offline
-            </span>
-          </div>
 
-          {/* Icon + headline */}
-          <div className="space-y-4">
-            <div className="w-14 h-14 rounded-xl border border-white/10 bg-white/5 flex items-center justify-center">
-              <PowerOff className="w-6 h-6 text-zinc-400" />
+            <div className="relative z-10 w-10 h-10 rounded-full bg-[#39FF14]/10 flex items-center justify-center group-hover:bg-[#39FF14] group-hover:text-black transition-all text-[#39FF14]">
+              <ArrowRight className="w-5 h-5 group-hover:rotate-[-45deg] transition-transform duration-300" />
             </div>
-
-            <h1 className="text-3xl md:text-4xl font-black tracking-tighter text-white">
-              This deployment of IRIS
-              <br />
-              <span className="text-zinc-500">has been shut down.</span>
-            </h1>
-
-            <p className="text-zinc-400 text-sm leading-relaxed max-w-md">
-              This was the original public build of IRIS AI. It's been
-              retired and fully decommissioned — every route on this domain
-              has been removed. The project continues, privately, under new
-              infrastructure that isn't public yet.
-            </p>
-          </div>
-
-          {/* Boot-style shutdown log */}
-          <div className="rounded-xl border border-white/5 bg-black/60 p-4 space-y-1.5 text-[11px]">
-            {BOOT_LINES.slice(0, bootIndex).map((line, i) => (
-              <div key={i} className="flex items-center gap-2">
-                <span className="text-[#39FF14]/60">$</span>
-                <span
-                  className={
-                    i === BOOT_LINES.length - 1
-                      ? "text-red-400/90 font-bold"
-                      : "text-zinc-500"
-                  }
-                >
-                  {line}
-                </span>
-              </div>
-            ))}
-            {!bootDone && (
-              <span className="inline-block w-1.5 h-3 bg-[#39FF14]/60 animate-pulse ml-4" />
-            )}
-          </div>
-
-          {/* What this means */}
-          <div className="space-y-3 pt-1">
-            <div className="flex items-start gap-3 text-xs text-zinc-400">
-              <Lock className="w-3.5 h-3.5 text-zinc-600 mt-0.5 shrink-0" />
-              <span>
-                Old links, README badges, and bookmarks pointing here will no
-                longer resolve to a working app.
-              </span>
-            </div>
-          </div>
-
-          {/* Contact — only outlet left */}
-          <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row gap-3">
-            <a
-              href="https://github.com/201Harsh"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-xs text-zinc-300 hover:text-[#39FF14] hover:border-[#39FF14]/30 hover:bg-[#39FF14]/5 transition-all"
-            >
-              <Github className="w-3.5 h-3.5" />
-              GitHub
-            </a>
-            <a
-              href="mailto:contact@irisxai.dev"
-              className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-xs text-zinc-300 hover:text-[#39FF14] hover:border-[#39FF14]/30 hover:bg-[#39FF14]/5 transition-all"
-            >
-              <Mail className="w-3.5 h-3.5" />
-              Contact
-            </a>
-          </div>
-        </div>
-
-        <p className="text-center text-[10px] text-zinc-700 mt-6 tracking-wide">
-          IRIS AI — Built by Harsh Pandey
-        </p>
+          </a>
+        </motion.div>
       </motion.div>
+
     </div>
   );
-};
-
-export default IRIS;
+}
