@@ -41,12 +41,12 @@ export default function ComparePage() {
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/pricing">
-              <button className="px-8 py-3 rounded-full bg-[#39FF14] text-black font-bold hover:bg-green-400 transition-all shadow-[0_0_20px_rgba(57,255,20,0.4)]">
+              <button className="cursor-pointer px-8 py-3 rounded-full bg-[#39FF14] text-black font-bold hover:bg-green-400 transition-all shadow-[0_0_20px_rgba(57,255,20,0.4)]">
                 Upgrade to Pro (₹499)
               </button>
             </Link>
             <Link href="/docs/tiers">
-              <button className="px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-colors flex items-center gap-2">
+              <button className="cursor-pointer px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-colors flex items-center gap-2">
                 View Licensing Details
               </button>
             </Link>
