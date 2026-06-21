@@ -103,7 +103,7 @@ export default function PrivacyPolicyPage() {
               <h2 className="text-2xl font-bold text-white tracking-tight font-sans">Google OAuth Authentication Data</h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4 font-sans">
-              IRIS utilizes Google Login protocols to securely verify identities and map sponsorship profiles. When logging in, we collect and store:
+              IRIS utilizes Google Login protocols to securely verify identities. When logging in, we collect and store:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
               <div className="p-3 bg-white/5 rounded-xl border border-white/5 font-sans">
@@ -112,13 +112,28 @@ export default function PrivacyPolicyPage() {
               </div>
               <div className="p-3 bg-white/5 rounded-xl border border-white/5 font-sans">
                 <strong className="text-[#39FF14] block mb-1">Email Address</strong>
-                <span className="text-zinc-500">To verify licensing keys and sponsor credentials.</span>
+                <span className="text-zinc-500">To verify licensing keys and Google Authentication.</span>
               </div>
               <div className="p-3 bg-white/5 rounded-xl border border-white/5 font-sans">
                 <strong className="text-[#39FF14] block mb-1">Profile Picture</strong>
                 <span className="text-zinc-500">Used strictly for visual layout indicators.</span>
               </div>
             </div>
+          </motion.div>
+
+          <motion.div
+            variants={itemVariants}
+            className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 relative overflow-hidden group hover:border-[#39FF14]/30 transition-all duration-300"
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
+                <Shield className="w-6 h-6 text-[#39FF14]" />
+              </div>
+              <h2 className="text-2xl font-bold text-white tracking-tight font-sans">Payment Processing</h2>
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed mb-4 font-sans">
+              We do not store your credit card details on our servers. All financial transactions are encrypted and processed directly by our PCI-compliant payment gateway (Razorpay).
+            </p>
           </motion.div>
 
           <motion.div

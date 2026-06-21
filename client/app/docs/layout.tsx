@@ -47,7 +47,7 @@ const sidebarNavItems: NavGroup[] = [
     title: "Security & Licensing",
     items: [
       { name: "Code Protection", href: "/docs/security", icon: ShieldCheck },
-      { name: "Sponsorship Tiers", href: "/docs/tiers", icon: Coins },
+      { name: "Pro Tiers", href: "/docs/tiers", icon: Coins },
     ],
   },
 ];
