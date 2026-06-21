@@ -47,7 +47,7 @@ const sidebarNavItems: NavGroup[] = [
     title: "Security & Licensing",
     items: [
       { name: "Code Protection", href: "/docs/security", icon: ShieldCheck },
-      { name: "Sponsorship Tiers", href: "/docs/tiers", icon: Coins },
+      { name: "Pro Tiers", href: "/docs/tiers", icon: Coins },
     ],
   },
 ];
@@ -57,7 +57,7 @@ export default function DocsLayout({ children }: { children: ReactNode }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-black text-zinc-100 font-sans selection:bg-[#39FF14]/30 flex flex-col mt-12">
+    <div className="min-h-screen bg-black text-zinc-100  selection:bg-[#39FF14]/30 flex flex-col mt-12">
       <Header />
 
       <div className="flex-1 max-w-7xl mx-auto w-full pt-32 px-6 flex gap-10 relative">
@@ -99,7 +99,7 @@ export default function DocsLayout({ children }: { children: ReactNode }) {
                           ${
                             isActive
                               ? "bg-[#39FF14]/10 text-[#39FF14] border border-[#39FF14]/20 shadow-[0_0_15px_rgba(57,255,20,0.1)]"
-                              : "text-zinc-400 hover:text-white hover:bg-white/5 border border-transparent"
+                              : "text-zinc-200 hover:text-white hover:bg-white/5 border border-transparent"
                           }
                         `}
                       >

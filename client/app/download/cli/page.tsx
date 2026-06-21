@@ -36,7 +36,7 @@ export default function CliDownloadPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#000000] text-zinc-100 font-sans selection:bg-[#39FF14]/30 pt-24 overflow-hidden relative">
+    <div className="min-h-screen bg-[#000000] text-zinc-100  selection:bg-[#39FF14]/30 pt-24 overflow-hidden relative">
       <Header />
 
       <main className="max-w-5xl mx-auto px-6 relative z-10 pb-20">

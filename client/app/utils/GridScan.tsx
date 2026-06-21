@@ -722,7 +722,7 @@ export const GridScan: React.FC<GridScanProps> = ({
       style={style}
     >
       {showPreview && (
-        <div className="right-3 bottom-3 absolute bg-black shadow-[0_4px_16px_rgba(0,0,0,0.4)] border border-white/25 rounded-lg w-55 h-33 overflow-hidden font-sans text-[12px] text-white leading-[1.2] pointer-events-none">
+        <div className="right-3 bottom-3 absolute bg-black shadow-[0_4px_16px_rgba(0,0,0,0.4)] border border-white/25 rounded-lg w-55 h-33 overflow-hidden  text-[12px] text-white leading-[1.2] pointer-events-none">
           <video
             ref={videoRef}
             muted

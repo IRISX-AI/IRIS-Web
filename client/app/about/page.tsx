@@ -162,7 +162,7 @@ const IRISAbout = () => {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen bg-black text-white selection:bg-[#39FF14] selection:text-black font-sans overflow-x-hidden"
+      className="min-h-screen bg-black text-white selection:bg-[#39FF14] selection:text-black  overflow-x-hidden"
     >
       <Header />
 

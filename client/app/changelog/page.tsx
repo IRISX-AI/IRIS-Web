@@ -469,8 +469,6 @@ export default function ChangelogPage() {
           });
         }
 
-
-
         ScrollTrigger.create({
           trigger: cardSelector,
           start: "top 60%",
@@ -567,7 +565,7 @@ export default function ChangelogPage() {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#39FF14] selection:text-black overflow-x-hidden"
+      className="min-h-screen bg-[#050505] text-white  selection:bg-[#39FF14] selection:text-black overflow-x-hidden"
     >
       <Header />
 
@@ -605,11 +603,11 @@ export default function ChangelogPage() {
       <section className="pt-20 pb-10 px-6 relative z-20 max-w-5xl mx-auto">
         <div className="bg-[#0a0a0a] border border-[#39FF14]/20 rounded-2xl p-6 md:p-8 space-y-4 relative overflow-hidden group">
           <div className="absolute top-0 left-0 w-full h-1 bg-[#39FF14]/15 shadow-[0_0_15px_#39FF14] pointer-events-none" />
-          <h3 className="text-lg font-bold text-white flex items-center gap-2 font-mono">
+          <h3 className="text-lg font-bold text-white flex items-center gap-2 ">
             <GitBranch className="w-5 h-5 text-[#39FF14]" />
             Transition to Sustainable Open Core Model
           </h3>
-          <div className="text-zinc-400 text-xs font-mono leading-relaxed space-y-3">
+          <div className="text-zinc-200 text-xs  leading-relaxed space-y-3">
             <p>
               In our earlier iterations (pre-v1.1.0), IRIS was developed as a
               100% free and open-source project. However, to fund continuous
@@ -630,21 +628,21 @@ export default function ChangelogPage() {
               bytecode.
             </p>
             <div className="p-4 rounded-xl bg-[#39FF14]/5 border border-[#39FF14]/10 text-[#39FF14]/90 space-y-2 mt-2 font-semibold">
-              <span className="font-bold block">Sponsorship Inclusions:</span>
-              <ul className="space-y-1 pl-2 text-zinc-400">
+              <span className="font-bold block">Pro License Inclusions:</span>
+              <ul className="space-y-1 pl-2 text-zinc-200">
                 <li>
-                  • **$15/mo Sponsor (Insider)**: Unlocks read access to
+                  • **$15/mo Pro Licensee (Insider)**: Unlocks read access to
                   `iris-insiders` containing functional hooks and code snippets.
-                  *Sponsorship at this level does not provide the full code.*
+                  *Licensing at this level does not provide the full code.*
                 </li>
                 <li>
-                  • **$30/mo Sponsor (Builder)**: Access to testing prompts,
-                  logs, and workflow macros.
+                  • **$30/mo Pro Licensee (Builder)**: Access to testing
+                  prompts, logs, and workflow macros.
                 </li>
                 <li>
-                  • **$50/mo Sponsor (Alpha)**: Full read access to the raw,
-                  unprotected, uncompiled source code, precompiled releases, and
-                  commercial licenses.
+                  • **$50/mo Pro Licensee (Alpha)**: Full read access to the
+                  raw, unprotected, uncompiled source code, precompiled
+                  releases, and commercial licenses.
                 </li>
               </ul>
             </div>
@@ -666,10 +664,10 @@ export default function ChangelogPage() {
                 className="bg-[#0a0a0a]/80 backdrop-blur-md border border-white/5 hover:border-[#39FF14]/20 rounded-2xl p-6 space-y-6 transition-all duration-300"
               >
                 <div className="space-y-1.5">
-                  <div className="text-[10px] text-zinc-500 font-bold uppercase tracking-[0.2em] font-mono">
+                  <div className="text-[10px] text-zinc-500 font-bold uppercase tracking-[0.2em] ">
                     SYSTEM CORE: OPERATIONAL
                   </div>
-                  <div className="text-xs text-[#39FF14] font-bold font-mono flex items-center gap-2">
+                  <div className="text-xs text-[#39FF14] font-bold  flex items-center gap-2">
                     <span className="relative flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#39FF14] opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-[#39FF14]"></span>
@@ -681,19 +679,19 @@ export default function ChangelogPage() {
                 <div className="h-px bg-white/5" />
 
                 <div className="space-y-3">
-                  <div className="text-zinc-500 text-[10px] uppercase tracking-wider font-mono">
+                  <div className="text-zinc-500 text-[10px] uppercase tracking-wider ">
                     Currently Viewing
                   </div>
-                  <div className="text-4xl font-black font-mono tracking-tighter text-white flex items-baseline gap-2">
+                  <div className="text-4xl font-black  tracking-tighter text-white flex items-baseline gap-2">
                     {changelogData[activeIndex].version}
-                    <span className="text-[9px] text-[#39FF14] font-bold tracking-widest uppercase px-2 py-0.5 rounded bg-[#39FF14]/10 border border-[#39FF14]/20 font-mono">
+                    <span className="text-[9px] text-[#39FF14] font-bold tracking-widest uppercase px-2 py-0.5 rounded bg-[#39FF14]/10 border border-[#39FF14]/20 ">
                       {changelogData[activeIndex].type}
                     </span>
                   </div>
-                  <div className="text-white font-bold text-sm tracking-tight font-mono">
+                  <div className="text-white font-bold text-sm tracking-tight ">
                     {changelogData[activeIndex].title}
                   </div>
-                  <p className="text-zinc-400 text-xs leading-relaxed font-mono">
+                  <p className="text-zinc-200 text-xs leading-relaxed ">
                     {changelogData[activeIndex].desc}
                   </p>
                 </div>
@@ -701,7 +699,7 @@ export default function ChangelogPage() {
                 <div className="h-px bg-white/5" />
 
                 <div className="space-y-2.5">
-                  <div className="text-zinc-500 text-[10px] uppercase tracking-wider font-mono">
+                  <div className="text-zinc-500 text-[10px] uppercase tracking-wider ">
                     Ecosystem Versions Index
                   </div>
                   <div className="space-y-1.5 max-h-56 overflow-y-auto pr-1 iris-scrollbar">
@@ -709,10 +707,10 @@ export default function ChangelogPage() {
                       <button
                         key={item.version}
                         onClick={() => scrollToVersion(item.version, idx)}
-                        className={`w-full text-left px-3 py-2 rounded-xl text-xs font-mono font-semibold transition-all flex items-center justify-between border ${
+                        className={`w-full text-left px-3 py-2 rounded-xl text-xs  font-semibold transition-all flex items-center justify-between border ${
                           activeIndex === idx
                             ? "bg-[#39FF14]/10 text-[#39FF14] border-[#39FF14]/30 shadow-[0_0_15px_rgba(57,255,20,0.03)]"
-                            : "text-zinc-400 hover:text-white bg-transparent border-transparent hover:bg-white/5"
+                            : "text-zinc-200 hover:text-white bg-transparent border-transparent hover:bg-white/5"
                         }`}
                       >
                         <span className="flex items-center gap-2">
@@ -736,7 +734,7 @@ export default function ChangelogPage() {
 
               <Link
                 href="/docs"
-                className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-white/5 border border-white/5 text-xs text-zinc-400 font-mono hover:text-[#39FF14] hover:border-[#39FF14]/30 hover:bg-[#39FF14]/5 transition-all w-full text-center"
+                className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-white/5 border border-white/5 text-xs text-zinc-200  hover:text-[#39FF14] hover:border-[#39FF14]/30 hover:bg-[#39FF14]/5 transition-all w-full text-center"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
                 Return to Documentation
@@ -747,7 +745,7 @@ export default function ChangelogPage() {
           {/* Right Column (Scrollable stack cards) */}
           <div className="lg:col-span-8 relative pl-12 lg:pl-20 h-full">
             {/* Vertical timeline track line */}
-            <div className="absolute left-6 lg:left-8 top-4 bottom-4 w-[2px] bg-zinc-800/40 rounded-full z-0 pointer-events-none">
+            <div className="absolute left-6 lg:left-8 top-4 bottom-4 w-0.5 bg-zinc-800/40 rounded-full z-0 pointer-events-none">
               <div
                 ref={lineProgressRef}
                 className="absolute top-0 left-0 w-full bg-linear-to-b from-[#39FF14] to-emerald-500 origin-top h-0 shadow-[0_0_15px_rgba(57,255,20,0.6)]"
@@ -768,12 +766,12 @@ export default function ChangelogPage() {
                   <div
                     key={item.version}
                     id={`card-${idSafe}`}
-                    className="relative bg-[#0a0a0a] border border-white/10 rounded-3xl p-6 md:p-8 flex flex-col justify-between w-full h-auto lg:h-[720px] overflow-visible lg:overflow-y-auto transition-all duration-300 iris-scrollbar"
+                    className="relative bg-[#0a0a0a] border border-white/10 rounded-3xl p-6 md:p-8 flex flex-col justify-between w-full h-auto lg:h-180 overflow-visible lg:overflow-y-auto transition-all duration-300 iris-scrollbar"
                   >
                     {/* Projecting timeline dot */}
                     <div
                       id={`dot-${idSafe}`}
-                      className="absolute -left-9 lg:-left-16 top-[30px] w-6 h-6 lg:w-8 lg:h-8 rounded-full border bg-black flex items-center justify-center z-20 transition-all duration-300"
+                      className="absolute -left-9 lg:-left-16 top-7.5 w-6 h-6 lg:w-8 lg:h-8 rounded-full border bg-black flex items-center justify-center z-20 transition-all duration-300"
                     >
                       <Icon className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
                     </div>
@@ -782,24 +780,24 @@ export default function ChangelogPage() {
                     <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/5 pb-4">
                       <div className="flex items-center gap-3">
                         <span
-                          className={`text-xl font-bold font-mono ${
+                          className={`text-xl font-bold  ${
                             isMajor ? "text-[#39FF14]" : "text-white"
                           }`}
                         >
                           {item.version}
                         </span>
-                        <span className="text-zinc-500 text-xs font-mono font-semibold flex items-center gap-1.5">
+                        <span className="text-zinc-500 text-xs  font-semibold flex items-center gap-1.5">
                           <Calendar className="w-3.5 h-3.5" />
                           {item.date}
                         </span>
                       </div>
                       <span
                         className={`
-                          text-[9px] font-black uppercase font-mono px-2 py-0.5 rounded tracking-widest border
+                          text-[9px] font-black uppercase  px-2 py-0.5 rounded tracking-widest border
                           ${
                             isMajor
                               ? "bg-[#39FF14]/10 border-[#39FF14]/20 text-[#39FF14]"
-                              : "bg-white/5 border-white/10 text-zinc-400"
+                              : "bg-white/5 border-white/10 text-zinc-200"
                           }
                         `}
                       >
@@ -809,10 +807,10 @@ export default function ChangelogPage() {
 
                     {/* Title & Desc */}
                     <div className="space-y-1.5 my-4">
-                      <h3 className="text-lg font-bold text-white font-mono leading-tight">
+                      <h3 className="text-lg font-bold text-white  leading-tight">
                         {item.title}
                       </h3>
-                      <p className="text-zinc-400 text-xs font-mono leading-relaxed">
+                      <p className="text-zinc-200 text-xs  leading-relaxed">
                         {item.desc}
                       </p>
                     </div>
@@ -821,10 +819,10 @@ export default function ChangelogPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 flex-1 overflow-y-auto iris-scrollbar pr-2">
                       {item.categories.map((cat, catIdx) => (
                         <div key={catIdx} className="category-block space-y-3">
-                          <h4 className="text-xs font-bold text-white flex items-center gap-2 border-b border-white/5 pb-1 font-mono uppercase tracking-wider">
+                          <h4 className="text-xs font-bold text-white flex items-center gap-2 border-b border-white/5 pb-1  uppercase tracking-wider">
                             {cat.title}
                           </h4>
-                          <ul className="space-y-2 pl-1 font-mono text-[11px] text-zinc-400">
+                          <ul className="space-y-2 pl-1  text-[11px] text-zinc-200">
                             {cat.items.map((bullet, bIdx) => (
                               <li
                                 key={bIdx}

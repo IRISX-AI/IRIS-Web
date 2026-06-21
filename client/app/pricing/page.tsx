@@ -10,12 +10,11 @@ import {
 } from "lucide-react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import { FaGithub } from "react-icons/fa6";
 import Link from "next/link";
 
 export default function PricingPage() {
   return (
-    <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#39FF14] selection:text-black">
+    <div className="min-h-screen bg-[#050505] text-white  selection:bg-[#39FF14] selection:text-black">
       <Header />
 
       <section className="pt-40 pb-20 px-6 relative overflow-hidden flex flex-col items-center text-center">
@@ -43,14 +42,14 @@ export default function PricingPage() {
 
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
             One-time payment. Zero complicated setups or monthly subscriptions.
-            Secure a lifetime license to the IRIS Pro engine instantly via
-            GitHub Sponsors.
+            Secure a lifetime license to the IRIS Pro engine instantly via our
+            secure direct checkout.
           </p>
 
           <Link href="/refund-policy" className="inline-block">
             <button className="cursor-pointer group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-orange-500/20 bg-orange-500/5 text-xs  text-orange-400/80 hover:text-orange-400 hover:bg-orange-500/10 hover:border-orange-500/40 transition-all duration-300 shadow-[0_0_15px_rgba(249,115,22,0.05)] hover:shadow-[0_0_25px_rgba(249,115,22,0.15)]">
               <ShieldAlert className="w-4 h-4 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
-              <span>Strict No-Refund Policy (Standard GitHub Terms)</span>
+              <span>Strict No-Refund Policy (License Delivery)</span>
             </button>
           </Link>
         </motion.div>
@@ -126,14 +125,14 @@ export default function PricingPage() {
                 </h3>
               </div>
               <div className="text-4xl font-black text-white mb-4 flex items-end gap-3">
-                <span>$5 / ₹500</span>
+                <span>₹499</span>
                 <span className="text-lg font-normal text-gray-500 tracking-normal mb-1">
                   one-time
                 </span>
               </div>
               <p className="text-sm text-gray-400 h-10">
-                Unlock the complete autonomous ecosystem. Private repository
-                access forever.
+                Unlock the complete autonomous ecosystem. Instant License
+                Activation and Direct Pro Access forever.
               </p>
             </div>
 
@@ -148,7 +147,9 @@ export default function PricingPage() {
                 </li>
                 <li className="flex justify-between">
                   <span>Delivery Method:</span>{" "}
-                  <span className="text-[#39FF14]">Private GitHub Repo</span>
+                  <span className="text-[#39FF14]">
+                    Instant License Activation
+                  </span>
                 </li>
               </ul>
             </div>
@@ -173,7 +174,7 @@ export default function PricingPage() {
                 pro
               />
               <FeatureItem
-                text="AI Image Generation (DALL-E / Midjourney)"
+                text="AI Image Generation (Black Forest/ Stable Diffusion)"
                 pro
               />
               <FeatureItem text="Autonomous Deep Web Research Crawlers" pro />
@@ -187,117 +188,36 @@ export default function PricingPage() {
               />
             </div>
 
-            <button className="cursor-pointer group w-full flex justify-center items-center gap-2 mt-10 py-4 rounded-xl bg-[#39FF14] text-black font-bold hover:bg-green-400 transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] relative z-10">
-              <FaGithub className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              Sponsor on GitHub to Unlock
-            </button>
+            <div className="mt-10 flex flex-col items-center">
+              <button className="cursor-pointer group w-full flex justify-center items-center gap-2 py-4 rounded-xl bg-[#39FF14] text-black font-bold hover:bg-green-400 transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] relative z-10">
+                Upgrade via Secure Checkout
+              </button>
+              <p className="mt-3 text-xs text-gray-500 font-medium">
+                Secure SSL Checkout. Authentication powered by Google.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-24 max-w-5xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Deep Architecture Comparison
+      <section className="py-24 max-w-4xl mx-auto px-6 relative z-10">
+        <div className="bg-[#050505] rounded-[2.5rem] p-10 border border-[#39FF14]/20 flex flex-col items-center text-center relative overflow-hidden shadow-xl">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-linear-to-r from-transparent via-[#39FF14]/50 to-transparent" />
+
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Compare IRIS{" "}
+            <span className="text-[#39FF14] font-extrabold">Free vs Pro</span>
           </h2>
-          <p className="text-gray-400">
-            A precise technical breakdown of system access per tier.
+          <p className="text-gray-400 mb-8 max-w-2xl text-lg">
+            Not sure which version is right for you? See exactly which local
+            automations, system capabilities, and developer tools are unlocked
+            when you purchase a Pro License.
           </p>
-        </div>
-
-        <div className="overflow-x-auto">
-          <table className="w-full text-left border-collapse">
-            <thead>
-              <tr className="border-b border-white/10 text-xs  uppercase tracking-widest text-gray-500">
-                <th className="py-4 px-6 font-bold">Capability</th>
-                <th className="py-4 px-6 font-bold text-center">
-                  Base Engine (Free)
-                </th>
-                <th className="py-4 px-6 font-bold text-center text-[#39FF14]">
-                  Pro ($5 Lifetime)
-                </th>
-              </tr>
-            </thead>
-            <tbody className="text-sm text-gray-300">
-              <TableRow
-                title="Native File System & Directory Control"
-                free="Yes"
-                pro="Yes"
-              />
-              <TableRow
-                title="Terminal & OS Script Execution"
-                free="Yes"
-                pro="Yes"
-              />
-              <TableRow
-                title="Desktop Window Management"
-                free="Yes"
-                pro="Yes"
-              />
-              <TableRow title="Live DOM Manipulation" free="Yes" pro="Yes" />
-              <TableRow
-                title="Bring Your Own Key (BYOK) Logic"
-                free="Yes"
-                pro="Yes"
-              />
-              <TableRow
-                title="WhatsApp Messaging Automation"
-                free="Yes"
-                pro="Yes"
-              />
-
-              <TableRow
-                title="Offline Passive Wake Word Activation"
-                free="No"
-                pro="Yes"
-              />
-              <TableRow
-                title="ScreenPeeler Multimodal AI OCR"
-                free="No"
-                pro="Yes"
-              />
-              <TableRow
-                title="Phantom Control Ghost Keyboard"
-                free="No"
-                pro="Yes"
-              />
-              <TableRow
-                title="Gmail Integration & Email Automation"
-                free="No"
-                pro="Yes"
-              />
-              <TableRow
-                title="Mobile Device Bridge (ADB Integration)"
-                free="No"
-                pro="Yes"
-              />
-              <TableRow
-                title="AI Image Generation (DALL-E/Midjourney)"
-                free="No"
-                pro="Yes"
-              />
-              <TableRow
-                title="Autonomous Deep Research Crawlers"
-                free="No"
-                pro="Yes"
-              />
-              <TableRow
-                title="Deploy Localhost Wormholes"
-                free="No"
-                pro="Yes"
-              />
-              <TableRow
-                title="Biometric Security & Face Lockdown"
-                free="No (PIN Only)"
-                pro="Yes (Face Match + PIN)"
-              />
-              <TableRow
-                title="Private GitHub Repository Access"
-                free="No"
-                pro="Yes"
-              />
-            </tbody>
-          </table>
+          <Link href="/compare">
+            <button className="cursor-pointer group flex justify-center items-center gap-2 px-8 py-4 rounded-xl border border-[#39FF14]/30 bg-[#39FF14]/10 text-[#39FF14] font-bold hover:bg-[#39FF14] hover:text-black transition-all shadow-[0_0_15px_rgba(57,255,20,0.1)] hover:shadow-[0_0_30px_rgba(57,255,20,0.3)]">
+              See Full Comparison
+            </button>
+          </Link>
         </div>
       </section>
 
@@ -323,20 +243,4 @@ const FeatureItem = ({
       {text}
     </span>
   </div>
-);
-
-const TableRow = ({
-  title,
-  free,
-  pro,
-}: {
-  title: string;
-  free: string;
-  pro: string;
-}) => (
-  <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-    <td className="py-4 px-6 font-medium text-gray-200">{title}</td>
-    <td className="py-4 px-6 text-center text-gray-400">{free}</td>
-    <td className="py-4 px-6 text-center font-medium text-[#39FF14]">{pro}</td>
-  </tr>
 );

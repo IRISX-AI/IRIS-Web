@@ -100,7 +100,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white font-sans flex items-center justify-center p-6 relative overflow-hidden selection:bg-[#39FF14] selection:text-black">
+    <div className="min-h-screen bg-[#050505] text-white  flex items-center justify-center p-6 relative overflow-hidden selection:bg-[#39FF14] selection:text-black">
       <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-[#39FF14]/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-[#044a33]/30 blur-[120px] rounded-full pointer-events-none" />
 

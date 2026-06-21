@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function CliInstallGuide() {
   return (
-    <div className="min-h-screen bg-[#000000] text-zinc-100 font-sans selection:bg-[#39FF14]/30 pt-24 overflow-hidden relative">
+    <div className="min-h-screen bg-[#000000] text-zinc-100  selection:bg-[#39FF14]/30 pt-24 overflow-hidden relative">
       <Header />
 
       <main className="max-w-4xl mx-auto px-6 relative z-10 pb-24">
@@ -113,7 +113,7 @@ export default function CliInstallGuide() {
                     "✔ Loading config...",
                     "✔ Connecting API...",
                     "",
-                    "[ NEURAL CORE ONLINE ]",
+                    "[ IRIS PRO ONLINE ]",
                     "[ UI PORT ]  http://localhost:6753",
                     "[ AGENT ]    Awaiting Connection...",
                     "[ EXIT ]     Press Ctrl + C to stop",

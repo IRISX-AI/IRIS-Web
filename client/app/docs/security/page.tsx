@@ -46,7 +46,7 @@ export default function DocsSecurityPage() {
         <h1 className="text-4xl md:text-6xl font-black tracking-tight uppercase">
           CODE <span className="text-[#39FF14]">PROTECTION.</span>
         </h1>
-        <p className="text-zinc-400 text-lg leading-relaxed max-w-3xl ">
+        <p className="text-zinc-200 text-lg leading-relaxed max-w-3xl ">
           IRIS implements enterprise-grade application security to safeguard
           private orchestration scripts, encrypt keys, and validate local
           runtime integrity.
@@ -102,7 +102,7 @@ export default function DocsSecurityPage() {
           <EyeOff className="w-5 h-5 text-[#39FF14]" />
           Shielding Mechanisms & Compilation
         </h3>
-        <p className="text-zinc-400 text-sm leading-relaxed max-w-3xl ">
+        <p className="text-zinc-200 text-sm leading-relaxed max-w-3xl ">
           To maintain structural integrity and secure the main execution logic
           from tampering or unauthorized modifications, IRIS employs a
           multi-tiered binaries shield.
@@ -172,7 +172,7 @@ export default function DocsSecurityPage() {
                 <span className="text-white font-bold block text-sm">
                   Window & Context Isolation
                 </span>
-                <p className="text-zinc-400 block font-semibold leading-relaxed">
+                <p className="text-zinc-200 block font-semibold leading-relaxed">
                   The renderer framework operates under strict sandboxing
                   settings. Render context files cannot trigger Node scripts
                   directly. All requests must go through a whitelisted IPC
@@ -201,13 +201,13 @@ export default function DocsSecurityPage() {
           </p>
           <div className="space-y-2 text-xs">
             <div className="flex items-center justify-between p-3 rounded-xl bg-black/50 border border-white/5">
-              <span className="text-zinc-400">Lock System Vault</span>
+              <span className="text-zinc-200">Lock System Vault</span>
               <code className="text-[#39FF14] text-[10px]">
                 "Lock the system vault"
               </code>
             </div>
             <div className="flex items-center justify-between p-3 rounded-xl bg-black/50 border border-white/5">
-              <span className="text-zinc-400">Biometric Face Check</span>
+              <span className="text-zinc-200">Biometric Face Check</span>
               <code className="text-[#39FF14] text-[10px]">
                 Multi-Face Validation
               </code>
@@ -226,7 +226,7 @@ export default function DocsSecurityPage() {
             manage files, invoke terminal routines, and run local automation
             macros.
           </p>
-          <ul className="space-y-1.5 text-zinc-400 text-xs pl-2 border-l border-orange-500/20">
+          <ul className="space-y-1.5 text-zinc-200 text-xs pl-2 border-l border-orange-500/20">
             <li>• Ensure API keys are kept private.</li>
             <li>• Custom macros should be audited prior to execution.</li>
             <li>• Standard processes run under user permission profiles.</li>
