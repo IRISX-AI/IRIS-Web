@@ -22,7 +22,7 @@ export default function DeprecatedSite() {
       <motion.div 
         animate={{ top: ["-10%", "110%"] }}
         transition={{ duration: 3, ease: "linear", repeat: Infinity }}
-        className="absolute left-0 w-full h-[2px] bg-[#39FF14]/50 shadow-[0_0_20px_#39FF14] z-0 pointer-events-none"
+        className="absolute left-0 w-full h-0.5 bg-[#39FF14]/50 shadow-[0_0_20px_#39FF14] z-0 pointer-events-none"
       />
 
       <motion.div 
