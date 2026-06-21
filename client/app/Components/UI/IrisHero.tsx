@@ -116,10 +116,10 @@ export default function IrisHero({
               />
             </Link>
 
-            <Link href="/how-to-install">
+            <Link href="/get-started">
               <MagneticButton
-                title="Installation Guide"
-                subtitle="Watch Tutorial"
+                title="Get Started"
+                subtitle="Login or Create Account"
                 iconLeft={<FileCode2 className="w-6 h-6 text-[#39FF14]" />}
                 iconRight={
                   <ArrowRight className="w-5 h-5 text-current group-hover:text-[#39FF14]" />
