@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import { FaGithub } from "react-icons/fa6";
 import Link from "next/link";
 
 export default function PricingPage() {
@@ -44,13 +43,13 @@ export default function PricingPage() {
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
             One-time payment. Zero complicated setups or monthly subscriptions.
             Secure a lifetime license to the IRIS Pro engine instantly via
-            GitHub Sponsors.
+            our secure direct checkout.
           </p>
 
           <Link href="/refund-policy" className="inline-block">
             <button className="cursor-pointer group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-orange-500/20 bg-orange-500/5 text-xs  text-orange-400/80 hover:text-orange-400 hover:bg-orange-500/10 hover:border-orange-500/40 transition-all duration-300 shadow-[0_0_15px_rgba(249,115,22,0.05)] hover:shadow-[0_0_25px_rgba(249,115,22,0.15)]">
               <ShieldAlert className="w-4 h-4 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
-              <span>Strict No-Refund Policy (Standard GitHub Terms)</span>
+              <span>Strict No-Refund Policy (License Delivery)</span>
             </button>
           </Link>
         </motion.div>
@@ -132,8 +131,8 @@ export default function PricingPage() {
                 </span>
               </div>
               <p className="text-sm text-gray-400 h-10">
-                Unlock the complete autonomous ecosystem. Private repository
-                access forever.
+                Unlock the complete autonomous ecosystem. Instant License Activation
+                and Direct Pro Access forever.
               </p>
             </div>
 
@@ -148,7 +147,7 @@ export default function PricingPage() {
                 </li>
                 <li className="flex justify-between">
                   <span>Delivery Method:</span>{" "}
-                  <span className="text-[#39FF14]">Private GitHub Repo</span>
+                  <span className="text-[#39FF14]">Instant License Activation</span>
                 </li>
               </ul>
             </div>
@@ -187,10 +186,14 @@ export default function PricingPage() {
               />
             </div>
 
-            <button className="cursor-pointer group w-full flex justify-center items-center gap-2 mt-10 py-4 rounded-xl bg-[#39FF14] text-black font-bold hover:bg-green-400 transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] relative z-10">
-              <FaGithub className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              Sponsor on GitHub to Unlock
-            </button>
+            <div className="mt-10 flex flex-col items-center">
+              <button className="cursor-pointer group w-full flex justify-center items-center gap-2 py-4 rounded-xl bg-[#39FF14] text-black font-bold hover:bg-green-400 transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] relative z-10">
+                Upgrade via Secure Checkout
+              </button>
+              <p className="mt-3 text-xs text-gray-500 font-medium">
+                Secure SSL Checkout. Authentication powered by Google.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -292,7 +295,7 @@ export default function PricingPage() {
                 pro="Yes (Face Match + PIN)"
               />
               <TableRow
-                title="Private GitHub Repository Access"
+                title="Direct Pro Access"
                 free="No"
                 pro="Yes"
               />

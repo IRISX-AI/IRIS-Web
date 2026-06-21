@@ -193,10 +193,11 @@ export default function TermsOfServicePage() {
               <h2 className="text-2xl font-bold text-white tracking-tight">7. Strict No-Refund Policy</h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              IRIS Pro is distributed as a digital package consisting of compiled bytecode binaries delivered via GitHub Sponsors.
+              IRIS Pro is distributed as a digital package consisting of compiled bytecode binaries delivered securely upon license activation. 
+              You agree to one-time billing via our authorized merchant of record, and access is tied to your authenticated Google Account.
             </p>
             <div className="p-4 rounded-xl border border-white/5 bg-white/5 text-xs text-zinc-400 leading-relaxed">
-              Because we cannot verify the deletion of offline code files once pulled, all sponsorships are final, permanent, and 100% non-refundable. Please test core actions using the Free engine version prior to sponsoring.
+              Because we cannot verify the deletion of offline code files once downloaded, all license purchases are final, permanent, and 100% non-refundable. Please test core actions using the Free engine version prior to purchasing.
             </div>
           </motion.div>
 
@@ -211,10 +212,10 @@ export default function TermsOfServicePage() {
               <h2 className="text-2xl font-bold text-white tracking-tight">8. Repository Access Revocation</h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              We reserve the right to permanently terminate your developer access to the private GitHub repository network, updates stream, and Discord network for the following offenses:
+              We reserve the right to permanently terminate your developer access to the private IRIS Pro systems, updates stream, and Discord network for the following offenses:
             </p>
             <ul className="space-y-2.5 text-zinc-500 text-xs pl-2 border-l border-red-500/20">
-              <li>• Initiating payment chargebacks or bank payment disputes via GitHub Sponsors.</li>
+              <li>• Initiating payment chargebacks or bank payment disputes.</li>
               <li>• Sharing, redistributing, or publishing the proprietary compiled binary packages (.exe / .jsc / ASAR archives).</li>
               <li>• Violating the non-commercial deployment boundaries or device activation limits.</li>
               <li>• Reverse engineering bytecode files.</li>

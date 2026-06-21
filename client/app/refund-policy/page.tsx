@@ -71,16 +71,15 @@ export default function RefundPolicyPage() {
             <div className="grid md:grid-cols-2 gap-8 text-gray-400  text-sm leading-relaxed">
               <div>
                 <p className="mb-4">
-                  Due to the nature of perpetual software licenses and the{" "}
-                  <strong className="text-white">GitHub Sponsors</strong>{" "}
-                  platform architecture, all transactions for the IRIS Pro
+                  Due to the nature of perpetual software licenses and our{" "}
+                  <strong className="text-white">Secure Checkout</strong>{" "}
+                  architecture, all transactions for the IRIS Pro
                   Engine are 100% final and non-refundable.
                 </p>
                 <p>
-                  GitHub Sponsors does not natively support partial or one-time
-                  payment refunds for digital goods. We utilize this platform
-                  specifically to keep overhead low and provide a single,
-                  one-time payment structure instead of a subscription.
+                  Payments are securely processed via our payment gateway (Razorpay). 
+                  We utilize this integrated checkout to provide a seamless,
+                  single one-time payment structure instead of a subscription.
                 </p>
               </div>
               <div>
@@ -94,8 +93,9 @@ export default function RefundPolicyPage() {
                   </strong>
                 </p>
                 <p className="text-orange-400/80 mt-4 border-l-2 border-orange-500/50 pl-4 py-1 bg-orange-500/5 rounded-r-md">
-                  By executing the $5 / ₹500 transaction, you explicitly
+                  By executing the transaction, you explicitly
                   acknowledge and agree to this permanent no-refund clause.
+                  Exceptions are only made for verifiable Payment Gateway Errors or Duplicate Charges.
                 </p>
               </div>
             </div>
@@ -156,9 +156,9 @@ export default function RefundPolicyPage() {
               unwarranted chargebacks.
             </p>
             <p className="text-gray-400  text-sm leading-relaxed">
-              In the event of a bank chargeback or payment dispute via GitHub
-              Sponsors, your GitHub account will be flagged. Access to the
-              private IRIS Pro repository, future updates, bug fixes, and the
+              In the event of a bank chargeback or payment dispute, your 
+              Google account will be flagged. Access to the
+              private IRIS Pro systems, future updates, bug fixes, and the
               community network will be{" "}
               <strong className="text-red-400">
                 permanently revoked without notice
