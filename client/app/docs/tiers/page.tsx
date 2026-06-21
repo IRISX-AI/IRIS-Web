@@ -102,16 +102,56 @@ const tiersData: TierDetail[] = [
 ];
 
 const comparisonData = [
-  { feature: "Wake Up Word Activation", free: "❌ Disabled", paid: "✅ 'Hey, IRIS' / 'IRIS'" },
-  { feature: "ScreenPeeler AI OCR", free: "❌ Disabled", paid: "✅ AI scan snippet (Ctrl+Alt+X)" },
-  { feature: "Phantom Ghost Keyboard", free: "❌ Disabled", paid: "✅ Inline global injection (Ctrl+Alt+Space)" },
-  { feature: "Gmail Integration", free: "❌ Disabled", paid: "✅ Read, scan and draft emails" },
-  { feature: "Mobile Telekinesis (Android)", free: "❌ Disabled", paid: "✅ Full ADB remote actions & telemetry" },
-  { feature: "AI Image Generation", free: "❌ Disabled", paid: "✅ Native DALL-E & Midjourney calls" },
-  { feature: "Deep Research Agent", free: "❌ Disabled", paid: "✅ Multi-step web crawlers" },
-  { feature: "Localhost Wormhole Tunnels", free: "❌ Disabled", paid: "✅ Expose local ports instantly" },
-  { feature: "OS Vault Security", free: "🔒 standard PIN only", paid: "🛡️ Biometric Face Recognition + PIN" },
-  { feature: "System Actions Core", free: "❌ Mock UI only", paid: "✅ Fully functional local main engine" },
+  {
+    feature: "Wake Up Word Activation",
+    free: "❌ Disabled",
+    paid: "✅ 'Hey, IRIS' / 'IRIS'",
+  },
+  {
+    feature: "ScreenPeeler AI OCR",
+    free: "❌ Disabled",
+    paid: "✅ AI scan snippet (Ctrl+Alt+X)",
+  },
+  {
+    feature: "Phantom Ghost Keyboard",
+    free: "❌ Disabled",
+    paid: "✅ Inline global injection (Ctrl+Alt+Space)",
+  },
+  {
+    feature: "Gmail Integration",
+    free: "❌ Disabled",
+    paid: "✅ Read, scan and draft emails",
+  },
+  {
+    feature: "Mobile Telekinesis (Android)",
+    free: "❌ Disabled",
+    paid: "✅ Full ADB remote actions & telemetry",
+  },
+  {
+    feature: "AI Image Generation",
+    free: "❌ Disabled",
+    paid: "✅ Native DALL-E & Midjourney calls",
+  },
+  {
+    feature: "Deep Research Agent",
+    free: "❌ Disabled",
+    paid: "✅ Multi-step web crawlers",
+  },
+  {
+    feature: "Localhost Wormhole Tunnels",
+    free: "❌ Disabled",
+    paid: "✅ Expose local ports instantly",
+  },
+  {
+    feature: "OS Vault Security",
+    free: "🔒 standard PIN only",
+    paid: "🛡️ Biometric Face Recognition + PIN",
+  },
+  {
+    feature: "System Actions Core",
+    free: "❌ Mock UI only",
+    paid: "✅ Fully functional local main engine",
+  },
 ];
 
 export default function DocsTiersPage() {
@@ -152,10 +192,17 @@ export default function DocsTiersPage() {
         <p className="text-zinc-400 text-lg leading-relaxed max-w-3xl font-mono">
           IRIS operates under an Open Core development methodology. Public repos
           host the frontend shell layouts. To activate the full experience:
-          <br /><br />
-          <strong className="text-[#39FF14]">1. Authenticate with Google.</strong><br />
-          <strong className="text-[#39FF14]">2. Purchase a License.</strong><br />
-          <strong className="text-[#39FF14]">3. Unlock the IRIS Neural Core.</strong>
+          <br />
+          <br />
+          <strong className="text-[#39FF14]">
+            1. Authenticate with Google.
+          </strong>
+          <br />
+          <strong className="text-[#39FF14]">2. Purchase a License.</strong>
+          <br />
+          <strong className="text-[#39FF14]">
+            3. Unlock the IRIS Neural Core.
+          </strong>
         </p>
       </motion.div>
 
@@ -169,17 +216,44 @@ export default function DocsTiersPage() {
           Evolving to a Sustainable Open-Core Model
         </h3>
         <p className="text-zinc-400 text-xs leading-relaxed font-mono">
-          Before the release of our advanced Live SDK voice engines, IRIS was completely free and 100% open-source. However, to sustain continuous development, visual overrides, and advanced tooling updates, IRIS has evolved to a **partially open-source (Open-Core) model**.
+          Before the release of our advanced Live SDK voice engines, IRIS was
+          completely free and 100% open-source. However, to sustain continuous
+          development, visual overrides, and advanced tooling updates, IRIS has
+          evolved to a **partially open-source (Open-Core) model**.
         </p>
         <div className="text-zinc-500 text-xs leading-relaxed font-mono space-y-2">
           <p>
-            • <strong className="text-white">Disclosed:</strong> Part of the frontend UI visual elements and select preload bridging APIs are fully open and publicly inspectable.
+            • <strong className="text-white">Disclosed:</strong> Part of the
+            frontend UI visual elements and select preload bridging APIs are
+            fully open and publicly inspectable.
           </p>
           <p>
-            • <strong className="text-white">Protected:</strong> The core voice routing engine, private system-level scripts execution, and the backend AI agent orchestration files remain protected inside V8 binary bytecode and are not disclosed in public repositories.
+            • <strong className="text-white">Protected:</strong> The core voice
+            routing engine, private system-level scripts execution, and the
+            backend AI agent orchestration files remain protected inside V8
+            binary bytecode and are not disclosed in public repositories.
           </p>
           <p>
-            • <strong className="text-white">Code Access Inclusions:</strong> To back the project, a Pro Licensee subscription of a <strong className="text-[#39FF14]">minimum of $15/mo (IRIS Insider)</strong> grants read access to the <code className="text-[#39FF14]">iris-insiders</code> repository containing functional hooks and code snippets. <em className="text-orange-400 font-semibold">*Note that this does not provide the full code*</em>. The <strong className="text-purple-400">complete, raw, unprotected source code</strong> is only provided under the <strong className="text-purple-400">$50/mo (Alpha & Enterprise)</strong> tier.
+            • <strong className="text-white">Code Access Inclusions:</strong> To
+            back the project, a Pro Licensee subscription of a{" "}
+            <strong className="text-[#39FF14]">
+              minimum of $15/mo (IRIS Insider)
+            </strong>{" "}
+            grants read access to the{" "}
+            <code className="text-[#39FF14]">iris-insiders</code> repository
+            containing functional hooks and code snippets.{" "}
+            <em className="text-orange-400 font-semibold">
+              *Note that this does not provide the full code*
+            </em>
+            . The{" "}
+            <strong className="text-purple-400">
+              complete, raw, unprotected source code
+            </strong>{" "}
+            is only provided under the{" "}
+            <strong className="text-purple-400">
+              $50/mo (Alpha & Enterprise)
+            </strong>{" "}
+            tier.
           </p>
         </div>
       </motion.div>
@@ -194,7 +268,8 @@ export default function DocsTiersPage() {
           Free vs Paid (Pro) Matrix
         </h3>
         <p className="text-zinc-400 text-xs leading-relaxed font-mono">
-          Compare the core differences between the open-source Free UI Shell and the fully-loaded Paid (Pro) Engine.
+          Compare the core differences between the open-source Free UI Shell and
+          the fully-loaded Paid (Pro) Engine.
         </p>
 
         {/* Comparison Grid Table */}
@@ -204,13 +279,17 @@ export default function DocsTiersPage() {
               <tr className="bg-white/5 border-b border-white/10">
                 <th className="p-4 text-white font-bold">Feature Capability</th>
                 <th className="p-4 text-zinc-400 font-bold">Free Edition</th>
-                <th className="p-4 text-[#39FF14] font-bold">Paid Pro ($5 / ₹500 one-time)</th>
+                <th className="p-4 text-[#39FF14] font-bold">
+                  Paid Pro (₹499 one-time)
+                </th>
               </tr>
             </thead>
             <tbody className="divide-y divide-white/5 bg-black/40">
               {comparisonData.map((row, idx) => (
                 <tr key={idx} className="hover:bg-white/5 transition-colors">
-                  <td className="p-4 text-zinc-300 font-semibold">{row.feature}</td>
+                  <td className="p-4 text-zinc-300 font-semibold">
+                    {row.feature}
+                  </td>
                   <td className="p-4 text-zinc-500">{row.free}</td>
                   <td className="p-4 text-zinc-200">{row.paid}</td>
                 </tr>
@@ -239,10 +318,10 @@ export default function DocsTiersPage() {
                   isPro
                     ? "border-[#39FF14] bg-[#39FF14]/5 shadow-[0_0_25px_rgba(57,255,20,0.05)]"
                     : isAlpha
-                    ? "border-purple-500/30 hover:border-purple-500/50 hover:shadow-[0_0_25px_rgba(168,85,247,0.1)]"
-                    : isInsider || isBuilder
-                    ? "border-[#39FF14]/30 hover:border-[#39FF14]/50 hover:shadow-[0_0_25px_rgba(57,255,20,0.1)]"
-                    : "border-white/10 hover:border-white/20"
+                      ? "border-purple-500/30 hover:border-purple-500/50 hover:shadow-[0_0_25px_rgba(168,85,247,0.1)]"
+                      : isInsider || isBuilder
+                        ? "border-[#39FF14]/30 hover:border-[#39FF14]/50 hover:shadow-[0_0_25px_rgba(57,255,20,0.1)]"
+                        : "border-white/10 hover:border-white/20"
                 }
               `}
             >
@@ -316,10 +395,10 @@ export default function DocsTiersPage() {
                       isPro
                         ? "bg-[#39FF14] text-black border-[#39FF14] hover:bg-transparent hover:text-[#39FF14] shadow-[0_0_15px_rgba(57,255,20,0.3)]"
                         : isAlpha
-                        ? "bg-purple-500/10 border-purple-500/20 hover:bg-purple-500/20 text-purple-300"
-                        : isInsider || isBuilder
-                        ? "bg-[#39FF14]/10 border-[#39FF14]/20 hover:bg-[#39FF14]/20 text-[#39FF14]"
-                        : "bg-white/5 border-white/10 hover:bg-white/10 text-zinc-300"
+                          ? "bg-purple-500/10 border-purple-500/20 hover:bg-purple-500/20 text-purple-300"
+                          : isInsider || isBuilder
+                            ? "bg-[#39FF14]/10 border-[#39FF14]/20 hover:bg-[#39FF14]/20 text-[#39FF14]"
+                            : "bg-white/5 border-white/10 hover:bg-white/10 text-zinc-300"
                     }
                   `}
                 >
@@ -342,19 +421,31 @@ export default function DocsTiersPage() {
           Ecosystem Refund Policy Summary
         </h4>
         <p className="text-zinc-400 leading-relaxed">
-          Due to the nature of perpetual software licenses and our Secure Checkout architecture, all transactions for the IRIS Pro Engine are <strong>100% final and non-refundable</strong>.
+          Due to the nature of perpetual software licenses and our Secure
+          Checkout architecture, all transactions for the IRIS Pro Engine are{" "}
+          <strong>100% final and non-refundable</strong>.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-zinc-500 pt-2 border-t border-white/5">
           <div className="space-y-1">
-            <span className="text-white font-bold block">1. Why are purchases non-refundable?</span>
+            <span className="text-white font-bold block">
+              1. Why are purchases non-refundable?
+            </span>
             <p className="leading-relaxed">
-              Upon sponsoring, you gain immediate, irrevocable access to the private repository network and raw binaries. Because we cannot mathematically verify deletion of local offline software packages, we cannot issue chargeback adjustments.
+              Upon sponsoring, you gain immediate, irrevocable access to the
+              private repository network and raw binaries. Because we cannot
+              mathematically verify deletion of local offline software packages,
+              we cannot issue chargeback adjustments.
             </p>
           </div>
           <div className="space-y-1">
-            <span className="text-white font-bold block">2. Test Before You Pay</span>
+            <span className="text-white font-bold block">
+              2. Test Before You Pay
+            </span>
             <p className="leading-relaxed">
-              Please download and install the free IRIS Base Engine to verify that configuration, BYOK API tokens, and visual panels connect properly on your hardware before initiating the one-time $5 / ₹500 checkout.
+              Please download and install the free IRIS Base Engine to verify
+              that configuration, BYOK API tokens, and visual panels connect
+              properly on your hardware before initiating the one-time ₹499
+              checkout.
             </p>
           </div>
         </div>
@@ -375,7 +466,10 @@ export default function DocsTiersPage() {
               1. Community Open Code
             </span>
             <p className="leading-relaxed">
-              Standard UI layout configurations, templates, widgets, and IPC preloads are governed under the open-source MIT License. You are free to modify layouts, connect public hooks, and integrate layouts.
+              Standard UI layout configurations, templates, widgets, and IPC
+              preloads are governed under the open-source MIT License. You are
+              free to modify layouts, connect public hooks, and integrate
+              layouts.
             </p>
           </div>
           <div className="space-y-2">
@@ -383,7 +477,10 @@ export default function DocsTiersPage() {
               2. Commercial & Licensed Code
             </span>
             <p className="leading-relaxed">
-              Private repository scripts, custom core hooks, experimental agent parameters, and bytecode engines require commercial developer permissions. Redistribution of compiled V8 main loops is prohibited.
+              Private repository scripts, custom core hooks, experimental agent
+              parameters, and bytecode engines require commercial developer
+              permissions. Redistribution of compiled V8 main loops is
+              prohibited.
             </p>
           </div>
         </div>

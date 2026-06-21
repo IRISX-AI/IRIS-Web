@@ -42,8 +42,8 @@ export default function PricingPage() {
 
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
             One-time payment. Zero complicated setups or monthly subscriptions.
-            Secure a lifetime license to the IRIS Pro engine instantly via
-            our secure direct checkout.
+            Secure a lifetime license to the IRIS Pro engine instantly via our
+            secure direct checkout.
           </p>
 
           <Link href="/refund-policy" className="inline-block">
@@ -125,14 +125,14 @@ export default function PricingPage() {
                 </h3>
               </div>
               <div className="text-4xl font-black text-white mb-4 flex items-end gap-3">
-                <span>$5 / ₹500</span>
+                <span>₹499</span>
                 <span className="text-lg font-normal text-gray-500 tracking-normal mb-1">
                   one-time
                 </span>
               </div>
               <p className="text-sm text-gray-400 h-10">
-                Unlock the complete autonomous ecosystem. Instant License Activation
-                and Direct Pro Access forever.
+                Unlock the complete autonomous ecosystem. Instant License
+                Activation and Direct Pro Access forever.
               </p>
             </div>
 
@@ -147,7 +147,9 @@ export default function PricingPage() {
                 </li>
                 <li className="flex justify-between">
                   <span>Delivery Method:</span>{" "}
-                  <span className="text-[#39FF14]">Instant License Activation</span>
+                  <span className="text-[#39FF14]">
+                    Instant License Activation
+                  </span>
                 </li>
               </ul>
             </div>
@@ -294,11 +296,7 @@ export default function PricingPage() {
                 free="No (PIN Only)"
                 pro="Yes (Face Match + PIN)"
               />
-              <TableRow
-                title="Direct Pro Access"
-                free="No"
-                pro="Yes"
-              />
+              <TableRow title="Direct Pro Access" free="No" pro="Yes" />
             </tbody>
           </table>
         </div>
