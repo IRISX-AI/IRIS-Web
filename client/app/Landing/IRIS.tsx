@@ -69,7 +69,7 @@ export default function DeprecatedSite() {
           transition={{ duration: 0.5, delay: 1 }}
           className="text-zinc-400 text-base md:text-lg max-w-lg mx-auto leading-relaxed mb-12 "
         >
-          The old version of IRIS has been completely shut down. We have moved everything to a brand new, secure website. Click the button below to continue.
+          The old version of IRIS has been completely shut down. We have moved everything to a brand new, secure website.
         </motion.p>
 
         <motion.div
@@ -85,15 +85,15 @@ export default function DeprecatedSite() {
             className="group relative flex items-center justify-between sm:justify-center gap-6 px-8 py-5 rounded-2xl bg-[#050505] border border-[#39FF14]/40 hover:border-[#39FF14] transition-all duration-300 shadow-[0_0_20px_rgba(57,255,20,0.1)] hover:shadow-[0_0_40px_rgba(57,255,20,0.3)] w-full overflow-hidden"
           >
             <div className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-[#39FF14]/10 to-transparent -translate-x-full group-hover:animate-[scan_1.5s_ease-in-out_infinite]" />
-{/*             
+            
             <div className="relative z-10 flex flex-col text-left sm:text-center">
               <span className="text-white font-bold text-xl uppercase tracking-wider group-hover:text-[#39FF14] transition-colors">
-                Go To The New Website
+                Visit Our New Site
               </span>
               <span className="text-zinc-500 text-[10px] uppercase tracking-widest mt-1 ">
-                Click here to continue
+                New Websie Coming Soon
               </span>
-            </div> */}
+            </div>
             
             <div className="relative z-10 w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center group-hover:bg-[#39FF14] group-hover:text-black transition-all text-[#39FF14]">
               <ArrowRight className="w-6 h-6 group-hover:-rotate-45 transition-transform duration-300" />
