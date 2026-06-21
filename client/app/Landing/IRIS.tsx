@@ -16,11 +16,9 @@ export default function DeprecatedSite() {
   return (
     <div className="min-h-screen bg-[#000000] text-zinc-100 flex flex-col items-center justify-center relative overflow-hidden ns px-6 selection:bg-[#39FF14] selection:text-black">
       
-      {/* --- BACKGROUND EFFECTS --- */}
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,transparent_0%,#000000_100%)] pointer-events-none" />
       
       
-      {/* Scanning Laser Line */}
       <motion.div 
         animate={{ top: ["-10%", "110%"] }}
         transition={{ duration: 3, ease: "linear", repeat: Infinity }}
