@@ -150,11 +150,11 @@ function RedirectLogic() {
                   exit={{ opacity: 0, y: -10 }}
                 >
                   <h2 className="text-3xl font-black mb-3 tracking-tight">
-                    ESTABLISHING <span className="text-[#39FF14]">LINK...</span>
+                    VERIFYING <span className="text-[#39FF14]">ACCESS...</span>
                   </h2>
                   <p className="text-zinc-400 text-xs tracking-[0.2em] uppercase flex items-center justify-center gap-2">
                     <Loader2 className="w-4 h-4 animate-spin text-[#39FF14]" />{" "}
-                    Securing Neural Uplink
+                    Please Wait
                   </p>
                 </motion.div>
               )}
@@ -167,7 +167,7 @@ function RedirectLogic() {
                   exit={{ opacity: 0, y: -10 }}
                 >
                   <h2 className="text-3xl font-black mb-3 tracking-tight">
-                    LAUNCHING <span className="text-[#39FF14]">ENGINE</span>
+                    OPENING <span className="text-[#39FF14]">APP</span>
                   </h2>
                   <p className="text-[#39FF14] text-xs tracking-[0.2em] uppercase animate-pulse">
                     Please confirm the browser prompt
@@ -182,11 +182,12 @@ function RedirectLogic() {
                   animate={{ opacity: 1, y: 0 }}
                 >
                   <h2 className="text-3xl font-black mb-3 tracking-tight">
-                    TRANSMISSION <span className="text-[#39FF14]">SENT</span>
+                    VERIFICATION{" "}
+                    <span className="text-[#39FF14]">COMPLETE</span>
                   </h2>
                   <p className="text-zinc-400 text-sm leading-relaxed px-4">
-                    Tokens secured. You can safely close this window once the
-                    desktop engine connects.
+                    Verification successful. You can safely close this window
+                    and proceed in the app.
                   </p>
                 </motion.div>
               )}
@@ -223,8 +224,8 @@ export default function DesktopRedirectPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen bg-[#050505] flex items-center justify-center text-[#39FF14]  tracking-widest text-sm">
-          PREPARING NEURAL UPLINK...
+        <div className="min-h-screen bg-[#050505] flex items-center justify-center text-[#39FF14] tracking-widest text-sm uppercase">
+          Loading...
         </div>
       }
     >
