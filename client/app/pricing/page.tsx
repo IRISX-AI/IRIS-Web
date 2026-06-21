@@ -219,7 +219,7 @@ export default function PricingPage() {
                   Base Engine (Free)
                 </th>
                 <th className="py-4 px-6 font-bold text-center text-[#39FF14]">
-                  Pro ($5 Lifetime)
+                  Pro (₹499Lifetime)
                 </th>
               </tr>
             </thead>

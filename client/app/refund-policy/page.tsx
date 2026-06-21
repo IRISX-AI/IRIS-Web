@@ -73,13 +73,14 @@ export default function RefundPolicyPage() {
                 <p className="mb-4">
                   Due to the nature of perpetual software licenses and our{" "}
                   <strong className="text-white">Secure Checkout</strong>{" "}
-                  architecture, all transactions for the IRIS Pro
-                  Engine are 100% final and non-refundable.
+                  architecture, all transactions for the IRIS Pro Engine are
+                  100% final and non-refundable.
                 </p>
                 <p>
-                  Payments are securely processed via our payment gateway (Razorpay). 
-                  We utilize this integrated checkout to provide a seamless,
-                  single one-time payment structure instead of a subscription.
+                  Payments are securely processed via our payment gateway
+                  (Razorpay). We utilize this integrated checkout to provide a
+                  seamless, single one-time payment structure instead of a
+                  subscription.
                 </p>
               </div>
               <div>
@@ -93,9 +94,10 @@ export default function RefundPolicyPage() {
                   </strong>
                 </p>
                 <p className="text-orange-400/80 mt-4 border-l-2 border-orange-500/50 pl-4 py-1 bg-orange-500/5 rounded-r-md">
-                  By executing the transaction, you explicitly
-                  acknowledge and agree to this permanent no-refund clause.
-                  Exceptions are only made for verifiable Payment Gateway Errors or Duplicate Charges.
+                  By executing the transaction, you explicitly acknowledge and
+                  agree to this permanent no-refund clause. Exceptions are only
+                  made for verifiable Payment Gateway Errors or Duplicate
+                  Charges.
                 </p>
               </div>
             </div>
@@ -116,7 +118,7 @@ export default function RefundPolicyPage() {
               </h2>
             </div>
             <p className="text-gray-400  text-sm leading-relaxed mb-4">
-              The IRIS $5 Pro license is strictly provisioned for{" "}
+              The IRIS ₹499 Pro license is strictly provisioned for{" "}
               <strong className="text-white">
                 individual, non-commercial use
               </strong>
@@ -156,10 +158,9 @@ export default function RefundPolicyPage() {
               unwarranted chargebacks.
             </p>
             <p className="text-gray-400  text-sm leading-relaxed">
-              In the event of a bank chargeback or payment dispute, your 
-              Google account will be flagged. Access to the
-              private IRIS Pro systems, future updates, bug fixes, and the
-              community network will be{" "}
+              In the event of a bank chargeback or payment dispute, your Google
+              account will be flagged. Access to the private IRIS Pro systems,
+              future updates, bug fixes, and the community network will be{" "}
               <strong className="text-red-400">
                 permanently revoked without notice
               </strong>

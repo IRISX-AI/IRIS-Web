@@ -39,7 +39,7 @@ const tiersData: TierDetail[] = [
   },
   {
     name: "IRIS Paid (Pro)",
-    price: "$5 USD / ₹500 INR (One-Time)",
+    price: "₹499 / ₹500 INR (One-Time)",
     desc: "Unlocks the core voice processing engine and all advanced system automation capabilities for lifetime usage.",
     features: [
       "Hands-Free Wake Up Word ('Hey, IRIS')",
