@@ -146,7 +146,6 @@ vite.config.ts.timestamp-*
 !.yarn/releases
 !.yarn/versions
 
-# testing
 /coverage
 
 /.next/
