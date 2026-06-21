@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2, Zap} from "lucide-react";
+import { CheckCircle2, Zap } from "lucide-react";
 import Link from "next/link";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
@@ -169,7 +169,7 @@ export default function ComparePage() {
             Secure checkout, lifetime access, zero subscriptions.
           </p>
           <Link href="/pricing">
-            <button className="group w-full max-w-sm flex justify-center items-center gap-2 py-4 rounded-xl bg-[#39FF14] text-black font-bold hover:bg-green-400 transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)]">
+            <button className="cursor-pointer group w-full max-w-sm flex justify-center items-center gap-2 py-4 rounded-xl bg-[#39FF14] text-black font-bold hover:bg-green-400 transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)]">
               Get Pro License Now
             </button>
           </Link>
