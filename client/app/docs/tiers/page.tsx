@@ -47,7 +47,7 @@ const tiersData: TierDetail[] = [
       "Phantom Control Ghost Keyboard (Ctrl + Alt + Space)",
       "Gmail Inbox Integration & Messaging Protocols",
       "Android Mobile Telekinesis Control (ADB pairing)",
-      "DALL-E & Midjourney Image Generation Tools",
+      "Black Forest& Stable Diffusion Image Generation Tools",
       "Deep Research Agent (Llama 3 Web Crawler)",
       "Localhost Wormhole Public internet tunnels",
       "OS Vault Lockdown: Biometric Face matching encryption",
@@ -130,7 +130,7 @@ const comparisonData = [
   {
     feature: "AI Image Generation",
     free: "❌ Disabled",
-    paid: "✅ Native DALL-E & Midjourney calls",
+    paid: "✅ Native Black Forest& Stable Diffusion calls",
   },
   {
     feature: "Deep Research Agent",

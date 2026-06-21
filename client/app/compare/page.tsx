@@ -135,7 +135,7 @@ export default function ComparePage() {
                   pro="Yes"
                 />
                 <TableRow
-                  title="AI Image Generation (DALL-E/Midjourney)"
+                  title="AI Image Generation (DALL-E/Stable Diffusion)"
                   free="No"
                   pro="Yes"
                 />

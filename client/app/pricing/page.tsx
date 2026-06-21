@@ -174,7 +174,7 @@ export default function PricingPage() {
                 pro
               />
               <FeatureItem
-                text="AI Image Generation (DALL-E / Midjourney)"
+                text="AI Image Generation (Black Forest/ Stable Diffusion)"
                 pro
               />
               <FeatureItem text="Autonomous Deep Web Research Crawlers" pro />
@@ -203,12 +203,14 @@ export default function PricingPage() {
       <section className="py-24 max-w-4xl mx-auto px-6 relative z-10">
         <div className="bg-[#050505] rounded-[2.5rem] p-10 border border-[#39FF14]/20 flex flex-col items-center text-center relative overflow-hidden">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-linear-to-r from-transparent via-[#39FF14]/50 to-transparent" />
-          
+
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Deep Architecture Comparison
           </h2>
           <p className="text-gray-400 mb-8 max-w-2xl">
-            Want to see exactly what you get when you upgrade from the Free Base Engine to the Paid Pro Engine? We have a precise technical breakdown of system access per tier.
+            Want to see exactly what you get when you upgrade from the Free Base
+            Engine to the Paid Pro Engine? We have a precise technical breakdown
+            of system access per tier.
           </p>
           <Link href="/compare">
             <button className="cursor-pointer group flex justify-center items-center gap-2 px-8 py-4 rounded-xl border border-[#39FF14]/30 bg-[#39FF14]/10 text-[#39FF14] font-bold hover:bg-[#39FF14] hover:text-black transition-all shadow-[0_0_15px_rgba(57,255,20,0.1)] hover:shadow-[0_0_30px_rgba(57,255,20,0.3)]">
@@ -241,5 +243,3 @@ const FeatureItem = ({
     </span>
   </div>
 );
-
-
