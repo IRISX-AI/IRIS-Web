@@ -157,7 +157,7 @@ export default function TermsOfServicePage() {
               <h2 className="text-2xl font-bold text-white tracking-tight">5. Individual, Non-Commercial License Limit</h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              The $ Pro engine tier is strictly licensed for individual, personal, non-production usage.
+              The ₹499 Pro engine tier is strictly licensed for individual, personal, non-production usage.
             </p>
             <p className="text-zinc-500 text-xs leading-relaxed">
               Deploying IRIS within a corporate workspace, commercial enterprise, or team production setup without an Enterprise license is a violation of our terms and will lead to an immediate ban. Contact <code className="text-[#39FF14]">irisaidevop@gmail.com</code> for commercial pricing.

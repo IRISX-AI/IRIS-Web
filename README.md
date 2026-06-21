@@ -288,127 +288,39 @@ IRIS uses **enterprise-grade code protection** to secure proprietary agent logic
 
 ---
 
-# 💰 Sponsorship Tiers
+# ⚡ Why Upgrade to IRIS Pro?
 
-IRIS is built on open-source principles, but the **core agent logic and proprietary tools are hidden** to protect intellectual property and fund development.
+IRIS is built on an **Open Core model**. While the Free Tier (Public Repository) gives you access to the community UI and basic templates, the **core voice engine, agent loops, and advanced execution tools** are protected within the IRIS Pro ecosystem. 
 
-## 🎁 Free Tier (Public Repository)
+Upgrading to **IRIS Pro (₹499 One-Time License)** unlocks the complete autonomous OS controller experience.
 
-**What You Get:**
+## 🎁 Free Tier (Base Engine)
+**Cost:** Free
+- Access to the public frontend shell (React + Tailwind)
+- Community Layout Config & Themes
+- Standard PIN-only OS Vault lockdown
+- Basic UI Widgets & Desktop Shell structure
 
-- Public source code (UI, integrations, setup)
-- Ready-to-run desktop application (`npm run dev`)
-- Community documentation
-- Public GitHub issues & discussions
-- Basic example tool signatures
+## 🚀 IRIS Paid Pro
+**Cost:** ₹499 (Lifetime License)
+- **Instant License Activation:** Pay once, keep it forever. No subscriptions.
+- **Hands-Free Wake Up Word:** Passive offline activation ("Hey, IRIS").
+- **ScreenPeeler Multimodal AI OCR:** Instantly scan and extract text/code from your screen (Ctrl+Alt+X).
+- **Phantom Ghost Keyboard:** Global inline injection (Ctrl+Alt+Space).
+- **Mobile Telekinesis (Android):** Full ADB remote actions, telemetry, and file pushing.
+- **Deep Research Agent:** Multi-step autonomous web crawling and data gathering.
+- **Localhost Wormhole:** Instantly expose local ports to the public internet.
+- **OS Vault Security:** Biometric Face Recognition + PIN lockdown.
+- **Direct Pro Access:** Fully functional local execution engine.
 
-**What You DON'T Get:**
+### How to Upgrade?
+1. **Authenticate with Google** to create your secure identity.
+2. **Purchase a License** via our Secure Checkout (Razorpay).
+3. **Unlock the IRIS Neural Core** instantly.
 
-- Full agent implementation (protected)
-- Complete tool source code
-- Advanced configuration docs
-- Priority support
-
-**Cost:** FREE ✅
-
----
-
-# 💰 Sponsorship Tiers
-
-IRIS is built on open-source principles, but the **core voice engine, agent loops, and advanced execution tools are hidden** within private repositories to protect intellectual property and fund ongoing development.
-
-Review the options below to choose your access level and support the ecosystem.
-
----
-
-## 🎁 Free Tier (Public Repository)
-
-The baseline public repository contains the foundational UI layer, layout configuration, and basic ecosystem scaffolding.
-
-- **What is Included:** Access to the public frontend shell (React + Tailwind + Framer Motion), community documentation, public GitHub issue tracking, and basic structural templates.
-- **What is Locked:** Full agent execution routines, the core voice module, deep automation tool logic, and local self-hosting capability.
-- **Monthly Cost:** Free
+[**Compare Free vs Pro Features in Detail**](/compare)
 
 ---
-
-## 🟢 IRIS Supporter ($5/month)
-
-Directly back the future of the IRIS ecosystem and unlock standard project insight.
-
-- **GitHub Sponsor Badge:** Displays a verification badge on your public GitHub profile.
-- **Sponsor-Only Updates:** Direct access to private text updates regarding upcoming system builds.
-- **Development Progress Reports:** Behind-the-scenes engineering logs showing what is being cooked next.
-- **Monthly Project Summaries:** Comprehensive recaps of system changes, optimizations, and performance stats.
-- **Monthly Cost:** $5/month (USD)
-- **Access Link:** [Sponsor @201Harsh on GitHub](https://github.com/sponsors/201Harsh)
-
----
-
-## ⚡ IRIS Insider ($15/month)
-
-Step closer to the codebase with private repository access and deep architectural insights.
-
-- **Private Repository Access:** Full read access to the `iris-insiders` repository containing working functional code snippets for core agent hooks.
-- **Early Development Previews:** See upcoming UI elements and feature modules weeks before public release.
-- **Architecture Discussions:** Participate in private development threads discussing system performance and state management.
-- **Behind-the-Scenes Progress:** Unfiltered access to video showcases and performance benchmarks of current builds.
-- **Experimental Showcases:** Early look at how the voice processing pipeline handles background noise filtration.
-- **Monthly Cost:** $15/month (USD)
-- **Access Link:** [Sponsor @201Harsh on GitHub](https://github.com/sponsors/201Harsh)
-
----
-
-## 🚀 IRIS Builder ($30/month)
-
-Designed for developer-level sponsors who want to experiment with custom setups and prototype structures.
-
-- **Access to Iris-Labs:** Direct membership to the `iris-labs` repository for code sharing and component testing.
-- **Experimental AI Agents:** Access to unreleased experimental agent logic scripts and prompt testbeds.
-- **Prototype Systems:** Early-stage UI widgets, window managers, and terminal interaction mockups.
-- **Technical Development Logs:** Deep-dive logs exploring lower-level Electron execution, IPC communication, and V8 bytecode compilation tricks.
-- **Alpha Feature Testing:** Opportunities to run partial standalone builds of upcoming tooling systems.
-- **Advanced Architecture Breakdowns:** Full block diagrams and technical write-ups detailing the communication between backend processes.
-- **Monthly Cost:** $30/month (USD)
-- **Access Link:** [Sponsor @201Harsh on GitHub](https://github.com/sponsors/201Harsh)
-
----
-
-## 👁️ IRIS Alpha Access ($50/month)
-
-The definitive sponsor tier. Get absolute proximity to the latest builds, edge implementations, and direct development feedback priority.
-
-- **Access to Iris-Alpha:** Exclusive membership to the bleeding-edge `iris-alpha` environment.
-- **Early Alpha Builds:** Downloadable compiled packages of upcoming desktop application releases for early testing.
-- **Upcoming Feature Previews:** Full access to high-tier closed tools (including advanced automated web navigation and cross-device mobile pairing prototypes).
-- **Private Release Notes:** Granular, code-level changelogs tracking every structural patch.
-- **Priority Sponsor Feedback:** Direct consideration for your feature requests, tool ideas, and framework optimizations.
-- **Monthly Cost:** $50/month (USD)
-- **Access Link:** [Sponsor @201Harsh on GitHub](https://github.com/sponsors/201Harsh)
-
----
-
-## Why This Model?
-
-```
-Open Source + Sustainable Development
-
-┌─────────────────────────────┐
-│ Free Tier Users             │
-│ (Community, feedback)       │
-└──────────┬──────────────────┘
-           │
-    ┌──────▼───────┐
-    │ Sponsors     │
-    │ Fund Dev     │
-    │ Get snippets │
-    └──────┬───────┘
-           │
-    ┌──────▼──────────┐
-    │ Enterprise      │
-    │ Full access     │
-    │ Support + mods  │
-    └─────────────────┘
-```
 
 ---
 

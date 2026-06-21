@@ -200,105 +200,21 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="py-24 max-w-5xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className="py-24 max-w-4xl mx-auto px-6 relative z-10">
+        <div className="bg-[#050505] rounded-[2.5rem] p-10 border border-[#39FF14]/20 flex flex-col items-center text-center relative overflow-hidden">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-linear-to-r from-transparent via-[#39FF14]/50 to-transparent" />
+          
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Deep Architecture Comparison
           </h2>
-          <p className="text-gray-400">
-            A precise technical breakdown of system access per tier.
+          <p className="text-gray-400 mb-8 max-w-2xl">
+            Want to see exactly what you get when you upgrade from the Free Base Engine to the Paid Pro Engine? We have a precise technical breakdown of system access per tier.
           </p>
-        </div>
-
-        <div className="overflow-x-auto">
-          <table className="w-full text-left border-collapse">
-            <thead>
-              <tr className="border-b border-white/10 text-xs  uppercase tracking-widest text-gray-500">
-                <th className="py-4 px-6 font-bold">Capability</th>
-                <th className="py-4 px-6 font-bold text-center">
-                  Base Engine (Free)
-                </th>
-                <th className="py-4 px-6 font-bold text-center text-[#39FF14]">
-                  Pro (₹499Lifetime)
-                </th>
-              </tr>
-            </thead>
-            <tbody className="text-sm text-gray-300">
-              <TableRow
-                title="Native File System & Directory Control"
-                free="Yes"
-                pro="Yes"
-              />
-              <TableRow
-                title="Terminal & OS Script Execution"
-                free="Yes"
-                pro="Yes"
-              />
-              <TableRow
-                title="Desktop Window Management"
-                free="Yes"
-                pro="Yes"
-              />
-              <TableRow title="Live DOM Manipulation" free="Yes" pro="Yes" />
-              <TableRow
-                title="Bring Your Own Key (BYOK) Logic"
-                free="Yes"
-                pro="Yes"
-              />
-              <TableRow
-                title="WhatsApp Messaging Automation"
-                free="Yes"
-                pro="Yes"
-              />
-
-              <TableRow
-                title="Offline Passive Wake Word Activation"
-                free="No"
-                pro="Yes"
-              />
-              <TableRow
-                title="ScreenPeeler Multimodal AI OCR"
-                free="No"
-                pro="Yes"
-              />
-              <TableRow
-                title="Phantom Control Ghost Keyboard"
-                free="No"
-                pro="Yes"
-              />
-              <TableRow
-                title="Gmail Integration & Email Automation"
-                free="No"
-                pro="Yes"
-              />
-              <TableRow
-                title="Mobile Device Bridge (ADB Integration)"
-                free="No"
-                pro="Yes"
-              />
-              <TableRow
-                title="AI Image Generation (DALL-E/Midjourney)"
-                free="No"
-                pro="Yes"
-              />
-              <TableRow
-                title="Autonomous Deep Research Crawlers"
-                free="No"
-                pro="Yes"
-              />
-              <TableRow
-                title="Deploy Localhost Wormholes"
-                free="No"
-                pro="Yes"
-              />
-              <TableRow
-                title="Biometric Security & Face Lockdown"
-                free="No (PIN Only)"
-                pro="Yes (Face Match + PIN)"
-              />
-              <TableRow title="Direct Pro Access" free="No" pro="Yes" />
-            </tbody>
-          </table>
+          <Link href="/compare">
+            <button className="cursor-pointer group flex justify-center items-center gap-2 px-8 py-4 rounded-xl border border-[#39FF14]/30 bg-[#39FF14]/10 text-[#39FF14] font-bold hover:bg-[#39FF14] hover:text-black transition-all shadow-[0_0_15px_rgba(57,255,20,0.1)] hover:shadow-[0_0_30px_rgba(57,255,20,0.3)]">
+              View Feature Matrix
+            </button>
+          </Link>
         </div>
       </section>
 
@@ -326,18 +242,4 @@ const FeatureItem = ({
   </div>
 );
 
-const TableRow = ({
-  title,
-  free,
-  pro,
-}: {
-  title: string;
-  free: string;
-  pro: string;
-}) => (
-  <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-    <td className="py-4 px-6 font-medium text-gray-200">{title}</td>
-    <td className="py-4 px-6 text-center text-gray-400">{free}</td>
-    <td className="py-4 px-6 text-center font-medium text-[#39FF14]">{pro}</td>
-  </tr>
-);
+
