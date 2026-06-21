@@ -41,11 +41,7 @@ const featuresData: FeatureCategory[] = [
       {
         name: "Wake Up Word Activation",
         desc: "IRIS is configured for hands-free local startup. Speaking the wake word automatically opens the assistant window, performs local telemetry diagnostics, and checks real-time atmospheric updates.",
-        commands: [
-          '"Hey, IRIS"',
-          '"IRIS"',
-          '"Wake up, IRIS"',
-        ],
+        commands: ['"Hey, IRIS"', '"IRIS"', '"Wake up, IRIS"'],
       },
       {
         name: "Phantom Control (Ghost Keyboard)",
@@ -394,7 +390,7 @@ export default function DocsFeaturesPage() {
         <h1 className="text-4xl md:text-6xl font-black tracking-tight uppercase">
           CORE <span className="text-[#39FF14]">FEATURES.</span>
         </h1>
-        <p className="text-zinc-400 text-lg leading-relaxed max-w-3xl ">
+        <p className="text-zinc-200 text-lg leading-relaxed max-w-3xl ">
           IRIS features an extensible toolset. Check all system operations below
           along with the exact voice triggers that execute them.
         </p>
@@ -418,7 +414,7 @@ export default function DocsFeaturesPage() {
               >
                 <div className="flex items-center gap-4">
                   <div
-                    className={`p-3 rounded-xl transition-all ${isExpanded ? "bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14]" : "bg-white/5 text-zinc-400 group-hover:text-white"}`}
+                    className={`p-3 rounded-xl transition-all ${isExpanded ? "bg-[#39FF14]/10 border border-[#39FF14]/20 text-[#39FF14]" : "bg-white/5 text-zinc-200 group-hover:text-white"}`}
                   >
                     <Icon className="w-5 h-5 shrink-0" />
                   </div>
@@ -451,7 +447,7 @@ export default function DocsFeaturesPage() {
                         <span className="w-1.5 h-1.5 rounded-full bg-[#39FF14]" />
                         {tool.name}
                       </h4>
-                      <p className="text-zinc-400 text-xs ">{tool.desc}</p>
+                      <p className="text-zinc-200 text-xs ">{tool.desc}</p>
 
                       <div className="space-y-1.5 bg-black/60 p-3 rounded-xl border border-white/5">
                         <div className="text-[10px]  uppercase tracking-widest text-zinc-500 flex items-center gap-1.5">

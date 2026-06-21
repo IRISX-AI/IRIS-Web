@@ -138,7 +138,7 @@ function FAQItem({
           }`}
         >
           <Icon
-            className={`w-4 h-4 transition-colors duration-300 ${isOpen ? "text-[#39FF14]" : "text-zinc-400 group-hover:text-[#39FF14]"}`}
+            className={`w-4 h-4 transition-colors duration-300 ${isOpen ? "text-[#39FF14]" : "text-zinc-200 group-hover:text-[#39FF14]"}`}
           />
         </div>
         <div className="flex-1 min-w-0">
@@ -182,7 +182,7 @@ function FAQItem({
           >
             <div className="px-6 pb-6 pl-17">
               <div className="h-px bg-white/5 mb-4" />
-              <div className="text-zinc-400 text-xs  leading-relaxed whitespace-pre-line space-y-1">
+              <div className="text-zinc-200 text-xs  leading-relaxed whitespace-pre-line space-y-1">
                 {item.answer.split("\n").map((line, i) => {
                   if (line.startsWith("**") && line.endsWith("**")) {
                     return (
@@ -288,7 +288,7 @@ export default function SupportPage() {
           transition={{ duration: 0.6 }}
           className="mb-12 text-center"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-zinc-400 text-[10px] uppercase tracking-widest  mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-zinc-200 text-[10px] uppercase tracking-widest  mb-4">
             <BookOpen className="w-3 h-3" />
             Self-Service First
           </div>
@@ -360,7 +360,7 @@ export default function SupportPage() {
           className="mt-8 rounded-2xl border border-white/8 bg-[#0a0a0a] overflow-hidden"
         >
           <div className="flex items-center justify-between px-6 py-4 border-b border-white/5">
-            <div className="flex items-center gap-2 text-xs font-bold  text-zinc-400 uppercase tracking-widest">
+            <div className="flex items-center gap-2 text-xs font-bold  text-zinc-200 uppercase tracking-widest">
               <Activity className="w-4 h-4 text-[#39FF14]" />
               Live System Status
             </div>
@@ -399,7 +399,7 @@ export default function SupportPage() {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-zinc-400 text-[10px] uppercase tracking-widest  mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-zinc-200 text-[10px] uppercase tracking-widest  mb-4">
             <HelpCircle className="w-3 h-3" />
             Frequently Asked
           </div>
@@ -443,7 +443,7 @@ export default function SupportPage() {
             transition={{ duration: 0.6 }}
             className="mb-12 text-center"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-zinc-400 text-[10px] uppercase tracking-widest  mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-zinc-200 text-[10px] uppercase tracking-widest  mb-4">
               <Bug className="w-3 h-3" />
               Issue Tracking
             </div>
@@ -495,7 +495,7 @@ export default function SupportPage() {
                     <ExternalLink className="w-4 h-4 text-zinc-600 group-hover:text-[#39FF14] ml-auto transition-colors duration-300" />
                   </div>
 
-                  <p className="text-zinc-400 text-xs  leading-relaxed">
+                  <p className="text-zinc-200 text-xs  leading-relaxed">
                     Click to open a pre-formatted bug report template on our
                     GitHub repository. Issues are triaged within 48 hours and
                     tagged by severity.
@@ -526,7 +526,7 @@ export default function SupportPage() {
                     Required Info
                   </span>
                 </div>
-                <p className="text-zinc-400 text-xs  leading-relaxed">
+                <p className="text-zinc-200 text-xs  leading-relaxed">
                   Reports missing this info will be closed without action. All
                   three are mandatory.
                 </p>
@@ -573,7 +573,7 @@ export default function SupportPage() {
             transition={{ duration: 0.6 }}
             className="mb-12 text-center"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-zinc-400 text-[10px] uppercase tracking-widest  mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-zinc-200 text-[10px] uppercase tracking-widest  mb-4">
               <Users className="w-3 h-3" />
               Community
             </div>
@@ -620,7 +620,7 @@ export default function SupportPage() {
                   <ExternalLink className="w-4 h-4 text-zinc-600 group-hover:text-[#25D366] transition-colors duration-300 shrink-0" />
                 </div>
 
-                <p className="text-zinc-400 text-xs  leading-relaxed">
+                <p className="text-zinc-200 text-xs  leading-relaxed">
                   Connect with other IRIS developers. Share automation macros,
                   get unofficial help from power users, discuss upcoming
                   features, and stay plugged into the community.
@@ -659,7 +659,7 @@ export default function SupportPage() {
               >
                 <div className="flex items-start gap-4">
                   <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#39FF14]/10 group-hover:border-[#39FF14]/20 transition-all duration-300 shrink-0">
-                    <MessageCircle className="w-6 h-6 text-zinc-400 group-hover:text-[#39FF14] transition-colors duration-300" />
+                    <MessageCircle className="w-6 h-6 text-zinc-200 group-hover:text-[#39FF14] transition-colors duration-300" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-white font-black  text-lg group-hover:text-[#39FF14] transition-colors duration-300">
@@ -672,7 +672,7 @@ export default function SupportPage() {
                   <ExternalLink className="w-4 h-4 text-zinc-600 group-hover:text-[#39FF14] transition-colors duration-300 shrink-0" />
                 </div>
 
-                <p className="text-zinc-400 text-xs  leading-relaxed">
+                <p className="text-zinc-200 text-xs  leading-relaxed">
                   For technical questions that need a permanent answer. Search
                   existing threads first — your question may already have a
                   verified answer from the IRIS team.

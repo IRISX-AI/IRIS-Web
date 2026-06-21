@@ -134,7 +134,7 @@ export default function DocsArchitecturePage() {
         <h1 className="text-4xl md:text-6xl font-black tracking-tight uppercase">
           SYSTEM <span className="text-[#39FF14]">ARCHITECTURE.</span>
         </h1>
-        <p className="text-zinc-400 text-lg leading-relaxed max-w-3xl ">
+        <p className="text-zinc-200 text-lg leading-relaxed max-w-3xl ">
           IRIS maps natural audio input directly into OS-level instructions.
           Explore the neural execution cycle, process isolation boundary, and
           complete system stack.
@@ -184,7 +184,7 @@ export default function DocsArchitecturePage() {
                 <Zap className="w-5 h-5 text-[#39FF14]" />
                 Real-Time Voice-To-System Pipeline
               </h3>
-              <p className="text-zinc-400 text-sm leading-relaxed max-w-3xl ">
+              <p className="text-zinc-200 text-sm leading-relaxed max-w-3xl ">
                 IRIS establishes a persistent full-duplex WebRTC connection with
                 Gemini Live. Audio streams continuously; when intent is matched,
                 the state-machine locks and executes actions, feeding the output
@@ -242,7 +242,7 @@ export default function DocsArchitecturePage() {
                     <div className="hidden md:block text-zinc-500">
                       <ArrowRight className="w-4 h-4" />
                     </div>
-                    <div className="text-zinc-400 text-xs  md:w-1/3">
+                    <div className="text-zinc-200 text-xs  md:w-1/3">
                       {item.desc}
                     </div>
                   </div>
@@ -263,7 +263,7 @@ export default function DocsArchitecturePage() {
                   Frontend Render Process
                 </h3>
               </div>
-              <p className="text-zinc-400 text-xs  leading-relaxed">
+              <p className="text-zinc-200 text-xs  leading-relaxed">
                 The frontend operates as a standard Chromium view. It is
                 completely isolated and lacks direct access to the Node.js
                 runtime or direct filesystem endpoints.
@@ -296,7 +296,7 @@ export default function DocsArchitecturePage() {
                   </span>
                 </h3>
               </div>
-              <p className="text-zinc-400 text-xs  leading-relaxed">
+              <p className="text-zinc-200 text-xs  leading-relaxed">
                 The main process executes system operations. It compiles
                 directly into binary V8 bytecode, meaning reverse engineering
                 requires substantial resources.
@@ -326,7 +326,7 @@ export default function DocsArchitecturePage() {
                 <Code className="w-5 h-5 text-[#39FF14]" />
                 Secure Context-Isolated IPC Tunnel
               </h3>
-              <p className="text-zinc-400 text-sm leading-relaxed max-w-3xl ">
+              <p className="text-zinc-200 text-sm leading-relaxed max-w-3xl ">
                 Frontend render frames trigger tools through a strict,
                 whitelisted Inter-Process Communication (IPC) bridge. No direct
                 Node calls are made in client modules.

@@ -53,7 +53,7 @@ export default function DocsOverviewPage() {
         <h1 className="text-4xl md:text-6xl font-black tracking-tight uppercase">
           SYSTEM <span className="text-[#39FF14]">OVERVIEW.</span>
         </h1>
-        <p className="text-zinc-400 text-lg leading-relaxed max-w-3xl">
+        <p className="text-zinc-200 text-lg leading-relaxed max-w-3xl">
           IRIS is a voice-first neural execution system built to perform
           real-world actions directly on your local workstation. By using
           Google's bleeding-edge Gemini 3.1 Live API with bidirectional WebRTC
@@ -69,7 +69,7 @@ export default function DocsOverviewPage() {
           <Zap className="w-5 h-5 text-[#39FF14]" />
           What is Voice-First?
         </h3>
-        <p className="text-zinc-400  text-sm leading-relaxed">
+        <p className="text-zinc-200  text-sm leading-relaxed">
           Traditional AI models are text-first: you type, wait, read. IRIS
           operates bidirectionally with real-time WebRTC audio streaming,
           bringing latency under 500ms. Speak naturally, interrupt anytime—IRIS
@@ -107,7 +107,7 @@ export default function DocsOverviewPage() {
             <Sparkles className="w-5 h-5 text-[#39FF14]" />
             What makes IRIS different?
           </h4>
-          <ul className="space-y-3  text-xs text-zinc-400">
+          <ul className="space-y-3  text-xs text-zinc-200">
             <li className="flex items-start gap-2">
               <span className="text-[#39FF14]">•</span>
               <span>
@@ -138,7 +138,7 @@ export default function DocsOverviewPage() {
             <AlertTriangle className="w-5 h-5 text-orange-500" />
             Open Core Architecture
           </h4>
-          <p className=" text-xs text-zinc-400 leading-relaxed">
+          <p className=" text-xs text-zinc-200 leading-relaxed">
             IRIS follows an open-core licensing model. The public repository
             controls the frontend shell, electron layout, and standard UI
             widgets. The core voice engine, neural orchestration loops, and

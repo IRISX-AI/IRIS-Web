@@ -99,7 +99,7 @@ export default function DocsLayout({ children }: { children: ReactNode }) {
                           ${
                             isActive
                               ? "bg-[#39FF14]/10 text-[#39FF14] border border-[#39FF14]/20 shadow-[0_0_15px_rgba(57,255,20,0.1)]"
-                              : "text-zinc-400 hover:text-white hover:bg-white/5 border border-transparent"
+                              : "text-zinc-200 hover:text-white hover:bg-white/5 border border-transparent"
                           }
                         `}
                       >

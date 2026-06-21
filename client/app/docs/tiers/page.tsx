@@ -189,7 +189,7 @@ export default function DocsTiersPage() {
         <h1 className="text-4xl md:text-6xl font-black tracking-tight uppercase">
           PRO <span className="text-[#39FF14]">TIERS.</span>
         </h1>
-        <p className="text-zinc-400 text-lg leading-relaxed max-w-3xl ">
+        <p className="text-zinc-200 text-lg leading-relaxed max-w-3xl ">
           IRIS operates under an Open Core development methodology. Public repos
           host the frontend shell layouts. To activate the full experience:
           <br />
@@ -213,7 +213,7 @@ export default function DocsTiersPage() {
           <GitBranch className="w-5 h-5 text-[#39FF14]" />
           Evolving to a Sustainable Open-Core Model
         </h3>
-        <p className="text-zinc-400 text-xs leading-relaxed ">
+        <p className="text-zinc-200 text-xs leading-relaxed ">
           Before the release of our advanced Live SDK voice engines, IRIS was
           completely free and 100% open-source. However, to sustain continuous
           development, visual overrides, and advanced tooling updates, IRIS has
@@ -265,7 +265,7 @@ export default function DocsTiersPage() {
           <Info className="w-5 h-5 text-[#39FF14]" />
           Free vs Paid (Pro) Matrix
         </h3>
-        <p className="text-zinc-400 text-xs leading-relaxed ">
+        <p className="text-zinc-200 text-xs leading-relaxed ">
           Compare the core differences between the open-source Free UI Shell and
           the fully-loaded Paid (Pro) Engine.
         </p>
@@ -284,7 +284,7 @@ export default function DocsTiersPage() {
             <thead>
               <tr className="bg-white/5 border-b border-white/10">
                 <th className="p-4 text-white font-bold">Feature Capability</th>
-                <th className="p-4 text-zinc-400 font-bold">Free Edition</th>
+                <th className="p-4 text-zinc-200 font-bold">Free Edition</th>
                 <th className="p-4 text-[#39FF14] font-bold">
                   Paid Pro (₹499 one-time)
                 </th>
@@ -350,7 +350,7 @@ export default function DocsTiersPage() {
               {/* Title & Price */}
               <div className="space-y-4">
                 <div className="">
-                  <h3 className="text-zinc-400 text-xs font-bold uppercase tracking-wider">
+                  <h3 className="text-zinc-200 text-xs font-bold uppercase tracking-wider">
                     {tier.name}
                   </h3>
                   <div className="text-xl md:text-2xl font-black text-white mt-1">
@@ -426,7 +426,7 @@ export default function DocsTiersPage() {
           <ShieldAlert className="w-4 h-4 text-orange-500" />
           Ecosystem Refund Policy Summary
         </h4>
-        <p className="text-zinc-400 leading-relaxed">
+        <p className="text-zinc-200 leading-relaxed">
           Due to the nature of perpetual software licenses and our Secure
           Checkout architecture, all transactions for the IRIS Pro Engine are{" "}
           <strong>100% final and non-refundable</strong>.

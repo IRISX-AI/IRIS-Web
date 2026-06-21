@@ -130,7 +130,7 @@ export default function SitemapPage() {
                     <li key={link.path}>
                       <Link
                         href={link.path}
-                        className="flex items-center gap-3 text-zinc-400 hover:text-[#39FF14] transition-colors duration-300 group/link"
+                        className="flex items-center gap-3 text-zinc-200 hover:text-[#39FF14] transition-colors duration-300 group/link"
                       >
                         <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover/link:bg-[#39FF14]/10 group-hover/link:border-[#39FF14]/20 transition-all duration-300 shrink-0">
                           <Icon className="w-4 h-4 text-zinc-500 group-hover/link:text-[#39FF14] transition-colors" />

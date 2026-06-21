@@ -164,7 +164,7 @@ export default function ComparePage() {
           <h3 className="text-2xl font-bold text-white mb-4">
             Ready to Unlock the IRIS PRO?
           </h3>
-          <p className="text-zinc-400 mb-8 max-w-lg mx-auto">
+          <p className="text-zinc-200 mb-8 max-w-lg mx-auto">
             Upgrade your base engine into a fully autonomous OS controller.
             Secure checkout, lifetime access, zero subscriptions.
           </p>

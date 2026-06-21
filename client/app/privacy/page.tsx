@@ -49,7 +49,9 @@ export default function PrivacyPolicyPage() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#39FF14]/30 bg-[#39FF14]/5 text-[#39FF14] text-xs mb-8 backdrop-blur-md">
             <Shield className="w-3 h-3 text-[#39FF14]" />
-            <span className="uppercase tracking-widest">Data Protection & Privacy</span>
+            <span className="uppercase tracking-widest">
+              Data Protection & Privacy
+            </span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 text-white drop-shadow-2xl">
@@ -60,7 +62,8 @@ export default function PrivacyPolicyPage() {
           </h1>
 
           <p className="text-xl text-gray-400 max-w-2xl mx-auto font-sans">
-            Local-First Architecture, governed under Indian Judiciary Laws. Your system remains your own.
+            Local-First Architecture, governed under Indian Judiciary Laws. Your
+            system remains your own.
           </p>
         </motion.div>
       </section>
@@ -82,13 +85,21 @@ export default function PrivacyPolicyPage() {
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20 shadow-[0_0_15px_rgba(57,255,20,0.1)]">
                 <Gavel className="w-6 h-6 text-[#39FF14]" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight">Indian Legislative & Statutory Compliance</h2>
+              <h2 className="text-2xl font-bold text-white tracking-tight">
+                Indian Legislative & Statutory Compliance
+              </h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4 font-sans">
-              This policy is drafted, administered, and maintained in strict compliance with the laws of the **Republic of India**, including the **Information Technology Act, 2000 (Section 43A)** and the **Digital Personal Data Protection Act, 2023 (DPDP Act)**.
+              This policy is drafted, administered, and maintained in strict
+              compliance with the laws of the **Republic of India**, including
+              the **Information Technology Act, 2000 (Section 43A)** and the
+              **Digital Personal Data Protection Act, 2023 (DPDP Act)**.
             </p>
             <p className="text-zinc-500 text-xs leading-relaxed font-sans">
-              IRIS adheres to the statutory provisions of reasonable security practices, data minimization, and purpose-limitation. By utilizing the software, users consent to the local-first processing of metadata as outlined herein.
+              IRIS adheres to the statutory provisions of reasonable security
+              practices, data minimization, and purpose-limitation. By utilizing
+              the software, users consent to the local-first processing of
+              metadata as outlined herein.
             </p>
           </motion.div>
 
@@ -100,23 +111,38 @@ export default function PrivacyPolicyPage() {
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
                 <Users className="w-6 h-6 text-[#39FF14]" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight font-sans">Google OAuth Authentication Data</h2>
+              <h2 className="text-2xl font-bold text-white tracking-tight font-sans">
+                Google OAuth Authentication Data
+              </h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4 font-sans">
-              IRIS utilizes Google Login protocols to securely verify identities. When logging in, we collect and store:
+              IRIS utilizes Google Login protocols to securely verify
+              identities. When logging in, we collect and store:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
               <div className="p-3 bg-white/5 rounded-xl border border-white/5 font-sans">
-                <strong className="text-[#39FF14] block mb-1">User's Name</strong>
-                <span className="text-zinc-500">To personalize your workspace interface logs.</span>
+                <strong className="text-[#39FF14] block mb-1">
+                  User's Name
+                </strong>
+                <span className="text-zinc-500">
+                  To personalize your workspace interface logs.
+                </span>
               </div>
               <div className="p-3 bg-white/5 rounded-xl border border-white/5 font-sans">
-                <strong className="text-[#39FF14] block mb-1">Email Address</strong>
-                <span className="text-zinc-500">To verify licensing keys and Google Authentication.</span>
+                <strong className="text-[#39FF14] block mb-1">
+                  Email Address
+                </strong>
+                <span className="text-zinc-500">
+                  To verify licensing keys and Google Authentication.
+                </span>
               </div>
               <div className="p-3 bg-white/5 rounded-xl border border-white/5 font-sans">
-                <strong className="text-[#39FF14] block mb-1">Profile Picture</strong>
-                <span className="text-zinc-500">Used strictly for visual layout indicators.</span>
+                <strong className="text-[#39FF14] block mb-1">
+                  Profile Picture
+                </strong>
+                <span className="text-zinc-500">
+                  Used strictly for visual layout indicators.
+                </span>
               </div>
             </div>
           </motion.div>
@@ -129,10 +155,14 @@ export default function PrivacyPolicyPage() {
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
                 <Shield className="w-6 h-6 text-[#39FF14]" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight font-sans">Payment Processing</h2>
+              <h2 className="text-2xl font-bold text-white tracking-tight font-sans">
+                Payment Processing
+              </h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4 font-sans">
-              We do not store your credit card details on our servers. All financial transactions are encrypted and processed directly by our PCI-compliant payment gateway (Razorpay).
+              We do not store your credit card details on our servers. All
+              financial transactions are encrypted and processed directly by our
+              PCI-compliant payment gateway (Razorpay).
             </p>
           </motion.div>
 
@@ -144,28 +174,42 @@ export default function PrivacyPolicyPage() {
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
                 <Cpu className="w-6 h-6 text-[#39FF14]" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight font-sans">Licensing Verification & HWID Telemetry</h2>
+              <h2 className="text-2xl font-bold text-white tracking-tight font-sans">
+                Licensing Verification & HWID Telemetry
+              </h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4 font-sans">
-              To enforce licensing boundaries and prevent bulk key sharing, the IRIS Pro Engine collects minimal device-specific parameters:
+              To enforce licensing boundaries and prevent bulk key sharing, the
+              IRIS Pro Engine collects minimal device-specific parameters:
             </p>
             <div className="grid md:grid-cols-3 gap-4 text-xs">
               <div className="p-4 rounded-xl bg-white/5 border border-white/5 space-y-2">
-                <span className="text-[#39FF14] font-bold block">1. Motherboard Unique ID (HWID)</span>
-                <span className="text-zinc-400 block leading-relaxed font-sans">
-                  A unique cryptographic hash generated by the motherboard of your computer to uniquely register the client machine.
+                <span className="text-[#39FF14] font-bold block">
+                  1. Motherboard Unique ID (HWID)
+                </span>
+                <span className="text-zinc-200 block leading-relaxed font-sans">
+                  A unique cryptographic hash generated by the motherboard of
+                  your computer to uniquely register the client machine.
                 </span>
               </div>
               <div className="p-4 rounded-xl bg-white/5 border border-white/5 space-y-2">
-                <span className="text-[#39FF14] font-bold block">2. Connected Device Count</span>
-                <span className="text-zinc-400 block leading-relaxed font-sans">
-                  Tracks how many devices are currently registered under your license (enforcing the strict limit of **two [2] devices** per user ID).
+                <span className="text-[#39FF14] font-bold block">
+                  2. Connected Device Count
+                </span>
+                <span className="text-zinc-200 block leading-relaxed font-sans">
+                  Tracks how many devices are currently registered under your
+                  license (enforcing the strict limit of **two [2] devices** per
+                  user ID).
                 </span>
               </div>
               <div className="p-4 rounded-xl bg-white/5 border border-white/5 space-y-2">
-                <span className="text-[#39FF14] font-bold block">3. IP Verification</span>
-                <span className="text-zinc-400 block leading-relaxed font-sans">
-                  The client machine's IP address is verified strictly at the **time of installation** and **licensing upgrade** to prevent bulk automated abuse.
+                <span className="text-[#39FF14] font-bold block">
+                  3. IP Verification
+                </span>
+                <span className="text-zinc-200 block leading-relaxed font-sans">
+                  The client machine's IP address is verified strictly at the
+                  **time of installation** and **licensing upgrade** to prevent
+                  bulk automated abuse.
                 </span>
               </div>
             </div>
@@ -179,22 +223,28 @@ export default function PrivacyPolicyPage() {
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
                 <Lock className="w-6 h-6 text-[#39FF14]" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight">Local-First Architecture</h2>
+              <h2 className="text-2xl font-bold text-white tracking-tight">
+                Local-First Architecture
+              </h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              Aside from license verification parameters, IRIS operates as a local binary client. Your workspace contents, files, and logs remain on your workstation.
+              Aside from license verification parameters, IRIS operates as a
+              local binary client. Your workspace contents, files, and logs
+              remain on your workstation.
             </p>
             <div className="grid md:grid-cols-2 gap-4 mt-6">
               <div className="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/5">
                 <CheckCircle2 className="w-5 h-5 text-[#39FF14] shrink-0 mt-0.5" />
                 <span className="text-xs text-gray-300">
-                  Workspace isolation: Directories are scanned, read, and indexed locally on your own machine.
+                  Workspace isolation: Directories are scanned, read, and
+                  indexed locally on your own machine.
                 </span>
               </div>
               <div className="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/5">
                 <CheckCircle2 className="w-5 h-5 text-[#39FF14] shrink-0 mt-0.5" />
                 <span className="text-xs text-gray-300">
-                  Zero keylogging: Global macros and phantom inputs are captured and injected strictly on-device.
+                  Zero keylogging: Global macros and phantom inputs are captured
+                  and injected strictly on-device.
                 </span>
               </div>
             </div>
@@ -208,19 +258,30 @@ export default function PrivacyPolicyPage() {
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
                 <EyeOff className="w-6 h-6 text-[#39FF14]" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight">Zero Server Telemetry</h2>
+              <h2 className="text-2xl font-bold text-white tracking-tight">
+                Zero Server Telemetry
+              </h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              We do not maintain centralized telemetry or logging collection servers. 
+              We do not maintain centralized telemetry or logging collection
+              servers.
             </p>
-            <ul className="space-y-3 text-zinc-400 text-xs">
+            <ul className="space-y-3 text-zinc-200 text-xs">
               <li className="flex items-start gap-2.5">
                 <span className="text-[#39FF14] font-bold">•</span>
-                <span><strong>No Analytics:</strong> IRIS does not compile statistics regarding your terminal outputs, file creations, or script operations.</span>
+                <span>
+                  <strong>No Analytics:</strong> IRIS does not compile
+                  statistics regarding your terminal outputs, file creations, or
+                  script operations.
+                </span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="text-[#39FF14] font-bold">•</span>
-                <span><strong>No Tracking:</strong> Voice prompts, system metrics, and keyboard overlays are never uploaded back to any centralized IRIS database.</span>
+                <span>
+                  <strong>No Tracking:</strong> Voice prompts, system metrics,
+                  and keyboard overlays are never uploaded back to any
+                  centralized IRIS database.
+                </span>
               </li>
             </ul>
           </motion.div>
@@ -234,13 +295,23 @@ export default function PrivacyPolicyPage() {
               <div className="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center border border-orange-500/20">
                 <AlertTriangle className="w-6 h-6 text-orange-500" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight">The BYOK (Bring Your Own Key) Disclosure</h2>
+              <h2 className="text-2xl font-bold text-white tracking-tight">
+                The BYOK (Bring Your Own Key) Disclosure
+              </h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              IRIS runs strictly in a BYOK configuration. To facilitate reasoning, code generation, search crawls, and multimodal tasks, the client routes local data queries to third-party endpoints.
+              IRIS runs strictly in a BYOK configuration. To facilitate
+              reasoning, code generation, search crawls, and multimodal tasks,
+              the client routes local data queries to third-party endpoints.
             </p>
             <div className="p-4 rounded-xl border border-orange-500/10 bg-orange-500/5 text-orange-400/80 text-xs leading-relaxed font-sans">
-              <strong>IMPORTANT:</strong> Because data is routed directly to third-party API providers: **Google Gemini**, **Groq**, **Tavily**, and **Hugging Face**, all prompt context parameters, searches, and files passed to AI tools are governed by the privacy guidelines and policies of those specific companies. The author of IRIS holds zero responsibility or liability for third-party company data-harvesting or telemetry behaviors.
+              <strong>IMPORTANT:</strong> Because data is routed directly to
+              third-party API providers: **Google Gemini**, **Groq**,
+              **Tavily**, and **Hugging Face**, all prompt context parameters,
+              searches, and files passed to AI tools are governed by the privacy
+              guidelines and policies of those specific companies. The author of
+              IRIS holds zero responsibility or liability for third-party
+              company data-harvesting or telemetry behaviors.
             </div>
           </motion.div>
 
@@ -252,15 +323,29 @@ export default function PrivacyPolicyPage() {
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
                 <Database className="w-6 h-6 text-[#39FF14]" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight">Local Vector Storage & Key Encryption</h2>
+              <h2 className="text-2xl font-bold text-white tracking-tight">
+                Local Vector Storage & Key Encryption
+              </h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              All memory elements, index structures, notes, and keys are stored locally on your hard disk:
+              All memory elements, index structures, notes, and keys are stored
+              locally on your hard disk:
             </p>
             <ul className="space-y-2 text-zinc-500 text-xs pl-2 border-l border-[#39FF14]/30">
-              <li>• <strong>API Keys:</strong> Stored securely using the native OS keychain interface (Windows Credential Manager / macOS Keychain).</li>
-              <li>• <strong>Vector Databases:</strong> Local LanceDB embeddings are written locally and sandboxed under the desktop app data path.</li>
-              <li>• <strong>Local note cache:</strong> Markdown logs and macros remain exclusively inside the application sandbox structure.</li>
+              <li>
+                • <strong>API Keys:</strong> Stored securely using the native OS
+                keychain interface (Windows Credential Manager / macOS
+                Keychain).
+              </li>
+              <li>
+                • <strong>Vector Databases:</strong> Local LanceDB embeddings
+                are written locally and sandboxed under the desktop app data
+                path.
+              </li>
+              <li>
+                • <strong>Local note cache:</strong> Markdown logs and macros
+                remain exclusively inside the application sandbox structure.
+              </li>
             </ul>
           </motion.div>
 
@@ -272,13 +357,20 @@ export default function PrivacyPolicyPage() {
               <div className="w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center border border-[#39FF14]/20">
                 <Smartphone className="w-6 h-6 text-[#39FF14]" />
               </div>
-              <h2 className="text-2xl font-bold text-white tracking-tight">Mobile Companion Bridge (IRIS-X)</h2>
+              <h2 className="text-2xl font-bold text-white tracking-tight">
+                Mobile Companion Bridge (IRIS-X)
+              </h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              The IRIS-X mobile companion application routes notification streams, system indicators, and push payloads directly over local network bridges (via native Android Debug Bridge [ADB] tunnels or local WebSocket connections).
+              The IRIS-X mobile companion application routes notification
+              streams, system indicators, and push payloads directly over local
+              network bridges (via native Android Debug Bridge [ADB] tunnels or
+              local WebSocket connections).
             </p>
-            <div className="p-4 rounded-xl border border-white/5 bg-white/5 text-xs text-zinc-400 leading-relaxed">
-              The companion system has no analytics layer, does not hook into advertising scripts, and communicates exclusively with the local desktop environment.
+            <div className="p-4 rounded-xl border border-white/5 bg-white/5 text-xs text-zinc-200 leading-relaxed">
+              The companion system has no analytics layer, does not hook into
+              advertising scripts, and communicates exclusively with the local
+              desktop environment.
             </div>
           </motion.div>
         </motion.div>

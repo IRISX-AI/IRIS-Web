@@ -67,7 +67,7 @@ export default function NotFound() {
 
           <motion.p
             variants={itemVariants}
-            className="text-zinc-400 text-center max-w-lg mb-12 text-sm md:text-base"
+            className="text-zinc-200 text-center max-w-lg mb-12 text-sm md:text-base"
           >
             The directory or file you requested is missing from the core index.
             It may have been relocated, deleted, or you might have used an
@@ -80,7 +80,7 @@ export default function NotFound() {
           >
             <Link href="/" className="group block h-full">
               <div className="h-full flex flex-col items-center text-center p-6 rounded-xl bg-white/5 border border-white/10 hover:border-[#39FF14]/50 hover:bg-[#39FF14]/5 transition-all duration-300">
-                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:bg-[#39FF14]/20 group-hover:text-[#39FF14] transition-colors text-zinc-400">
+                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:bg-[#39FF14]/20 group-hover:text-[#39FF14] transition-colors text-zinc-200">
                   <Home className="w-5 h-5" />
                 </div>
                 <h3 className="font-semibold text-white mb-1 group-hover:text-[#39FF14] transition-colors">
@@ -92,7 +92,7 @@ export default function NotFound() {
 
             <Link href="/docs" className="group block h-full">
               <div className="h-full flex flex-col items-center text-center p-6 rounded-xl bg-white/5 border border-white/10 hover:border-[#39FF14]/50 hover:bg-[#39FF14]/5 transition-all duration-300">
-                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:bg-[#39FF14]/20 group-hover:text-[#39FF14] transition-colors text-zinc-400">
+                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:bg-[#39FF14]/20 group-hover:text-[#39FF14] transition-colors text-zinc-200">
                   <FileText className="w-5 h-5" />
                 </div>
                 <h3 className="font-semibold text-white mb-1 group-hover:text-[#39FF14] transition-colors">
@@ -104,7 +104,7 @@ export default function NotFound() {
 
             <Link href="/support" className="group block h-full">
               <div className="h-full flex flex-col items-center text-center p-6 rounded-xl bg-white/5 border border-white/10 hover:border-[#39FF14]/50 hover:bg-[#39FF14]/5 transition-all duration-300">
-                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:bg-[#39FF14]/20 group-hover:text-[#39FF14] transition-colors text-zinc-400">
+                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:bg-[#39FF14]/20 group-hover:text-[#39FF14] transition-colors text-zinc-200">
                   <HelpCircle className="w-5 h-5" />
                 </div>
                 <h3 className="font-semibold text-white mb-1 group-hover:text-[#39FF14] transition-colors">
@@ -119,7 +119,7 @@ export default function NotFound() {
               className="group block h-full w-full cursor-pointer"
             >
               <div className="h-full flex flex-col items-center text-center p-6 rounded-xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300">
-                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors text-zinc-400">
+                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors text-zinc-200">
                   <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                 </div>
                 <h3 className="font-semibold text-white mb-1">Go Back</h3>
