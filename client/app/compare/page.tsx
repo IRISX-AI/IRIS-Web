@@ -1,10 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2, Zap, ArrowLeft } from "lucide-react";
+import { CheckCircle2, Zap} from "lucide-react";
 import Link from "next/link";
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
 
 export default function ComparePage() {
   return (
@@ -165,7 +163,8 @@ export default function ComparePage() {
             Ready to Unlock the Neural Core?
           </h3>
           <p className="text-zinc-400 mb-8 max-w-lg mx-auto">
-            Upgrade your base engine into a fully autonomous OS controller. Secure checkout, lifetime access, zero subscriptions.
+            Upgrade your base engine into a fully autonomous OS controller.
+            Secure checkout, lifetime access, zero subscriptions.
           </p>
           <Link href="/pricing">
             <button className="group w-full max-w-sm flex justify-center items-center gap-2 py-4 rounded-xl bg-[#39FF14] text-black font-bold hover:bg-green-400 transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)]">
@@ -199,11 +198,7 @@ const TableRow = ({
       )}
     </td>
     <td className="py-5 px-8 text-center font-bold text-[#39FF14] border-l border-white/5 bg-[#39FF14]/5">
-      {pro === "Yes" ? (
-        <Zap className="w-5 h-5 text-[#39FF14] mx-auto" />
-      ) : (
-        pro
-      )}
+      {pro === "Yes" ? <Zap className="w-5 h-5 text-[#39FF14] mx-auto" /> : pro}
     </td>
   </tr>
 );
