@@ -16,7 +16,7 @@ export default function DeprecatedSite() {
   return (
     <div className="min-h-screen bg-[#000000] text-zinc-100 flex flex-col items-center justify-center relative overflow-hidden ns px-6 selection:bg-[#39FF14] selection:text-black">
       
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,transparent_0%,#000000_100%)] pointer-events-none" />
+      <div className="absolute inset-0 z-0 bg-[radial-linear(circle_at_center,transparent_0%,#000000_100%)] pointer-events-none" />
       
       
       <motion.div 
@@ -60,7 +60,7 @@ export default function DeprecatedSite() {
           transition={{ duration: 0.5, delay: 0.8 }}
           className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-6 text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]"
         >
-          THIS WEBSITE IS <span className="text-transparent bg-clip-text bg-gradient-to-b from-red-500 to-red-900">CLOSED.</span>
+          THIS WEBSITE IS <span className="text-transparent bg-clip-text bg-linear-to-b from-red-500 to-red-900">CLOSED.</span>
         </motion.h1>
 
         <motion.p 
@@ -84,7 +84,7 @@ export default function DeprecatedSite() {
             rel="noopener noreferrer"
             className="group relative flex items-center justify-between sm:justify-center gap-6 px-8 py-5 rounded-2xl bg-[#050505] border border-[#39FF14]/40 hover:border-[#39FF14] transition-all duration-300 shadow-[0_0_20px_rgba(57,255,20,0.1)] hover:shadow-[0_0_40px_rgba(57,255,20,0.3)] w-full overflow-hidden"
           >
-            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-[#39FF14]/10 to-transparent -translate-x-full group-hover:animate-[scan_1.5s_ease-in-out_infinite]" />
+            <div className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-[#39FF14]/10 to-transparent -translate-x-full group-hover:animate-[scan_1.5s_ease-in-out_infinite]" />
             
             <div className="relative z-10 flex flex-col text-left sm:text-center">
               <span className="text-white font-bold text-xl uppercase tracking-wider group-hover:text-[#39FF14] transition-colors">
