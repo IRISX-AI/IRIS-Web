@@ -96,7 +96,7 @@ export default function DeprecatedSite() {
             </div>
             
             <div className="relative z-10 w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center group-hover:bg-[#39FF14] group-hover:text-black transition-all text-[#39FF14]">
-              <ArrowRight className="w-6 h-6 group-hover:rotate-[-45deg] transition-transform duration-300" />
+              <ArrowRight className="w-6 h-6 group-hover:-rotate-45 transition-transform duration-300" />
             </div>
           </a>
         </motion.div>
