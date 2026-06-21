@@ -31,7 +31,6 @@ export default function DeprecatedSite() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 w-full max-w-2xl flex flex-col items-center text-center"
       >
-        {/* --- WARNING ICON --- */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: [0, 1, 0.5, 1], y: 0 }}
@@ -44,7 +43,6 @@ export default function DeprecatedSite() {
           </div>
         </motion.div>
 
-        {/* --- STATUS BADGE --- */}
         <motion.div
           initial={{ clipPath: "inset(0 100% 0 0)" }}
           animate={{ clipPath: "inset(0 0% 0 0)" }}
@@ -56,7 +54,6 @@ export default function DeprecatedSite() {
           </div>
         </motion.div>
 
-        {/* --- SIMPLE HEADLINE --- */}
         <motion.h1 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -66,7 +63,6 @@ export default function DeprecatedSite() {
           THIS WEBSITE IS <span className="text-transparent bg-clip-text bg-gradient-to-b from-red-500 to-red-900">CLOSED.</span>
         </motion.h1>
 
-        {/* --- SIMPLE MESSAGE --- */}
         <motion.p 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -76,21 +72,18 @@ export default function DeprecatedSite() {
           The old version of IRIS has been completely shut down. We have moved everything to a brand new, secure website. Click the button below to continue.
         </motion.p>
 
-        {/* --- GIANT REDIRECT BUTTON --- */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.3 }}
           className="w-full sm:w-auto"
         >
-          {/* REPLACE THE HREF BELOW WITH YOUR NEW DOMAIN */}
           <a 
             href="https://YOUR-NEW-SITE-URL.com" 
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex items-center justify-between sm:justify-center gap-6 px-8 py-5 rounded-2xl bg-[#050505] border border-[#39FF14]/40 hover:border-[#39FF14] transition-all duration-300 shadow-[0_0_20px_rgba(57,255,20,0.1)] hover:shadow-[0_0_40px_rgba(57,255,20,0.3)] w-full overflow-hidden"
           >
-            {/* Button Hover Sweep */}
             <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-[#39FF14]/10 to-transparent -translate-x-full group-hover:animate-[scan_1.5s_ease-in-out_infinite]" />
             
             <div className="relative z-10 flex flex-col text-left sm:text-center">
