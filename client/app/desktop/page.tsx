@@ -78,10 +78,8 @@ function RedirectLogic() {
 
   return (
     <div className="min-h-screen bg-[#000000] text-white flex items-center justify-center p-6 relative overflow-hidden selection:bg-[#39FF14] selection:text-black font-mono">
-      {/* Dynamic Background */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-[#39FF14]/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(57,255,20,0.05)_0%,transparent_70%)] pointer-events-none" />
-      
 
       <motion.div
         variants={containerVariants}
@@ -93,7 +91,6 @@ function RedirectLogic() {
           variants={itemVariants}
           className="bg-[#050505]/80 backdrop-blur-xl border border-[#39FF14]/30 rounded-[2.5rem] p-10 shadow-[0_0_80px_rgba(57,255,20,0.07)] relative overflow-hidden text-center flex flex-col items-center"
         >
-          {/* Top Progress Bar */}
           <div
             className={`absolute top-0 left-0 w-full h-1 opacity-80 transition-all duration-1000 ${status === "redirecting" ? "bg-linear-to-r from-transparent via-[#39FF14] to-[#39FF14]" : "bg-linear-to-r from-transparent via-[#39FF14]/30 to-transparent"}`}
           />
