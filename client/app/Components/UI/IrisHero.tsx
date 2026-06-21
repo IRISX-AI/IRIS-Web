@@ -116,7 +116,7 @@ export default function IrisHero({
               />
             </Link>
 
-            <Link href="/get-started">
+            <Link href="/login">
               <MagneticButton
                 title="Get Started"
                 subtitle="Login or Create Account"
