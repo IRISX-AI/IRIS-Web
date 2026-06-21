@@ -4,21 +4,6 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { PowerOff, Lock, Github, Mail } from "lucide-react";
 
-// ─────────────────────────────────────────────────────────────
-// IRIS — Decommission Notice
-//
-// This is the ONLY surface left on this domain. Every old route
-// has been removed. Anyone landing here via a stale link, bookmark,
-// or old README badge needs three things in under 5 seconds:
-//   1. Confirmation this isn't broken — it's intentional
-//   2. Why (so it reads as a decision, not an abandonment)
-//   3. Where to go if they need to reach you
-//
-// The next destination is deliberately NOT named or linked —
-// it's still private. This page should read as "closed," not
-// "teaser for what's next."
-// ─────────────────────────────────────────────────────────────
-
 const BOOT_LINES = [
   "neural_core.shutdown()",
   "terminating active sessions...",
