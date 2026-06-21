@@ -10,6 +10,7 @@ import {
   CheckCircle2,
   ExternalLink,
 } from "lucide-react";
+import Link from "next/link";
 
 function RedirectLogic() {
   const searchParams = useSearchParams();
@@ -78,7 +79,7 @@ function RedirectLogic() {
   return (
     <div className="min-h-screen bg-[#000000] text-white flex items-center justify-center p-6 relative overflow-hidden selection:bg-[#39FF14] selection:text-black font-mono">
       {/* Dynamic Background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#39FF14]/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-[800px] bg-[#39FF14]/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(57,255,20,0.05)_0%,transparent_70%)] pointer-events-none" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#39FF14_1px,transparent_1px),linear-gradient(to_bottom,#39FF14_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.02] pointer-events-none mix-blend-screen" />
 
@@ -208,9 +209,11 @@ function RedirectLogic() {
                   <ExternalLink className="w-4 h-4" /> Try Opening Again
                 </button>
 
-                <button className="w-full py-4 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-white font-bold transition-all duration-300 flex items-center justify-center gap-2 text-sm cursor-pointer uppercase tracking-wider">
-                  <Download className="w-4 h-4" /> Download Local Engine
-                </button>
+                <Link href="/download">
+                  <button className="w-full py-4 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-white font-bold transition-all duration-300 flex items-center justify-center gap-2 text-sm cursor-pointer uppercase tracking-wider">
+                    <Download className="w-4 h-4" /> Download Local Engine
+                  </button>
+                </Link>
               </motion.div>
             )}
           </AnimatePresence>
