@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, Zap} from "lucide-react";
 import Link from "next/link";
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 
 export default function ComparePage() {
   return (
