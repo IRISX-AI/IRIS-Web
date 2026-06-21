@@ -28,14 +28,6 @@ const IRIS = () => {
   return (
     <div className="min-h-screen bg-[#050505] text-white font-mono selection:bg-[#39FF14] selection:text-black relative overflow-hidden flex items-center justify-center px-6">
       {/* Cyber-grid ambient background */}
-      <div
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(#39FF14 1px, transparent 1px), linear-gradient(90deg, #39FF14 1px, transparent 1px)",
-          backgroundSize: "48px 48px",
-        }}
-      />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-80 bg-[#39FF14]/10 blur-[120px] rounded-full pointer-events-none" />
 
       <motion.div
