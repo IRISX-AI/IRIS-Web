@@ -113,7 +113,7 @@ export default function CliInstallGuide() {
                     "✔ Loading config...",
                     "✔ Connecting API...",
                     "",
-                    "[ NEURAL CORE ONLINE ]",
+                    "[ IRIS PRO ONLINE ]",
                     "[ UI PORT ]  http://localhost:6753",
                     "[ AGENT ]    Awaiting Connection...",
                     "[ EXIT ]     Press Ctrl + C to stop",

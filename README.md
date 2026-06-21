@@ -290,19 +290,23 @@ IRIS uses **enterprise-grade code protection** to secure proprietary agent logic
 
 # ⚡ Why Upgrade to IRIS Pro?
 
-IRIS is built on an **Open Core model**. While the Free Tier (Public Repository) gives you access to the community UI and basic templates, the **core voice engine, agent loops, and advanced execution tools** are protected within the IRIS Pro ecosystem. 
+IRIS is built on an **Open Core model**. While the Free Tier (Public Repository) gives you access to the community UI and basic templates, the **core voice engine, agent loops, and advanced execution tools** are protected within the IRIS Pro ecosystem.
 
 Upgrading to **IRIS Pro (₹499 One-Time License)** unlocks the complete autonomous OS controller experience.
 
 ## 🎁 Free Tier (Base Engine)
+
 **Cost:** Free
+
 - Access to the public frontend shell (React + Tailwind)
 - Community Layout Config & Themes
 - Standard PIN-only OS Vault lockdown
 - Basic UI Widgets & Desktop Shell structure
 
 ## 🚀 IRIS Paid Pro
+
 **Cost:** ₹499 (Lifetime License)
+
 - **Instant License Activation:** Pay once, keep it forever. No subscriptions.
 - **Hands-Free Wake Up Word:** Passive offline activation ("Hey, IRIS").
 - **ScreenPeeler Multimodal AI OCR:** Instantly scan and extract text/code from your screen (Ctrl+Alt+X).
@@ -314,9 +318,10 @@ Upgrading to **IRIS Pro (₹499 One-Time License)** unlocks the complete autonom
 - **Direct Pro Access:** Fully functional local execution engine.
 
 ### How to Upgrade?
+
 1. **Authenticate with Google** to create your secure identity.
 2. **Purchase a License** via our Secure Checkout (Razorpay).
-3. **Unlock the IRIS Neural Core** instantly.
+3. **Unlock the IRIS PRO** instantly.
 
 [**Compare Free vs Pro Features in Detail**](/compare)
 

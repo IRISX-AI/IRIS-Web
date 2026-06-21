@@ -86,7 +86,7 @@ export default function NotFound() {
                 <h3 className="font-semibold text-white mb-1 group-hover:text-[#39FF14] transition-colors">
                   Return Home
                 </h3>
-                <p className="text-xs text-zinc-500">Back to the neural core</p>
+                <p className="text-xs text-zinc-500">Back to the IRIS PRO</p>
               </div>
             </Link>
 

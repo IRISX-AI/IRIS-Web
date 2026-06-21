@@ -200,9 +200,7 @@ export default function DocsTiersPage() {
           <br />
           <strong className="text-[#39FF14]">2. Purchase a License.</strong>
           <br />
-          <strong className="text-[#39FF14]">
-            3. Unlock the IRIS Neural Core.
-          </strong>
+          <strong className="text-[#39FF14]">3. Unlock the IRIS PRO.</strong>
         </p>
       </motion.div>
 

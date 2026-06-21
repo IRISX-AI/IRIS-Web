@@ -36,7 +36,7 @@ export default function ComparePage() {
 
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
             A precise technical breakdown of system access per tier. Understand
-            why unlocking the Neural Core is the ultimate upgrade.
+            why unlocking the IRIS PRO is the ultimate upgrade.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -162,7 +162,7 @@ export default function ComparePage() {
 
         <div className="mt-16 text-center flex flex-col items-center">
           <h3 className="text-2xl font-bold text-white mb-4">
-            Ready to Unlock the Neural Core?
+            Ready to Unlock the IRIS PRO?
           </h3>
           <p className="text-zinc-400 mb-8 max-w-lg mx-auto">
             Upgrade your base engine into a fully autonomous OS controller.
