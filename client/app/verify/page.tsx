@@ -27,7 +27,7 @@ function VerifyContent() {
     if (!token) {
       setStatus("error");
       setErrorMessage("NO CRYPTOGRAPHIC TOKEN DETECTED IN URL.");
-      router.push("/signup?error=No-token-found");
+      router.push("/auth?error=No-token-found");
       return;
     }
 
@@ -124,7 +124,7 @@ function VerifyContent() {
             {errorMessage}
           </p>
           <Link
-            href="/login"
+            href="/auth"
             className="px-8 py-3 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 text-white font-medium transition-colors w-full flex items-center justify-center gap-2"
           >
             <Shield className="w-4 h-4" /> Return to Security Node
