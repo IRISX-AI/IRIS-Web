@@ -469,8 +469,6 @@ export default function ChangelogPage() {
           });
         }
 
-
-
         ScrollTrigger.create({
           trigger: cardSelector,
           start: "top 60%",
@@ -638,13 +636,13 @@ export default function ChangelogPage() {
                   *Licensing at this level does not provide the full code.*
                 </li>
                 <li>
-                  • **$30/mo Pro Licensee (Builder)**: Access to testing prompts,
-                  logs, and workflow macros.
+                  • **$30/mo Pro Licensee (Builder)**: Access to testing
+                  prompts, logs, and workflow macros.
                 </li>
                 <li>
-                  • **$50/mo Pro Licensee (Alpha)**: Full read access to the raw,
-                  unprotected, uncompiled source code, precompiled releases, and
-                  commercial licenses.
+                  • **$50/mo Pro Licensee (Alpha)**: Full read access to the
+                  raw, unprotected, uncompiled source code, precompiled
+                  releases, and commercial licenses.
                 </li>
               </ul>
             </div>
@@ -747,7 +745,7 @@ export default function ChangelogPage() {
           {/* Right Column (Scrollable stack cards) */}
           <div className="lg:col-span-8 relative pl-12 lg:pl-20 h-full">
             {/* Vertical timeline track line */}
-            <div className="absolute left-6 lg:left-8 top-4 bottom-4 w-[2px] bg-zinc-800/40 rounded-full z-0 pointer-events-none">
+            <div className="absolute left-6 lg:left-8 top-4 bottom-4 w-0.5 bg-zinc-800/40 rounded-full z-0 pointer-events-none">
               <div
                 ref={lineProgressRef}
                 className="absolute top-0 left-0 w-full bg-linear-to-b from-[#39FF14] to-emerald-500 origin-top h-0 shadow-[0_0_15px_rgba(57,255,20,0.6)]"
@@ -768,12 +766,12 @@ export default function ChangelogPage() {
                   <div
                     key={item.version}
                     id={`card-${idSafe}`}
-                    className="relative bg-[#0a0a0a] border border-white/10 rounded-3xl p-6 md:p-8 flex flex-col justify-between w-full h-auto lg:h-[720px] overflow-visible lg:overflow-y-auto transition-all duration-300 iris-scrollbar"
+                    className="relative bg-[#0a0a0a] border border-white/10 rounded-3xl p-6 md:p-8 flex flex-col justify-between w-full h-auto lg:h-180 overflow-visible lg:overflow-y-auto transition-all duration-300 iris-scrollbar"
                   >
                     {/* Projecting timeline dot */}
                     <div
                       id={`dot-${idSafe}`}
-                      className="absolute -left-9 lg:-left-16 top-[30px] w-6 h-6 lg:w-8 lg:h-8 rounded-full border bg-black flex items-center justify-center z-20 transition-all duration-300"
+                      className="absolute -left-9 lg:-left-16 top-7.5 w-6 h-6 lg:w-8 lg:h-8 rounded-full border bg-black flex items-center justify-center z-20 transition-all duration-300"
                     >
                       <Icon className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
                     </div>
