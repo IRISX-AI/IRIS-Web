@@ -3,8 +3,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Home, ArrowLeft, FileText, HelpCircle } from "lucide-react";
-import Footer from "./Components/Footer";
-import Header from "./Components/Header";
 
 export default function NotFound() {
   const containerVariants: any = {
@@ -26,7 +24,6 @@ export default function NotFound() {
 
   return (
     <div className="min-h-screen flex flex-col mt-16 bg-[#050505] text-white  selection:bg-[#39FF14] selection:text-black overflow-hidden">
-      <Header />
 
       <main className="flex-1 relative flex flex-col items-center justify-center pt-32 pb-20 px-6">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-150 bg-[#39FF14]/5 blur-[150px] rounded-full pointer-events-none" />
@@ -130,7 +127,6 @@ export default function NotFound() {
         </motion.div>
       </main>
 
-      <Footer />
     </div>
   );
 }
