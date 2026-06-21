@@ -52,7 +52,7 @@ export default function DeprecatedSite() {
           animate={{ clipPath: "inset(0 0% 0 0)" }}
           transition={{ duration: 0.8, delay: 0.5, ease: "anticipate" }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-red-500/30 bg-red-500/10 text-red-500 text-xs mb-6 tracking-widest uppercase font-bold font-mono">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-red-500/30 bg-red-500/10 text-red-500 text-xs mb-6 tracking-widest uppercase font-bold ">
             <span className="w-2 h-2 rounded-full bg-red-500 animate-ping" />
             Status: Offline
           </div>
@@ -73,7 +73,7 @@ export default function DeprecatedSite() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 1 }}
-          className="text-zinc-400 text-base md:text-lg max-w-lg mx-auto leading-relaxed mb-12 font-mono"
+          className="text-zinc-400 text-base md:text-lg max-w-lg mx-auto leading-relaxed mb-12 "
         >
           The old version of IRIS has been completely shut down. We have moved everything to a brand new, secure website. Click the button below to continue.
         </motion.p>
@@ -99,7 +99,7 @@ export default function DeprecatedSite() {
               <span className="text-white font-black text-xl uppercase tracking-wider group-hover:text-[#39FF14] transition-colors">
                 Go To The New Website
               </span>
-              <span className="text-zinc-500 text-[10px] uppercase tracking-widest mt-1 font-mono">
+              <span className="text-zinc-500 text-[10px] uppercase tracking-widest mt-1 ">
                 Click here to continue
               </span>
             </div>
