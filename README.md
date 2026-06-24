@@ -1,6 +1,6 @@
 <div align="center">
 
-![IRIS Neural OS Documentation Banner](./assets/banner.png)
+![IRIS Neural OS Documentation Banner](banner.png)
 
 ### Voice-First Desktop AI Assistant
 
