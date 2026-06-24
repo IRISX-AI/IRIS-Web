@@ -72,7 +72,7 @@ export default function DeprecatedSite() {
           The old version of IRIS has been completely shut down. We have moved everything to a brand new, secure website. 
         </motion.p>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.3 }}
@@ -99,7 +99,7 @@ export default function DeprecatedSite() {
               <ArrowRight className="w-6 h-6 group-hover:-rotate-45 transition-transform duration-300" />
             </div>
           </a>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
       
     
