@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { AlertOctagon} from "lucide-react";
+import { AlertOctagon } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function DeprecatedSite() {
@@ -15,23 +15,21 @@ export default function DeprecatedSite() {
 
   return (
     <div className="min-h-screen bg-[#000000] text-zinc-100 flex flex-col items-center justify-center relative overflow-hidden ns px-6 selection:bg-[#39FF14] selection:text-black">
-      
       <div className="absolute inset-0 z-0 bg-[radial-linear(circle_at_center,transparent_0%,#000000_100%)] pointer-events-none" />
-      
-      
-      <motion.div 
+
+      <motion.div
         animate={{ top: ["-10%", "110%"] }}
         transition={{ duration: 3, ease: "linear", repeat: Infinity }}
         className="absolute left-0 w-full h-0.5 bg-[#39FF14]/50 shadow-[0_0_20px_#39FF14] z-0 pointer-events-none"
       />
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 w-full max-w-2xl flex flex-col items-center text-center"
       >
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: [0, 1, 0.5, 1], y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -54,23 +52,34 @@ export default function DeprecatedSite() {
           </div>
         </motion.div>
 
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.8 }}
           className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-6 text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]"
         >
-          THIS WEBSITE IS <span className="text-transparent bg-clip-text bg-linear-to-b from-red-500 to-red-900">CLOSED.</span>
+          THIS WEBSITE IS{" "}
+          <span className="text-transparent bg-clip-text bg-linear-to-b from-red-500 to-red-900">
+            CLOSED.
+          </span>
         </motion.h1>
 
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 1 }}
           className="text-zinc-400 text-base md:text-lg max-w-lg mx-auto leading-relaxed mb-12 "
         >
-          The old version of IRIS has been completely shut down. We have moved everything to a brand new, secure website. 
+          The old version of IRIS has been completely shut down. We are moving
+          everything to a brand new, secure website.
         </motion.p>
+
+        <motion.h1>
+          Comming Soon:{" "}
+          <span className="text-transparent bg-clip-text bg-linear-to-b from-[#39FF14] to-[#00FF00]">
+            Next Generation IRIS
+          </span>
+        </motion.h1>
 
         {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -101,8 +110,6 @@ export default function DeprecatedSite() {
           </a>
         </motion.div> */}
       </motion.div>
-      
-    
     </div>
   );
 }
