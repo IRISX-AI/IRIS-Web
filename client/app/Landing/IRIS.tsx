@@ -71,35 +71,6 @@ export default function DeprecatedSite() {
         >
           The old version of IRIS has been completely shut down. We have moved everything to a brand new, secure website. 
         </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1.3 }}
-          className="w-full sm:w-auto"
-        >
-          <a 
-            href="https://github.com/IRISX-AI" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative flex items-center justify-between sm:justify-center gap-6 px-8 py-5 rounded-2xl bg-[#050505] border border-[#39FF14]/40 hover:border-[#39FF14] transition-all duration-300 shadow-[0_0_20px_rgba(57,255,20,0.1)] hover:shadow-[0_0_40px_rgba(57,255,20,0.3)] w-full overflow-hidden"
-          >
-            <div className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-[#39FF14]/10 to-transparent -translate-x-full group-hover:animate-[scan_1.5s_ease-in-out_infinite]" />
-            
-            <div className="relative z-10 flex flex-col text-left sm:text-center">
-              <span className="text-white font-bold text-xl uppercase tracking-wider group-hover:text-[#39FF14] transition-colors">
-                Under Development...
-              </span>
-              <span className="text-zinc-500 text-[10px] uppercase tracking-widest mt-1 ">
-                New Websie Coming Soon
-              </span>
-            </div>
-            
-            <div className="relative z-10 w-12 h-12 rounded-full bg-[#39FF14]/10 flex items-center justify-center group-hover:bg-[#39FF14] group-hover:text-black transition-all text-[#39FF14]">
-              <ArrowRight className="w-6 h-6 group-hover:-rotate-45 transition-transform duration-300" />
-            </div>
-          </a>
-        </motion.div>
       </motion.div>
       
     
