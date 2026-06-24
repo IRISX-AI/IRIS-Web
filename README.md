@@ -96,14 +96,12 @@ It is a **Voice-First Desktop AI Assistant** that executes real-world actions ac
 We enforce three strict architectural and licensing boundaries across all deployments:
 
 ## 1. IRIS Community Edition (Free & Open Source)
-
 - **Framework Access:** Access to the high-performance desktop framework shell (Electron + Vite + React 19 + Tailwind v4).
 - **Customization:** Fully customizable UI layouts, themes, widgets, and standard window management.
 - **Licensing:** Built under the permissive MIT License for public UI contributions.
 - **Restrictions:** Core AI routing, background execution loops, and autonomous system tools are disabled/hidden.
 
 ## 2. IRIS PRO (End-User Commercial Application - ₹499 Flat Fee)
-
 - **Cost:** ₹499 Flat Fee (plus platform processing)
 - **Full Binary Access:** Grants a lifetime, single-seat perpetual license to the fully compiled, highly protected native binary core.
 - **Core Unlock:** Unlocks the core voice orchestration loops, Gemini 3.1 Live API WebRTC bidirectional streaming, and local LanceDB vector search.
@@ -111,7 +109,6 @@ We enforce three strict architectural and licensing boundaries across all deploy
 - **Security Guardrails:** Protected completely via native V8 Bytecode compilation and strict server-side cryptographic hardware identity (HWID) verification guards.
 
 ## 3. GitHub Sponsorship Program (Incremental Developer/Source Access)
-
 - **Overview:** This path allows developers to sponsor the project monthly to gain incremental, step-by-step code and preview access. Note that current proprietary internal production engines (IRIS 2.0) are NEVER open-sourced. Access to the source code archives is scaled strictly across the monthly tiers.
 
 ---
@@ -321,7 +318,7 @@ For developers looking to support the project, study legacy architecture, or gai
 - **$50/mo (IRIS Alpha Access):** Everything in previous + access to `iris-alpha`. Includes advanced architectural breakdowns, early alpha repository builds, upcoming feature previews, and priority feedback consideration.
 - **$250/mo (IRIS MAX):** The ultimate access tier. Everything from previous tiers + full access to the private `IRIS Legacy Repository`. This completely unlocks the full, unredacted IRIS v1 source archive (full v1 code, legacy voice agent implementation, legacy tool execution system, architecture documentation, design notes, and archived working examples).
 
-> **CRITICAL DISCLAIMER FOR IRIS MAX:** This tier provides access to the _complete legacy IRIS v1 codebase archive only_. Current proprietary systems, IRIS 2.0, enterprise commercial modules, private infrastructure, and future internal development pipelines are explicitly NOT included.
+> **CRITICAL DISCLAIMER FOR IRIS MAX:** This tier provides access to the *complete legacy IRIS v1 codebase archive only*. Current proprietary systems, IRIS 2.0, enterprise commercial modules, private infrastructure, and future internal development pipelines are explicitly NOT included.
 
 ---
 
@@ -345,12 +342,12 @@ For developers looking to support the project, study legacy architecture, or gai
 
 ```typescript
 // Frontend
-window.electron.ipcRenderer.invoke("tool-name", payload);
+window.electron.ipcRenderer.invoke('tool-name', payload)
 
 // Backend (Protected)
-ipcMain.handle("tool-name", async (event, payload) => {
+ipcMain.handle('tool-name', async (event, payload) => {
   // Secure tool execution
-});
+})
 ```
 
 ### AI Integration
