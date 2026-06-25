@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { AlertOctagon } from "lucide-react";
+import { AlertOctagon, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function DeprecatedSite() {
@@ -80,14 +80,13 @@ export default function DeprecatedSite() {
           </span>
         </motion.h1>
 
-        {/* <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.3 }}
           className="w-full sm:w-auto"
         >
           <a 
-            href="https://github.com/IRISX-AI" 
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex items-center justify-between sm:justify-center gap-6 px-8 py-5 rounded-2xl bg-[#050505] border border-[#39FF14]/40 hover:border-[#39FF14] transition-all duration-300 shadow-[0_0_20px_rgba(57,255,20,0.1)] hover:shadow-[0_0_40px_rgba(57,255,20,0.3)] w-full overflow-hidden"
@@ -107,7 +106,7 @@ export default function DeprecatedSite() {
               <ArrowRight className="w-6 h-6 group-hover:-rotate-45 transition-transform duration-300" />
             </div>
           </a>
-        </motion.div> */}
+        </motion.div>
       </motion.div>
     </div>
   );
