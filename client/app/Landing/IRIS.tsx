@@ -75,9 +75,8 @@ export default function DeprecatedSite() {
         </motion.p>
 
         <motion.h1>
-          Comming Soon:{" "}
           <span className="text-transparent bg-clip-text bg-linear-to-b from-[#39FF14] to-[#00FF00] text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6 drop-shadow-[0_0_15px_rgba(57,255,20,0.2)]">
-            Next Generation IRIS
+            Comming Soon: Next Generation IRIS
           </span>
         </motion.h1>
 
