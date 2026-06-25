@@ -44,7 +44,7 @@ export default function DeprecatedSite() {
   if (!mounted) return null;
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-slate-950 via-black to-slate-900 text-zinc-100 flex flex-col items-center justify-center relative overflow-hidden px-6 selection:bg-lime-400 selection:text-black">
+    <div className="min-h-screen bg-linear-to-br from-green-950 via-black to-green-400/5 text-zinc-100 flex flex-col items-center justify-center relative overflow-hidden px-6 selection:bg-lime-400 selection:text-black">
       {/* Premium animated background */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -211,7 +211,7 @@ export default function DeprecatedSite() {
               className="group relative"
             >
               <div className="absolute -inset-0.5 bg-linear-to-r from-lime-400 to-emerald-500 rounded-xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
-              <div className="relative flex flex-col items-center gap-3 px-4 py-5 rounded-xl bg-slate-900 border border-lime-500/20 backdrop-blur-md hover:border-lime-500/50 transition-all">
+              <div className="relative flex flex-col items-center gap-3 px-4 py-5 rounded-xl bg-green-900 border border-lime-500/20 backdrop-blur-md hover:border-lime-500/50 transition-all">
                 <Feature.icon className="w-6 h-6 text-lime-400 group-hover:text-lime-300 transition" />
                 <span className="text-xs font-semibold text-zinc-300 group-hover:text-white text-center transition">
                   {Feature.label}
@@ -230,9 +230,9 @@ export default function DeprecatedSite() {
         >
           <a
             href="#"
-            className="group relative flex items-center justify-between sm:justify-center gap-6 px-8 py-6 rounded-2xl bg-linear-to-r from-slate-900 to-slate-800 border border-lime-500/40 hover:border-lime-400/80 transition-all duration-300 shadow-[0_0_30px_rgba(101,255,0,0.2)] hover:shadow-[0_0_60px_rgba(101,255,0,0.4)] w-full overflow-hidden"
+            className="group relative flex items-center justify-between sm:justify-center gap-6 px-8 py-6 rounded-2xl bg-linear-to-r from-green-900 to-green-800 border border-lime-500/40 hover:border-lime-400/80 transition-all duration-300 shadow-[0_0_30px_rgba(101,255,0,0.2)] hover:shadow-[0_0_60px_rgba(101,255,0,0.4)] w-full overflow-hidden"
           >
-            <div className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-lime-400/20 to-transparent -translate-x-full group-hover:animate-[scan_1.5s_ease-in-out_infinite]" />
+            <div className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-lime-400/20 to-transparent -trangreen-x-full group-hover:animate-[scan_1.5s_ease-in-out_infinite]" />
 
             <div className="relative z-10 flex flex-col text-left sm:text-center">
               <span className="text-white font-bold text-xl uppercase tracking-wider group-hover:text-lime-300 transition-colors">
