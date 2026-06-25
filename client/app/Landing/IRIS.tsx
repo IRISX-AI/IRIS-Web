@@ -146,7 +146,8 @@ export default function DeprecatedSite() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-zinc-300 text-lg md:text-xl max-w-lg mx-auto leading-relaxed mb-6"
         >
-          We’re rebuilding something incredible. A brand‑new, enhanced experience is launching soon.
+          We’re rebuilding something incredible. A brand‑new, enhanced
+          experience is launching soon.
         </motion.p>
 
         {/* Incoming features stream */}
