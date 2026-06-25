@@ -74,12 +74,6 @@ export default function DeprecatedSite() {
           everything to a brand new, secure website.
         </motion.p>
 
-        <motion.h1>
-          <span className="text-transparent bg-clip-text bg-linear-to-b from-[#39FF14] to-[#00FF00] text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6 drop-shadow-[0_0_15px_rgba(57,255,20,0.2)]">
-            Comming Soon: Next Generation IRIS
-          </span>
-        </motion.h1>
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
