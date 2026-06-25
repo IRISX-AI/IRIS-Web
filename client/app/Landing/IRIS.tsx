@@ -1,7 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { AlertOctagon, ArrowRight, Zap, Lock, Sparkles, Cpu, Shield } from "lucide-react";
+import {
+  AlertOctagon,
+  ArrowRight,
+  Zap,
+  Lock,
+  Sparkles,
+  Cpu,
+  Shield,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 
 const features = [
@@ -22,9 +30,9 @@ export default function DeprecatedSite() {
 
   useEffect(() => {
     if (!mounted) return;
-    
+
     const interval = setInterval(() => {
-      setIncomingFeatures(prev => {
+      setIncomingFeatures((prev) => {
         const newIndex = Math.floor(Math.random() * features.length);
         return [...prev.slice(-3), newIndex];
       });
@@ -36,16 +44,16 @@ export default function DeprecatedSite() {
   if (!mounted) return null;
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-slate-950 via-black to-slate-900 text-zinc-100 flex flex-col items-center justify-center relative overflow-hidden px-6 selection:bg-cyan-400 selection:text-black">
+    <div className="min-h-screen bg-linear-to-br from-slate-950 via-black to-slate-900 text-zinc-100 flex flex-col items-center justify-center relative overflow-hidden px-6 selection:bg-lime-400 selection:text-black">
       {/* Premium animated background */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <motion.div
           animate={{
             background: [
-              "radial-gradient(circle at 20% 50%, rgba(0, 188, 212, 0.1) 0%, transparent 50%)",
-              "radial-gradient(circle at 80% 80%, rgba(0, 188, 212, 0.1) 0%, transparent 50%)",
-              "radial-gradient(circle at 40% 40%, rgba(0, 188, 212, 0.1) 0%, transparent 50%)",
-              "radial-gradient(circle at 20% 50%, rgba(0, 188, 212, 0.1) 0%, transparent 50%)",
+              "radial-gradient(circle at 20% 50%, rgba(101, 255, 0, 0.1) 0%, transparent 50%)",
+              "radial-gradient(circle at 80% 80%, rgba(101, 255, 0, 0.1) 0%, transparent 50%)",
+              "radial-gradient(circle at 40% 40%, rgba(101, 255, 0, 0.1) 0%, transparent 50%)",
+              "radial-gradient(circle at 20% 50%, rgba(101, 255, 0, 0.1) 0%, transparent 50%)",
             ],
           }}
           transition={{ duration: 15, repeat: Infinity }}
@@ -57,7 +65,7 @@ export default function DeprecatedSite() {
       <motion.div
         animate={{ top: ["-10%", "110%"] }}
         transition={{ duration: 4, ease: "linear", repeat: Infinity }}
-        className="absolute left-0 w-full h-0.5 bg-linear-to-r from-transparent via-cyan-400/50 to-transparent shadow-[0_0_30px_rgba(34,211,238,0.8)] z-0 pointer-events-none"
+        className="absolute left-0 w-full h-0.5 bg-linear-to-r from-transparent via-lime-400/50 to-transparent shadow-[0_0_30px_rgba(101,255,0,0.8)] z-0 pointer-events-none"
       />
 
       {/* Floating particles */}
@@ -74,7 +82,7 @@ export default function DeprecatedSite() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute w-1 h-1 bg-cyan-400 rounded-full blur-sm"
+          className="absolute w-1 h-1 bg-lime-400 rounded-full blur-sm"
           style={{
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
@@ -112,10 +120,9 @@ export default function DeprecatedSite() {
           animate={{ clipPath: "inset(0 0% 0 0)" }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-red-500/50 bg-red-500/10 backdrop-blur-md text-red-400 text-xs mb-8 tracking-widest uppercase font-bold shadow-[0_0_20px_rgba(239,68,68,0.2)]">
-            <span className="w-2 h-2 rounded-full bg-red-500 animate-ping" />
-            Status: Offline
-          </div>
+          <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-lime-500/50 bg-lime-500/10 backdrop-blur-md text-lime-400 text-xs mb-8 tracking-widest uppercase font-bold shadow-[0_0_20px_rgba(101,255,0,0.2)]"></div>
+          <span className="w-2 h-2 rounded-full bg-lime-500 animate-ping" />
+          Status: Offline
         </motion.div>
 
         {/* Main heading */}
@@ -126,7 +133,7 @@ export default function DeprecatedSite() {
           className="text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6 text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]"
         >
           THIS WEBSITE IS{" "}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-red-500 via-orange-500 to-red-600 animate-pulse">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-lime-400 via-lime-500 to-lime-600 animate-pulse">
             POWERED DOWN.
           </span>
         </motion.h1>
@@ -138,7 +145,8 @@ export default function DeprecatedSite() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-zinc-300 text-lg md:text-xl max-w-lg mx-auto leading-relaxed mb-6"
         >
-          The legacy IRIS system has been taken offline. Preparing next-generation platform with enhanced security and performance.
+          The legacy IRIS system has been taken offline. Preparing
+          next-generation platform with enhanced security and performance.
         </motion.p>
 
         {/* Incoming features stream */}
@@ -148,32 +156,38 @@ export default function DeprecatedSite() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mb-12 w-full"
         >
-          <p className="text-cyan-400 text-xs uppercase tracking-widest font-bold mb-4 flex items-center justify-center gap-2">
-            <motion.span animate={{ rotate: 360 }} transition={{ duration: 2, repeat: Infinity }}>
+          <p className="text-lime-400 text-xs uppercase tracking-widest font-bold mb-4 flex items-center justify-center gap-2">
+            <motion.span
+              animate={{ rotate: 360 }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
               ⚡
             </motion.span>
             Incoming Features Stream
           </p>
-          
-          <div className="relative h-32 bg-linear-to-r from-cyan-500/5 via-transparent to-cyan-500/5 rounded-2xl border border-cyan-500/20 backdrop-blur-md overflow-hidden p-4 shadow-[0_0_30px_rgba(34,211,238,0.1)]">
+
+          <div className="relative h-32 bg-linear-to-r from-lime-500/5 via-transparent to-lime-500/5 rounded-2xl border border-lime-500/20 backdrop-blur-md overflow-hidden p-4 shadow-[0_0_30px_rgba(101,255,0,0.1)]">
             {/* Feature cards */}
             {features.map((Feature, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, x: 300, y: 0 }}
-                animate={incomingFeatures.includes(idx) ? 
-                  { opacity: [0, 1, 0], x: [-300, 0, 300], y: [0, -20, 0] } 
-                  : { opacity: 0, x: 300 }
+                animate={
+                  incomingFeatures.includes(idx)
+                    ? { opacity: [0, 1, 0], x: [-300, 0, 300], y: [0, -20, 0] }
+                    : { opacity: 0, x: 300 }
                 }
                 transition={{ duration: 3, ease: "easeInOut" }}
                 className="absolute left-0 top-1/2 -translate-y-1/2"
               >
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="flex items-center gap-3 px-5 py-3 rounded-xl bg-linear-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/40 backdrop-blur-sm shadow-[0_0_20px_rgba(34,211,238,0.2)]"
+                  className="flex items-center gap-3 px-5 py-3 rounded-xl bg-linear-to-r from-lime-500/20 to-emerald-500/20 border border-lime-500/40 backdrop-blur-sm shadow-[0_0_20px_rgba(101,255,0,0.2)]"
                 >
-                  <Feature.icon className="w-5 h-5 text-cyan-400" />
-                  <span className="text-white font-semibold">{Feature.label}</span>
+                  <Feature.icon className="w-5 h-5 text-lime-400" />
+                  <span className="text-white font-semibold">
+                    {Feature.label}
+                  </span>
                 </motion.div>
               </motion.div>
             ))}
@@ -196,10 +210,12 @@ export default function DeprecatedSite() {
               whileHover={{ y: -5, scale: 1.05 }}
               className="group relative"
             >
-              <div className="absolute -inset-0.5 bg-linear-to-r from-cyan-500 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
-              <div className="relative flex flex-col items-center gap-3 px-4 py-5 rounded-xl bg-slate-900 border border-cyan-500/20 backdrop-blur-md hover:border-cyan-500/50 transition-all">
-                <Feature.icon className="w-6 h-6 text-cyan-400 group-hover:text-cyan-300 transition" />
-                <span className="text-xs font-semibold text-zinc-300 group-hover:text-white text-center transition">{Feature.label}</span>
+              <div className="absolute -inset-0.5 bg-linear-to-r from-lime-400 to-emerald-500 rounded-xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
+              <div className="relative flex flex-col items-center gap-3 px-4 py-5 rounded-xl bg-slate-900 border border-lime-500/20 backdrop-blur-md hover:border-lime-500/50 transition-all">
+                <Feature.icon className="w-6 h-6 text-lime-400 group-hover:text-lime-300 transition" />
+                <span className="text-xs font-semibold text-zinc-300 group-hover:text-white text-center transition">
+                  {Feature.label}
+                </span>
               </div>
             </motion.div>
           ))}
@@ -212,23 +228,26 @@ export default function DeprecatedSite() {
           transition={{ duration: 0.5, delay: 1.2 }}
           className="w-full sm:w-auto"
         >
-          <a 
+          <a
             href="#"
-            className="group relative flex items-center justify-between sm:justify-center gap-6 px-8 py-6 rounded-2xl bg-linear-to-r from-slate-900 to-slate-800 border border-cyan-500/40 hover:border-cyan-400/80 transition-all duration-300 shadow-[0_0_30px_rgba(34,211,238,0.2)] hover:shadow-[0_0_60px_rgba(34,211,238,0.4)] w-full overflow-hidden"
+            className="group relative flex items-center justify-between sm:justify-center gap-6 px-8 py-6 rounded-2xl bg-linear-to-r from-slate-900 to-slate-800 border border-lime-500/40 hover:border-lime-400/80 transition-all duration-300 shadow-[0_0_30px_rgba(101,255,0,0.2)] hover:shadow-[0_0_60px_rgba(101,255,0,0.4)] w-full overflow-hidden"
           >
-            <div className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-cyan-400/20 to-transparent -translate-x-full group-hover:animate-[scan_1.5s_ease-in-out_infinite]" />
-            
+            <div className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-lime-400/20 to-transparent -translate-x-full group-hover:animate-[scan_1.5s_ease-in-out_infinite]" />
+
             <div className="relative z-10 flex flex-col text-left sm:text-center">
-              <span className="text-white font-bold text-xl uppercase tracking-wider group-hover:text-cyan-300 transition-colors">
+              <span className="text-white font-bold text-xl uppercase tracking-wider group-hover:text-lime-300 transition-colors">
                 Initializing New Platform
               </span>
               <span className="text-zinc-400 text-xs uppercase tracking-widest mt-1 group-hover:text-zinc-300 transition-colors">
                 Coming Soon — Enhanced & Secure
               </span>
             </div>
-            
-            <div className="relative z-10 w-12 h-12 rounded-full bg-linear-to-br from-cyan-500/30 to-blue-500/30 flex items-center justify-center group-hover:from-cyan-500/60 group-hover:to-blue-500/60 transition-all text-cyan-400 group-hover:text-cyan-200 shadow-[0_0_15px_rgba(34,211,238,0.3)]">
-              <motion.div animate={{ x: [0, 5, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+
+            <div className="relative z-10 w-12 h-12 rounded-full bg-linear-to-br from-lime-500/30 to-emerald-500/30 flex items-center justify-center group-hover:from-lime-500/60 group-hover:to-emerald-500/60 transition-all text-lime-400 group-hover:text-lime-200 shadow-[0_0_15px_rgba(101,255,0,0.3)]">
+              <motion.div
+                animate={{ x: [0, 5, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
                 <ArrowRight className="w-6 h-6" />
               </motion.div>
             </div>
@@ -240,13 +259,13 @@ export default function DeprecatedSite() {
       <motion.div
         animate={{ opacity: [0.3, 0.6, 0.3] }}
         transition={{ duration: 4, repeat: Infinity }}
-        className="absolute top-0 right-0 w-96 h-96 bg-linear-to-br from-cyan-500/10 to-transparent rounded-full blur-3xl pointer-events-none"
-      />
+        className="absolute top-0 right-0 w-96 h-96 bg-linear-to-br from-lime-500/10 to-transparent rounded-full blur-3xl pointer-events-none"
+      ></motion.div>
       <motion.div
         animate={{ opacity: [0.2, 0.5, 0.2] }}
         transition={{ duration: 5, repeat: Infinity }}
-        className="absolute bottom-0 left-0 w-96 h-96 bg-linear-to-tr from-blue-500/10 to-transparent rounded-full blur-3xl pointer-events-none"
-      />
+        className="absolute bottom-0 left-0 w-96 h-96 bg-linear-to-tr from-emerald-500/10 to-transparent rounded-full blur-3xl pointer-events-none"
+      ></motion.div>
     </div>
   );
 }
