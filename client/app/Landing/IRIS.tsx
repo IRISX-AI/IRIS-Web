@@ -166,33 +166,6 @@ export default function DeprecatedSite() {
             </motion.span>
             What’s Coming Next
           </p>
-
-          <div className="relative h-32 bg-linear-to-r from-green-500/5 via-transparent to-lime-500/5 rounded-2xl border border-green-500/20 backdrop-blur-md overflow-hidden p-4 shadow-[0_0_30px_rgba(0,255,0,0.1)]">
-            {/* Feature cards */}
-            {features.map((Feature, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, x: 300, y: 0 }}
-                animate={
-                  incomingFeatures.includes(idx)
-                    ? { opacity: [0, 1, 0], x: [-300, 0, 300], y: [0, -20, 0] }
-                    : { opacity: 0, x: 300 }
-                }
-                transition={{ duration: 3, ease: "easeInOut" }}
-                className="absolute left-0 top-1/2 -translate-y-1/2"
-              >
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="flex items-center gap-3 px-5 py-3 rounded-xl bg-linear-to-r from-green-500/20 to-lime-500/20 border border-green-500/40 backdrop-blur-sm shadow-[0_0_20px_rgba(0,255,0,0.2)]"
-                >
-                  <Feature.icon className="w-5 h-5 text-green-400" />
-                  <span className="text-white font-semibold">
-                    {Feature.label}
-                  </span>
-                </motion.div>
-              </motion.div>
-            ))}
-          </div>
         </motion.div>
 
         {/* Premium feature list */}
