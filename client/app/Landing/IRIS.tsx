@@ -119,9 +119,9 @@ export default function DeprecatedSite() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6 text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]"
         >
-          THIS WEBSITE IS{" "}
+          This Website Has Been {" "}
           <span className="text-transparent bg-clip-text bg-linear-to-r from-green-400 via-lime-500 to-green-600 animate-pulse">
-            SHUT DOWN.
+            CLOSED
           </span>
         </motion.h1>
 
