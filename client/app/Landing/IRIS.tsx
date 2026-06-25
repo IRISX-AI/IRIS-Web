@@ -22,24 +22,10 @@ const features = [
 
 export default function DeprecatedSite() {
   const [mounted, setMounted] = useState(false);
-  const [incomingFeatures, setIncomingFeatures] = useState<number[]>([]);
 
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  useEffect(() => {
-    if (!mounted) return;
-
-    const interval = setInterval(() => {
-      setIncomingFeatures((prev) => {
-        const newIndex = Math.floor(Math.random() * features.length);
-        return [...prev.slice(-3), newIndex];
-      });
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, [mounted]);
 
   if (!mounted) return null;
 
