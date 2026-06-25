@@ -31,7 +31,6 @@ export default function DeprecatedSite() {
 
   return (
     <div className="min-h-screen bg-linear-to-br from-black via-black to-green-950/40 text-zinc-100 flex flex-col items-center justify-center relative overflow-hidden px-6 selection:bg-green-400 selection:text-black">
-      {/* Premium animated background – green neon glow */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <motion.div
           animate={{
@@ -47,14 +46,12 @@ export default function DeprecatedSite() {
         />
       </div>
 
-      {/* Scanning beam – green */}
       <motion.div
         animate={{ top: ["-10%", "110%"] }}
         transition={{ duration: 4, ease: "linear", repeat: Infinity }}
         className="absolute left-0 w-full h-0.5 bg-linear-to-r from-transparent via-green-400/60 to-transparent shadow-[0_0_30px_rgba(0,255,0,0.8)] z-0 pointer-events-none"
       />
 
-      {/* Floating particles – green tints */}
       {[...Array(6)].map((_, i) => (
         <motion.div
           key={i}
@@ -77,14 +74,12 @@ export default function DeprecatedSite() {
         />
       ))}
 
-      {/* Main content */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 w-full max-w-3xl flex flex-col items-center text-center"
       >
-        {/* Status icon */}
         <motion.div
           initial={{ opacity: 0, y: -30, scale: 0.5 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -101,7 +96,6 @@ export default function DeprecatedSite() {
           </motion.div>
         </motion.div>
 
-        {/* Status badge */}
         <motion.div
           initial={{ clipPath: "inset(0 100% 0 0)" }}
           animate={{ clipPath: "inset(0 0% 0 0)" }}
@@ -112,7 +106,6 @@ export default function DeprecatedSite() {
           Status: Offline
         </motion.div>
 
-        {/* Main heading */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -125,7 +118,6 @@ export default function DeprecatedSite() {
           </span>
         </motion.h1>
 
-        {/* Subtitle */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -136,7 +128,6 @@ export default function DeprecatedSite() {
           experience is launching soon.
         </motion.p>
 
-        {/* Incoming features stream */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -154,7 +145,6 @@ export default function DeprecatedSite() {
           </p>
         </motion.div>
 
-        {/* Premium feature list */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -181,7 +171,6 @@ export default function DeprecatedSite() {
           ))}
         </motion.div>
 
-        {/* CTA Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -215,7 +204,6 @@ export default function DeprecatedSite() {
         </motion.div>
       </motion.div>
 
-      {/* Premium corner accents – green neon */}
       <motion.div
         animate={{ opacity: [0.3, 0.6, 0.3] }}
         transition={{ duration: 4, repeat: Infinity }}
