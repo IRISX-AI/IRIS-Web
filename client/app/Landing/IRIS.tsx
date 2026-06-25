@@ -44,16 +44,16 @@ export default function DeprecatedSite() {
   if (!mounted) return null;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-950 to-green-950/40 text-zinc-100 flex flex-col items-center justify-center relative overflow-hidden px-6 selection:bg-green-400 selection:text-black">
+    <div className="min-h-screen bg-linear-to-br from-black via-black to-green-950/40 text-zinc-100 flex flex-col items-center justify-center relative overflow-hidden px-6 selection:bg-green-400 selection:text-black">
       {/* Premium animated background – green neon glow */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <motion.div
           animate={{
             background: [
-              "radial-gradient(circle at 20% 50%, rgba(0, 255, 0, 0.15) 0%, transparent 50%)",
-              "radial-gradient(circle at 80% 80%, rgba(0, 255, 0, 0.15) 0%, transparent 50%)",
-              "radial-gradient(circle at 40% 40%, rgba(0, 255, 0, 0.15) 0%, transparent 50%)",
-              "radial-gradient(circle at 20% 50%, rgba(0, 255, 0, 0.15) 0%, transparent 50%)",
+              "radial-linear(circle at 20% 50%, rgba(0, 255, 0, 0.15) 0%, transparent 50%)",
+              "radial-linear(circle at 80% 80%, rgba(0, 255, 0, 0.15) 0%, transparent 50%)",
+              "radial-linear(circle at 40% 40%, rgba(0, 255, 0, 0.15) 0%, transparent 50%)",
+              "radial-linear(circle at 20% 50%, rgba(0, 255, 0, 0.15) 0%, transparent 50%)",
             ],
           }}
           transition={{ duration: 15, repeat: Infinity }}
@@ -65,7 +65,7 @@ export default function DeprecatedSite() {
       <motion.div
         animate={{ top: ["-10%", "110%"] }}
         transition={{ duration: 4, ease: "linear", repeat: Infinity }}
-        className="absolute left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-green-400/60 to-transparent shadow-[0_0_30px_rgba(0,255,0,0.8)] z-0 pointer-events-none"
+        className="absolute left-0 w-full h-0.5 bg-linear-to-r from-transparent via-green-400/60 to-transparent shadow-[0_0_30px_rgba(0,255,0,0.8)] z-0 pointer-events-none"
       />
 
       {/* Floating particles – green tints */}
@@ -108,7 +108,7 @@ export default function DeprecatedSite() {
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-            className="w-24 h-24 rounded-3xl bg-gradient-to-br from-green-500/20 to-green-700/20 border border-green-500/40 flex items-center justify-center shadow-[0_0_40px_rgba(0,255,0,0.3)] relative overflow-hidden"
+            className="w-24 h-24 rounded-3xl bg-linear-to-br from-green-500/20 to-green-700/20 border border-green-500/40 flex items-center justify-center shadow-[0_0_40px_rgba(0,255,0,0.3)] relative overflow-hidden"
           >
             <div className="absolute inset-0 bg-green-500/10 animate-pulse" />
             <Power className="w-12 h-12 text-green-400 relative z-10" />
@@ -134,7 +134,7 @@ export default function DeprecatedSite() {
           className="text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6 text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]"
         >
           THIS WEBSITE IS{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-lime-500 to-green-600 animate-pulse">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-green-400 via-lime-500 to-green-600 animate-pulse">
             SHUT DOWN.
           </span>
         </motion.h1>
@@ -167,7 +167,7 @@ export default function DeprecatedSite() {
             What’s Coming Next
           </p>
 
-          <div className="relative h-32 bg-gradient-to-r from-green-500/5 via-transparent to-lime-500/5 rounded-2xl border border-green-500/20 backdrop-blur-md overflow-hidden p-4 shadow-[0_0_30px_rgba(0,255,0,0.1)]">
+          <div className="relative h-32 bg-linear-to-r from-green-500/5 via-transparent to-lime-500/5 rounded-2xl border border-green-500/20 backdrop-blur-md overflow-hidden p-4 shadow-[0_0_30px_rgba(0,255,0,0.1)]">
             {/* Feature cards */}
             {features.map((Feature, idx) => (
               <motion.div
@@ -183,7 +183,7 @@ export default function DeprecatedSite() {
               >
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="flex items-center gap-3 px-5 py-3 rounded-xl bg-gradient-to-r from-green-500/20 to-lime-500/20 border border-green-500/40 backdrop-blur-sm shadow-[0_0_20px_rgba(0,255,0,0.2)]"
+                  className="flex items-center gap-3 px-5 py-3 rounded-xl bg-linear-to-r from-green-500/20 to-lime-500/20 border border-green-500/40 backdrop-blur-sm shadow-[0_0_20px_rgba(0,255,0,0.2)]"
                 >
                   <Feature.icon className="w-5 h-5 text-green-400" />
                   <span className="text-white font-semibold">
@@ -211,8 +211,8 @@ export default function DeprecatedSite() {
               whileHover={{ y: -5, scale: 1.05 }}
               className="group relative"
             >
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-green-400 to-lime-500 rounded-xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
-              <div className="relative flex flex-col items-center gap-3 px-4 py-5 rounded-xl bg-gray-900 border border-green-500/20 backdrop-blur-md hover:border-green-500/50 transition-all">
+              <div className="absolute -inset-0.5 bg-linear-to-r from-green-400 to-lime-500 rounded-xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
+              <div className="relative flex flex-col items-center gap-3 px-4 py-5 rounded-xl bg-black border border-green-500/20 backdrop-blur-md hover:border-green-500/50 transition-all">
                 <Feature.icon className="w-6 h-6 text-green-400 group-hover:text-green-300 transition" />
                 <span className="text-xs font-semibold text-zinc-300 group-hover:text-white text-center transition">
                   {Feature.label}
@@ -231,9 +231,9 @@ export default function DeprecatedSite() {
         >
           <a
             href="#"
-            className="group relative flex items-center justify-between sm:justify-center gap-6 px-8 py-6 rounded-2xl bg-gradient-to-r from-gray-900 to-gray-800 border border-green-500/40 hover:border-green-400/80 transition-all duration-300 shadow-[0_0_30px_rgba(0,255,0,0.2)] hover:shadow-[0_0_60px_rgba(0,255,0,0.4)] w-full overflow-hidden"
+            className="group relative flex items-center justify-between sm:justify-center gap-6 px-8 py-6 rounded-2xl bg-linear-to-r from-black to-black border border-green-500/40 hover:border-green-400/80 transition-all duration-300 shadow-[0_0_30px_rgba(0,255,0,0.2)] hover:shadow-[0_0_60px_rgba(0,255,0,0.4)] w-full overflow-hidden"
           >
-            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-green-400/20 to-transparent -translate-x-full group-hover:animate-[scan_1.5s_ease-in-out_infinite]" />
+            <div className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-green-400/20 to-transparent -translate-x-full group-hover:animate-[scan_1.5s_ease-in-out_infinite]" />
 
             <div className="relative z-10 flex flex-col text-left sm:text-center">
               <span className="text-white font-bold text-xl uppercase tracking-wider group-hover:text-green-300 transition-colors">
@@ -244,7 +244,7 @@ export default function DeprecatedSite() {
               </span>
             </div>
 
-            <div className="relative z-10 w-12 h-12 rounded-full bg-gradient-to-br from-green-500/30 to-lime-500/30 flex items-center justify-center group-hover:from-green-500/60 group-hover:to-lime-500/60 transition-all text-green-400 group-hover:text-green-200 shadow-[0_0_15px_rgba(0,255,0,0.3)]">
+            <div className="relative z-10 w-12 h-12 rounded-full bg-linear-to-br from-green-500/30 to-lime-500/30 flex items-center justify-center group-hover:from-green-500/60 group-hover:to-lime-500/60 transition-all text-green-400 group-hover:text-green-200 shadow-[0_0_15px_rgba(0,255,0,0.3)]">
               <motion.div
                 animate={{ x: [0, 5, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
@@ -260,12 +260,12 @@ export default function DeprecatedSite() {
       <motion.div
         animate={{ opacity: [0.3, 0.6, 0.3] }}
         transition={{ duration: 4, repeat: Infinity }}
-        className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-green-500/10 to-transparent rounded-full blur-3xl pointer-events-none"
+        className="absolute top-0 right-0 w-96 h-96 bg-linear-to-br from-green-500/10 to-transparent rounded-full blur-3xl pointer-events-none"
       ></motion.div>
       <motion.div
         animate={{ opacity: [0.2, 0.5, 0.2] }}
         transition={{ duration: 5, repeat: Infinity }}
-        className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-lime-500/10 to-transparent rounded-full blur-3xl pointer-events-none"
+        className="absolute bottom-0 left-0 w-96 h-96 bg-linear-to-tr from-lime-500/10 to-transparent rounded-full blur-3xl pointer-events-none"
       ></motion.div>
     </div>
   );
