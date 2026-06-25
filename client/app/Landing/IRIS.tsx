@@ -112,7 +112,7 @@ export default function DeprecatedSite() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6 text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]"
         >
-          This Website Has Been {" "}
+          This Website Has Been{" "}
           <span className="text-transparent bg-clip-text bg-linear-to-r from-green-400 via-lime-500 to-green-600 animate-pulse">
             CLOSED
           </span>
@@ -183,14 +183,19 @@ export default function DeprecatedSite() {
           >
             <div className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-green-400/20 to-transparent -translate-x-full group-hover:animate-[scan_1.5s_ease-in-out_infinite]" />
 
-            <div className="relative z-10 flex flex-col text-left sm:text-center">
+            <button
+              onClick={() => {
+                window.open("https://github.com/IRISX-AI");
+              }}
+              className="relative z-10 flex flex-col text-left sm:text-center"
+            >
               <span className="text-white font-bold text-xl uppercase tracking-wider group-hover:text-green-300 transition-colors">
                 Launching Soon
               </span>
               <span className="text-zinc-400 text-xs uppercase tracking-widest mt-1 group-hover:text-zinc-300 transition-colors">
                 Get notified when we’re live
               </span>
-            </div>
+            </button>
 
             <div className="relative z-10 w-12 h-12 rounded-full bg-linear-to-br from-green-500/30 to-lime-500/30 flex items-center justify-center group-hover:from-green-500/60 group-hover:to-lime-500/60 transition-all text-green-400 group-hover:text-green-200 shadow-[0_0_15px_rgba(0,255,0,0.3)]">
               <motion.div
