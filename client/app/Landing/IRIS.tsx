@@ -36,7 +36,7 @@ export default function DeprecatedSite() {
   if (!mounted) return null;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-black to-slate-900 text-zinc-100 flex flex-col items-center justify-center relative overflow-hidden px-6 selection:bg-cyan-400 selection:text-black">
+    <div className="min-h-screen bg-linear-to-br from-slate-950 via-black to-slate-900 text-zinc-100 flex flex-col items-center justify-center relative overflow-hidden px-6 selection:bg-cyan-400 selection:text-black">
       {/* Premium animated background */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -57,7 +57,7 @@ export default function DeprecatedSite() {
       <motion.div
         animate={{ top: ["-10%", "110%"] }}
         transition={{ duration: 4, ease: "linear", repeat: Infinity }}
-        className="absolute left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent shadow-[0_0_30px_rgba(34,211,238,0.8)] z-0 pointer-events-none"
+        className="absolute left-0 w-full h-0.5 bg-linear-to-r from-transparent via-cyan-400/50 to-transparent shadow-[0_0_30px_rgba(34,211,238,0.8)] z-0 pointer-events-none"
       />
 
       {/* Floating particles */}
@@ -99,7 +99,7 @@ export default function DeprecatedSite() {
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-            className="w-24 h-24 rounded-3xl bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-500/40 flex items-center justify-center shadow-[0_0_40px_rgba(239,68,68,0.3)] relative overflow-hidden"
+            className="w-24 h-24 rounded-3xl bg-linear-to-br from-red-500/20 to-orange-500/20 border border-red-500/40 flex items-center justify-center shadow-[0_0_40px_rgba(239,68,68,0.3)] relative overflow-hidden"
           >
             <div className="absolute inset-0 bg-red-500/10 animate-pulse" />
             <AlertOctagon className="w-12 h-12 text-red-400 relative z-10" />
@@ -126,7 +126,7 @@ export default function DeprecatedSite() {
           className="text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6 text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]"
         >
           THIS WEBSITE IS{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-500 to-red-600 animate-pulse">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-red-500 via-orange-500 to-red-600 animate-pulse">
             POWERED DOWN.
           </span>
         </motion.h1>
@@ -155,7 +155,7 @@ export default function DeprecatedSite() {
             Incoming Features Stream
           </p>
           
-          <div className="relative h-32 bg-gradient-to-r from-cyan-500/5 via-transparent to-cyan-500/5 rounded-2xl border border-cyan-500/20 backdrop-blur-md overflow-hidden p-4 shadow-[0_0_30px_rgba(34,211,238,0.1)]">
+          <div className="relative h-32 bg-linear-to-r from-cyan-500/5 via-transparent to-cyan-500/5 rounded-2xl border border-cyan-500/20 backdrop-blur-md overflow-hidden p-4 shadow-[0_0_30px_rgba(34,211,238,0.1)]">
             {/* Feature cards */}
             {features.map((Feature, idx) => (
               <motion.div
@@ -170,7 +170,7 @@ export default function DeprecatedSite() {
               >
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="flex items-center gap-3 px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/40 backdrop-blur-sm shadow-[0_0_20px_rgba(34,211,238,0.2)]"
+                  className="flex items-center gap-3 px-5 py-3 rounded-xl bg-linear-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/40 backdrop-blur-sm shadow-[0_0_20px_rgba(34,211,238,0.2)]"
                 >
                   <Feature.icon className="w-5 h-5 text-cyan-400" />
                   <span className="text-white font-semibold">{Feature.label}</span>
@@ -196,7 +196,7 @@ export default function DeprecatedSite() {
               whileHover={{ y: -5, scale: 1.05 }}
               className="group relative"
             >
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
+              <div className="absolute -inset-0.5 bg-linear-to-r from-cyan-500 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
               <div className="relative flex flex-col items-center gap-3 px-4 py-5 rounded-xl bg-slate-900 border border-cyan-500/20 backdrop-blur-md hover:border-cyan-500/50 transition-all">
                 <Feature.icon className="w-6 h-6 text-cyan-400 group-hover:text-cyan-300 transition" />
                 <span className="text-xs font-semibold text-zinc-300 group-hover:text-white text-center transition">{Feature.label}</span>
@@ -214,9 +214,9 @@ export default function DeprecatedSite() {
         >
           <a 
             href="#"
-            className="group relative flex items-center justify-between sm:justify-center gap-6 px-8 py-6 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-800 border border-cyan-500/40 hover:border-cyan-400/80 transition-all duration-300 shadow-[0_0_30px_rgba(34,211,238,0.2)] hover:shadow-[0_0_60px_rgba(34,211,238,0.4)] w-full overflow-hidden"
+            className="group relative flex items-center justify-between sm:justify-center gap-6 px-8 py-6 rounded-2xl bg-linear-to-r from-slate-900 to-slate-800 border border-cyan-500/40 hover:border-cyan-400/80 transition-all duration-300 shadow-[0_0_30px_rgba(34,211,238,0.2)] hover:shadow-[0_0_60px_rgba(34,211,238,0.4)] w-full overflow-hidden"
           >
-            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent -translate-x-full group-hover:animate-[scan_1.5s_ease-in-out_infinite]" />
+            <div className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-cyan-400/20 to-transparent -translate-x-full group-hover:animate-[scan_1.5s_ease-in-out_infinite]" />
             
             <div className="relative z-10 flex flex-col text-left sm:text-center">
               <span className="text-white font-bold text-xl uppercase tracking-wider group-hover:text-cyan-300 transition-colors">
@@ -227,7 +227,7 @@ export default function DeprecatedSite() {
               </span>
             </div>
             
-            <div className="relative z-10 w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500/30 to-blue-500/30 flex items-center justify-center group-hover:from-cyan-500/60 group-hover:to-blue-500/60 transition-all text-cyan-400 group-hover:text-cyan-200 shadow-[0_0_15px_rgba(34,211,238,0.3)]">
+            <div className="relative z-10 w-12 h-12 rounded-full bg-linear-to-br from-cyan-500/30 to-blue-500/30 flex items-center justify-center group-hover:from-cyan-500/60 group-hover:to-blue-500/60 transition-all text-cyan-400 group-hover:text-cyan-200 shadow-[0_0_15px_rgba(34,211,238,0.3)]">
               <motion.div animate={{ x: [0, 5, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
                 <ArrowRight className="w-6 h-6" />
               </motion.div>
@@ -240,12 +240,12 @@ export default function DeprecatedSite() {
       <motion.div
         animate={{ opacity: [0.3, 0.6, 0.3] }}
         transition={{ duration: 4, repeat: Infinity }}
-        className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-cyan-500/10 to-transparent rounded-full blur-3xl pointer-events-none"
+        className="absolute top-0 right-0 w-96 h-96 bg-linear-to-br from-cyan-500/10 to-transparent rounded-full blur-3xl pointer-events-none"
       />
       <motion.div
         animate={{ opacity: [0.2, 0.5, 0.2] }}
         transition={{ duration: 5, repeat: Infinity }}
-        className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-500/10 to-transparent rounded-full blur-3xl pointer-events-none"
+        className="absolute bottom-0 left-0 w-96 h-96 bg-linear-to-tr from-blue-500/10 to-transparent rounded-full blur-3xl pointer-events-none"
       />
     </div>
   );
