@@ -1,14 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Zap,
-  Lock,
-  Sparkles,
-  Cpu,
-  Shield,
-} from "lucide-react";
+import { ArrowRight, Zap, Lock, Sparkles, Cpu, Shield } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const features = [
