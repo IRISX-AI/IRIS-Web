@@ -31,21 +31,6 @@ export default function DeprecatedSite() {
 
   return (
     <div className="min-h-screen bg-linear-to-br from-black via-black to-green-950/40 text-zinc-100 flex flex-col items-center justify-center relative overflow-hidden px-6 selection:bg-green-400 selection:text-black">
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <motion.div
-          animate={{
-            background: [
-              "radial-linear(circle at 20% 50%, rgba(0, 255, 0, 0.15) 0%, transparent 50%)",
-              "radial-linear(circle at 80% 80%, rgba(0, 255, 0, 0.15) 0%, transparent 50%)",
-              "radial-linear(circle at 40% 40%, rgba(0, 255, 0, 0.15) 0%, transparent 50%)",
-              "radial-linear(circle at 20% 50%, rgba(0, 255, 0, 0.15) 0%, transparent 50%)",
-            ],
-          }}
-          transition={{ duration: 15, repeat: Infinity }}
-          className="absolute inset-0"
-        />
-      </div>
-
       <motion.div
         animate={{ top: ["-10%", "110%"] }}
         transition={{ duration: 4, ease: "linear", repeat: Infinity }}
