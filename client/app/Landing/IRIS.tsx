@@ -65,7 +65,6 @@ export default function DeprecatedSite() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 w-full max-w-3xl flex flex-col items-center text-center"
       >
-    
 
         <motion.div
           initial={{ clipPath: "inset(0 100% 0 0)" }}
