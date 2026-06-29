@@ -113,31 +113,7 @@ export default function DeprecatedSite() {
           </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-          className="grid grid-cols-2 md:grid-cols-5 gap-4 w-full mb-12"
-        >
-          {features.map((Feature, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.7 + Feature.delay }}
-              whileHover={{ y: -5, scale: 1.05 }}
-              className="group relative"
-            >
-              <div className="absolute -inset-0.5 bg-linear-to-r from-green-400 to-lime-500 rounded-xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
-              <div className="relative flex flex-col items-center gap-3 px-4 py-5 rounded-xl bg-black border border-green-500/20 backdrop-blur-md hover:border-green-500/50 transition-all">
-                <Feature.icon className="w-6 h-6 text-green-400 group-hover:text-green-300 transition" />
-                <span className="text-xs font-semibold text-zinc-300 group-hover:text-white text-center transition">
-                  {Feature.label}
-                </span>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
