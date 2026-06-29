@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 import { ArrowRight, Zap, Lock, Sparkles, Cpu, Shield } from "lucide-react";
 import { useEffect, useState } from "react";
 
-
-
 export default function DeprecatedSite() {
   const [mounted, setMounted] = useState(false);
 
