@@ -65,21 +65,7 @@ export default function DeprecatedSite() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 w-full max-w-3xl flex flex-col items-center text-center"
       >
-        <motion.div
-          initial={{ opacity: 0, y: -30, scale: 0.5 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="mb-8"
-        >
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-            className="w-24 h-24 rounded-3xl bg-linear-to-br from-green-500/20 to-green-700/20 border border-green-500/40 flex items-center justify-center shadow-[0_0_40px_rgba(0,255,0,0.3)] relative overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-green-500/10 animate-pulse" />
-            <Power className="w-12 h-12 text-green-400 relative z-10" />
-          </motion.div>
-        </motion.div>
+    
 
         <motion.div
           initial={{ clipPath: "inset(0 100% 0 0)" }}
