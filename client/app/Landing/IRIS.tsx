@@ -4,13 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Zap, Lock, Sparkles, Cpu, Shield } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const features = [
-  { icon: Zap, label: "Lightning Fast", delay: 0.2 },
-  { icon: Lock, label: "Enterprise Security", delay: 0.4 },
-  { icon: Sparkles, label: "Premium Design", delay: 0.6 },
-  { icon: Cpu, label: "Advanced AI", delay: 0.8 },
-  { icon: Shield, label: "Full Protection", delay: 1.0 },
-];
+
 
 export default function DeprecatedSite() {
   const [mounted, setMounted] = useState(false);
