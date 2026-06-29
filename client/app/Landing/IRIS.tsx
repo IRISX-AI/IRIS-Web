@@ -21,28 +21,6 @@ export default function DeprecatedSite() {
         className="absolute left-0 w-full h-0.5 bg-linear-to-r from-transparent via-green-400/60 to-transparent shadow-[0_0_30px_rgba(0,255,0,0.8)] z-0 pointer-events-none"
       />
 
-      {[...Array(6)].map((_, i) => (
-        <motion.div
-          key={i}
-          animate={{
-            x: [0, Math.random() * 100 - 50],
-            y: [0, Math.random() * 100 - 50],
-            opacity: [0.3, 0.8, 0.3],
-          }}
-          transition={{
-            duration: 8 + i,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute w-1 h-1 rounded-full blur-sm"
-          style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            backgroundColor: `hsl(${120 + i * 10}, 100%, 60%)`,
-          }}
-        />
-      ))}
-
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
