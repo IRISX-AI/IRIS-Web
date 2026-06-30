@@ -42,7 +42,7 @@ export default function DeprecatedSite() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="text-4xl md:text-5xl font-normal tracking-tight text-white mb-6"
+          className="text-5xl md:text-7xl font-bold capitalize tracking-tight text-white mb-6"
         >
           We have moved.
         </motion.h1>
@@ -51,7 +51,7 @@ export default function DeprecatedSite() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="text-zinc-400 text-lg max-w-sm mx-auto leading-relaxed mb-12 font-light"
+          className="text-zinc-400 text-xl max-w-sm mx-auto leading-relaxed mb-12 font-normal"
         >
           This platform has been officially closed. You can find us at our new
           location.
