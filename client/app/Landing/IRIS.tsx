@@ -17,9 +17,9 @@ export default function DeprecatedSite() {
     <div className="min-h-screen bg-[#050505] text-zinc-200 flex flex-col items-center justify-center relative overflow-hidden px-6 font-sans selection:bg-white selection:text-black">
       {/* Minimalist Ambient Background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-800/10 via-transparent to-transparent opacity-50 blur-3xl" />
+        <div className="w-200 h-200 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-800/10 via-transparent to-transparent opacity-50 blur-3xl" />
       </div>
-      
+
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -33,7 +33,9 @@ export default function DeprecatedSite() {
           className="mb-10 px-4 py-1.5 rounded-full border border-zinc-800/60 bg-zinc-900/30 backdrop-blur-sm flex items-center gap-3"
         >
           <div className="w-1.5 h-1.5 rounded-full bg-zinc-400" />
-          <span className="text-xs font-medium tracking-wide text-zinc-400 uppercase">Service Relocated</span>
+          <span className="text-xs font-medium tracking-wide text-zinc-400 uppercase">
+            Service Relocated
+          </span>
         </motion.div>
 
         <motion.h1
@@ -51,7 +53,8 @@ export default function DeprecatedSite() {
           transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="text-zinc-400 text-lg max-w-sm mx-auto leading-relaxed mb-12 font-light"
         >
-          This platform has been officially closed. You can find us at our new location.
+          This platform has been officially closed. You can find us at our new
+          location.
         </motion.p>
 
         <motion.div
