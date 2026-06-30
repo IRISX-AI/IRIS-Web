@@ -17,7 +17,7 @@ export default function DeprecatedSite() {
     <div className="min-h-screen bg-[#050505] text-zinc-200 flex flex-col items-center justify-center relative overflow-hidden px-6 font-sans selection:bg-white selection:text-black">
       {/* Minimalist Ambient Background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-200 h-200 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-800/10 via-transparent to-transparent opacity-50 blur-3xl" />
+        <div className="w-200 h-200 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-zinc-800/10 via-transparent to-transparent opacity-50 blur-3xl" />
       </div>
 
       <motion.div
