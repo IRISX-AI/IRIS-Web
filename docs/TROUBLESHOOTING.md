@@ -10,4 +10,3 @@ Common issues and their resolutions.
 
 ## 3. Blank Screen on Launch
 **Fix:** React Three Fiber (R3F) crashed due to WebGL issues. Verify your GPU supports `high-performance` power preference.
-
