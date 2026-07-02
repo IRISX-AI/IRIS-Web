@@ -24,7 +24,6 @@ export default function NotFound() {
 
   return (
     <div className="min-h-screen flex flex-col mt-16 bg-[#050505] text-white  selection:bg-[#39FF14] selection:text-black overflow-hidden">
-
       <main className="flex-1 relative flex flex-col items-center justify-center pt-32 pb-20 px-6">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-150 bg-[#39FF14]/5 blur-[150px] rounded-full pointer-events-none" />
         <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,transparent_0%,#050505_100%)] pointer-events-none" />
@@ -126,7 +125,6 @@ export default function NotFound() {
           </motion.div>
         </motion.div>
       </main>
-
     </div>
   );
 }
