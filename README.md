@@ -8,7 +8,7 @@
 
 ---
 
-<div style="display: flex; justify-center; gap: 10px; margin-bottom: 20px;">
+<div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 20px;">
 
   <a href="https://github.com/IRISX-AI/IRIS-AI/stargazers">
     <img src="https://badgen.net/github/stars/IRISX-AI/IRIS-AI?color=10b981&icon=github" alt="GitHub stars">
@@ -24,6 +24,10 @@
 
   <a href="https://github.com/sponsors/201Harsh">
     <img src="https://badgen.net/badge/Sponsor/Support%20IRIS/ff69b4?icon=github" alt="GitHub Sponsors">
+  </a>
+
+  <a href="https://github.com/IRISX-AI/IRIS-AI/releases">
+    <img src="https://badgen.net/github/assets-dl/IRISX-AI/IRIS-AI?color=10b981&icon=github" alt="Total Downloads">
   </a>
 
 </div>
@@ -426,12 +430,12 @@ Upgrading to **IRIS Pro (₹499 base license + platform processing fee (Final Ch
 
 ```typescript
 // Frontend
-window.electron.ipcRenderer.invoke("tool-name", payload);
+window.electron.ipcRenderer.invoke('tool-name', payload)
 
 // Backend (Protected)
-ipcMain.handle("tool-name", async (event, payload) => {
+ipcMain.handle('tool-name', async (event, payload) => {
   // Secure tool execution
-});
+})
 ```
 
 ### AI Integration
