@@ -430,12 +430,12 @@ Upgrading to **IRIS Pro (₹499 base license + platform processing fee (Final Ch
 
 ```typescript
 // Frontend
-window.electron.ipcRenderer.invoke('tool-name', payload)
+window.electron.ipcRenderer.invoke("tool-name", payload);
 
 // Backend (Protected)
-ipcMain.handle('tool-name', async (event, payload) => {
+ipcMain.handle("tool-name", async (event, payload) => {
   // Secure tool execution
-})
+});
 ```
 
 ### AI Integration
