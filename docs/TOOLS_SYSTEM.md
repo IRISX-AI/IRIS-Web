@@ -9,3 +9,4 @@ Tools are the bridge between AI reasoning and native OS execution.
 4. **Result:** Success or failure is streamed back to the agent.
 
 See [Available Tools](AVAILABLE_TOOLS.md) for a complete list.
+

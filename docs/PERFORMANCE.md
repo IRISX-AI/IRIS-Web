@@ -8,3 +8,4 @@ Rules for keeping the Neural OS ultra-responsive.
 
 ## Audio Constraints
 - Use exact 4096 frame buffers. Do not flood the Node.js event loop with micro-buffers.
+

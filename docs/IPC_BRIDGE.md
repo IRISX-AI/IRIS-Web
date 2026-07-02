@@ -11,3 +11,4 @@ The IPC Bridge secures the boundary between the untrusted UI and the protected O
 // Frontend
 await window.electron.ipcRenderer.invoke('secure-save-keys', data);
 ```
+

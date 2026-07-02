@@ -16,3 +16,4 @@ IRIS uses an Open Core model.
 
 ## $50/mo - IRIS Alpha
 - Unprotected source code access and commercial deployment rights.
+
